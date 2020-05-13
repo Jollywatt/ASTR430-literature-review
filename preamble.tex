@@ -1,0 +1,147 @@
+\documentclass[a4paper,12pt,twoside]{report}
+\usepackage[margin=3cm,bindingoffset=-1.2cm]{geometry}
+
+%% PACKAGES %%
+
+% Bibliography
+\usepackage[
+	style=phys,
+	biblabel=brackets,
+	maxbibnames=4, % write `et al.' for many authors
+	% sorting=none,
+]{biblatex}
+	\addbibresource{citations.bib}
+	\DeclareFieldFormat{titlecase}{#1}
+
+% Graphics packages
+\usepackage{xcolor}
+
+% Math packages
+\usepackage{amsmath}
+\usepackage{amssymb} % defines \mathfrak
+\usepackage[
+	math-style=ISO, % italic Greek
+	warnings-off={mathtools-colon,mathtools-overbracket}]
+{unicode-math}
+\usepackage{physics}
+\usepackage{accents}
+\usepackage{mathrsfs} % defines \mathscr
+\usepackage{dsfont}
+% \usepackage{siunitx}
+% \usepackage{eucal}
+% \usepackage{dutchcal}
+\usepackage{mathtools}
+	\mathtoolsset{showonlyrefs} % autonum seems far inferior
+
+
+% Layout packages
+\usepackage[inline]{enumitem}
+\usepackage[margin=\parindent,font=footnotesize]{caption}
+
+% Misc. packages
+\usepackage[ddmmyy]{datetime}
+
+
+\usepackage{hyperref}
+	\hypersetup{
+		colorlinks,
+		linkcolor={red!50!black},
+		citecolor={blue!50!black},
+		urlcolor={blue!80!black}
+	}
+
+\listfiles
+
+%% LAYOUT %%
+
+% David's preferred line spacing
+\setlength{\parskip}{4pt}
+
+% Omit page numbering (until chapter 1)
+\pagenumbering{gobble}
+
+% Set chapter style
+\usepackage{titlesec}
+\titleformat{\chapter}[hang]{\normalfont\huge\bfseries}
+	{\thechapter}{1em}{}
+% "1 Title" vs "Chapter 1\nTitle"
+
+% hyphenation rules for funky words
+\hyphenation{
+	Schwarz-schild
+}
+
+% Environment for outlined 'aside boxes'
+\usepackage[framemethod=default]{mdframed}
+\newenvironment{aside}[1][Note]{ 
+\vspace{-1.6ex}
+\begin{mdframed}[
+	frametitle={\colorbox{white}{\normalfont\emph{#1}}},
+	frametitleaboveskip=-1.6ex,
+	frametitlealignment=\raggedright,
+	font=\small,
+	linewidth=.3pt,
+	leftmargin=1cm,
+	rightmargin=1cm,]
+\vspace{-1.6ex}
+}{\end{mdframed}}
+
+
+%% COMMANDS %%
+
+% \scalemath - scale math symbols easily
+\newcommand\scalemath[2]{
+	\scalebox{#1}{\mbox{\ensuremath{\displaystyle #2}}}
+}
+
+% \raisemath - raise and lower math symbols, obeying sub/superscript contexts
+\makeatletter
+\newcommand{\raisemath}[1]{\mathpalette{\raisem@th{#1}}}
+\newcommand{\raisem@th}[3]{\raisebox{#1}{$#2#3$}}
+\makeatother
+
+% \currentfontsize - refers to original font size
+\makeatletter
+\newcommand{\currentfontsize}{
+	\fontsize{\f@size}{\f@baselineskip}\selectfont
+}
+\makeatother
+
+
+%% SYMBOLS & SHORTCUTS %%
+
+\renewcommand{\cal}{\mathcal}
+\renewcommand{\frak}{\mathfrak}
+
+\newcommand{\bm}{\symbf}
+\newcommand{\ts}[1]{\underaccent{\sim}{#1}} % David's tensor 'twiddle'
+\newcommand{\tsbm}[1]{\ts{\bm{#1}}}
+
+\newcommand{\secs}{\symrm{\Gamma}}
+\newcommand{\forms}{\symrm{\Omega}}
+
+\newcommand{\T}{\mathrm{T}}
+\newcommand{\TT}{\mathds{T}}
+\newcommand{\LL}{\ts{\mathscr L}}
+
+\newcommand{\ang}[1]{\left\langle{#1}\right\rangle}
+\newcommand{\angg}[1]{\ang{#1}_{\raisemath{2pt}{\mathrm{Ad}}}}
+
+\newcommand{\fibrebundle}[4][]{#2 \rightarrowtail #3 \overset{#1}{\twoheadrightarrow} #4}
+
+% \newcommand{\csform}{\phi_{\text{CS}}^{(3)}}
+\newcommand{\csform}{\Omega_3}
+
+\newenvironment{baligned}
+	{\left\{\begin{aligned}}
+	{\end{aligned}\right.}
+
+
+%% DRAFT & FINAL MODE %%
+
+\newif\iffinal
+\newcommand{\note}[1]{\iffinal\else\textcolor{gray}{<<#1>>}\fi}
+\newcommand{\urgent}[1]{\iffinal\else\textcolor{red}{\{#1\}}\fi}
+
+% uncomment to render as final, hiding notes to self
+% \finaltrue

@@ -1,0 +1,711 @@
+{
+	"auto_complete":
+	{
+		"selected_items":
+		[
+		]
+	},
+	"buffers":
+	[
+		{
+			"file": "sections/1.intro.tex",
+			"settings":
+			{
+				"buffer_size": 20911,
+				"encoding": "UTF-8",
+				"line_ending": "Unix"
+			}
+		},
+		{
+			"file": "preamble.tex",
+			"settings":
+			{
+				"buffer_size": 3273,
+				"encoding": "UTF-8",
+				"line_ending": "Unix"
+			}
+		},
+		{
+			"file": "/home/jollywatt/Academia/Literature Review/notes.md",
+			"settings":
+			{
+				"buffer_size": 7744,
+				"encoding": "UTF-8",
+				"line_ending": "Unix"
+			}
+		},
+		{
+			"file": "/home/jollywatt/Academia/Literature Review/References/citations.bib",
+			"settings":
+			{
+				"buffer_size": 7565,
+				"encoding": "UTF-8",
+				"line_ending": "Unix"
+			}
+		}
+	],
+	"build_system": "Packages/LaTeXTools/LaTeX.sublime-build",
+	"build_system_choices":
+	[
+		[
+			[
+				[
+					"Packages/LaTeXTools/LaTeX.sublime-build",
+					""
+				],
+				[
+					"Packages/LaTeXTools/LaTeX.sublime-build",
+					"Traditional"
+				],
+				[
+					"Packages/LaTeXTools/LaTeX.sublime-build",
+					"PdfLaTeX"
+				],
+				[
+					"Packages/LaTeXTools/LaTeX.sublime-build",
+					"XeLaTeX"
+				],
+				[
+					"Packages/LaTeXTools/LaTeX.sublime-build",
+					"LuaLaTeX"
+				],
+				[
+					"Packages/LaTeXTools/LaTeX.sublime-build",
+					"Basic Builder"
+				],
+				[
+					"Packages/LaTeXTools/LaTeX.sublime-build",
+					"Basic Builder - PdfLaTeX"
+				],
+				[
+					"Packages/LaTeXTools/LaTeX.sublime-build",
+					"Basic Builder - XeLaTeX"
+				],
+				[
+					"Packages/LaTeXTools/LaTeX.sublime-build",
+					"Basic Builder - LuaLaTeX"
+				],
+				[
+					"Packages/LaTeXTools/LaTeX.sublime-build",
+					"Script Builder"
+				]
+			],
+			[
+				"Packages/LaTeXTools/LaTeX.sublime-build",
+				"XeLaTeX"
+			]
+		]
+	],
+	"build_varint": "",
+	"command_palette":
+	{
+		"height": 0.0,
+		"last_filter": "",
+		"selected_items":
+		[
+			[
+				"ssmu",
+				"Set Syntax: MultiMarkdown"
+			],
+			[
+				"ss",
+				"Set Syntax: Clojure"
+			],
+			[
+				"ui",
+				"UI: Select Color Scheme"
+			],
+			[
+				"mar",
+				"Set Syntax: MultiMarkdown"
+			],
+			[
+				"sslate",
+				"Set Syntax: LaTeX"
+			],
+			[
+				"sstex",
+				"Set Syntax: TeX"
+			],
+			[
+				"mini",
+				"View: Toggle Minimap"
+			],
+			[
+				"mm",
+				"Set Syntax: MultiMarkdown"
+			],
+			[
+				"check",
+				"LaTeXTools: Check system"
+			],
+			[
+				"latexlo",
+				"Set Syntax: LaTeX Log"
+			],
+			[
+				"vmini",
+				"View: Toggle Minimap"
+			],
+			[
+				"sett",
+				"Preferences: Settings"
+			],
+			[
+				"m",
+				"View: Toggle Menu"
+			],
+			[
+				"vm",
+				"View: Toggle Menu"
+			],
+			[
+				"latex",
+				"LaTeXTools: Check system"
+			],
+			[
+				"pcisntal",
+				"Package Control: Install Package"
+			],
+			[
+				"pcl",
+				"Package Control: List Packages"
+			],
+			[
+				"install",
+				"Package Control: Install Package"
+			],
+			[
+				"ren",
+				"Rename File"
+			],
+			[
+				"ssm",
+				"Set Syntax: Markdown"
+			],
+			[
+				"menu",
+				"View: Toggle Menu"
+			],
+			[
+				"min",
+				"View: Toggle Minimap"
+			],
+			[
+				"ssmark",
+				"Set Syntax: Markdown"
+			],
+			[
+				"ssge",
+				"Set Syntax: Generic Config"
+			],
+			[
+				"instal",
+				"Package Control: Install Package"
+			],
+			[
+				"pcremo",
+				"Package Control: Remove Package"
+			],
+			[
+				"Package Control: ",
+				"Package Control: Enable Package"
+			],
+			[
+				"ssbash",
+				"Set Syntax: Bourne Again Shell (bash)"
+			],
+			[
+				"ssfi",
+				"Set Syntax: Friendly Interactive Shell (fish)"
+			],
+			[
+				"pclp",
+				"Package Control: List Packages"
+			],
+			[
+				"inst",
+				"Package Control: Install Package"
+			],
+			[
+				"sspy",
+				"Set Syntax: Python"
+			],
+			[
+				"v",
+				"View: Toggle Menu"
+			],
+			[
+				"theme",
+				"UI: Select Theme"
+			],
+			[
+				"setting",
+				"Preferences: Settings"
+			]
+		],
+		"width": 0.0
+	},
+	"console":
+	{
+		"height": 0.0,
+		"history":
+		[
+		]
+	},
+	"distraction_free":
+	{
+		"menu_visible": false,
+		"show_minimap": false,
+		"show_open_files": false,
+		"show_tabs": false,
+		"side_bar_visible": false,
+		"status_bar_visible": false
+	},
+	"expanded_folders":
+	[
+		"/home/jollywatt/Academia/Literature Review",
+		"/home/jollywatt/Academia/Literature Review/Review",
+		"/home/jollywatt/Academia/Literature Review/Review/sections"
+	],
+	"file_history":
+	[
+		"/home/jollywatt/Academia/Literature Review/notes.md",
+		"/home/jollywatt/Videos/Adventure Time/megalink",
+		"/home/jollywatt/Videos/Steven Universe/reccommended.txt",
+		"/home/jollywatt/Academia/Literature Review/Review/main.tex",
+		"/home/jollywatt/Academia/Literature Review/Review/build/main.log",
+		"/home/jollywatt/Academia/BSc(Hons)/Honours Project/Report/build/main.log",
+		"/home/jollywatt/Academia/BSc(Hons)/Honours Project/Report/preamble.tex",
+		"/home/jollywatt/Academia/BSc(Hons)/Honours Project/Report/main.tex",
+		"/home/jollywatt/Academia/Literature Review/References/citations.bib",
+		"/home/jollywatt/Academia/Literature Review/Review/preamble.tex",
+		"/home/jollywatt/Academia/Literature Review/Review/sections/1.intro.tex",
+		"/home/jollywatt/Academia/Literature Review/Review/sections/2.strong-cp.tex",
+		"/home/jollywatt/Academia/Literature Review/Review/frontmatter.tex",
+		"/home/jollywatt/Documents/Maths/Manifold Geometry/Covariant Derivative/def.covariant-derivative.tex",
+		"/home/jollywatt/Documents/string-substitution-system.jl",
+		"/home/jollywatt/.config/sublime-text-3/Packages/User/LaTeXTools.sublime-settings",
+		"/home/jollywatt/Documents/Maths/Objects in Abstract Algebra",
+		"/home/jollywatt/Documents/General Relativity Lecture Notes/symbols.tex",
+		"/home/jollywatt/Documents/General Relativity Lecture Notes/preamble.tex",
+		"/usr/share/texlive/texmf-dist/tex/latex/amsfonts/amssymb.sty",
+		"/home/jollywatt/Academia/Literature Review/Review/build/main.out",
+		"/home/jollywatt/Academia/Literature Review/Review/intro.tex",
+		"/home/jollywatt/Academia/Literature Review/Review/Literature Review.sublime-workspace",
+		"/home/jollywatt/Academia/Literature Review/Review/literature-review.tex",
+		"/home/jollywatt/Documents/Maths/Hodge Dual/def.hodge-dual.tex",
+		"/home/jollywatt/.config/fish/config.fish",
+		"/home/jollywatt/Academia/Literature Review/notes.txt",
+		"/home/jollywatt/Academia/Literature Review/citations.bib",
+		"/home/jollywatt/Academia/Literature Review/Notes.txt",
+		"/home/jollywatt/Documents/Configuration Records/apache2.notes",
+		"/home/jollywatt/Documents/Configuration Records/sublime-text.notes",
+		"/home/jollywatt/Documents/Configuration Records/apt.notes",
+		"/media/jollywatt/Jo's backup/joseph/Templates/LaTeX Document.tex",
+		"/home/jollywatt/Documents/Configuration Record/sublime-text.notes",
+		"/home/jollywatt/Documents/Configuration Record/apt.notes",
+		"/home/jollywatt/Documents/Configuration Record/nautilus.notes",
+		"/home/jollywatt/.config/regolith/i3xrocks/config",
+		"/etc/regolith/i3xrocks/config",
+		"/home/jollywatt/.config/regolith/i3/config",
+		"/home/jollywatt/.config/regolith/Xresources",
+		"/home/jollywatt/kitty.conf",
+		"/home/jollywatt/Documents/Configuration Record/Installed Packages"
+	],
+	"find":
+	{
+		"height": 48.0
+	},
+	"find_in_files":
+	{
+		"height": 673.0,
+		"where_history":
+		[
+			""
+		]
+	},
+	"find_state":
+	{
+		"case_sensitive": true,
+		"find_history":
+		[
+			"meaning",
+			"&",
+			"align",
+			"_{\\raisemath{2pt}{\\frak g}",
+			"_{\\frak g}",
+			"\\ang{\\ ,\\ }_{\\frak g}",
+			"\\\\D",
+			"unicode-math",
+			"warning",
+			"warnings",
+			"\\.sty",
+			".sty",
+			"unicode-math wa",
+			"\\int_{",
+			"gauge-invariant",
+			".\n",
+			"\\cal U",
+			"cal N",
+			"cal M",
+			"M",
+			"paritla",
+			"L(",
+			"}\n",
+			"However",
+			"of QCD",
+			"e\\,\\ma",
+			"1",
+			"nabla_A",
+			"nabla",
+			"\\\\dd_{\\\\tsbm A}",
+			"DeclareMathOperator",
+			"bm",
+			"tsk",
+			"bm",
+			"\\\\forms\\^[^\\{]",
+			"forms^",
+			"DeclareMathOperator",
+			"; ",
+			"\\bm\\phi",
+			"psi",
+			"phi",
+			"psi",
+			"wedge",
+			"tsbm",
+			"|_p",
+			"possess",
+			"\\rho(g)",
+			"math",
+			"nabla",
+			"1",
+			"math",
+			"(",
+			"_",
+			"bigotimes",
+			"namely",
+			";",
+			"exterior",
+			"A$",
+			"A",
+			"&\t",
+			"\\sec",
+			"sec",
+			"\\Gamma",
+			"Omega",
+			"\t\t& ",
+			"t",
+			"T",
+			"itemize",
+			"note",
+			"aside",
+			"frak",
+			"quad",
+			"F_",
+			"tsbf",
+			"bm",
+			"\\",
+			"tsbm",
+			"tsbf",
+			"qqtext",
+			"gather",
+			"gatehr",
+			"align",
+			"bm",
+			"dd",
+			"A_",
+			"bmit",
+			"a",
+			"A",
+			"a",
+			"A",
+			"bm",
+			"\\symbf",
+			"\\e",
+			"e",
+			"}{\\",
+			"unicode-math",
+			"QEQCD",
+			"lhookarrow"
+		],
+		"highlight": true,
+		"in_selection": false,
+		"preserve_case": false,
+		"regex": true,
+		"replace_history":
+		[
+			"tsbm"
+		],
+		"reverse": false,
+		"show_context": true,
+		"use_buffer2": true,
+		"whole_word": false,
+		"wrap": true
+	},
+	"groups":
+	[
+		{
+			"selected": 2,
+			"sheets":
+			[
+				{
+					"buffer": 0,
+					"file": "sections/1.intro.tex",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 20911,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								18986,
+								18986
+							]
+						],
+						"settings":
+						{
+							"spell_check": true,
+							"syntax": "Packages/LaTeX/LaTeX.sublime-syntax",
+							"translate_tabs_to_spaces": false
+						},
+						"translation.x": 0.0,
+						"translation.y": 11040.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 2,
+					"type": "text"
+				},
+				{
+					"buffer": 1,
+					"file": "preamble.tex",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 3273,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								2864,
+								2864
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/LaTeX/LaTeX.sublime-syntax",
+							"translate_tabs_to_spaces": false
+						},
+						"translation.x": 0.0,
+						"translation.y": 303.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 1,
+					"type": "text"
+				},
+				{
+					"buffer": 2,
+					"file": "/home/jollywatt/Academia/Literature Review/notes.md",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 7744,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								7380,
+								7380
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/Markdown/MultiMarkdown.sublime-syntax",
+							"translate_tabs_to_spaces": false
+						},
+						"translation.x": 0.0,
+						"translation.y": 5653.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 0,
+					"type": "text"
+				},
+				{
+					"buffer": 3,
+					"file": "/home/jollywatt/Academia/Literature Review/References/citations.bib",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 7565,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								7223,
+								7223
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/LaTeXTools/BibLaTeX.tmLanguage",
+							"tab_size": 2,
+							"translate_tabs_to_spaces": true
+						},
+						"translation.x": 0.0,
+						"translation.y": 3162.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 3,
+					"type": "text"
+				}
+			]
+		}
+	],
+	"incremental_find":
+	{
+		"height": 35.0
+	},
+	"input":
+	{
+		"height": 0.0
+	},
+	"layout":
+	{
+		"cells":
+		[
+			[
+				0,
+				0,
+				1,
+				1
+			]
+		],
+		"cols":
+		[
+			0.0,
+			1.0
+		],
+		"rows":
+		[
+			0.0,
+			1.0
+		]
+	},
+	"menu_visible": true,
+	"output.find_results":
+	{
+		"height": 0.0
+	},
+	"output.latextools":
+	{
+		"height": 285.0
+	},
+	"pinned_build_system": "",
+	"project": "Literature Review.sublime-project",
+	"replace":
+	{
+		"height": 66.0
+	},
+	"save_all_on_build": true,
+	"select_file":
+	{
+		"height": 0.0,
+		"last_filter": "",
+		"selected_items":
+		[
+			[
+				"note",
+				"notes.md"
+			],
+			[
+				"cit",
+				"References/citations.bib"
+			],
+			[
+				"main",
+				"Review/main.tex"
+			],
+			[
+				"nte",
+				"notes.md"
+			],
+			[
+				"pre",
+				"Review/preamble.tex"
+			],
+			[
+				"1",
+				"Review/sections/1.intro.tex"
+			],
+			[
+				"n",
+				"notes.md"
+			],
+			[
+				"fr",
+				"Review/frontmatter.tex"
+			],
+			[
+				"ou",
+				"Review/build/main.out"
+			],
+			[
+				"not",
+				"notes.md"
+			],
+			[
+				"2",
+				"Review/sections/2.strong-cp.tex"
+			],
+			[
+				"fro",
+				"frontmatter.tex"
+			],
+			[
+				"apt",
+				"apt.notes"
+			]
+		],
+		"width": 0.0
+	},
+	"select_project":
+	{
+		"height": 0.0,
+		"last_filter": "",
+		"selected_items":
+		[
+		],
+		"width": 0.0
+	},
+	"select_symbol":
+	{
+		"height": 0.0,
+		"last_filter": "",
+		"selected_items":
+		[
+		],
+		"width": 0.0
+	},
+	"selected_group": 0,
+	"settings":
+	{
+	},
+	"show_minimap": false,
+	"show_open_files": false,
+	"show_tabs": true,
+	"side_bar_visible": false,
+	"side_bar_width": 197.0,
+	"status_bar_visible": true,
+	"template_settings":
+	{
+	}
+}
