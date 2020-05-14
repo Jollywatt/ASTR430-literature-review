@@ -182,7 +182,7 @@ to allow the construction of, among other things, the curvature 2-form, or \emph
 where we have written the r.h.s.\ with respect to a basis $\qty{\bm e_a}$ and dual basis $\qty{\bm e^a}$ of $\cal E$.
 The field strength $\tsbm F$ is useful because it is geometrical---that is, it transforms in the same matter as the matter fields $\tsbm F \mapsto g\cdot\tsbm F = g_\rho\tsbm F g_\rho^{-1}$, even though $\tsbm A$ does not.
 
-The gauge field strength also satisfies the Bianchi identity $\ts\dd_A\star\tsbm F = 0$.
+The gauge field strength also satisfies the Bianchi identity $\ts\dd_A\tsbm F = 0$.
 
 % Since $\ts\dd g : \cal M \to \frak g$ has values in the Lie algebra of $G$, the object $\ts\dd g_\rho = \ts\dd\rho(g)$ has values in $\dd\rho(\frak g)$
 % From its transformation law, the gauge field $\tsbm A \in \forms^1(\cal E, \dd\rho(\frak g))$ may be seen to have values in the representation $\dd\rho$ of the Lie algebra $\frak g$ of $ G$, where the representation is that induced by the group representation $\rho$.
@@ -208,21 +208,28 @@ For classical gauge theories, the equations of motion may be specified as the Eu
 ,\end{align}
 where $\LL$ is a local Lagrangian density.
 In order that the equations of motion are physically well-defined, we require the Lagrangian possesses important symmetries: gauge symmetry, so that the equations of motion are gauge invariant; and Lorentz symmetry (which is automatic if $\LL$ is expressed as a volume form) \cite[§~7.1]{Hamilton_2017}.
-We let the Lagrangian depend on derivatives only of order $\le 1$ in the fields for reasons of respecting causality and ensuring that energy has lower-bound.
+% We let the Lagrangian depend on derivatives only of order $\le 1$ in the fields for reasons of respecting causality and ensuring that energy has lower-bound.
+The equations of motion are symmetric under adjustments to the Lagrangian density by a total derivative $\ts\dd\alpha$, since by Stokes' theorem these contribute only to boundary terms.
+Therefore, a Lagrangian which possesses gauge symmetry is still generally permitted to transform as
+\begin{math}
+	\LL \mapsto \LL + \ts\dd\alpha
+\end{math}
+under gauge transformations.
 
-
-MASTER
-
-In a classical field theory, the equations of motion are symmetric under adjustments to the Lagrangian density by a total derivative $\cal L \mapsto \cal L + \ts\dd \alpha$, since by Stokes' theorem these contribute only to boundary terms.
-The dynamics of quantum field theories, on the other hand, do not enjoy this symmetry in general, because of their origin in a path integral.
+% The condition that Lagrangians of quantum field theories are , on the other hand, enjoy slightly enlarged symmetri, because of their origin in a path integral.
+Furthermore, the Lagrangian of a quantum field theory enjoys an enlarged criterion of gauge symmetry: it is also permitted to transform as
+\begin{align}
+	\LL \mapsto \LL + n\cdot2\pi\hbar
+	\label{eqn:discrete-QFT-Lagrangian-transformation}
+,\end{align}
+where $n \in \mathds Z$ need not be constant under gauge transformations.
+This is because of the origin of a QFT's equations of motion in the path integral.
 For instance, the quantum mechanical amplitude that the fields $\bm\psi$ and $\tsbm F$ satisfy prescribed boundary conditions on $\partial\Omega$ surrounding some region of spacetime $\Omega \subseteq \cal M$ is given by the path integral
 \begin{align}
 	\cal A = \int_{\partial\Omega}\! \cal D[\bm\psi, \tsbm F] \exp\qty{\frac{i}{\hbar} \int_{\Omega}\! \LL\qty[\bm\psi, \ts\nabla_{\!A}\bm\psi, \tsbm F]}
 ,\end{align}
 where the intended meaning of $\cal D[\cdots]$ is an integration over all field configurations on $\Omega$.
-If the Lagrangian were to undergo the addition of a total derivative term $\ts\dd\alpha$, its effect would be to adjust the integrand by an overall phase $e^{i\alpha/\hbar}$ dependent on the fields.
-These phases may affect the path integral through interference, leading to a different amplitude---and hence to different physics.
-Thus, in QFT, total divergence terms in the Lagrangian density may not be presumptuously disregarded. \note{UNTRUE. IT HAS NO EFFECT}
+If the Lagrangian were to undergo a gauge transformation \eqref{eqn:discrete-QFT-Lagrangian-transformation}, the amplitude $\cal A \mapsto \cal A\exp(n\cdot2\pi i)$ would be left invariant. 
 
 
 % Another condition on the Lagrangian in QFT comes from the expectation that the quantised theory be \emph{renormalisable}
@@ -278,19 +285,21 @@ The Chern--Simons form has an interesting kind of gauge invariance on the bounda
 For Abelian gauge groups such as $\mathrm{U}(1)$, the topology of $\cal G$ is trivial (meaning it is connected to the identity) and thus $\csform$ is gauge-invariant.
 As a consequence, 
 
+\note{Instantons, Homotopy Invariance}
+
 \cite{Witten_1989}
 
-However, for simple compact gauge groups such as $G = \mathrm{SU}(N)$, the fibre bundle $\cal G$ is not identity-connected.
+However, for simple compact gauge groups such as $G = \mathrm{SU}(N)$, the fibre bundle $\cal G$ may be non-trivial.
 In these cases, under a general gauge transformation $g \in \cal G$, the 3-form $\csform$ transforms such that its affect on the boundary term is
 \begin{align}
 	% \int_{\partial\cal M}\csform \mapsto \int_{\partial\cal M}\csform + n\cdot\text{const}
 	L_\theta \overset{g}{\mapsto} L_\theta + n\cdot\text{const}
 ,\end{align}
 where the \emph{winding number} $n \in \mathds Z$ depends on $g$.
-The winding number $n$ is a topological invariant of the gauge transformation $g$.
+% The winding number $n$ is a topological invariant of the gauge transformation $g$.
+With appropriate scaling, 
 
-and therefore does not affect the classical equations of motion.\note{But it is not gauge invariant?}
-It is a topological term
+% and therefore does not affect the classical equations of motion.\note{But it is not gauge invariant?}
 
 
 \note{Tong Gauge Theory §~2.2}
