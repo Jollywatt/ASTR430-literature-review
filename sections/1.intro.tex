@@ -17,14 +17,19 @@ The modern formulation of the standard model is as a Lorentz-invariant \emph{qua
 A quantum field theory is a quantised \emph{gauge field theory}, which is a field theory whose Lagrangian is symmetric under the action of the gauge group (elaborated upon in §\,\ref{sec:overview-of-gauge-theory}).
 Each term in the gauge group of the standard model \eqref{eqn:SM-gauge-group} corresponds to a fundamental force of nature.
 % The meaning and significance of the gauge group is outlined in the next section.
-The factor $\mathrm{SU}(2)\oplus\mathrm{U}(1)$ corresponds to the electroweak force of quantum electrodynamics; and the factor $\mathrm{SU}(3)$ is the gauge group of quantum chromodynamics (QCD), the sector of the standard model which describes the interactions of colour-charged quarks and gluons via the strong force.
+The factor $\mathrm{SU}(2)\oplus\mathrm{U}(1)$ corresponds to the electroweak force of quantum electrodynamics (QED); and the factor $\mathrm{SU}(3)$ is the gauge group of quantum chromodynamics (QCD), the sector of the standard model which describes the interactions of colour-charged quarks and gluons via the strong force.
 
-Quantum chromodynamics, while difficult to analyse in the non-perturbative regime, is a successful and beautiful theory.
+Quantum chromodynamics was formulated quite some time after quantum electrodynamics was understood, which is perhaps a reflection that QCD is more intricate than QED.
+Unlike QED, quantum chromodynamics exhibits \emph{asymptotic freedom}, which results in quark confinement.
+This contributed to the confusion of particle physicists in the 1960s---quarks could never be observed in isolation.
+Another subtlety of QCD is that its asymptotic freedom leads to \emph{increasing} effective strength of the strong force with increasing distance between colour-charged quarks, meaning that QCD is non-perturbative.
+However, quantum chromodynamics remains a highly successful and beautiful theory.
 % It is successful in the sense that offers precise predictions
 % Setting aside technical problems of confinement and non-perturbative dynamics, QCD exhibits in particular a 
-Aside from the technically difficult problems concerning confinement and the non-perturbative regime, QCD exhibits a mystery of purely theoretical concern: the \emph{strong \CP\ problem}.
-This is a problem of fine-tuning and is a smoking-gun for physics beyond the standard model.
-
+% Aside from the technically difficult problems concerning confinement and the non-perturbative regime
+Aside from the technical problems of analysis in the non-perturbative regime, QCD theory also exhibits a mystery of purely theoretical concern: the \emph{strong \CP\ problem}.
+% This is a problem of fine-tuning and is a smoking-gun for physics beyond the standard model.
+This problem is of the fine-tuning variety, but it lacks even an anthropic solution and is good reason to pursue physics beyond the standard model.
 
 
 The significance and role of the gauge group is outlined in the next section where a modern overview of gauge field theory
@@ -38,20 +43,20 @@ Then, QCD is defined and the origin of the so-called \emph{strong \CP\ problem} 
 \section{Overview of Classical Gauge Theory}
 \label{sec:overview-of-gauge-theory}
 
-Gauge theories are theories of fields on a spacetime manifold which consist of two mathematically distinct dynamical entities: a \emph{matter field} and a \emph{gauge field}.
+Gauge theories take place on a spacetime manifold and consist of two mathematically distinct dynamical entities: a \emph{matter field} and a \emph{gauge field}.
 A classical gauge theory is completely specified by the prescription of three ingredients: the base manifold; the vector space in which the matter field takes its values; and a \emph{gauge group} equipped with an action on the matter field.
-The gauge field arises as a consequence of the gauge group's action on the matter field.
+The dynamical gauge field arises naturally as a consequence of the matter field's symmetry under the action of the gauge group.
 
-The underlying premise of gauge theory is that there may be redundancy in the mathematical description of a physical matter field at each point in spacetime.
+The underlying premise of gauge theory is that there may be redundancy in the mathematical description of a matter field at each point in spacetime.
 (For example, the complex phase of a wavefunction.)
 This redundancy results in mathematical degrees of freedom of the matter fields which are non-physical, called \emph{local gauge freedoms}.
 (Keeping with our example: local rotations of phase.)
 Crucially, local gauge freedoms introduce ambiguity in the notion of the physical rate of change of matter fields about a point, because of the point-wise independence of its gauge freedom.
-In other words, there is no preferred directional derivative of a matter field with local gauge freedom, until the choice of a \emph{connection}.
+In other words, there is no preferred directional derivative of a matter field with local gauge freedom, until the choice of a \emph{connection} is made.
 The triumph of gauge theory is that, by introducing the gauge field to act as a connection, this ambiguity is promoted to a separate set of physical degrees of freedom.
 The implications of this are twofold:
 Firstly, the gauge field yields a choice of derivative (namely, the covariant derivative with respect to the gauge field), allowing the inclusion of well-defined derivatives of matter fields in the theory's equations of motion.
-Secondly, the gauge field has a dynamical role in the theory, and describes a new type of matter field (e.g., after quantisation, the force carrier bosons).
+Secondly, the gauge field has a dynamical role in the theory, describing a new kind of field: force fields (and, after quantisation, the force carrier bosons).
 
 
 
@@ -105,19 +110,19 @@ Secondly, the gauge field has a dynamical role in the theory, and describes a ne
 \end{aside}	
 \end{figure}
 
-In modern formalism, the matter field $\bm\psi \in \secs(\cal E)$ is a section of a vector bundle $\fibrebundle{V}{\cal E}{\cal M}$, so that at any point $p \in \cal M$ in spacetime the field is a vector, $\bm\psi|_p \cong V$.%
+In modern formalism, the matter field $\bm\psi \in \secs(\cal E)$ is a section of a vector bundle $\fibrebundle{V}{\cal E}{\cal M}$, so that at any point $p \in \cal M$ in spacetime the field assigns a vector, $\bm\psi|_p \cong V$.%
 \footnote{
-	The reason many objects in gauge theory (such as fields $\bm\psi$) are defined as sections of fibre bundles (and not simply as smooth maps $\bm\psi : \cal M \to V$) is because fibre bundles are themselves smooth manifolds, allowing the construction of connections (whereas the set of smooth maps $\cal M \to V$ does not have a manifold topology).
+	The reason many objects in gauge theory (such as fields $\bm\psi$) are defined as sections of fibre bundles (and not simply as smooth maps $\bm\psi : \cal M \to V$) is because fibre bundles are themselves smooth manifolds, allowing the construction of connections, etc. (whereas the set of smooth maps $\cal M \to V$ does not come with a manifold topology).
 }
-The gauge transformations of $\bm\psi|_p$ at some point $p$ form a group $G$ under composition---but this group does not describe all local gauge transformations which act on the entire field $\bm\psi$.
+The gauge transformations of $\bm\psi|_p$ at a point $p$ form a group $G$ under composition---but this group does not describe local gauge transformations which act on the \emph{entire} field $\bm\psi$.
 Rather, the total space of local gauge transformations is a principle $G$-bundle $\fibrebundle{G}{\cal G}{\cal M}$, consisting of smooth maps $\cal M \to G$.
-The action of $\cal G$ on matter fields $\cal E$ is denoted
+The action of $\cal G$ on the space of matter fields $\cal E$ may be denoted
 \begin{align}
 	\bm\psi \overset{g}{\mapsto} \bm\psi' = g\cdot\bm\psi
 \end{align}
-for $\bm\psi \in \cal E$ and $g \in \cal G$.
-This specification of an action of $G$ on the vector space $V$ underlying the matter field is equivalent to the global prescription of a linear representation $\rho : G \to \mathrm{GL}(V)$.
-Thus, we may write the group action as matrix product,
+for $\bm\psi \in \cal E$ and $g \in \cal G$ (i.e., $\bm\psi : \cal M \to V$ and $g : \cal M \to G$).
+This specification of an action ``$\cdot$'' of $G$ on the vector space $V$ is equivalent to the prescription of a linear representation $\rho : G \to \mathrm{GL}(V)$.
+Thus, we may represent the group action as matrix product,
 \begin{math}
 	% (g \cdot \bm\psi)|_p = \rho(g|_p)\bm\psi|_p
 	g \cdot \bm\psi = \rho(g)\bm\psi
@@ -127,11 +132,11 @@ remembering that both $\bm\psi$ and $g$ (but not $\rho$) vary across $\cal M$.
 Here, it is worth noting that all gauge theories are equivalent to a gauge theory possessing only one matter field $\bm\psi_\text{total}$ with one gauge group $(G, \rho)$.
 For instance, if a theory consists of different fundamental particles and forces, represented by fields $\bm\phi$ and $\bm\varphi$ with gauge groups $(G_\phi, \rho_\phi)$ and $(G_\varphi, \rho_\varphi)$,
 % If a theory consists of qualitatively distinct fields $\bm\phi$ and $\bm\varphi$ with gauge groups $(G_\phi, \rho_\phi)$ and $(G_\varphi, \rho_\varphi)$, representing distinct fundamental particles and forces,
-then we may consider the total matter field $\bm\psi_\text{total} = \bm\phi \oplus \bm\varphi$ to be the direct sum of the fields in the theory, and similarly equip it with the gauge group $G_\text{total} = G_\phi \oplus G_\varphi$ with representation $\rho_\text{total} = \rho_\phi \oplus \rho_\varphi$.
+then we may take the total matter field $\bm\psi_\text{total} = \bm\phi \oplus \bm\varphi$ to be the direct sum of the fields in the theory, and similarly equip it with the gauge group $G_\text{total} = G_\phi \oplus G_\varphi$ with representation $\rho_\text{total} = \rho_\phi \oplus \rho_\varphi$.
 This new theory is physically identical to the original.
 In full generality, therefore, we treat our theory as possessing one matter and one gauge field, while freely speaking of its composite parts as separate fields where convenient.
 
-A connection on $\cal E$ is a derivation\footnotemark{} $\ts\nabla : \secs(\cal E) \to \forms^1(\cal M, \cal E)$ from vector fields to vector-valued 1-forms, designed so that $(\ts\nabla\bm\psi)(X)$---that is, the action of the 1-form $\ts\nabla\bm\psi$ on a vector $\ts X \in \T\cal M$---gives the directional derivative of $\bm\psi$ along $\ts X$ with respect to $\ts\nabla$.
+A \emph{connection} on $\cal E$ is a derivation\footnotemark{} $\ts\nabla : \secs(\cal E) \to \forms^1(\cal M, \cal E)$ from vector fields to vector-valued 1-forms, designed so that $(\ts\nabla\bm\psi)(X)$---that is, the action of the 1-form $\ts\nabla\bm\psi$ on a vector $\ts X \in \T\cal M$---gives the directional derivative of $\bm\psi$ along $\ts X$ with respect to $\ts\nabla$.
 \footnotetext{
 	More precisely, $\ts\nabla$ is a $\cal C^\infty(\cal M)$-linear derivation, meaning
 	\begin{math}
@@ -160,7 +165,7 @@ then $\ts\nabla$ is called a \emph{covariant derivative} and the connection 1-fo
 .\end{align}
 
 Such a connection $\ts\nabla_{\!A}$ is not unique; it depends on the choice of the 1-form field $\tsbm A$.
-It is exactly this connection 1-form which is promoted to a dynamical object in the theory and named the \emph{gauge field}.
+It is exactly this connection 1-form which is promoted to a dynamical object in the theory and given the name \emph{the gauge field}.
 In order for the gauge field to be incorporated in the theory's equations of motion, we must have a notion of its derivative.
 However, $\ts\nabla_{\!A} : \secs(\cal E) \cong \forms^0(\cal M, \cal E) \to \forms^1(\cal M, \cal E)$ is not defined on 1-forms such as $\tsbm A$ until we make the natural extension\footnotemark{} to a \emph{covariant exterior derivative}
 % Finally, the connection $\ts\nabla : \secs(\cal E) \cong \forms^0(\cal M, \cal E) \to \forms^1(\cal M, \cal E)$ may be naturally extended\footnotemark{} to a \emph{covariant exterior derivative}
@@ -189,7 +194,12 @@ to allow the construction of, among other things, the curvature 2-form, or \emph
 where we have written the r.h.s.\ with respect to a basis $\qty{\bm e_a}$ and dual basis $\qty{\bm e^a}$ of $\cal E$.
 The field strength $\tsbm F$ is useful because it is geometrical---that is, it transforms in the same matter as the matter fields $\tsbm F \mapsto g\cdot\tsbm F = g_\rho\tsbm F g_\rho^{-1}$, even though $\tsbm A$ does not.
 
-The gauge field strength also satisfies the Bianchi identity $\ts\dd_A\tsbm F = 0$.
+\note{The gauge field strength also satisfies the Bianchi identity $\ts\dd_A\tsbm F = 0$.}
+
+We have seen how the gauge field $\tsbm A$ and its strength $\tsbm F$ arise when we require the notion of a spacetime derivative for a matter field which possesses gauge freedom, and are now acquainted with the dynamical objects of a gauge theory.
+The matter field $\bm\psi$, its derivative $\ts\nabla_{\!A}\bm\psi$ and the strength of the gauge field $\tsbm F$ are constructions which all transform regularly under gauge transformations.
+All that remains to be specified in our theory are the equations of motion, which are to be expressed in terms of these three geometrical objects in a gauge invariant manner.
+
 
 % Since $\ts\dd g : \cal M \to \frak g$ has values in the Lie algebra of $G$, the object $\ts\dd g_\rho = \ts\dd\rho(g)$ has values in $\dd\rho(\frak g)$
 % From its transformation law, the gauge field $\tsbm A \in \forms^1(\cal E, \dd\rho(\frak g))$ may be seen to have values in the representation $\dd\rho$ of the Lie algebra $\frak g$ of $ G$, where the representation is that induced by the group representation $\rho$.
@@ -207,17 +217,17 @@ The gauge field strength also satisfies the Bianchi identity $\ts\dd_A\tsbm F = 
 \section{Lagrangians in QFT}
 \label{sec:Lagrangians}
 
-We now have constructions for the matter field $\bm\psi$, its derivative $\ts\nabla_{\!A}\bm\psi$ and the strength of the gauge field $\tsbm F$ which all transform regularly under gauge transformations.
-All that remains to be specified in our theory are the equations of motion, which are to be expressed in terms of these three geometrical objects in a gauge invariant manner.
+% We now have constructions for the matter field $\bm\psi$, its derivative $\ts\nabla_{\!A}\bm\psi$ and the strength of the gauge field $\tsbm F$ which all transform regularly under gauge transformations.
+% All that remains to be specified in our theory are the equations of motion, which are to be expressed in terms of these three geometrical objects in a gauge invariant manner.
 
 For classical gauge theories, the equations of motion may be specified as the Euler--Lagrange equations of a Lagrangian
 \begin{align}
 	L\qty[\bm\psi, \ts\nabla_{\!A}\bm\psi, \tsbm F] = \int_{\cal M}\! \LL\qty[\bm\psi, \ts\nabla_{\!A}\bm\psi, \tsbm F]
 ,\end{align}
 where $\LL$ is a local Lagrangian density.
-In order that the equations of motion are physically well-defined, we require the Lagrangian possesses important symmetries: gauge symmetry, so that the equations of motion are gauge invariant; and Lorentz symmetry (which is automatic if $\LL = \mathscr{L}\,\vol$ is expressed as a volume form) \cite[§\,7.1]{Hamilton_2017}.
+In order that the equations of motion are physically consistent, we require the Lagrangian possesses important symmetries: gauge symmetry, so that the equations of motion are gauge invariant; and Lorentz symmetry (which is automatic if $\LL = \mathscr{L}\,\vol$ is expressed as a volume form) \cite[§\,7.1]{Hamilton_2017}.
 % We let the Lagrangian depend on derivatives only of order $\le 1$ in the fields for reasons of respecting causality and ensuring that energy has lower-bound.
-The equations of motion are symmetric under adjustments to the Lagrangian density by a total derivative $\ts\dd\alpha$, since by Stokes' theorem these contribute only to boundary terms.
+The equations of motion are invariant under adjustments to the Lagrangian density by a total derivative $\ts\dd\alpha$, since by Stokes' theorem these contribute only to boundary terms.
 Therefore, a Lagrangian which possesses gauge symmetry is still generally permitted to transform as
 \begin{math}
 	\LL \mapsto \LL + \ts\dd\alpha
@@ -230,7 +240,7 @@ Furthermore, the Lagrangian of a quantum field theory enjoys an enlarged criteri
 	\LL \mapsto \LL + n\cdot2\pi\hbar
 	\label{eqn:discrete-QFT-Lagrangian-transformation}
 ,\end{align}
-where $n \in \mathds Z$ may vary discretely.
+where $n \in \mathds Z$ may vary discretely under different gauges.
 This is because of the origin of a QFT's equations of motion in the path integral.
 For instance, the quantum mechanical amplitude that the fields $\bm\psi$ and $\tsbm F$ satisfy prescribed boundary conditions on $\partial\Omega$ surrounding some region of spacetime $\Omega \subseteq \cal M$ is given by the path integral
 \begin{align}
@@ -238,7 +248,7 @@ For instance, the quantum mechanical amplitude that the fields $\bm\psi$ and $\t
 ,\end{align}
 where the intended meaning of $\cal D[\cdots]$ is an integration over all field configurations on $\Omega$.
 If the Lagrangian were to undergo a gauge transformation \eqref{eqn:discrete-QFT-Lagrangian-transformation}, the amplitude $\mathscr A \mapsto \mathscr A\exp(n\cdot2\pi i)$ would be left invariant.
-In other words, consistency of QFT does not require the single-valuedness of $\LL$, but only of $\exp(i\LL/\hbar)$.
+In other words, physical consistency of a QFT does not require the single-valuedness of $\LL$, but only of $\exp(i\LL/\hbar)$.
 
 
 % Another condition on the Lagrangian in QFT comes from the expectation that the quantised theory be \emph{renormalisable}
@@ -249,6 +259,8 @@ This restricts the form of the Lagrangian considerably.
 \note{transition}
 
 \subsection{The Yang--Mills Lagrangian}
+
+\note{Needs intro}
 
 In fact, the only admissible field Lagrangians which may be constructed from the gauge field $\tsbm A$ alone are linear combinations of
 \begin{align}
@@ -263,7 +275,7 @@ In particular, if the gauge group $G$ is the direct sum of $n$ simple Lie groups
 	Any compact connected Lie group is either of this form, or is a finite quotient of such a group, if $\mathrm U(1)$ is counted as `simple'. \cite[§\,2.4.3]{Hamilton_2017}.
 }
 then $\angg{\ ,\ }$ is specified by the choice of exactly $n$ coupling constants, one corresponding to each factor of $G$.
-Physically, the coupling constants determine the relative interaction strengths of the forces associated to each factor \cite[§\,2.5]{Hamilton_2017}
+Physically, the coupling constants determine the relative interaction strengths of the forces associated to each factor of $G$ \cite[§\,2.5]{Hamilton_2017}
 (For instance, the gauge group of the standard model \eqref{eqn:SM-gauge-group} has three such coupling constants for the strong, weak, and electromagnetic forces.)
 
 The term $\ang{\tsbm F \wedge\star \tsbm F}$ is known as the \emph{Yang--Mills Lagrangian}, and is a major component in the standard model, describing boson force carrier self-interactions (such as gluon self-interactions in QCD).
@@ -296,6 +308,7 @@ Thus, the $\theta$-term contributes a boundary term $L_\theta = \int_{\raisemath
 The Chern--Simons form has an interesting kind of gauge invariance on the boundary $\partial\cal M$: it is \emph{not} invariant under the full gauge group, but only under the subgroup which is connected to the identity.\footnote{
 	The full gauge group $\cal G$ can have disconnected components when the fibre bundle $\fibrebundle{G}{\cal G}{\cal M}$ is non-trivial. \note{I think.}
 }
+Thus, the $\theta$-term may influence the
 For Abelian gauge groups such as $\mathrm{U}(1)$, the topology of $\cal G$ is trivial (meaning it is connected to the identity) and thus $\csform$ is gauge-invariant and consequently does not contribute to dynamics.
 Thus, electrodynamics does not have a $\theta$-term.
 
@@ -319,7 +332,7 @@ With appropriate scaling of the $\theta$-term, this transformation is of the for
 \note{Tong Gauge Theory §\,2.2}
 
 
-\section{The QCD Lagrangian}
+\section{The QCD Lagrangian and the Strong \CP\ Problem}
 
 The Lagrangian of quantum chromodynamics describes the strong interactions between hadronic matter: its matter field describes quarks, and the gauge field describes gluons.
 One of the attractive qualities of pure QCD is that, given the gauge group $G = \mathrm{SU}(3)$ and its action on a matter field $\bm\psi$, the theory is almost completely specified given reasonable physical assumptions.
@@ -331,9 +344,6 @@ The Lagrangian of QCD is a sum of the Dirac Lagrangian and the Yang--Mills Lagra
 \end{align}
 
 
-
-\section{The Strong \CP\ Problem}
-
 At this point, we see that the issue which is given the name \emph{the strong \CP\ problem} offers itself as a question about the naturalness the QCD Lagrangian.
 As encountered in section~\ref{sec:Lagrangians}, there is another `natural' term that may be included; the topological $\theta$-term.
 In this sense, the most general QCD Lagrangian is
@@ -343,7 +353,7 @@ In this sense, the most general QCD Lagrangian is
 	+ \frac{\theta}{8\pi^2}\ang{\tsbm F \wedge \tsbm F}
 ,\end{align}
 which includes the \CP-violating $\theta$-term $\ang{\tsbm F\wedge\tsbm F}$ with a coefficient named the $\theta$-parameter.
-\note{`Natural' here means that we lack a reason that the $\theta$-term should not contribute, unlike the case of QED, where "there are no instantons".}
+\note{`Natural' here means that we lack a reason that the $\theta$-term should not contribute, unlike the case of QED, where ``there are no instantons''.}
 Especially given the fact that \CP\ symmetry is not a feature of the standard model, there is no reason to exclude the \CP-violating term in the QCD Lagrangian.
 
 
