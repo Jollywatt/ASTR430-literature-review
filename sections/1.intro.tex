@@ -1,11 +1,12 @@
-\chapter{QCD and the Strong CP Problem}
+\chapter{QCD and the Strong \CP\ Problem}
 
 \textsc{The Standard Model} of particle physics is a quantum field theory which describes all known fundamental particles and interactions to high precision---with notable exceptions including:
 the absence of gravity;
 dark matter;
 and the experimentally incorrect prediction that neutrinos are massless.
 
-With its emergence in the \note{buzz of phenomenological particle physics in the early 1960s}, the modern rendition of the standard model is as a Lorentz-invariant quantum gauge field theory whose Lagrangian exhibits gauge symmetry characterised by the compact connected Lie group
+With its emergence in the \note{buzz of phenomenological particle physics in the early 1960s}.
+The modern formulation of the standard model is as a Lorentz-invariant quantum gauge field theory whose Lagrangian exhibits gauge symmetry characterised by the compact connected Lie group
 \begin{align}
 	\qty\big(\mathrm{SU}(3)\oplus\mathrm{SU}(2)\oplus\mathrm{U}(1))\big/\mathds{Z}_6
 	\label{eqn:SM-gauge-group}
@@ -14,17 +15,18 @@ Each term in the gauge group corresponds to a fundamental force of nature.
 % The meaning and significance of the gauge group is outlined in the next section.
 The factor $\mathrm{SU}(2)\oplus\mathrm{U}(1)$ corresponds to the electroweak force of quantum electrodynamics; and the factor $\mathrm{SU}(3)$ is the gauge group of quantum chromodynamics (QCD), the sector of the standard model which describes the interactions of colour-charged quarks and gluons via the strong force.
 
-Quantum chromodynamics, while pathologically difficult to analyse in the non-perturbative regime, is a successful and beautiful theory.
+Quantum chromodynamics, while difficult to analyse in the non-perturbative regime, is a successful and beautiful theory.
 % It is successful in the sense that offers precise predictions
 % Setting aside technical problems of confinement and non-perturbative dynamics, QCD exhibits in particular a 
-Aside from technical problems concerning confinement and the non-perturbative regime, QCD exhibits a mystery of purely theoretical concern known: the \emph{strong $CP$ problem}, which is a problem of fine-tuning and is a smoking-gun for physics beyond the standard model.
+Aside from the technically difficult problems concerning confinement and the non-perturbative regime, QCD exhibits a mystery of purely theoretical concern: the \emph{strong \CP\ problem}.
+This is a problem of fine-tuning and is a smoking-gun for physics beyond the standard model.
 
 
 
 The significance and role of the gauge group is outlined in the next section where a modern overview of gauge field theory
 % ---the formalism in which the Standard Model and QCD is expressed---
 is presented.
-Then, QCD is defined and the origin of the so-called \emph{strong CP problem} is highlighted.
+Then, QCD is defined and the origin of the so-called \emph{strong \CP\ problem} is highlighted.
 
 
 \note{Justify focus on classical gauge theory}
@@ -71,8 +73,6 @@ Secondly, the gauge field has a dynamical role in the theory, and describes a ne
 			% \bigoplus_{r,s\in\mathds N}\T^r_s\cal M
 			\bigoplus_{r,s=0}^\infty\T^r_s\cal M
 		\end{math}
-	\\	$\secs(\cal E)$
-	&	smooth sections $\cal M \to F$ of fibre bundle $\fibrebundle{F}{\cal E}{\cal M}$
 	\\	$\ts A$
 		% & Spacetime tensor; an element of $\T\cal M\otimes\cdots\otimes\T\cal M\otimes\T^*\cal M\otimes\cdots\otimes\T^*\cal M$
 	&	spacetime tensor field; i.e., a section of $\TT\cal M$
@@ -82,6 +82,8 @@ Secondly, the gauge field has a dynamical role in the theory, and describes a ne
 	&	spacetime tensor field with values in some other abstract vector space
 	\\	$\wedge^pV$
 	&	$p$th exterior power of the vector space $V$, consisting of $p$-forms
+	\\	$\secs(\cal E)$
+	&	smooth sections $\cal M \to F$ of fibre bundle $\fibrebundle{F}{\cal E}{\cal M}$
 	\\	$\forms^p(\cal M)$
 	&	space of $p$-forms on $\cal M$, equal to $\secs(\wedge^p \T^*\cal M)$
 	\\	$\forms^p(\cal M, V)$
@@ -198,6 +200,7 @@ The gauge field strength also satisfies the Bianchi identity $\ts\dd_A\tsbm F = 
 % After making reasonable physical assumptions about a theory, there are only a few consistent possible terms constructed using only the gauge field strength $\tsbm F$ which may be included in the theory's Lagrangian.
 
 \section{Lagrangians in QFT}
+\label{sec:Lagrangians}
 
 We now have constructions for the matter field $\bm\psi$, its derivative $\ts\nabla_{\!A}\bm\psi$ and the strength of the gauge field $\tsbm F$ which all transform regularly under gauge transformations.
 All that remains to be specified in our theory are the equations of motion, which are to be expressed in terms of these three geometrical objects in a gauge invariant manner.
@@ -207,7 +210,7 @@ For classical gauge theories, the equations of motion may be specified as the Eu
 	L\qty[\bm\psi, \ts\nabla_{\!A}\bm\psi, \tsbm F] = \int_{\cal M}\! \LL\qty[\bm\psi, \ts\nabla_{\!A}\bm\psi, \tsbm F]
 ,\end{align}
 where $\LL$ is a local Lagrangian density.
-In order that the equations of motion are physically well-defined, we require the Lagrangian possesses important symmetries: gauge symmetry, so that the equations of motion are gauge invariant; and Lorentz symmetry (which is automatic if $\LL$ is expressed as a volume form) \cite[§~7.1]{Hamilton_2017}.
+In order that the equations of motion are physically well-defined, we require the Lagrangian possesses important symmetries: gauge symmetry, so that the equations of motion are gauge invariant; and Lorentz symmetry (which is automatic if $\LL = \mathscr{L}\,\vol$ is expressed as a volume form) \cite[§\,7.1]{Hamilton_2017}.
 % We let the Lagrangian depend on derivatives only of order $\le 1$ in the fields for reasons of respecting causality and ensuring that energy has lower-bound.
 The equations of motion are symmetric under adjustments to the Lagrangian density by a total derivative $\ts\dd\alpha$, since by Stokes' theorem these contribute only to boundary terms.
 Therefore, a Lagrangian which possesses gauge symmetry is still generally permitted to transform as
@@ -222,14 +225,15 @@ Furthermore, the Lagrangian of a quantum field theory enjoys an enlarged criteri
 	\LL \mapsto \LL + n\cdot2\pi\hbar
 	\label{eqn:discrete-QFT-Lagrangian-transformation}
 ,\end{align}
-where $n \in \mathds Z$ need not be constant under gauge transformations.
+where $n \in \mathds Z$ may vary discretely.
 This is because of the origin of a QFT's equations of motion in the path integral.
 For instance, the quantum mechanical amplitude that the fields $\bm\psi$ and $\tsbm F$ satisfy prescribed boundary conditions on $\partial\Omega$ surrounding some region of spacetime $\Omega \subseteq \cal M$ is given by the path integral
 \begin{align}
-	\cal A = \int_{\partial\Omega}\! \cal D[\bm\psi, \tsbm F] \exp\qty{\frac{i}{\hbar} \int_{\Omega}\! \LL\qty[\bm\psi, \ts\nabla_{\!A}\bm\psi, \tsbm F]}
+	\mathscr A = \int_{\partial\Omega}\! \cal D[\bm\psi, \tsbm F] \exp\qty{\frac{i}{\hbar} \int_{\Omega}\! \LL\qty[\bm\psi, \ts\nabla_{\!A}\bm\psi, \tsbm F]}
 ,\end{align}
 where the intended meaning of $\cal D[\cdots]$ is an integration over all field configurations on $\Omega$.
-If the Lagrangian were to undergo a gauge transformation \eqref{eqn:discrete-QFT-Lagrangian-transformation}, the amplitude $\cal A \mapsto \cal A\exp(n\cdot2\pi i)$ would be left invariant. 
+If the Lagrangian were to undergo a gauge transformation \eqref{eqn:discrete-QFT-Lagrangian-transformation}, the amplitude $\mathscr A \mapsto \mathscr A\exp(n\cdot2\pi i)$ would be left invariant.
+In other words, consistency of QFT does not require the single-valuedness of $\LL$, but only of $\exp(i\LL/\hbar)$.
 
 
 % Another condition on the Lagrangian in QFT comes from the expectation that the quantised theory be \emph{renormalisable}
@@ -239,24 +243,26 @@ This restricts the form of the Lagrangian considerably.
 
 \note{transition}
 
+\subsection{The Yang--Mills Lagrangian}
+
 In fact, the only admissible field Lagrangians which may be constructed from the gauge field $\tsbm A$ alone are linear combinations of
 \begin{align}
-	\ang{\tsbm F, \tsbm F} &= \angg{\bm F_{\mu\nu}, \bm F^{\mu\nu}}
+	\ang{\tsbm F \wedge \star\tsbm F} &\equiv \frac12\angg{\bm F_{\mu\nu}, \bm F^{\mu\nu}}\vol
 ,&	&\text{and}
-&	\ang{\tsbm F, \star \tsbm F} &= \frac12\epsilon^{\mu\nu\rho\sigma}\angg{\bm F_{\mu\nu}, \bm F_{\rho\sigma}}
+&	\ang{\tsbm F \wedge \tsbm F} &\equiv \frac14\angg{\bm F_{\mu\nu}, \bm F_{\rho\sigma}}\epsilon^{\mu\nu\rho\sigma}\vol
 ,\end{align}
 where $\star$ is the Hodge dual and $\angg{\ ,\ }$ is an inner product on the Lie algebra $\frak g$ of the gauge group $G$ (recall that $\tsbm F$ is a $\frak g$-valued form).
 The inner product $\angg{\ ,\ }$ on $\frak g$ is not unique; it depends on a choice of \emph{coupling constants}.
 In particular, if the gauge group $G$ is the direct sum of $n$ simple Lie groups,%
 \footnote{
-	Any compact connected Lie group is either of this form, or is a finite quotient of such a group, if $\mathrm U(1)$ is counted as `simple'. \cite[§~2.4.3]{Hamilton_2017}.
+	Any compact connected Lie group is either of this form, or is a finite quotient of such a group, if $\mathrm U(1)$ is counted as `simple'. \cite[§\,2.4.3]{Hamilton_2017}.
 }
 then $\angg{\ ,\ }$ is specified by the choice of exactly $n$ coupling constants, one corresponding to each factor of $G$.
-Physically, the coupling constants determine the relative interaction strengths of the forces associated to each factor.
+Physically, the coupling constants determine the relative interaction strengths of the forces associated to each factor \cite[§\,2.5]{Hamilton_2017}
 (For instance, the gauge group of the standard model \eqref{eqn:SM-gauge-group} has three such coupling constants for the strong, weak, and electromagnetic forces.)
 
-The term $\ang{\tsbm F, \tsbm F}$ is known as the \emph{Yang--Mills Lagrangian}, and is used in the standard model to describe boson force carrier self-interactions (such as gluon self-interactions in QCD).
-It yields the equations of motion 
+The term $\ang{\tsbm F \wedge\star \tsbm F}$ is known as the \emph{Yang--Mills Lagrangian}, and is a major component in the standard model, describing boson force carrier self-interactions (such as gluon self-interactions in QCD).
+The Yang--Mills Lagrangian yields\footnotemark{} the equations of motion 
 % \begin{align}
 % 	\ts\dd_A\tsbm F &= 0
 % ,&	&\text{and}
@@ -266,14 +272,17 @@ It yields the equations of motion
 	\ts\dd_A\tsbm F = 0
 	\text{ and }
 	\ts\dd_A\star\tsbm F = 0
-\end{math}
-(where the second equation, the Bianchi identity, is true independent of the Lagrangian).
-For an Abelian gauge group $G = \mathrm{U}(1)$, these are exactly Maxwell's equations of electromagnetism.
+.\end{math}
+For the Abelian gauge group of electromagnetism $G = \mathrm{U}(1)$, these are exactly Maxwell's equations.
+\footnotetext{
+	The Bianchi identity $\ts\dd_A\tsbm F = 0$ is true independent of the Lagrangian.
+}
 
-The other term $\ang{\tsbm F, \star\tsbm F}$, known as the \emph{$\theta$-term} for reasons that will shortly become apparent, breaks both time-reversal symmetry $T$ and parity $P$ (since $\epsilon^{\mu\nu\rho\sigma} \mapsto -\epsilon^{\mu\nu\rho\sigma}$ under $T$ or $P$).
+The other term $\ang{\tsbm F \wedge \tsbm F}$ is known as the \emph{$\theta$-term} for reasons that will shortly become apparent.
+The $\theta$-term breaks both time-reversal symmetry $T$ and parity $P$ (since $\epsilon^{\mu\nu\rho\sigma} \mapsto -\epsilon^{\mu\nu\rho\sigma}$ under $T$ or $P$).
 It is in fact a total derivative of the \emph{Chern--Simons 3-form} $\csform$,
 \begin{align}
-	\ang{\tsbm F, \star\tsbm F}
+	\ang{\tsbm F \wedge \tsbm F}
 	\propto \ts\dd\csform
 	= \ts\dd\tr\qty(\tsbm A\wedge\ts\dd\tsbm A + \frac{2}{3}\tsbm A\wedge\tsbm A\wedge\tsbm A)
 .\end{align}
@@ -282,27 +291,27 @@ Thus, the $\theta$-term contributes a boundary term $L_\theta = \int_{\raisemath
 The Chern--Simons form has an interesting kind of gauge invariance on the boundary $\partial\cal M$: it is \emph{not} invariant under the full gauge group, but only under the subgroup which is connected to the identity.\footnote{
 	The full gauge group $\cal G$ can have disconnected components when the fibre bundle $\fibrebundle{G}{\cal G}{\cal M}$ is non-trivial. \note{I think.}
 }
-For Abelian gauge groups such as $\mathrm{U}(1)$, the topology of $\cal G$ is trivial (meaning it is connected to the identity) and thus $\csform$ is gauge-invariant.
-As a consequence, 
+For Abelian gauge groups such as $\mathrm{U}(1)$, the topology of $\cal G$ is trivial (meaning it is connected to the identity) and thus $\csform$ is gauge-invariant and consequently does not contribute to dynamics.
+Thus, electrodynamics does not have a $\theta$-term.
 
 \note{Instantons, Homotopy Invariance}
 
 \cite{Witten_1989}
 
-However, for simple compact gauge groups such as $G = \mathrm{SU}(N)$, the fibre bundle $\cal G$ may be non-trivial.
-In these cases, under a general gauge transformation $g \in \cal G$, the 3-form $\csform$ transforms such that its affect on the boundary term is
+However, for general gauge groups, the fibre bundle $\cal G$ may be non-trivial.
+In the case that $G = \mathrm{SU}(N)$, under a general gauge transformation $g \in \cal G$, the 3-form $\csform$ transforms such that the induced transformation on the boundary term is of the form
 \begin{align}
 	% \int_{\partial\cal M}\csform \mapsto \int_{\partial\cal M}\csform + n\cdot\text{const}
 	L_\theta \overset{g}{\mapsto} L_\theta + n\cdot\text{const}
 ,\end{align}
-where the \emph{winding number} $n \in \mathds Z$ depends on $g$.
+where the \emph{winding number} $n \in \mathds Z$ depends on $g$ \cite[§\,1]{Witten_1989}
 % The winding number $n$ is a topological invariant of the gauge transformation $g$.
-With appropriate scaling, 
+With appropriate scaling of the $\theta$-term, this transformation is of the form \eqref{eqn:discrete-QFT-Lagrangian-transformation}, and therefore gauge symmetry is preserved.
 
 % and therefore does not affect the classical equations of motion.\note{But it is not gauge invariant?}
 
 
-\note{Tong Gauge Theory §~2.2}
+\note{Tong Gauge Theory §\,2.2}
 
 
 \section{The QCD Lagrangian}
@@ -311,25 +320,29 @@ The Lagrangian of quantum chromodynamics describes the strong interactions betwe
 One of the attractive qualities of pure QCD is that, given the gauge group $G = \mathrm{SU}(3)$ and its action on a matter field $\bm\psi$, the theory is almost completely specified given reasonable physical assumptions.
 That is, there is not much freedom for QCD to be slightly different without being an essentially different theory.
 
-The Lagrangian
+The Lagrangian of QCD is a sum of the Dirac Lagrangian and the Yang--Mills Lagrangian:
 \begin{align}
-	\cal L_\text{QCD} = \overbar{\bm\psi}\qty(\quad)\bm\psi - \frac14\|\tsbm F\|^2
+	\cal L_\text{QCD} = \overbar{\bm\psi}\qty(? - m)\bm\psi - \ang{\tsbm F \wedge\star \tsbm F}
 \end{align}
 
 
 
-\section{The Strong CP Problem}
+\section{The Strong \CP\ Problem}
 
-At this point, we see that which is given the name \emph{the strong CP problem} offers itself as a question about the naturalness the QCD Lagrangian.
-The most general QCD Lagrangian is
+At this point, we see that the issue which is given the name \emph{the strong \CP\ problem} offers itself as a question about the naturalness the QCD Lagrangian.
+As encountered in section~\ref{sec:Lagrangians}, there is another `natural' term that may be included; the topological $\theta$-term.
+In this sense, the most general QCD Lagrangian is
 \begin{align}
-	\cal L_\text{QCD} = \overbar{\bm\psi}\qty(\quad)\bm\psi
-	+ \frac?4\ang{\tsbm F, \tsbm F}
-	+ \theta \frac?4\ang{\tsbm F, \star \tsbm F}
+	\cal L_\text{QCD} = \overbar{\bm\psi}\qty(? - m)\bm\psi
+	- \ang{\tsbm F \wedge\star \tsbm F}
+	+ \frac{\theta}{8\pi^2}\ang{\tsbm F \wedge \tsbm F}
 ,\end{align}
-where the $\ang{\tsbm F, \star\tsbm F}$ term manifestly violates parity.
-If this term has a nonzero coefficient, then the strong force is predicted to violate CP in general.
-A significant implication of CP violation is that the neutron is expected to possess an electric dipole moment of approximate magnitude $|d_n| \approx 10^{-18} \,e\,\mathrm{cm}$.
+which includes the \CP-violating $\theta$-term $\ang{\tsbm F\wedge\tsbm F}$ with a coefficient named the $\theta$-parameter.
+\note{`Natural' here means that we lack a reason that the $\theta$-term should not contribute, unlike the case of QED, where "there are no instantons".}
+Especially given the fact that \CP\ symmetry is not a feature of the standard model, there is no reason to exclude the \CP-violating term in the QCD Lagrangian.
+
+
+If the $\theta$-parameter is nonzero, then the strong force is predicted to violate \CP\ in general.
+A significant implication of \CP\ violation is that the neutron is expected to possess an electric dipole moment of approximate magnitude $|d_n| \approx 10^{-18} \,e\,\mathrm{cm}$.
 In reality, current measurements \cite{electric_dipole_neutron_2020} of the neutron's electric dipole moment place an upper bound of $|d_n| \lesssim 10^{-26} \,e\,\mathrm{cm}$, and this implies a stringent constraint on the responsible $\theta$-term, $|\theta| \lesssim 10^{-10}$ \cite{Review_2018}.
 
-However, given the fact that CP symmetry is not a feature of the standard model, there is no reason to exclude the $CP$-violating term $\ang{\tsbm F, \star\tsbm F}$ in the QCD Lagrangian.
