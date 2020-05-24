@@ -115,7 +115,9 @@ In modern formalism, the matter field $\bm\psi \in \secs(\cal E)$ is a section o
 	The reason many objects in gauge theory (such as fields $\bm\psi$) are defined as sections of fibre bundles (and not simply as smooth maps $\bm\psi : \cal M \to V$) is because fibre bundles are themselves smooth manifolds, allowing the construction of connections, etc. (whereas the set of smooth maps $\cal M \to V$ does not come with a manifold topology).
 }
 The gauge transformations of $\bm\psi|_p$ at a point $p$ form a group $G$ under composition---but this group does not describe local gauge transformations which act on the \emph{entire} field $\bm\psi$.
-Rather, the total space of local gauge transformations is a principle $G$-bundle $\fibrebundle{G}{\cal G}{\cal M}$, consisting of smooth maps $\cal M \to G$.
+Rather, the total space of local gauge transformations is a principle $G$-bundle $\fibrebundle{G}{\cal G}{\cal M}$, consisting of smooth maps $\cal M \to G$.\footnote{
+	We sometimes loosely refer to the fibre group $G$ as the gauge group, but strictly this means the fibre bundle $\cal G$ (following \cite{Tong_lecture_notes}).
+}
 The action of $\cal G$ on the space of matter fields $\cal E$ may be denoted
 \begin{align}
 	\bm\psi \overset{g}{\mapsto} \bm\psi' = g\cdot\bm\psi
@@ -245,6 +247,7 @@ This is because of the origin of a QFT's equations of motion in the path integra
 For instance, the quantum mechanical amplitude that the fields $\bm\psi$ and $\tsbm F$ satisfy prescribed boundary conditions on $\partial\Omega$ surrounding some region of spacetime $\Omega \subseteq \cal M$ is given by the path integral
 \begin{align}
 	\mathscr A = \int_{\partial\Omega}\! \cal D[\bm\psi, \tsbm F] \exp\qty{\frac{i}{\hbar} \int_{\Omega}\! \LL\qty[\bm\psi, \ts\nabla_{\!A}\bm\psi, \tsbm F]}
+	\label{eqn:path-integral}
 ,\end{align}
 where the intended meaning of $\cal D[\cdots]$ is an integration over all field configurations on $\Omega$.
 If the Lagrangian were to undergo a gauge transformation \eqref{eqn:discrete-QFT-Lagrangian-transformation}, the amplitude $\mathscr A \mapsto \mathscr A\exp(n\cdot2\pi i)$ would be left invariant.
@@ -258,21 +261,16 @@ This restricts the form of the Lagrangian considerably.
 
 \note{transition}
 
-% \subsection{The Yang--Mills Lagrangian and the Topological Term}
-\subsection{The Yang--Mills Lagrangian and the \texorpdfstring{$\theta$-Term}{θ-Term}}
-
-\note{Needs intro}
+\subsection{The Yang--Mills Lagrangian and the Topological \texorpdfstring{$\theta$-Term}{θ-Term}}
 
 
-\urgent{Note: I misunderstood the literature and the following is not accurate.}
-
-In fact, the only admissible field Lagrangians which may be constructed from the gauge field $\tsbm A$ alone are linear combinations of
+Taking Lorentz and gauge invariance into account, the only admissible field Lagrangians which may be constructed from the gauge field $\tsbm A$ alone are linear combinations of
 \begin{align}
 	\ang{\tsbm F \wedge \star\tsbm F} &\equiv \frac12\angg{\bm F_{\mu\nu}, \bm F^{\mu\nu}}\vol
 ,&	&\text{and}
 &	\ang{\tsbm F \wedge \tsbm F} &\equiv \frac14\angg{\bm F_{\mu\nu}, \bm F_{\rho\sigma}}\epsilon^{\mu\nu\rho\sigma}\vol
 ,\end{align}
-where $\star$ is the Hodge dual and $\angg{\ ,\ }$ is an inner product on the Lie algebra $\frak g$ of the gauge group $G$ (recall that $\tsbm F$ is a $\frak g$-valued form).
+where $\star$ is the Hodge dual and $\angg{\ ,\ }$ is an inner product on the Lie algebra $\frak g$ of the gauge group $G$ (recall that $\tsbm F$ is a $\frak g$-valued form) \cite[§\,7.1.2]{Hamilton_2017}.
 The inner product $\angg{\ ,\ }$ on $\frak g$ is not unique; it depends on a choice of \emph{coupling constants}.
 In particular, if the gauge group $G$ is the direct sum of $n$ simple Lie groups,%
 \footnote{
@@ -282,58 +280,37 @@ then $\angg{\ ,\ }$ is specified by the choice of exactly $n$ coupling constants
 Physically, the coupling constants determine the relative interaction strengths of the forces associated to each factor of $G$ \cite[§\,2.5]{Hamilton_2017}
 (For instance, the gauge group of the standard model \eqref{eqn:SM-gauge-group} has three such coupling constants for the strong, weak, and electromagnetic forces.)
 
-The term $\ang{\tsbm F \wedge\star \tsbm F}$ is known as the \emph{Yang--Mills Lagrangian}, and is a major component in the standard model, describing boson force carrier self-interactions (such as gluon self-interactions in QCD).
-The Yang--Mills Lagrangian yields\footnotemark{} the equations of motion 
-% \begin{align}
-% 	\ts\dd_A\tsbm F &= 0
-% ,&	&\text{and}
-% &	\ts\dd_A\star\tsbm F &= 0
-% ,\end{align}
-\begin{math}
-	\ts\dd_A\tsbm F = 0
-	\text{ and }
-	\ts\dd_A\star\tsbm F = 0
-.\end{math}
-For the Abelian gauge group of electromagnetism $G = \mathrm{U}(1)$, these are exactly Maxwell's equations.
-\footnotetext{
-	The Bianchi identity $\ts\dd_A\tsbm F = 0$ is true independent of the Lagrangian.
-}
+The term $\ang{\tsbm F \wedge\star \tsbm F}$ is known as the \emph{Yang--Mills Lagrangian}, and is a major component in the standard model, describing boson force carrier self-interactions (such as gluon self-interactions).
+The Yang--Mills Lagrangian yields the equations of motion $\ts\dd_A\star\tsbm F = 0$.
+For the Abelian gauge group of electromagnetism $G = \mathrm{U}(1)$, these, together with the Bianchi identity $\ts\dd_A\tsbm F = 0$, are the source-free Maxwell's equations.
 
-The other term $\ang{\tsbm F \wedge \tsbm F}$ is known as the \emph{$\theta$-term} for reasons that will shortly become apparent.
+
+The other term $\ang{\tsbm F \wedge \tsbm F}$ is known as the \emph{topological $\theta$-term} for reasons that will shortly become apparent.
 The $\theta$-term breaks both time-reversal symmetry $T$ and parity $P$ (since $\epsilon^{\mu\nu\rho\sigma} \mapsto -\epsilon^{\mu\nu\rho\sigma}$ under $T$ or $P$).
-It is in fact a total derivative of the \emph{Chern--Simons 3-form} $\csform$,
+It is \emph{topological} because its integral over spacetime is discrete;
 \begin{align}
-	\ang{\tsbm F \wedge \tsbm F}
-	= \ts\dd\csform
-	= \ts\dd\tr\qty(\tsbm A\wedge\ts\dd\tsbm A + \frac{2}{3}\tsbm A\wedge\tsbm A\wedge\tsbm A)
-.\end{align}
-% and hence the $\theta$-term contributes a boundary term equal to the integral of the Chern--Simons 3-form over the 3-dimensional boundary $\partial\cal M$.
-Thus, the $\theta$-term contributes a boundary term $L_\theta = \int_{\raisemath{1pt}{\,\partial\cal M}}\csform$ to the theory's total Lagrangian.
-The Chern--Simons form has an interesting kind of gauge invariance on the boundary $\partial\cal M$: it is \emph{not} invariant under the full gauge group, but only under the subgroup which is connected to the identity.\footnote{
-	The full gauge group $\cal G$ can have disconnected components when the fibre bundle $\fibrebundle{G}{\cal G}{\cal M}$ is non-trivial. \note{I think.}
-}
-Thus, the $\theta$-term may influence the
-For Abelian gauge groups such as $\mathrm{U}(1)$, the topology of $\cal G$ is trivial (meaning it is connected to the identity) and thus $\csform$ is gauge-invariant and consequently does not contribute to dynamics.
-Thus, electrodynamics does not have a $\theta$-term.
-
-\note{Instantons, Homotopy Invariance}
-
-\cite{Witten_1989}
-
-However, for general gauge groups, the fibre bundle $\cal G$ may be non-trivial.
-In the case that $G = \mathrm{SU}(N)$, under a general gauge transformation $g \in \cal G$, the 3-form $\csform$ transforms such that the induced transformation on the boundary term is of the form
-\begin{align}
-	% \int_{\partial\cal M}\csform \mapsto \int_{\partial\cal M}\csform + n\cdot\text{const}
-	L_\theta \overset{g}{\mapsto} L_\theta + n\cdot\text{const}
+	\frac{1}{8\pi^2}\int_{\cal M} \ang{\tsbm F \wedge \tsbm F} = n_A \in \mathds{Z}
 ,\end{align}
-where the \emph{winding number} $n \in \mathds Z$ depends on $g$ \cite[§\,1]{Witten_1989}
-% The winding number $n$ is a topological invariant of the gauge transformation $g$.
-With appropriate scaling of the $\theta$-term, this transformation is of the form \eqref{eqn:discrete-QFT-Lagrangian-transformation}, and therefore gauge symmetry is preserved.
-
-% and therefore does not affect the classical equations of motion.\note{But it is not gauge invariant?}
+where $n_A$ is a topological invariant of the configuration of the gauge field $\tsbm A$, known as the Pontryagin number (or informally, the `winding number') \cite[§\,2.2]{Tong_lecture_notes}.
+\note{Needs more explanation. Relates to instanton configurations.}
+% This is because it is in fact the derivative of the \emph{Chern--Simons 3-form} $\CS$, ($\ang{\tsbm F\wedge\tsbm F} = \ts\dd\CS$, incidentally meaning t),
 
 
-\note{Tong Gauge Theory §\,2.2}
+% For Abelian gauge groups such as $\mathrm{U}(1)$, the topology of the space of gauge fields, $\forms^1(\cal M, \mathfrak g)$, is trivial (in the sense that it is path-connected to the identity) and the Pontryagin number $n_A$ is zero for all $\tsbm A$.
+% However, for general gauge groups, $\forms^1(\cal M, \mathfrak g)$ may have non-trivial topology.
+
+The $\theta$ in the name refers to the cyclic property of a coefficient $\theta$ given to the topological $\theta$-term.
+If the Lagrangian density includes the term
+\begin{align}
+	\frac{\theta}{8\pi^2}\ang{\tsbm F\wedge\tsbm F}
+,\end{align}
+then its contribution to the action in the path-integral \eqref{eqn:path-integral} is $\theta n_A$, and since
+\begin{math}
+	\exp(i\theta n_A) = \exp(i(\theta + 2\pi)n_A)
+,\end{math}
+the coefficient $\theta \in [0, 2\pi)$ is naturally periodic.
+
+
 
 
 \section{The QCD Lagrangian and the Strong \CP\ Problem}
