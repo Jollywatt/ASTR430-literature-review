@@ -216,7 +216,7 @@ All that remains to be specified in our theory are the equations of motion, whic
 
 % After making reasonable physical assumptions about a theory, there are only a few consistent possible terms constructed using only the gauge field strength $\tsbm F$ which may be included in the theory's Lagrangian.
 
-\section{Lagrangians in QFT}
+\subsection{Lagrangians in QFT}
 \label{sec:Lagrangians}
 
 % We now have constructions for the matter field $\bm\psi$, its derivative $\ts\nabla_{\!A}\bm\psi$ and the strength of the gauge field $\tsbm F$ which all transform regularly under gauge transformations.
@@ -261,8 +261,10 @@ This restricts the form of the Lagrangian considerably.
 
 \note{transition}
 
-\subsection{The Yang--Mills Lagrangian and the Topological \texorpdfstring{$\theta$-Term}{θ-Term}}
+\subsection{The Dirac Lagrangian}
 
+\subsection{The Yang--Mills Lagrangian and the Topological \texorpdfstring{$\theta$-Term}{θ-Term}}
+\label{sec:YM-and-topological}
 
 Taking Lorentz and gauge invariance into account, the only admissible field Lagrangians which may be constructed from the gauge field $\tsbm A$ alone are linear combinations of
 \begin{align}
@@ -313,23 +315,28 @@ the coefficient $\theta \in [0, 2\pi)$ is naturally periodic.
 
 
 
-\section{The QCD Lagrangian and the Strong \CP\ Problem}
+\section{QCD and the Strong \CP\ Problem}
 
-The Lagrangian of quantum chromodynamics describes the strong interactions between hadronic matter: its matter field describes quarks, and the gauge field describes gluons.
+Quantum chromodynamics is a quantum gauge theory describing the strong interactions between hadronic matter, whose matter field describes quarks, and the gauge field describes gluons.
+Quarks are fermions described by Dirac fields which come in pairs of \emph{up type} and \emph{down type} quarks, each transforming under different representations of weak hypercharge $\mathrm{U}(1)$ (but which are identical in pure QCD).
+QCD herself is agnostic to the number of quark pairs, but when included in the standard model, three copies (each called a \emph{generation}) of quark pairs are used, meaning the standard model contains six quark fields in total .
+
 One of the attractive qualities of pure QCD is that, given the gauge group $G = \mathrm{SU}(3)$ and its action on a matter field $\bm\psi$, the theory is almost completely specified given reasonable physical assumptions.
 That is, there is not much freedom for QCD to be slightly different without being an essentially different theory.
 
 The Lagrangian of QCD is a sum of the Dirac Lagrangian and the Yang--Mills Lagrangian:
 \begin{align}
-	\cal L_\text{QCD} = \overbar{\bm\psi}\qty(? - m)\bm\psi - \ang{\tsbm F \wedge\star \tsbm F}
+	% \cal L_\text{QCD} = \overbar{\bm\psi}\qty(? - m)\bm\psi - \ang{\tsbm F \wedge\star \tsbm F}
+	\cal L_\text{QCD} &= \overbar{\bm\psi}\qty(i\bm\gamma^\mu\nabla_\mu - m)\bm\psi - \ang{\tsbm F \wedge\star \tsbm F}
+\\	&\equiv \overbar{\psi}_a\qty(i\gamma^{\mu a}{}_b\nabla_\mu - m\delta^a{}_b)\psi^b - \frac14F^a{}_{b\mu\nu}F_a{}^{b\mu\nu}
 \end{align}
 
 
 At this point, we see that the issue which is given the name \emph{the strong \CP\ problem} offers itself as a question about the naturalness the QCD Lagrangian.
-As encountered in section~\ref{sec:Lagrangians}, there is another `natural' term that may be included; the topological $\theta$-term.
+As encountered in section~\ref{sec:YM-and-topological}, there is another `natural' term that may be included; the topological $\theta$-term.
 In this sense, the most general QCD Lagrangian is
 \begin{align}
-	\cal L_\text{QCD} = \overbar{\bm\psi}\qty(? - m)\bm\psi
+	\cal L_\text{QCD} = \overbar{\bm\psi}\qty(i\bm\gamma^\mu\nabla_\mu - m)\bm\psi
 	- \ang{\tsbm F \wedge\star \tsbm F}
 	+ \frac{\theta}{8\pi^2}\ang{\tsbm F \wedge \tsbm F}
 ,\end{align}
