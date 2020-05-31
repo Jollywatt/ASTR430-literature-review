@@ -317,23 +317,27 @@ the coefficient $\theta \in [0, 2\pi)$ is naturally periodic.
 
 \section{QCD and the Strong \CP\ Problem}
 
-Quantum chromodynamics is a quantum gauge theory describing the strong interactions between hadronic matter, whose matter field describes quarks, and the gauge field describes gluons.
+Quantum chromodynamics describes the strong interactions between hadronic matter.
+It is a quantum gauge theory whose matter field describes quarks, and whose gauge field describes gluons.
 Quarks are fermions described by Dirac fields which come in pairs of \emph{up type} and \emph{down type} quarks, each transforming under different representations of weak hypercharge $\mathrm{U}(1)$ (but which are identical in pure QCD).
-QCD herself is agnostic to the number of quark pairs, but when included in the standard model, three copies (each called a \emph{generation}) of quark pairs are used, meaning the standard model contains six quark fields in total .
+QCD herself is agnostic to the number of quark pairs, but when included in the standard model, three copies (each called a \emph{generation}) of quark pairs are used, meaning the standard model contains six quark fields in total . \note{??}
 
-One of the attractive qualities of pure QCD is that, given the gauge group $G = \mathrm{SU}(3)$ and its action on a matter field $\bm\psi$, the theory is almost completely specified given reasonable physical assumptions.
+One of the attractive qualities of QCD is that, given the gauge group $G = \mathrm{SU}(3)$ and its action on a matter field $\bm\psi$, the theory is almost completely specified given reasonable physical assumptions.
 That is, there is not much freedom for QCD to be slightly different without being an essentially different theory.
 
-The Lagrangian of QCD is a sum of the Dirac Lagrangian and the Yang--Mills Lagrangian:
+The Lagrangian of QCD is a sum of the Dirac Lagrangian and the Yang--Mills Lagrangian,
 \begin{align}
 	% \cal L_\text{QCD} = \overbar{\bm\psi}\qty(? - m)\bm\psi - \ang{\tsbm F \wedge\star \tsbm F}
 	\cal L_\text{QCD} &= \overbar{\bm\psi}\qty(i\bm\gamma^\mu\nabla_\mu - m)\bm\psi - \ang{\tsbm F \wedge\star \tsbm F}
 \\	&\equiv \overbar{\psi}_a\qty(i\gamma^{\mu a}{}_b\nabla_\mu - m\delta^a{}_b)\psi^b - \frac14F^a{}_{b\mu\nu}F_a{}^{b\mu\nu}
 \end{align}
+where the Dirac matrices $\gamma^\mu$ are basis elements of the Clifford algebra $\cal{Cl}_{1,3}(\mathds{C})$ satisfying
+% $\frac12(\gamma^\mu\gamma^\nu + \gamma^\nu\gamma^\mu) = \ang{\gamma^\mu, \gamma^\nu}$
+$\gamma^{(\mu}\gamma^{\nu)} = \eta^{\mu\nu}$ and $\ts\nabla\bm\psi = (\nabla_\mu\bm\psi) \, \ts\dd x^\mu$ is the covariant derivative with respect to the gluon gauge field, $\tsbm A$.
 
 
 At this point, we see that the issue which is given the name \emph{the strong \CP\ problem} offers itself as a question about the naturalness the QCD Lagrangian.
-As encountered in section~\ref{sec:YM-and-topological}, there is another `natural' term that may be included; the topological $\theta$-term.
+As encountered in section~\ref{sec:YM-and-topological}, there is another term that may be included in the Lagrangian without any additional physical assumptions; the topological $\theta$-term.
 In this sense, the most general QCD Lagrangian is
 \begin{align}
 	\cal L_\text{QCD} = \overbar{\bm\psi}\qty(i\bm\gamma^\mu\nabla_\mu - m)\bm\psi
@@ -341,6 +345,9 @@ In this sense, the most general QCD Lagrangian is
 	+ \frac{\theta}{8\pi^2}\ang{\tsbm F \wedge \tsbm F}
 ,\end{align}
 which includes the \CP-violating $\theta$-term $\ang{\tsbm F\wedge\tsbm F}$ with a coefficient named the $\theta$-parameter.
+The inclusion of the $\theta$-term is `natural' because we lack reason to exclude it on a theoretical basis: it is Lorentz and gauge invariant, etc., just like its \CP-symmetric counterpart, $\ang{\tsbm F \wedge\star\tsbm F}$.
+In particular, the electroweak force directly violates parity, and the standard model violates all combinations of charge conjugation symmetry, $C$; parity $P$; and time-reversal symmetry $T$ except for combined $CPT$ symmetry---and therefore the $\theta$-term's \CP\ violation is not satisfactory reason for its exclusion.
+
 \note{`Natural' here means that we lack a reason that the $\theta$-term should not contribute, unlike the case of QED, where ``there are no instantons''.}
 Especially given the fact that \CP\ symmetry is not a feature of the standard model, there is no reason to exclude the \CP-violating term in the QCD Lagrangian.
 
