@@ -1,23 +1,26 @@
 \chapter{QCD and the Strong \CP\ Problem}
 
-\textsc{The Standard Model} of particle physics is a quantum field theory which describes all known fundamental particles and interactions to high precision---with notable exceptions including:
+\textsc{The Standard Model} of particle physics is a quantum field theory which describes all known fundamental particles and interactions to very high precision---with notable exceptions including:
 the absence of gravity;
 dark matter;
 and the experimentally incorrect prediction that neutrinos are massless.
+Alongside these shortcomings, the standard model also exhibits issues of a more philosophical nature, such as the reasons for the values of the theory's many parameters. (For example; why three generations and three colours? Why are left-handed fermions doublets, while right-handed fermions are singlets? Why do the particle masses and coupling constants have the values they do?)
+Among these mysteries is the \emph{strong \CP\ problem}, a fine-tuning problem regarding the apparent symmetry of the strong force under time-reversal.
+This section lays the background necessary to understand the statement and origin of the strong CP problem.
 
-% With its emergence in the \note{buzz of phenomenological particle physics in the early 1960s}.
-The standard model was born amid the explosion of phenomenological particle physics in the early 1960s, where the catalogue of known particles was growing rapidly as new hadrons were discovered.
-The introduction of the quark model explained the properties of numerous hadrons in terms of six kinds of quark, and, together with the well-established quantum theory of electromagnetism, became the first version approximation to the standard model \cite{Weinberg_2004-history}.
+The standard model was born amid the explosion of phenomenological particle physics in the early 1960s, in an effort to explain the patterns in the catalogue of known particles, which was growing rapidly as new hadrons were discovered.
+The introduction of the quark model explained the properties of numerous hadrons in terms of six kinds of quark, and was given the name \emph{quantum chromodynamics} (QCD). This, together with the well-established quantum theory of electromagnetism, became the first approximation to the standard model \cite{Weinberg_2004-history}.
 
-The modern formulation of the standard model is as a Lorentz-invariant \emph{quantum field theory} whose \emph{gauge group} is the compact connected Lie group
+The modern statement of the standard model is that it is a Lorentz-invariant \emph{quantum field theory} whose \emph{gauge group} is the compact connected Lie group
 \begin{align}
 	\qty\big(\mathrm{SU}(3)\oplus\mathrm{SU}(2)\oplus\mathrm{U}(1))\big/\mathds{Z}_6
 	\label{eqn:SM-gauge-group}
-.\end{align}
+,\end{align}
+equipped with a specific action on matter fields.
 A quantum field theory is a quantised \emph{gauge field theory}, which is a field theory whose Lagrangian is symmetric under the action of the gauge group (elaborated upon in §\,\ref{sec:overview-of-gauge-theory}).
 Each term in the gauge group of the standard model \eqref{eqn:SM-gauge-group} corresponds to a fundamental force of nature.
 % The meaning and significance of the gauge group is outlined in the next section.
-The factor $\mathrm{SU}(2)\oplus\mathrm{U}(1)$ corresponds to the electroweak force of quantum electrodynamics (QED); and the factor $\mathrm{SU}(3)$ is the gauge group of quantum chromodynamics (QCD), the sector of the standard model which describes the interactions of colour-charged quarks and gluons via the strong force.
+The factor $\mathrm{SU}(2)\oplus\mathrm{U}(1)$ corresponds to the electroweak force of quantum electrodynamics (QED); and the factor $\mathrm{SU}(3)$ is the gauge group of quantum chromodynamics, the sector of the standard model which describes the interactions of colour-charged quarks and gluons via the strong force.
 
 Quantum chromodynamics was formulated quite some time after quantum electrodynamics was understood, which is perhaps a reflection that QCD is more intricate than QED.
 Unlike QED, quantum chromodynamics exhibits \emph{asymptotic freedom}, which results in quark confinement.
@@ -32,9 +35,8 @@ Aside from the technical problems of analysis in the non-perturbative regime, QC
 This problem is of the fine-tuning variety, but it lacks even an anthropic solution and is good reason to pursue physics beyond the standard model.
 
 
-The significance and role of the gauge group is outlined in the next section where a modern overview of gauge field theory
-% ---the formalism in which the Standard Model and QCD is expressed---
-is presented.
+The significance and role of the gauge group is outlined in the next section where a geometrical overview of gauge field theory is presented.
+This overview is intended to equip the reader with a geometrical idea of the kinds of objects which comprise classical gauge theories and which underpin the standard model.
 Then, QCD is defined and the origin of the so-called \emph{strong \CP\ problem} is highlighted.
 
 
@@ -110,9 +112,9 @@ Secondly, the gauge field has a dynamical role in the theory, describing a new k
 \end{aside}	
 \end{figure}
 
-In modern formalism, the matter field $\bm\psi \in \secs(\cal E)$ is a section of a vector bundle $\fibrebundle{V}{\cal E}{\cal M}$, so that at any point $p \in \cal M$ in spacetime the field assigns a vector, $\bm\psi|_p \cong V$.%
+In geometrical language, the matter field $\bm\psi \in \secs(\cal E)$ is a section of a vector bundle $\fibrebundle{V}{\cal E}{\cal M}$, so that at any point $p \in \cal M$ in spacetime the field assigns a vector, $\bm\psi|_p \cong V$.%
 \footnote{
-	The reason many objects in gauge theory (such as fields $\bm\psi$) are defined as sections of fibre bundles (and not simply as smooth maps $\bm\psi : \cal M \to V$) is because fibre bundles are themselves smooth manifolds, allowing the construction of connections, etc. (whereas the set of smooth maps $\cal M \to V$ does not come with a manifold topology).
+	The reason many objects in gauge theory (such as fields $\bm\psi$) are defined as sections of fibre bundles (and not simply as smooth maps $\bm\psi : \cal M \to V$) is because fibre bundles are themselves smooth manifolds, enabling the construction of connections, etc.\ (whereas the set of smooth maps $\cal M \to V$ does not come with a manifold topology, and does not readily admit notions from calculus).
 }
 The gauge transformations of $\bm\psi|_p$ at a point $p$ form a group $G$ under composition---but this group does not describe local gauge transformations which act on the \emph{entire} field $\bm\psi$.
 Rather, the total space of local gauge transformations is a principle $G$-bundle $\fibrebundle{G}{\cal G}{\cal M}$, consisting of smooth maps $\cal M \to G$.\footnote{
@@ -131,14 +133,14 @@ Thus, we may represent the group action as matrix product,
 ,\end{math}
 remembering that both $\bm\psi$ and $g$ (but not $\rho$) vary across $\cal M$.
 
-Here, it is worth noting that all gauge theories are equivalent to a gauge theory possessing only one matter field $\bm\psi_\text{total}$ with one gauge group $(G, \rho)$.
+Here, it is worth noting that all gauge theories are isomorphic to a gauge theory possessing only one matter field $\bm\psi_\text{total}$ with one gauge group $(G, \rho)$.
 For instance, if a theory consists of different fundamental particles and forces, represented by fields $\bm\phi$ and $\bm\varphi$ with gauge groups $(G_\phi, \rho_\phi)$ and $(G_\varphi, \rho_\varphi)$,
 % If a theory consists of qualitatively distinct fields $\bm\phi$ and $\bm\varphi$ with gauge groups $(G_\phi, \rho_\phi)$ and $(G_\varphi, \rho_\varphi)$, representing distinct fundamental particles and forces,
 then we may take the total matter field $\bm\psi_\text{total} = \bm\phi \oplus \bm\varphi$ to be the direct sum of the fields in the theory, and similarly equip it with the gauge group $G_\text{total} = G_\phi \oplus G_\varphi$ with representation $\rho_\text{total} = \rho_\phi \oplus \rho_\varphi$.
 This new theory is physically identical to the original.
 In full generality, therefore, we treat our theory as possessing one matter and one gauge field, while freely speaking of its composite parts as separate fields where convenient.
 
-A \emph{connection} on $\cal E$ is a derivation\footnotemark{} $\ts\nabla : \secs(\cal E) \to \forms^1(\cal M, \cal E)$ from vector fields to vector-valued 1-forms, designed so that $(\ts\nabla\bm\psi)(X)$---that is, the action of the 1-form $\ts\nabla\bm\psi$ on a vector $\ts X \in \T\cal M$---gives the directional derivative of $\bm\psi$ along $\ts X$ with respect to $\ts\nabla$.
+A \emph{connection} on $\cal E$ is a derivation\footnotemark{} $\ts\nabla : \secs(\cal E) \to \forms^1(\cal M, \cal E)$ from vector fields to vector-valued 1-forms, designed so that $(\ts\nabla\bm\psi)(X)$---that is, the action of the $V$-valued 1-form $\ts\nabla\bm\psi$ on a vector $\ts X \in \T\cal M$---gives the directional derivative of $\bm\psi$ along $\ts X$ with respect to $\ts\nabla$.
 \footnotetext{
 	More precisely, $\ts\nabla$ is a $\cal C^\infty(\cal M)$-linear derivation, meaning
 	\begin{math}
@@ -181,7 +183,8 @@ $\ts\dd_A : \forms^p(\cal M, \cal E) \to \forms^{p + 1}(\cal M, \cal E)$
 % \\	\qty(\partial_\mu\phi_\nu{}^a + A_\mu{}^a{}_b\phi_\nu{}^b) \, \ts\dd x^\mu \otimes \bm e_a
 ,\end{align}
 \footnotetext{
-	This is done by requiring the graded Leibniz property
+	% Note that $\secs(\cal E) = \forms^0(\cal M, \cal E)$.
+	The extension is obtained by requiring the graded Leibniz property
 	\begin{math}
 		\ts\dd_A(\ts\phi\otimes\bm\psi) = \ts\dd\ts\phi \otimes\bm\psi + (-1)^p\ts\phi \wedge \ts\nabla\bm\psi
 	\end{math}
@@ -193,8 +196,8 @@ to allow the construction of, among other things, the curvature 2-form, or \emph
 \\	&= \ts\dd\tsbm A + \tsbm A \wedge \tsbm A
 	= (\ts\dd\ts A^a{}_b + \ts A^a{}_c \wedge \ts A^c{}_b) \, \bm e_a \otimes \bm e^b
 ,\end{align}
-where we have written the r.h.s.\ with respect to a basis $\qty{\bm e_a}$ and dual basis $\qty{\bm e^a}$ of $\cal E$.
-The field strength $\tsbm F$ is useful because it is geometrical---that is, it transforms in the same matter as the matter fields $\tsbm F \mapsto g\cdot\tsbm F = g_\rho\tsbm F g_\rho^{-1}$, even though $\tsbm A$ does not.
+where we have written the r.h.s.\ with respect to a basis $\qty{\bm e_a}$ and dual basis $\qty{\bm e^a}$ of $\cal E$ (note that $V$ is equipped with the Euclidean inner product; $\bm e^a (\bm e_b) = \delta^a_b$).
+The field strength $\tsbm F$ is useful because it is geometrical in the sense that it transforms in the same matter as the matter fields $\tsbm F \mapsto g\cdot\tsbm F = g_\rho\tsbm F g_\rho^{-1}$ under gauge transformations, even though $\tsbm A$ does not.
 
 \note{The gauge field strength also satisfies the Bianchi identity $\ts\dd_A\tsbm F = 0$.}
 
@@ -222,15 +225,15 @@ All that remains to be specified in our theory are the equations of motion, whic
 % We now have constructions for the matter field $\bm\psi$, its derivative $\ts\nabla_{\!A}\bm\psi$ and the strength of the gauge field $\tsbm F$ which all transform regularly under gauge transformations.
 % All that remains to be specified in our theory are the equations of motion, which are to be expressed in terms of these three geometrical objects in a gauge invariant manner.
 
-For classical gauge theories, the equations of motion may be specified as the Euler--Lagrange equations of a Lagrangian
+For classical gauge theories, the equations of motion may be specified as the minimisation of an action
 \begin{align}
-	L\qty[\bm\psi, \ts\nabla_{\!A}\bm\psi, \tsbm F] = \int_{\cal M}\! \LL\qty[\bm\psi, \ts\nabla_{\!A}\bm\psi, \tsbm F]
+	S\qty[\bm\psi, \ts\nabla_{\!A}\bm\psi, \tsbm F] = \int_{\cal M}\! \LL\qty[\bm\psi, \ts\nabla_{\!A}\bm\psi, \tsbm F]
 ,\end{align}
 where $\LL$ is a local Lagrangian density.
-In order that the equations of motion are physically consistent, we require the Lagrangian possesses important symmetries: gauge symmetry, so that the equations of motion are gauge invariant; and Lorentz symmetry (which is automatic if $\LL = \mathscr{L}\,\vol$ is expressed as a volume form) \cite[§\,7.1]{Hamilton_2017}.
+In order that the equations of motion are physically consistent, we require the Lagrangian possesses hte relevant symmetries: gauge symmetry, so that the equations of motion are gauge invariant; and Lorentz symmetry (which is automatic if $\LL = \mathscr{L}\,\vol$ is expressed as a volume form) \cite[§\,7.1]{Hamilton_2017}.
 % We let the Lagrangian depend on derivatives only of order $\le 1$ in the fields for reasons of respecting causality and ensuring that energy has lower-bound.
 The equations of motion are invariant under adjustments to the Lagrangian density by a total derivative $\ts\dd\alpha$, since by Stokes' theorem these contribute only to boundary terms.
-Therefore, a Lagrangian which possesses gauge symmetry is still generally permitted to transform as
+Therefore, a Lagrangian which is said to possess gauge symmetry is still generally permitted to transform as
 \begin{math}
 	\LL \mapsto \LL + \ts\dd\alpha
 \end{math}
@@ -266,7 +269,7 @@ This restricts the form of the Lagrangian considerably.
 \subsection{The Yang--Mills Lagrangian and the Topological \texorpdfstring{$\theta$-Term}{θ-Term}}
 \label{sec:YM-and-topological}
 
-Taking Lorentz and gauge invariance into account, the only admissible field Lagrangians which may be constructed from the gauge field $\tsbm A$ alone are linear combinations of
+Taking Lorentz and gauge invariance in into account, the only admissible QFT Lagrangians which may be constructed from the gauge field $\tsbm A$ alone are linear combinations of
 \begin{align}
 	\ang{\tsbm F \wedge \star\tsbm F} &\equiv \frac12\angg{\bm F_{\mu\nu}, \bm F^{\mu\nu}}\vol
 ,&	&\text{and}
@@ -304,13 +307,13 @@ where $n_A$ is a topological invariant of the configuration of the gauge field $
 The $\theta$ in the name refers to the cyclic property of a coefficient $\theta$ given to the topological $\theta$-term.
 If the Lagrangian density includes the term
 \begin{align}
-	\frac{\theta}{8\pi^2}\ang{\tsbm F\wedge\tsbm F}
+	\LL_\theta[\tsbm F] = \frac{\theta}{8\pi^2}\ang{\tsbm F\wedge\tsbm F}
 ,\end{align}
 then its contribution to the action in the path-integral \eqref{eqn:path-integral} is $\theta n_A$, and since
 \begin{math}
 	\exp(i\theta n_A) = \exp(i(\theta + 2\pi)n_A)
 ,\end{math}
-the coefficient $\theta \in [0, 2\pi)$ is naturally periodic.
+the coefficient $\theta \in [0, 2\pi)$, known as the \emph{$\theta$-parameter}, naturally exhibits periodicity.
 
 
 
@@ -318,8 +321,9 @@ the coefficient $\theta \in [0, 2\pi)$ is naturally periodic.
 \section{QCD and the Strong \CP\ Problem}
 
 Quantum chromodynamics describes the strong interactions between hadronic matter.
-It is a quantum gauge theory whose matter field describes quarks, and whose gauge field describes gluons.
-Quarks are fermions described by Dirac fields which come in pairs of \emph{up type} and \emph{down type} quarks, each transforming under different representations of weak hypercharge $\mathrm{U}(1)$ (but which are identical in pure QCD).
+Pure QCD is a quantum gauge theory whose matter field describes quarks and whose gauge field describes gluons.
+Pure QCD can be interpolated with QED or the standard model, in which case 
+Quarks are fermionic Dirac fields which come in pairs of \emph{up type} and \emph{down type} quarks, each transforming under different representations of weak hypercharge $\mathrm{U}(1)$ (but which are identical in pure QCD).
 QCD herself is agnostic to the number of quark pairs, but when included in the standard model, three copies (each called a \emph{generation}) of quark pairs are used, meaning the standard model contains six quark fields in total . \note{??}
 
 One of the attractive qualities of QCD is that, given the gauge group $G = \mathrm{SU}(3)$ and its action on a matter field $\bm\psi$, the theory is almost completely specified given reasonable physical assumptions.
@@ -344,7 +348,7 @@ In this sense, the most general QCD Lagrangian is
 	- \ang{\tsbm F \wedge\star \tsbm F}
 	+ \frac{\theta}{8\pi^2}\ang{\tsbm F \wedge \tsbm F}
 ,\end{align}
-which includes the \CP-violating $\theta$-term $\ang{\tsbm F\wedge\tsbm F}$ with a coefficient named the $\theta$-parameter.
+which includes the \CP-violating $\theta$-term $\ang{\tsbm F\wedge\tsbm F}$.
 The inclusion of the $\theta$-term is `natural' because we lack reason to exclude it on a theoretical basis: it is Lorentz and gauge invariant, etc., just like its \CP-symmetric counterpart, $\ang{\tsbm F \wedge\star\tsbm F}$.
 In particular, the electroweak force directly violates parity, and the standard model violates all combinations of charge conjugation symmetry, $C$; parity $P$; and time-reversal symmetry $T$ except for combined $CPT$ symmetry---and therefore the $\theta$-term's \CP\ violation is not satisfactory reason for its exclusion.
 
