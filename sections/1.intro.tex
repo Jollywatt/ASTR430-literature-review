@@ -296,24 +296,31 @@ It is \emph{topological} because its integral over spacetime is discrete;
 \begin{align}
 	\frac{1}{8\pi^2}\int_{\cal M} \ang{\tsbm F \wedge \tsbm F} = n_A \in \mathds{Z}
 ,\end{align}
-where $n_A$ is a topological invariant of the configuration of the gauge field $\tsbm A$, known as the Pontryagin number (or informally, the `winding number') \cite[§\,2.2]{Tong_lecture_notes}.
+where $n_A$ is a topological invariant known as the \emph{Pontryagin number}, as the \emph{second Chern class} \cite[§\,1]{Witten_1989} or, informally, as the `winding number' \cite[§\,2.2]{Tong_lecture_notes} of the gauge field configuration $\tsbm A$.
+
+% For an Abelian gauge group $\mathrm{U}(1)$,
 \note{Needs more explanation. Relates to instanton configurations.}
 % This is because it is in fact the derivative of the \emph{Chern--Simons 3-form} $\CS$, ($\ang{\tsbm F\wedge\tsbm F} = \ts\dd\CS$, incidentally meaning t),
 
 
-% For Abelian gauge groups such as $\mathrm{U}(1)$, the topology of the space of gauge fields, $\forms^1(\cal M, \mathfrak g)$, is trivial (in the sense that it is path-connected to the identity) and the Pontryagin number $n_A$ is zero for all $\tsbm A$.
-% However, for general gauge groups, $\forms^1(\cal M, \mathfrak g)$ may have non-trivial topology.
+For an Abelian gauge group $\mathrm{U}(1)$, the space of gauge fields $\forms^1(\cal M, \mathfrak g)$ is path-connected to the identity, and the winding number $n_A$ is zero for all $\tsbm A \in \forms^1(\cal M, \mathfrak g)$.
+Consequently, there is no $\theta$-term in classical electromagnetism or QED.
+However, for non-Abelian gauge groups, $\forms^1(\cal M, \mathfrak g)$ may have non-trivial topology, with path-disconnected regions which can be indexed by $n \in \mathds{Z}$.
+The presence of the $\theta$-term can be viewed as a consequence of the non-Abelian nature of QCD.
+Gauge field configurations $\tsbm A \in \forms^1(\cal M, \mathfrak g)$ which are outside of the identity-connected component are known as \emph{instanton configurations}.
+Instantons and are an important aspect of QCD and general Yang--Mills theories, giving rise to topologically distinct vacuum states and playing a central role in non-perturbative dynamics \cite{lectures-on-instantons}.
 
-The $\theta$ in the name refers to the cyclic property of a coefficient $\theta$ given to the topological $\theta$-term.
+The choice of the symbol $\theta$ in the name reflects the cyclic property of a coefficient $\theta$ given to the topological $\theta$-term.
 If the Lagrangian density includes the term
 \begin{align}
 	\LL_\theta[\tsbm F] = \frac{\theta}{8\pi^2}\ang{\tsbm F\wedge\tsbm F}
 ,\end{align}
-then its contribution to the action in the path-integral \eqref{eqn:path-integral} is $\theta n_A$, and since
+then its contribution to the action in the path-integral \eqref{eqn:path-integral} is $\theta n_A$.
+Since
 \begin{math}
 	\exp(i\theta n_A) = \exp(i(\theta + 2\pi)n_A)
 ,\end{math}
-the coefficient $\theta \in [0, 2\pi)$, known as the \emph{$\theta$-parameter}, naturally exhibits periodicity.
+the coefficient $\theta \in [0, 2\pi)$, known as the \emph{$\theta$-parameter}, exhibits natural periodicity.
 
 
 
