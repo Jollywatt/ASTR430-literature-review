@@ -3,6 +3,9 @@
 
 %% PACKAGES %%
 
+% Typography
+\usepackage{libertine}
+
 % Bibliography
 \usepackage[
 	style=phys,
@@ -27,7 +30,7 @@
 \usepackage{accents}
 \usepackage{mathrsfs} % defines \mathscr
 \usepackage{dsfont}
-% \usepackage{siunitx}
+\usepackage{siunitx}
 % \usepackage{eucal}
 % \usepackage{dutchcal}
 \usepackage{mathtools}
@@ -110,7 +113,7 @@
 
 %% SYMBOLS & SHORTCUTS %%
 
-\newcommand{\CP}{{CP}}
+\newcommand{\CP}{{$CP$}}
 
 \renewcommand{\cal}{\mathcal}
 \renewcommand{\frak}{\mathfrak}
@@ -122,13 +125,15 @@
 \newcommand{\secs}{\symrm{\Gamma}}
 \newcommand{\forms}{\symrm{\Omega}}
 
+\newcommand{\SU}{\mathrm{SU}}
+% \newcommand{\U}{\mathrm{U}}
 \newcommand{\T}{\mathrm{T}}
 \newcommand{\TT}{\mathds{T}}
 \newcommand{\LL}{\ts{\mathscr L}}
 \newcommand{\M}{\mathcal{M}}
 
-\newcommand{\ang}[1]{\left\langle{#1}\right\rangle}
-\newcommand{\angg}[1]{\ang{#1}_{\raisemath{2pt}{\mathrm{Ad}}}}
+\newcommand{\angbr}[1]{\left\langle{#1}\right\rangle}
+\newcommand{\angbrAd}[1]{\angbr{#1}_{\raisemath{2pt}{\mathrm{Ad}}}}
 
 \newcommand{\fibrebundle}[4][]{#2 \rightarrowtail #3 \overset{#1}{\twoheadrightarrow} #4}
 
