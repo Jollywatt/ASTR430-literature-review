@@ -89,11 +89,11 @@ Secondly, the gauge field has a dynamical role in the theory, describing a new k
 		% & Spacetime tensor; an element of $\T\cal M\otimes\cdots\otimes\T\cal M\otimes\T^*\cal M\otimes\cdots\otimes\T^*\cal M$
 	&	spacetime tensor field; i.e., a section of $\TT\cal M$
 	\\	$\bm A$
-	&	vector field of some abstract vector space not in $\TT\cal M$
+	&	vector field of some abstract vector space not contained in $\TT\cal M$
 	\\	$\tsbm A$
 	&	spacetime tensor field with values in some other abstract vector space
 	\\	$\wedge^pV$
-	&	$p$th exterior power of the vector space $V$, consisting of $p$-forms
+	&	$p$th exterior power of the vector space $V$; i.e., the space of $V$-valued $p$-forms
 	\\	$\secs(\cal E)$
 	&	smooth sections $\cal M \to F$ of fibre bundle $\fibrebundle{F}{\cal E}{\cal M}$
 	\\	$\forms^p(\cal M)$
@@ -261,7 +261,8 @@ In other words, physical consistency of a QFT does not require the single-valued
 
 % Another condition on the Lagrangian in QFT comes from the expectation that the quantised theory be \emph{renormalisable}
 We also require that the quantum field theory associated to a Lagrangian be \emph{renormaliseble}.
-This restricts the form of the Lagrangian considerably.
+Loosely speaking, a classical field theory is renormalisable if it can be quantised consistently.
+This restricts the form of the Lagrangian considerably, but how this happens is beyond this review's scope.
 % For instance, in 4-dimensional spacetime, can be shown that
 
 \note{transition}
@@ -271,7 +272,7 @@ This restricts the form of the Lagrangian considerably.
 \subsection{The Yang--Mills Lagrangian and the Topological \texorpdfstring{$θ$-Term}{θ-Term}}
 \label{sec:YM-and-topological}
 
-Taking Lorentz and gauge invariance in into account, the only admissible QFT Lagrangians which may be constructed from the gauge field $\tsbm A$ alone are linear combinations of
+Taking Lorentz and gauge invariance into account, while requiring the theory be renormalisable, the only admissible QFT Lagrangians which may be constructed from the gauge field $\tsbm A$ alone are linear combinations of
 \begin{align}
 	% \angbr{\tsbm F \wedge \star\tsbm F} &\equiv \frac12\angbrAd{\bm F_{μν}, \bm F^{μν}}\vol
 	\angbr{\tsbm F \wedge \star\tsbm F} &\equiv \frac12\angbrAd{\bm F_{μν}, \bm F_{\rho\sigma}}g^{μ\rho}g^{ν\sigma}\vol

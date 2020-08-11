@@ -20,14 +20,22 @@ Such fine-tuning problems at least have anthropic solutions---but the strong \CP
 % from http://scipp.ucsc.edu/~dine/solutions_of_strong_cp.pdf
 The strong \CP\ is therefore a strong theoretical indication that the standard model remains incomplete.
 
-\begin{figure}
+\begin{figure}[t]
 \begin{aside}[Technical terms used in this chapter]
-	\begin{tabular}{ll}
-		\emph{chiral}
-	---	a transformation which acts differently on left- and right-handed fermions
-	\\	\emph{spontaneous symmetry breaking}
-	---	j
-	\end{tabular}
+	\begin{itemize}[leftmargin=0.75em]
+		% \setlength{\itemindent}{1em}
+		\setlength\itemsep{0.25ex}
+		\item \emph{global symmetry}
+	--- a symmetry of the Lagrangian that acts uniformly across spacetime.
+		\item \emph{local symmetry}
+	--- a symmetry of the Lagrangian which acts independently at each point in spacetime. Local symmetries give rise to gauge bosons.
+		\item \emph{chiral}
+	--- a transformation acting differently on left- and right-handed fermions.
+		\item \emph{spontaneously broken symmetry}
+	---	a symmetry of the Lagrangian which is not exhibited by the Lagrangian's solutions.
+		\item \emph{anomalous symmetry}
+	--- a symmetry of the classical Lagrangian, but not of the measure $\cal D[\bm ψ, \tsbm F]$ in the path integral \eqref{eqn:path-integral}, and hence not a symmetry of the associated quantum theory.
+	\end{itemize}
 \end{aside}
 \end{figure}
 
@@ -37,12 +45,16 @@ The strong \CP\ is therefore a strong theoretical indication that the standard m
 In the pure QCD Lagrangian \eqref{eqn:pure-QCD-Lagrangian}, which includes the mass term $m\bar{\bm ψ}\bm ψ$, quarks possess mass given by the parameter $m$.
 This is \emph{not} the mechanism by which quarks exhibit mass in the standard model---instead, quarks obtain mass via the \emph{Higgs mechanism}, whereby $\bm ψ$ is coupled to the Higgs field by \emph{Yukawa interaction} terms in the Lagrangian \cite[§~7.6.6]{Hamilton_2017}.
 The Yukawa terms contain quark--Higgs coupling parameters $m_q$ which can be arranged into the \emph{quark mass matrix} $\cal M$.
-\note{In an abuse of notation, the QCD sector of the standard model may be regarded as being given by the effective Lagrangian
+
+In a slight abuse of notation, the overall effect of this complex mechanism of quark mass acquisition can be semantically conveyed by an \emph{effective Lagrangian}
 \begin{align}
 	\cal L_\text{QCD} = \overbar{\bm ψ}\qty(i\bmγ^μ\nabla_μ - \bm{\cal M})\bm ψ
 	- \angbr{\tsbm F \wedge\star \tsbm F}
 	+ \frac{θ}{8\pi^2}\angbr{\tsbm F \wedge \tsbm F}
-\end{align}
+,\end{align}
+where $\bar{\bm ψ} \cal M \bm ψ = \sum_{pq} \bar ψ_{(p)}\cal M_{pq} ψ_{(q)}$ are quark mass terms.\footnote{
+	These fermion mass terms are not gauge invariant under chiral transformations; only Yukawa mass terms can give rise to fermion mass in a gauge invariant manner.
+	Effective Lagrangians of this kind are often written for simplicity, with this in mind (e.g., in \cite{Peccei_1996,Agrawal_2018}).
 }
 
 
@@ -54,58 +66,69 @@ In the full quantum theory of $N$ massive quarks, the Lagrangian admits a global
 	\label{eqn:quark-mass-phase-transform}
 ,\end{align}
 where $\bm ψ_{(q)}$ are the quark fields and $m_q$ are their masses.
+\note{Not actually that simple. Only works for massless quarks; works approximately for $m_u$ and $m_d$, resulting in an approximate $\U(2)_L \oplus \U(2)_R$ symmetry or something...}
 This transformation is \emph{chiral}, meaning that it affects left- and right-handed fermions differently.\footnotemark
 \footnotetext{If the quark fields are split into left-handed $\bm ψ_+$ and right-handed $\bm ψ_-$ components defined by $\bm ψ_\pm \coloneqq \frac12(1 \pm \bmγ^5)\bm ψ$, then the first mapping of \eqref{eqn:quark-mass-phase-transform} can be written as $\bm ψ_\pm \mapsto e^{\pm ia_q/2}\bm ψ_\pm$.}
-The fact that the $θ$-parameter may be redefined by shifting the quark mass phases means that $θ$ is not directly observable.
-This gauge freedom can be fixed by defining the quantity
+The fact that the $θ$-parameter may be redefined by phase-shifting the quark fields and their masses means that $θ$ is not directly observable.
+However, this gauge freedom can be fixed by defining the quantity
 \begin{align}
 	\barθ
 	= θ + \arg\det\cal M
 	= θ + \arg\prod_{q=1}^Nm_q
 .\end{align}
-The gauge-fixed $\barθ$-parameter is invariant under \eqref{eqn:quark-mass-phase-transform}, as the two right-hand terms transform by the addition of $\pm\sum_{i=1}^Na_i$, respectively.
-The significance of this is that only variations in $\barθ$ can possibly have physical effects.
+% The gauge-fixed $\barθ$-parameter is invariant under \eqref{eqn:quark-mass-phase-transform}, as the two right-hand terms transform by the addition of $\pm\sum_{i=1}^Na_i$, respectively.
+The gauge-fixed $\barθ$-parameter is invariant under \eqref{eqn:quark-mass-phase-transform}, as the two right-hand terms transform by the addition of $\pm\sum a_q$, respectively.
+The significance of this is that only the value of $\barθ$ may have physical effects.
+The fact that $\bar θ$ can only be zero if apparently unrelated parameters---$θ$, a QCD parameter; and $\cal M$, derived from electroweak parameters---perfectly cancel each other highlights the fine-tuning nature of the strong \CP\ problem.
+
 In particular, $\barθ$ becomes singular when one of the quark masses is zero.
 Therefore, the $\barθ$-parameter, and hence the $θ$-term, are entirely unphysical in the case of a massless quark.
 The \emph{massless quark solution} to the strong \CP\ problem is the claim that $\barθ = 0$ because at least one quark is in fact massless.
 
 At first sight, this economical resolution to the strong \CP\ problem appears to be in contradiction with the experimentally determined masses of the quarks, all of which are non-zero (including the up quark, whose mass is estimated to be $\sim 2\,\mathrm{MeV}$).
-However, it was realised in the mid-1980s that the mass of the up quark has two contributions in the standard model Lagrangian: not only the Yukawa mass $m_u$ (the `bare mass') introduced above, but also a non-perturbative contribution $m_\text{eff}$ from topological effects (such as instantons) \cite{ruling-out-massless-uquark_2020}.
-Importantly, it was plausible that this secondary source of the up quark's mass is of order $m_\text{eff} \approx 2\,\mathrm{MeV}$, allowing $m_u$ to vanish by another mechanism.
+However, it was realised in the mid-1980s that the mass of the up quark has two contributions in the standard model Lagrangian: not only the Yukawa mass $m_u$ (the `bare mass') introduced above, but also a non-perturbative contribution $m_\text{eff}$ from topological effects (i.e., instantons) \cite{ruling-out-massless-uquark_2020}.
+Only the bare masses contribute to the value of $\bar θ$ via the quark mass matrix $\cal M$.
+Importantly, it was plausible that this secondary source of the up quark's mass is of order $m_\text{eff} \approx 2\,\mathrm{MeV}$, allowing $m_u$ to vanish by another mechanism while still preserving the up quark's overall mass.
 
-The massless up quark hypothesis remained controversial until the advancement of \emph{lattice gauge theory} made numerical simulations of non-perturbative effects in QCD possible.
-Consensus was reached by 2020 that the instanton contribution $m_\text{eff}$ is not sufficiently large, and hence that the massless up quark hypothesis is false \cite{ruling-out-massless-uquark_2015,aoki2016review,ruling-out-massless-uquark_2020}.
+The massless up quark hypothesis remained controversial until \emph{lattice gauge theory} had advanced sufficiently to made numerical simulations of non-perturbative effects in QCD possible.
+Consensus was reached by 2019 that the instanton contribution $m_\text{eff}$ is not sufficiently large, and hence that the massless up quark hypothesis is false \cite{ruling-out-massless-uquark_2015,aoki2016review,ruling-out-massless-uquark_2020}.
 Instead, another mechanism is required to explain the smallness of the $\barθ$-parameter and solve the strong \CP\ problem.
 
 
 
 
 
-\section{Peccei--Quinn Theory}
+% \section{Peccei--Quinn Theory}
+
+% Perhaps the most famous proposed resolution to the strong \CP\ problem is the Peccei--Quinn theory of the \emph{axion}, first proposed in 1977 \cite{PecceiQuinn_1977}.
+% The axion is well-known in cosmology because of the its allure as a dark matter candidate.
+
+% Peccei--Quinn theory explains the small value of $θ$ by its promotion to a dynamical field whose potential is minimised when $\barθ = 0$.
+% In other words, a new $\U(1)$ symmetry is introduced (whose action is to rotate $θ$) and is adjoined to the gauge group of QCD.
+% The QCD Lagrangian is modified by the addition of a potential with minimum at $θ = 0$, which is said to \emph{spontaneously break} the Peccei--Quinn $\U(1)$ symmetry.
+% The gauge field associated to this $\U(1)$ symmetry is named the \emph{axion field}, and the gauge bosons obtained upon quantisation are named \emph{axions}.
+
+% \note{
+% 	\begin{enumerate}
+% 		\item Predictions of PC theory
+% 		\item Theoretical limitations
+% 		\item Experimental evidence
+% 	\end{enumerate}
+% }
+
+
+\section{The Chiral Solution and the Axion}
+
 
 Perhaps the most famous proposed resolution to the strong \CP\ problem is the Peccei--Quinn theory of the \emph{axion}, first proposed in 1977 \cite{PecceiQuinn_1977}.
 The axion is well-known in cosmology because of the its allure as a dark matter candidate.
 
-Peccei--Quinn theory explains the small value of $θ$ by its promotion to a dynamical field whose potential is minimised when $\barθ = 0$.
-In other words, a new $\mathrm{U}(1)$ symmetry is introduced (whose action is to rotate $θ$) and is adjoined to the gauge group of QCD.
-The QCD Lagrangian is modified by the addition of a potential with minimum at $θ = 0$, which is said to \emph{spontaneously break} the Peccei--Quinn $\mathrm{U}(1)$ symmetry.
-The gauge field associated to this $\mathrm{U}(1)$ symmetry is named the \emph{axion field}, and the gauge bosons obtained upon quantisation are named \emph{axions}.
-
-\note{
-	\begin{enumerate}
-		\item Predictions of PC theory
-		\item Theoretical limitations
-		\item Experimental evidence
-	\end{enumerate}
-}
-
-
-\section{The Chiral Solution}
-
-\note{Define local/global symmetries}
 
 The \emph{chiral solution} to the strong \CP\ problem postulates that the standard model Lagrangian possesses another global chiral symmetry, in addition to the symmetry \eqref{eqn:quark-mass-phase-transform}.
-This Peccei--Quinn symmetry $\mathrm{U}(1)_\text{PQ}$ is specified by the action of $\mathrm{U}(1)$ on quark fields by a chiral rotation $\bm ψ_{(q)} \mapsto e^{i\bm γ^5 a}\bm ψ_{(q)}$, where $a$ is a parameter.
+In their original paper \cite{PecceiQuinn_1977}, Peccei and Quinn showed that the existence of such a symmetry would resolve the strong \CP\ problem, even if it was spontaneously broken (in which case, another boson would arise---the \emph{axion}).
+This Peccei--Quinn symmetry $\UPQ$ is specified by the action of $\U(1)$ on quark fields by a chiral rotation $\bm ψ_{(q)} \mapsto e^{i\bm γ^5 a}\bm ψ_{(q)}$, with $a \in [0, 2π)$, enabling the phases of all quark flavours to be rotated uniformly in a chiral manner.
 
-If $\mathrm(1)_\text{PQ}$ were in fact an exact symmetry of the standard model Lagrangian, 
+If $\UPQ$ were in fact an exact symmetry of the standard model Lagrangian, then, used in conjunction with the chiral symmetry \eqref{eqn:quark-mass-phase-transform}, $\bar θ$ could be set to zero by a simple choice of gauge, rendering it unphysical. \note{I do not actually understand how this works.}
+However, $\UPQ$ is not an exact symmetry of the standard model.
+Nevertheless, Peccei and Quinn showed that if $\UPQ$ was a symmetry that was spontaneously broken, then the parameter $\bar θ$ would be dynamically driven to zero \cite{Peccei_1996}.
 
