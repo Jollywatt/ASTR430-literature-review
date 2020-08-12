@@ -31,10 +31,12 @@ The strong \CP\ is therefore a strong theoretical indication that the standard m
 	--- a symmetry of the Lagrangian which acts independently at each point in spacetime. Local symmetries give rise to gauge bosons.
 		\item \emph{chiral}
 	--- a transformation acting differently on left- and right-handed fermions.
-		\item \emph{spontaneously broken symmetry}
-	---	a symmetry of the Lagrangian which is not exhibited by the ground state solutions.
 		\item \emph{anomalous symmetry}
 	--- a symmetry of the classical Lagrangian, but not of the measure $\cal D[\bm ψ, \tsbm F]$ in the path integral \eqref{eqn:path-integral}, and hence not a symmetry of the associated quantum theory.
+		\item \emph{spontaneously broken symmetry}
+	---	a symmetry of the Lagrangian which is not exhibited by the ground state solutions.
+		\item \emph{Nambu--Goldstone boson}
+	--- scalar bosons that arise due to spontaneously broken symmetries. There is exactly one Nambu--Goldstone boson for each generator of the symmetry which is broken.
 	\end{itemize}
 \end{aside}
 \end{figure}
@@ -117,18 +119,31 @@ Instead, another mechanism is required to explain the smallness of the $\barθ$-
 % }
 
 
-\section{The Chiral Solution and the Axion}
+
+\section{The Peccei--Quinn Mechanism}
 
 
 Perhaps the most famous proposed resolution to the strong \CP\ problem is the Peccei--Quinn theory of the \emph{axion}, first proposed in 1977 \cite{PecceiQuinn_1977}.
 The axion is well-known in cosmology because of the its allure as a dark matter candidate.
+It arises as a Nambu--Goldstone boson of an additional spontaneously broken symmetry, and dynamically solves the strong \CP\ problem via the Peccei--Quinn mechanism.
+\note{There are a variety of implementations of the Peccei--Quinn mechanism.}
+
+The Peccei--Quinn mechanism involves extending the standard model (usually by the addition of fields) so that the Lagrangian possesses another global chiral $\U(1)$ symmetry, named the Peccei--Quinn symmetry $\UPQ$.
+Because $\UPQ$ is chiral, it is broken by the chiral anomaly.
+Consequently, the Nöther \note{Noether?} current associated to the $\UPQ$ symmetry, $\ts J_\text{PQ}$, is not conserved:
+\begin{align}
+	\ts\dd\star\ts J_\text{PQ} &= \xi \angbr{\tsbm F\wedge\tsbm F}
+&	&\text{i.e.,}
+&	\partial_\mu J_\text{PQ}^\mu &= \frac\xi4\angbrAd{\bm F_{μν}, \bm F_{\rho\sigma}}\epsilon^{μν\rho\sigma}
+,\end{align}
+where $\xi$ is a model-dependent parameter.
 
 
-The \emph{chiral solution} to the strong \CP\ problem postulates that the standard model Lagrangian possesses another global chiral symmetry, in addition to the symmetry \eqref{eqn:quark-mass-phase-transform}.
-In their original paper \cite{PecceiQuinn_1977}, Peccei and Quinn showed that the existence of such a symmetry would resolve the strong \CP\ problem, even if it was spontaneously broken (in which case, another boson would arise---the \emph{axion}).
-This Peccei--Quinn symmetry $\UPQ$ is specified by the action of $\U(1)$ on quark fields by a chiral rotation $\bm ψ_{(q)} \mapsto e^{i\bm γ^5 a}\bm ψ_{(q)}$, with $a \in [0, 2π)$, enabling the phases of all quark flavours to be rotated uniformly in a chiral manner.
+% The \emph{chiral solution} to the strong \CP\ problem postulates that the standard model Lagrangian possesses another global chiral symmetry, in addition to the symmetry \eqref{eqn:quark-mass-phase-transform}.
+% In their original paper \cite{PecceiQuinn_1977}, Peccei and Quinn showed that the existence of such a symmetry would resolve the strong \CP\ problem, even if it was spontaneously broken (in which case, another boson would arise---the \emph{axion}).
+% This Peccei--Quinn symmetry $\UPQ$ is specified by the action of $\U(1)$ on quark fields by a chiral rotation $\bm ψ_{(q)} \mapsto e^{i\bm γ^5 a}\bm ψ_{(q)}$, with $a \in [0, 2π)$, enabling the phases of all quark flavours to be rotated uniformly in a chiral manner.
 
-If $\UPQ$ were in fact an exact symmetry of the standard model Lagrangian, then, used in conjunction with the chiral symmetry \eqref{eqn:quark-mass-phase-transform}, $\bar θ$ could be set to zero by a simple choice of gauge, rendering it unphysical. \note{I do not actually understand how this works.}
-However, $\UPQ$ is not an exact symmetry of the standard model.
-Nevertheless, Peccei and Quinn showed that if $\UPQ$ was a symmetry that was spontaneously broken, then the parameter $\bar θ$ would be dynamically driven to zero \cite{Peccei_1996}.
+% If $\UPQ$ were in fact an exact symmetry of the standard model Lagrangian, then, used in conjunction with the chiral symmetry \eqref{eqn:quark-mass-phase-transform}, $\bar θ$ could be set to zero by a simple choice of gauge, rendering it unphysical. \note{I do not actually understand how this works.}
+% However, $\UPQ$ is not an exact symmetry of the standard model.
+% Nevertheless, Peccei and Quinn showed that if $\UPQ$ was a symmetry that was spontaneously broken, then the parameter $\bar θ$ would be dynamically driven to zero \cite{Peccei_1996}.
 
