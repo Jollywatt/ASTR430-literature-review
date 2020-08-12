@@ -342,38 +342,63 @@ Since
 ,\end{math}
 the coefficient $θ$, henceforth the \emph{$θ$-parameter}, is naturally an angular quantity.
 
-\subsection{Fermions and the Chiral Anomaly}
+\subsection{Fermions Fields and the Chiral Anomaly}
 
-An important kind of matter field in the standard model are \emph{Dirac fermion fields} $\bm φ$, which transform under the spin-$\frac12$ representation of the Lorentz group $\mathrm{SO}(1,3)$.
-The Dirac matrices $\bmγ^μ$ are basis elements of the Clifford algebra $\cal{Cl}_{1,3}(\mathds{C})$ satisfying $\bmγ^{(μ}\bmγ^{ν)} = \eta^{μν}\bm 1$, and are used to write fermions in the spin-$\frac12$ representation.
+An important kind of matter field in the standard model is the \emph{Dirac fermion field} $\bm φ$, which transform under the spin-$\frac12$ representation of the Lorentz group $\mathrm{SO}^+(1,3)$.
+The Dirac matrices $\bmγ^μ$ are basis elements of the Clifford algebra $\cal{Cl}_{1,3}(\mathds{C})$ satisfying $\bmγ^{(μ}\bmγ^{ν)} = \eta^{μν}\bm 1$, and are used to write 4-component Dirac fermions in the spin-$\frac12$ representation.
+An inner product on fermions $\angbr{\bm ψ, \bm φ} = \bar{\bm ψ}\bm φ \in \mathds R$ \note{or $\mathds C$?} is provided by the Dirac adjoint $\bar{\bm ψ} \coloneqq \bm ψ^\dagger \bm γ^0$, so that Lorentz-invariant quantities may be naturally constructed.
 
-Fermion fields frequently appear in the standard model as they do in the \emph{Dirac Lagrangian}
+The simplest fermion equations of motion derive from the \emph{Dirac Lagrangian density}
 \begin{align}
-	\cal L_\text{Dirac} = \bar{\bm φ}\qty(i\bmγ^μ\partial_μ - m)\bm φ
+	\LL_\text{Dirac} = \bar{\bm φ}\qty(i\bmγ^μ\partial_μ - m)\bm φ \;\vol
 ,\end{align}
-which describes spin-$\frac12$ fermions of mass $m$.
-If the theory possesses a local gauge symmetry $\bm ψ \mapsto g \cdot \bm ψ$ for $g \in G$, then the Dirac Lagrangian may be localised, giving
+which describes a non-interacting spin-$\frac12$ fermion of mass $m$.
+% Consider a theory whose matter field $\bm ψ$ may consist of one or more fermion fields $\bm φ$...
+% If a theory possesses a local gauge symmetry $\bm ψ \mapsto g \cdot \bm ψ$ for $g \in G$, then the Dirac Lagrangian may be localised, giving
+The Dirac Lagrangian may be localised in the presence of gauge symmetry,
 \begin{align}
-	\cal L_\text{Dirac} = \bar{\bm ψ}\qty(i\bmγ^μ\nabla_μ - m)\bm ψ
+	\LL_\text{Dirac} = \bar{\bm ψ}\qty(i\bmγ^μ\nabla_μ - m)\bm ψ \;\vol
 	\label{eqn:Dirac-Lagrangian}
 ,\end{align}
-where $\bm ψ$ may be comprised of multiple fermion fields and $\ts\nabla\bm ψ \equiv (\nabla_μ\bm ψ) \, \ts\dd x^μ$ is the covariant derivative with respect to the gauge field, $\tsbm A$.
-This describes fermions and their interactions with the gauge bosons $\tsbm A$ associated to $G$.
-The electromagnetic interactions of charged fermionic matter are described by \eqref{eqn:Dirac-Lagrangian} where $G = \U(1)$.
+where $\bm ψ = \bm φ_{(1)} \oplus \cdots \oplus \bm φ_{(n)}$ may more generally be comprised of multiple fermion fields and where $\ts\nabla\bm ψ \equiv (\nabla_μ\bm ψ) \, \ts\dd x^μ$ is the covariant derivative with respect to the gauge field, $\tsbm A$.
+This describes fermions and their interactions with the gauge bosons.
+The electromagnetic interactions of charged fermionic matter are described by \eqref{eqn:Dirac-Lagrangian} in the case of a $\U(1)$ gauge symmetry.
 
 The $θ$-term $\angbr{\tsbm F\wedge\tsbm F}$ also arises in quantum field theories by another important route: via the \emph{chiral anomaly}.
 % The standard model enjoys the global $\U(1)$ symmetry by $\bm ψ \mapsto e^{iα}\bm ψ$.
 % These transformations are known as vector fermion rotations.
-The standard model is locally symmetric under \emph{vector fermion rotations}, which are spacetime dependent $\U(1)$ transformations given by
+The Dirac Lagrangian is invariant under global Abelian transformations known as \emph{vector fermion rotations}, $\U(1)_V$ given by
 \begin{align}
-	V: \bm ψ \mapsto e^{iα(x)}\bm ψ
+	\bm ψ &\overset{\U(1)_V}{\mapsto} e^{iα}\bm ψ
+,&	δ\bm ψ = iδα
 .\end{align}
-The Nöther current associated to this symmetry is
+By Nöther's theorem, there is a conserved current density (viz.\ a 3-form) associated to this symmetry,
 \begin{align}
-	j^μ &= \pdv{\cal L_\text{Dirac}}{\cal D_μ \bm ψ} \eval{\dv{V}{α}}_0 \bm ψ = \bar{\bm φ} \bm γ^μ \bm φ
-\\	\ts j &= δ\bm ψ \pdv{\cal L_\text{Dirac}}{\ts\nabla\bm ψ} = \bar{\bm φ} \bm γ_μ \bm φ \star \ts\dd x^μ
+	\ts J &= \pdv{\ts{\cal L}_\text{Dirac}}{\ts\nabla ψ} \, \fdv{\bm ψ}{α} = \bar{\bm ψ} \bm γ_μ \bm ψ \star \ts\dd x^μ
+,&	\text{i.e.,}\quad
+	j_V^{\,μ} &= \bar{\bm ψ} \bm γ^μ \bm ψ
+	\quad\text{where}\quad
+	\star\ts J = j_μ \ts\dd x^μ
 ,\end{align}
-whose conservation $\ts\dd\ts j = 0$
+whose continuity equation reads $\ts\dd\ts J = 0$ (i.e., $\partial_µ j^μ = 0$).
+Classically, this corresponds to conservation of charge $Q(t_0) = \int_{t=t_0} \ts J$, and in QFT, to Baryon number conservation.
+
+The Dirac Lagrangian classically exhibits another global Abelian symmetry, given by \emph{axial fermion rotations} $\U(1)_A$
+\begin{align}
+	\bm ψ &\mapsto e^{i\bm γ^5 α}\bm ψ
+,&	&\text{i.e.,}
+&	\bm ψ_\pm &\mapsto e^{\pm iα}\bm ψ_\pm
+,\end{align}
+which transforms the left- $\bm ψ_+$ and right-handed $\bm ψ_+$ components differently.
+The associated Nöther current density,
+\begin{align}
+	\ts J_A &= \bar{\bm ψ} \bm γ_μ \bm γ_5 \bm ψ \star\ts\dd x^μ
+,\end{align}
+is conserved classically, but not in the QFT \note{which QFT? The Dirac Lagrangian? Or just QCD, etc?}.
+The $\U(1)_A$ is said to be \emph{anomalous}, and the continuity equation $\ts\dd\ts J = 0$ is violated by the presence of none-other than the $θ$-term,
+\begin{align}
+	\ts\dd\ts J = \angbr{\tsbm F \wedge \tsbm F}
+.\end{align}
 
 
 \section{QCD and the Strong \CP\ Problem}
