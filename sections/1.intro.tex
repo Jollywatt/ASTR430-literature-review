@@ -112,36 +112,36 @@ Secondly, the gauge field has a dynamical role in the theory, describing a new k
 \end{aside}
 \end{figure}
 
-In geometrical language, the matter field $\bmψ \in \secs(\cal E)$ is a section of a vector bundle $\fibrebundle{V}{\cal E}{\cal M}$.
-In other words, at any point $p \in \cal M$ in spacetime the field assigns a vector, $\bmψ|_p \cong V$.%
+In geometrical language, the matter field $\bm ψ \in \secs(\cal E)$ is a section of a vector bundle $\fibrebundle{V}{\cal E}{\cal M}$.
+In other words, at any point $p \in \cal M$ in spacetime the field assigns a vector, $\bm ψ|_p \cong V$.%
 \footnote{
-	The reason many objects in gauge theory (such as fields $\bmψ$) are defined as sections of fibre bundles (and not simply as smooth maps $\bmψ : \cal M \to V$) is because fibre bundles are themselves smooth manifolds which admit the construction of connections.
+	The reason many objects in gauge theory (such as fields $\bm ψ$) are defined as sections of fibre bundles (and not simply as smooth maps $\bm ψ : \cal M \to V$) is because fibre bundles are themselves smooth manifolds which admit the construction of connections.
 }
-The gauge transformations of $\bmψ|_p$ at a point $p$ form a group $G$ under composition---but this group does not describe local gauge transformations which act on the \emph{entire} field $\bmψ$.
+The gauge transformations of $\bm ψ|_p$ at a point $p$ form a group $G$ under composition---but this group does not describe local gauge transformations which act on the \emph{entire} field $\bm ψ$.
 Rather, the total space of local gauge transformations is a principle $G$-bundle $\fibrebundle{G}{\cal G}{\cal M}$, consisting of smooth maps $\cal M \to G$.\footnote{
 	We sometimes loosely refer to the fibre group $G$ as the gauge group, but strictly this means the fibre bundle $\cal G$ (following \cite{Tong_lecture_notes}).
 }
 The action of $\cal G$ on the space of matter fields $\cal E$ may be denoted
 \begin{align}
-	\bmψ \overset{g}{\mapsto} \bmψ' = g\cdot\bmψ
+	\bm ψ \overset{g}{\mapsto} \bm ψ' = g\cdot\bm ψ
 \end{align}
-for $\bmψ \in \secs(\cal E)$ and $g \in \secs(\cal G)$ (i.e., $\bmψ : \cal M \to V$ and $g : \cal M \to G$).
+for $\bm ψ \in \secs(\cal E)$ and $g \in \secs(\cal G)$ (i.e., $\bm ψ : \cal M \to V$ and $g : \cal M \to G$).
 This specification of an action ``$\cdot$'' of $\cal G$ on the vector space $\cal E$ is equivalent to the choice of a linear representation $\rho : G \to \mathrm{GL}(V)$ of $G$ on $V$.
 Thus, we may represent the group action as matrix product,
 \begin{math}
-	% (g \cdot \bmψ)|_p = \rho(g|_p)\bmψ|_p
-	g \cdot \bmψ = \rho(g)\bmψ
+	% (g \cdot \bm ψ)|_p = \rho(g|_p)\bm ψ|_p
+	g \cdot \bm ψ = \rho(g)\bm ψ
 ,\end{math}
-remembering that both $\bmψ$ and $g$ (but not $\rho$) vary across $\cal M$.
+remembering that both $\bm ψ$ and $g$ (but not $\rho$) vary across $\cal M$.
 
-Here, it is worth noting that all gauge theories are isomorphic to a gauge theory possessing only one matter field $\bmψ_\text{total}$ with one gauge group $(G, \rho)$.
+Here, it is worth noting that all gauge theories are isomorphic to a gauge theory possessing only one matter field $\bm ψ_\text{total}$ with one gauge group $(G, \rho)$.
 For instance, if a theory consists of different fundamental particles and forces, represented by fields $\bm\phi$ and $\bm\varphi$ with gauge groups $(G_\phi, \rho_\phi)$ and $(G_\varphi, \rho_\varphi)$,
 % If a theory consists of qualitatively distinct fields $\bm\phi$ and $\bm\varphi$ with gauge groups $(G_\phi, \rho_\phi)$ and $(G_\varphi, \rho_\varphi)$, representing distinct fundamental particles and forces,
-then we may take the total matter field $\bmψ_\text{total} = \bm\phi \oplus \bm\varphi$ to be the direct sum of the fields in the theory, and similarly equip it with the gauge group $G_\text{total} = G_\phi \oplus G_\varphi$ with representation $\rho_\text{total} = \rho_\phi \oplus \rho_\varphi$.
+then we may take the total matter field $\bm ψ_\text{total} = \bm\phi \oplus \bm\varphi$ to be the direct sum of the fields in the theory, and similarly equip it with the gauge group $G_\text{total} = G_\phi \oplus G_\varphi$ with representation $\rho_\text{total} = \rho_\phi \oplus \rho_\varphi$.
 This new theory is physically identical to the original.
 In full generality, therefore, we treat our theory as possessing one matter and one gauge field, while freely speaking of its composite parts as separate fields where convenient.
 
-A \emph{connection} on $\cal E$ is a derivation\footnotemark{} $\ts\nabla : \secs(\cal E) \to \forms^1(\cal M, \cal E)$ from vector fields to vector-valued 1-forms, designed so that $(\ts\nabla\bmψ)(\ts X)$---that is, the action of the $V$-valued 1-form $\ts\nabla\bmψ$ on a vector $\ts X \in \T\cal M$---gives the directional derivative of $\bmψ$ along $\ts X$ with respect to $\ts\nabla$.
+A \emph{connection} on $\cal E$ is a derivation\footnotemark{} $\ts\nabla : \secs(\cal E) \to \forms^1(\cal M, \cal E)$ from vector fields to vector-valued 1-forms, designed so that $(\ts\nabla\bm ψ)(\ts X)$---that is, the action of the $V$-valued 1-form $\ts\nabla\bm ψ$ on a vector $\ts X \in \T\cal M$---gives the directional derivative of $\bm ψ$ along $\ts X$ with respect to $\ts\nabla$.
 \footnotetext{
 	More precisely, $\ts\nabla$ is a $\cal C^\infty(\cal M)$-linear derivation, meaning
 	\begin{math}
@@ -154,15 +154,15 @@ A \emph{connection} on $\cal E$ is a derivation\footnotemark{} $\ts\nabla : \sec
 }
 Employing a basis $\qty{\bm e_a}$ of $\cal E$ and local coordinates $\qty{x^μ}$ of $\cal M$, any connection is of the form
 \begin{align}
-	\ts\nabla \bmψ &= \ts\dd\bmψ + \tsbm A\bmψ
+	\ts\nabla \bm ψ &= \ts\dd\bm ψ + \tsbm A\bm ψ
 \\	&= \qty(\partial_\muψ^a{}_b + A_μ{}^a{}_bψ^b) \, \ts\dd x^μ \otimes \bm e_a
 \end{align}
 for some matrix-valued 1-form $\tsbm A$.
-If the connection is required to transform like the matter field $\bmψ$ under local gauge transformations, that is, as
+If the connection is required to transform like the matter field $\bm ψ$ under local gauge transformations, that is, as
 \begin{align}
-	\ts\nabla\bmψ \overset{g}{\mapsto} g\cdot(\ts\nabla\bmψ)
-	= (g\cdot\ts\nabla)(g_\rho\bmψ)
-	= g_\rho\ts\nabla\bmψ
+	\ts\nabla\bm ψ \overset{g}{\mapsto} g\cdot(\ts\nabla\bm ψ)
+	= (g\cdot\ts\nabla)(g_\rho\bm ψ)
+	= g_\rho\ts\nabla\bm ψ
 ,\end{align}
 then $\ts\nabla$ is called a \emph{covariant derivative} and the connection 1-form $\tsbm A$ consequently obeys
 \begin{align}
@@ -174,36 +174,36 @@ It is exactly this connection 1-form which is promoted to a dynamical object in 
 In order for the gauge field to be incorporated in the theory's equations of motion, we must have a notion of its derivative.
 However, $\ts\nabla_{\!A} : \secs(\cal E) \cong \forms^0(\cal M, \cal E) \to \forms^1(\cal M, \cal E)$ is not defined on 1-forms such as $\tsbm A$ until we make the natural extension\footnotemark{} to a \emph{covariant exterior derivative}
 % Finally, the connection $\ts\nabla : \secs(\cal E) \cong \forms^0(\cal M, \cal E) \to \forms^1(\cal M, \cal E)$ may be naturally extended\footnotemark{} to a \emph{covariant exterior derivative}
-$\ts\dd_A : \forms^p(\cal M, \cal E) \to \forms^{p + 1}(\cal M, \cal E)$
+$\covdd : \forms^p(\cal M, \cal E) \to \forms^{p + 1}(\cal M, \cal E)$
 \begin{align}
-	% \ts\dd_A &: \forms^p(\cal M, \cal E) \to \forms^{p + 1}(\cal M, \cal E)
-% ,&	\ts\dd_A &= \ts\dd + \tsbm A	
-	\ts\dd_A &= \ts\dd + \tsbm A
-% \\	\ts\dd_Aψ^a &= \ts\ddψ^a + \ts A^a{}_bψ^b
-	% \ts\dd_A\tsbm\phi &= \ts\dd\tsbm\phi + \tsbm A\tsbm\phi
+	% \covdd &: \forms^p(\cal M, \cal E) \to \forms^{p + 1}(\cal M, \cal E)
+% ,&	\covdd &= \ts\dd + \tsbm A	
+	\covdd &= \ts\dd + \tsbm A
+% \\	\covddψ^a &= \ts\ddψ^a + \ts A^a{}_bψ^b
+	% \covdd\tsbm\phi &= \ts\dd\tsbm\phi + \tsbm A\tsbm\phi
 % \\	\qty(\partial_μ\phi_ν{}^a + A_μ{}^a{}_b\phi_ν{}^b) \, \ts\dd x^μ \otimes \bm e_a
 ,\end{align}
 \footnotetext{
 	% Note that $\secs(\cal E) = \forms^0(\cal M, \cal E)$.
 	The extension is obtained by requiring the graded Leibniz property
 	\begin{math}
-		\ts\dd_A(\ts\phi\otimes\bmψ) = \ts\dd\ts\phi \otimes\bmψ + (-1)^p\ts\phi \wedge \ts\nabla\bmψ
+		\covdd(\ts\phi\otimes\bm ψ) = \ts\dd\ts\phi \otimes\bm ψ + (-1)^p\ts\phi \wedge \ts\nabla\bm ψ
 	\end{math}
-	for $\ts\phi \in \forms^p(\cal M)$ and $\bmψ \in \secs(\cal E)$, analogous to the usual exterior derivative.
+	for $\ts\phi \in \forms^p(\cal M)$ and $\bm ψ \in \secs(\cal E)$, analogous to the usual exterior derivative.
 }%
 to allow the construction of, among other things, the curvature 2-form, or \emph{gauge field strength}
 \begin{align}
-	\tsbm F &\coloneq \ts\dd_A\tsbm A
+	\tsbm F &\coloneq \covdd\tsbm A
 \\	&= \ts\dd\tsbm A + \tsbm A \wedge \tsbm A
 	= (\ts\dd\ts A^a{}_b + \ts A^a{}_c \wedge \ts A^c{}_b) \, \bm e_a \otimes \bm e^b
 ,\end{align}
 where we have written the r.h.s.\ with respect to a basis $\qty{\bm e_a}$ and dual basis $\qty{\bm e^a}$ of $\cal E$ (note that $V$ is equipped with the Euclidean inner product; $\bm e^a (\bm e_b) = \delta^a_b$).
 The field strength $\tsbm F$ is useful because it is geometrical in the sense that it transforms in the same matter as the matter fields $\tsbm F \mapsto g\cdot\tsbm F = g_\rho\tsbm F g_\rho^{-1}$ under gauge transformations, even though $\tsbm A$ does not.
 
-\note{The gauge field strength also satisfies the Bianchi identity $\ts\dd_A\tsbm F = 0$.}
+\note{The gauge field strength also satisfies the Bianchi identity $\covdd\tsbm F = 0$.}
 
 We have seen how the gauge field $\tsbm A$ and its strength $\tsbm F$ arise when we require the notion of a spacetime derivative for a matter field which possesses gauge freedom, and are now acquainted with the dynamical objects of a gauge theory.
-The matter field $\bmψ$, its derivative $\ts\nabla_{\!A}\bmψ$ and the strength of the gauge field $\tsbm F$ are constructions which all transform regularly under gauge transformations.
+The matter field $\bm ψ$, its derivative $\ts\nabla_{\!A}\bm ψ$ and the strength of the gauge field $\tsbm F$ are constructions which all transform regularly under gauge transformations.
 All that remains to be specified in our theory are the equations of motion, which are to be expressed in terms of these three geometrical objects in a gauge invariant manner.
 
 
@@ -213,7 +213,7 @@ All that remains to be specified in our theory are the equations of motion, whic
 
 % There is still freedom left in the choice of connection, however, and it is exactly this object $\tsbm A$ which is promoted to a dynamical field and named the \emph{gauge field}.
 
-% All that remains in our theory to specify are the equations of motion for $\bmψ$ and $\tsbm A$.
+% All that remains in our theory to specify are the equations of motion for $\bm ψ$ and $\tsbm A$.
 
 
 % \section{The Yang--Mills Lagrangian}
@@ -223,12 +223,12 @@ All that remains to be specified in our theory are the equations of motion, whic
 \subsection{Lagrangians in Field Theories}
 \label{sec:Lagrangians}
 
-% We now have constructions for the matter field $\bmψ$, its derivative $\ts\nabla_{\!A}\bmψ$ and the strength of the gauge field $\tsbm F$ which all transform regularly under gauge transformations.
+% We now have constructions for the matter field $\bm ψ$, its derivative $\ts\nabla_{\!A}\bm ψ$ and the strength of the gauge field $\tsbm F$ which all transform regularly under gauge transformations.
 % All that remains to be specified in our theory are the equations of motion, which are to be expressed in terms of these three geometrical objects in a gauge invariant manner.
 
 For classical gauge theories, the equations of motion may be specified as the extremisation of an action
 \begin{align}
-	S\qty[\bmψ, \ts\nabla_{\!A}\bmψ, \tsbm F] = \int_{\cal M}\! \LL\qty[\bmψ, \ts\nabla_{\!A}\bmψ, \tsbm F]
+	S\qty[\bm ψ, \ts\nabla_{\!A}\bm ψ, \tsbm F] = \int_{\cal M}\! \LL\qty[\bm ψ, \ts\nabla_{\!A}\bm ψ, \tsbm F]
 ,\end{align}
 where $\LL$ is a local Lagrangian density.
 In order that the equations of motion are physically well-defined, we require the Lagrangian possesses the relevant symmetries: gauge symmetry, so that the equations of motion are gauge invariant; and Lorentz symmetry (which is automatic if $\LL = \mathscr{L}\,\vol$ is expressed as a volume form) \cite[§\,7.1]{Hamilton_2017}.
@@ -249,9 +249,9 @@ Furthermore, the Lagrangian of a quantum field theory enjoys an enlarged criteri
 ,\end{align}
 where $n \in \mathds Z$ may vary discretely under different gauges.
 This is because of the origin of a QFT's equations of motion in the path integral.
-For instance, the quantum mechanical amplitude that the fields $\bmψ$ and $\tsbm F$ satisfy prescribed boundary conditions on $\partial\Omega$ surrounding some region of spacetime $\Omega \subseteq \cal M$ is given by the path integral
+For instance, the quantum mechanical amplitude that the fields $\bm ψ$ and $\tsbm F$ satisfy prescribed boundary conditions on $\partial\Omega$ surrounding some region of spacetime $\Omega \subseteq \cal M$ is given by the path integral
 \begin{align}
-	\mathscr A = \int_{\partial\Omega}\! \cal D[\bmψ, \tsbm F] \exp\qty{\frac{i}{\hbar} \int_{\Omega}\! \LL\qty[\bmψ, \ts\nabla_{\!A}\bmψ, \tsbm F]}
+	\mathscr A = \int_{\partial\Omega}\! \cal D[\bm ψ, \tsbm F] \exp\qty{\frac{i}{\hbar} \int_{\Omega}\! \LL\qty[\bm ψ, \ts\nabla_{\!A}\bm ψ, \tsbm F]}
 	\label{eqn:path-integral}
 ,\end{align}
 where the intended meaning of $\cal D[\cdots]$ is an integration over all field configurations on $\Omega$.
@@ -292,8 +292,8 @@ Physically, the coupling constants determine the relative interaction strengths 
 
 % This construction was first considered by Yang and Mills in 1954 [135] in the special case where G = SU(2) and Φ is a pair of Dirac spinor fields. [Folland pg 295]
 The term $\angbr{\tsbm F \wedge\star \tsbm F}$ is known as the \emph{Yang--Mills Lagrangian}, and is a major component in the standard model, describing boson force carrier self-interactions (such as gluon self-interactions).
-The Yang--Mills Lagrangian yields the equation of motion $\ts\dd_A\star\tsbm F = 0$.
-For the Abelian gauge group of electromagnetism $G = \mathrm{U}(1)$, this equation, together with the Bianchi identity $\ts\dd_A\tsbm F = 0$, are the source-free Maxwell's equations.
+The Yang--Mills Lagrangian yields the equation of motion $\covdd\star\tsbm F = 0$.
+For the Abelian gauge group of electromagnetism $G = \mathrm{U}(1)$, this equation, together with the Bianchi identity $\covdd\tsbm F = 0$, are the source-free Maxwell's equations.
 
 
 The other term $\angbr{\tsbm F \wedge \tsbm F}$ is known as the \emph{Chern--Simons term} or the \emph{topological $θ$-term}, for reasons which will become apparent.
@@ -342,96 +342,117 @@ Since
 ,\end{math}
 the coefficient $θ$, henceforth the \emph{$θ$-parameter}, is naturally an angular quantity.
 
-\subsection{Fermions Fields and the Chiral Anomaly}
+\subsection{Dirac Fermion Fields and the Chiral Anomaly}
 
 An important kind of matter field in the standard model is the \emph{Dirac fermion field} $\bm φ$, which transform under the spin-$\frac12$ representation of the Lorentz group $\mathrm{SO}^+(1,3)$.
-The Dirac matrices $\bmγ^μ$ are basis elements of the Clifford algebra $\cal{Cl}_{1,3}(\mathds{C})$ satisfying $\bmγ^{(μ}\bmγ^{ν)} = \eta^{μν}\bm 1$, and are used to write 4-component Dirac fermions in the spin-$\frac12$ representation.
+The Dirac matrices $\bm γ^μ$ are basis elements of the Clifford algebra $\cal{Cl}_{1,3}(\mathds{C})$ satisfying $\bm γ^{(μ}\bm γ^{ν)} = \eta^{μν}\bm 1$, and are used to write 4-component Dirac fermions in the spin-$\frac12$ representation.
 An inner product on fermions $\angbr{\bm ψ, \bm φ} = \bar{\bm ψ}\bm φ \in \mathds R$ \note{or $\mathds C$?} is provided by the Dirac adjoint $\bar{\bm ψ} \coloneqq \bm ψ^\dagger \bm γ^0$, so that Lorentz-invariant quantities may be naturally constructed.
+Finally, fermions may be separated into left-handed $\bm φ_+$ and right-handed $\bm φ_-$ components with the projection operators $\bm φ_\pm = \frac12(1 \pm \bm γ^5)$ where $\bm γ^5 = i\bm γ^0\bm γ^1\bm γ^2\bm γ^3$.
+In theories which violate parity, left- and right-handed fermions may experience different interactions.
 
 The simplest fermion equations of motion derive from the \emph{Dirac Lagrangian density}
 \begin{align}
-	\LL_\text{Dirac} = \bar{\bm φ}\qty(i\bmγ^μ\partial_μ - m)\bm φ \;\vol
+	\LL_\text{Dirac} = \bar{\bm φ}\qty(i\bm γ^μ\partial_μ - m)\bm φ \;\vol
 ,\end{align}
 which describes a non-interacting spin-$\frac12$ fermion of mass $m$.
 % Consider a theory whose matter field $\bm ψ$ may consist of one or more fermion fields $\bm φ$...
 % If a theory possesses a local gauge symmetry $\bm ψ \mapsto g \cdot \bm ψ$ for $g \in G$, then the Dirac Lagrangian may be localised, giving
 The Dirac Lagrangian may be localised in the presence of gauge symmetry,
 \begin{align}
-	\LL_\text{Dirac} = \bar{\bm ψ}\qty(i\bmγ^μ\nabla_μ - m)\bm ψ \;\vol
+	\LL_\text{Dirac} = \bar{\bm ψ}\qty(i\bm γ^μ\nabla_μ - m)\bm ψ \;\vol
 	\label{eqn:Dirac-Lagrangian}
 ,\end{align}
-where $\bm ψ = \bm φ_{(1)} \oplus \cdots \oplus \bm φ_{(n)}$ may more generally be comprised of multiple fermion fields and where $\ts\nabla\bm ψ \equiv (\nabla_μ\bm ψ) \, \ts\dd x^μ$ is the covariant derivative with respect to the gauge field, $\tsbm A$.
-This describes fermions and their interactions with the gauge bosons.
+where $\ts\nabla\bm ψ \equiv (\nabla_μ\bm ψ) \, \ts\dd x^μ$ is the covariant derivative with respect to the gauge field, $\tsbm A$.
+The matter field $\bm ψ = \bm φ_{(1)} \oplus \cdots \oplus \bm φ_{(n)}$ may now more generally be comprised of multiple fermion fields, which may be rotated into one another by the gauge group.
+The localised Dirac Lagrangian describes fermions and their interactions with the gauge bosons.
 The electromagnetic interactions of charged fermionic matter are described by \eqref{eqn:Dirac-Lagrangian} in the case of a $\U(1)$ gauge symmetry.
 
-The $θ$-term $\angbr{\tsbm F\wedge\tsbm F}$ also arises in quantum field theories by another important route: via the \emph{chiral anomaly}.
-% The standard model enjoys the global $\U(1)$ symmetry by $\bm ψ \mapsto e^{iα}\bm ψ$.
-% These transformations are known as vector fermion rotations.
+The $θ$-term $\angbr{\tsbm F\wedge\tsbm F}$ also arises in quantum field theories of fermions via a seemingly unrelated source: the \emph{chiral anomaly}.
+\note{Introduce this smoothly.}
+% Such QFTs exhibit two important symmetries relating to the fermion fields, and both give rise to conserved currents.
+% However, one of these sy
+% This is a symmetry of the classical Lagrangian which is violated in the corresponding quantum theory.
+
 The Dirac Lagrangian is invariant under global Abelian transformations known as \emph{vector fermion rotations}, $\U(1)_V$ given by
 \begin{align}
 	\bm ψ &\overset{\U(1)_V}{\mapsto} e^{iα}\bm ψ
-,&	δ\bm ψ = iδα
+,&	δ\bm ψ = iδα \bm ψ
 .\end{align}
 By Nöther's theorem, there is a conserved current density (viz.\ a 3-form) associated to this symmetry,
 \begin{align}
 	\ts J &= \pdv{\ts{\cal L}_\text{Dirac}}{\ts\nabla ψ} \, \fdv{\bm ψ}{α} = \bar{\bm ψ} \bm γ_μ \bm ψ \star \ts\dd x^μ
 ,&	\text{i.e.,}\quad
-	j_V^{\,μ} &= \bar{\bm ψ} \bm γ^μ \bm ψ
+	j^{\,μ} &= \bar{\bm ψ} \bm γ^μ \bm ψ
 	\quad\text{where}\quad
-	\star\ts J = j_μ \ts\dd x^μ
+	\star\ts J = j_μ \, \ts\dd x^μ
 ,\end{align}
-whose continuity equation reads $\ts\dd\ts J = 0$ (i.e., $\partial_µ j^μ = 0$).
-Classically, this corresponds to conservation of charge $Q(t_0) = \int_{t=t_0} \ts J$, and in QFT, to Baryon number conservation.
+whose continuity equation reads $\ts\dd\ts J = 0$ (i.e., $\partial_μj^μ = 0$).
+Classically, this corresponds to conservation of charge, and in the quantum regime, to the number of particles.
 
-The Dirac Lagrangian classically exhibits another global Abelian symmetry, given by \emph{axial fermion rotations} $\U(1)_A$
+The Dirac Lagrangian classically exhibits another global Abelian symmetry, given by \emph{axial fermion rotations} $\U(1)_A$, which transform left- $\bm ψ_+$ and right-handed $\bm ψ_+$ fermion components differently:
 \begin{align}
-	\bm ψ &\mapsto e^{i\bm γ^5 α}\bm ψ
-,&	&\text{i.e.,}
-&	\bm ψ_\pm &\mapsto e^{\pm iα}\bm ψ_\pm
-,\end{align}
-which transforms the left- $\bm ψ_+$ and right-handed $\bm ψ_+$ components differently.
+	\bm ψ &\overset{\U(1)_A}\mapsto e^{i\bm γ^5 α}\bm ψ
+,&	\text{i.e.,} \quad
+	\bm ψ_\pm &\overset{\U(1)_A}\mapsto e^{\pm iα}\bm ψ_\pm
+.\end{align}
 The associated Nöther current density,
 \begin{align}
 	\ts J_A &= \bar{\bm ψ} \bm γ_μ \bm γ_5 \bm ψ \star\ts\dd x^μ
 ,\end{align}
-is conserved classically, but not in the QFT \note{which QFT? The Dirac Lagrangian? Or just QCD, etc?}.
-The $\U(1)_A$ is said to be \emph{anomalous}, and the continuity equation $\ts\dd\ts J = 0$ is violated by the presence of none-other than the $θ$-term,
+is conserved classically.
+The charge associated to $\ts J_A$ is the number of particles minus antiparticles, named the \emph{baryon number} in QCD.
+However, $\U(1)_A$ symmetry does not survive the renormalisation procedure---it is \emph{anomalous}---and consequently, baryon number is not conserved in QCD.
+The continuity equation $\ts\dd\ts J = 0$ is violated by the presence of none-other than the $θ$-term,
 \begin{align}
-	\ts\dd\ts J = \angbr{\tsbm F \wedge \tsbm F}
+	\ts\dd\ts J_A = \angbr{\tsbm F \wedge \tsbm F}
+	\label{eqn:chiral-anomaly}
 .\end{align}
+This leads to parity violation...
 
+\note{What does this mean??
+Relevant because Peccei-Quinn mechanism depends on chiral symmetry breaking.}
 
 \section{QCD and the Strong \CP\ Problem}
 
 Quantum chromodynamics describes the strong interactions between hadronic matter.
-Pure $N$-quark QCD is a quantum gauge theory whose matter field (a direct product of $N$ fermionic Dirac fields) describes $N$ quark types and whose gauge field describes $N^2 - 1$ gluons.
-Pure QCD can be integrated into the standard model, in which case the quarks partition into \emph{up type} and \emph{down type}, and again into three \emph{flavours}, so that the standard model contains six quark fields.
+Pure $N$-quark QCD is a quantum gauge theory whose matter field (a direct product of $N$ fermionic Dirac fields) describes $N$ quark types, or \emph{flavours}, and whose gauge group $\SU(N)$ gives rise to $N^2 - 1$ gauge fields, or \emph{gluons}.
+The QCD sector of the standard model is an extension of pure QCD where the quarks partition into \emph{up type} and \emph{down type}, and again into three \emph{generations}, so that the standard model contains six quark flavours.
+{
+\newcommand{\quark}[2]{$\raisemath{0.7ex}{\underset{#2}{\mathrm{#1}}}$}
+\renewcommand{\arraystretch}{1.5}
+\begin{center}
+	\begin{tabular}{r|ccc}
+	generation & I & I\hspace{-1pt}I & I\hspace{-1pt}I\hspace{-1pt}I \\
+	\hline
+	up type & \quark{u}{\SI{2.2}{\mega\eV}} & \quark{c}{\SI{1.3}{\giga\eV}} & \quark{t}{\SI{170}{\giga\eV}} \\
+	down type & \quark{d}{\SI{4.7}{\mega\eV}} & \quark{s}{\SI{0.1}{\giga\eV}} & \quark{b}{\SI{4.2}{\giga\eV}} \\
+	\end{tabular}
+\end{center}
+}
 % Pure QCD can be interpolated with QED or the standard model, in which case 
 % Quarks are fermionic Dirac fields which come in pairs of \emph{up type} and \emph{down type} quarks, each transforming under different representations of weak hypercharge $\mathrm{U}(1)$ (but which are identical in pure QCD).
 % Pure QCD is agnostic to the number of quark pairs, but when included in the standard model, three copies (each called a \emph{generation}) of quark pairs are used, meaning the standard model contains six quark fields in total . \note{??}
-One of the attractive qualities of pure QCD is that, given the gauge group $G = \SU(3)$ and its action on a matter field $\bmψ$, the theory is almost completely specified.
+One of the attractive qualities of pure QCD is that, given the gauge group $G = \SU(3)$ and its action on a matter field $\bm ψ$, the theory is almost completely specified.
 That is, there is not much freedom for QCD to be slightly different without being a drastically different theory.
 
 The Lagrangian of pure, $N$-quark QCD is a sum of the Dirac Lagrangian and the Yang--Mills Lagrangian,
 \begin{align}
-	\cal L_\text{QCD} &= \bar{\bm ψ}\qty(i\bmγ^μ\nabla_μ - m)\bm ψ - \angbr{\tsbm F \wedge\star \tsbm F}
-	% \cal L_\text{QCD} &= \sum_q\overbar{\bmψ^{(q)}}\qty(i\bmγ^μ\nabla_μ - m)\bmψ^{(q)} - \angbr{\tsbm F \wedge\star \tsbm F}
+	\cal L_\text{QCD} &= \bar{\bm ψ}\qty(i\bm γ^μ\nabla_μ - m)\bm ψ - \angbr{\tsbm F \wedge\star \tsbm F}
+	% \cal L_\text{QCD} &= \sum_q\overbar{\bm ψ^{(q)}}\qty(i\bm γ^μ\nabla_μ - m)\bm ψ^{(q)} - \angbr{\tsbm F \wedge\star \tsbm F}
 \\	&\equiv \sum_{q=1}^N\overbar{ψ}_a^{(q)}\qty(iγ^{μ a}{}_b\nabla_μ - m\delta^a{}_b)ψ^b_{(q)} - \frac14F^a{}_{bμν}F_a{}^{bμν}
 \end{align}
 where
-% $\bmψ \equiv \bigoplus_{q=1}^N\bmψ^{(q)}$
-$\bmψ \equiv \bmψ^{(1)} \oplus \cdots \oplus \bmψ^{(N)}$
-is the fermion field separated into its quark components, each of which is a Dirac spinor (transforming under the spin-$\frac12$ representation of the Lorentz group).
-The Dirac matrices $\bmγ^μ$ are basis elements of the Clifford algebra $\cal{Cl}_{1,3}(\mathds{C})$ satisfying
-% $\frac12(γ^\muγ^ν + γ^\nuγ^μ) = \angbr{γ^μ, γ^ν}$
-$\bmγ^{(μ}\bmγ^{ν)} = \eta^{μν}\bm 1$ and $\ts\nabla\bmψ \equiv (\nabla_μ\bmψ) \, \ts\dd x^μ$ is the covariant derivative with respect to the gluon field, $\tsbm A$.
+$\bm ψ \equiv \bm φ^{(1)} \oplus \cdots \oplus \bm φ^{(N)}$
+is the matter field separated into its quark components, each of which is a Dirac fermion.
+The gauge field is $\SU(N)$, and its action is 
+$\ts\nabla\bm ψ \equiv (\nabla_μ\bm ψ) \, \ts\dd x^μ$ is the covariant derivative with respect to the gluon field, $\tsbm A$.
 
 
 At this point, we see that the issue which is given the name \emph{the strong \CP\ problem} offers itself as a question about the naturalness the QCD Lagrangian:
 As encountered in section~\ref{sec:YM-and-topological}, there is another term which may be included in the Lagrangian with no additional physical assumptions; the topological $θ$-term.
 In this sense, the most general pure QCD Lagrangian is
 \begin{align}
-	\cal L_\text{QCD} = \overbar{\bmψ}\qty(i\bmγ^μ\nabla_μ - m)\bmψ
+	\cal L_\text{QCD} = \overbar{\bm ψ}\qty(i\bm γ^μ\nabla_μ - m)\bm ψ
 	- \angbr{\tsbm F \wedge\star \tsbm F}
 	+ \frac{θ}{8\pi^2}\angbr{\tsbm F \wedge \tsbm F}
 	\label{eqn:pure-QCD-Lagrangian}
