@@ -46,14 +46,14 @@ Then, QCD is defined and the origin of the so-called \emph{strong \CP\ problem} 
 \label{sec:overview-of-gauge-theory}
 
 Gauge theories take place on a spacetime manifold and consist of two mathematically distinct dynamical entities: a \emph{matter field} and a \emph{gauge field}.
-A classical gauge theory is completely specified by the prescription of three ingredients: the base manifold; the vector space in which the matter field takes its values; and a \emph{gauge group} equipped with an action on the matter field.
-The dynamical gauge field arises naturally as a consequence of the matter field's symmetry under the action of the gauge group.
+A classical gauge theory is completely specified by the prescription of four ingredients: the base manifold; the vector space in which the matter field takes its values; a \emph{gauge group} equipped with an action on the matter field; and equations of motion, usually provided by a Lagrangian density.
+The dynamical gauge field is not prescribed at the outset---it arises naturally as a consequence of the matter field's symmetry under the action of the gauge group.
 
-The underlying premise of gauge theory is that there may be redundancy in the mathematical description of a matter field at each point in spacetime.
-(For example, the complex phase of a wavefunction.)
-This redundancy results in mathematical degrees of freedom of the matter fields which are non-physical, called \emph{local gauge freedoms}.
-(Keeping with our example: local rotations of phase.)
-Crucially, local gauge freedoms introduce ambiguity in the notion of the physical rate of change of matter fields about a point, because of the point-wise independence of its gauge freedom.
+The underlying premise of gauge theory is that there may be physical redundancy in the mathematical description of a matter field at each point in spacetime.
+(For example, the complex phase of a wavefunction is physically irrelevant.)
+This redundancy results in mathematical degrees of freedoms of the matter fields which are non-physical, called \emph{local gauge freedoms}.
+(Keeping with our example: local rotations of phase are a gauge freedom.)
+Crucially, local gauge freedoms introduce ambiguity in the notion of the physical rate of change of matter fields about a point, because the point-wise independence of its gauge freedom means that the difference in the matter field between nearby points is gauge-dependent.
 In other words, there is no preferred directional derivative of a matter field with local gauge freedom, until the choice of a \emph{connection} is made.
 The triumph of gauge theory is that, by introducing the gauge field to act as a connection, this ambiguity is promoted to a separate set of physical degrees of freedom.
 The implications of this are twofold:
@@ -126,7 +126,7 @@ The action of $\cal G$ on the space of matter fields $\cal E$ may be denoted
 	\bm ψ \overset{g}{\mapsto} \bm ψ' = g\cdot\bm ψ
 \end{align}
 for $\bm ψ \in \secs(\cal E)$ and $g \in \secs(\cal G)$ (i.e., $\bm ψ : \cal M \to V$ and $g : \cal M \to G$).
-This specification of an action ``$\cdot$'' of $\cal G$ on the vector space $\cal E$ is equivalent to the choice of a linear representation $\rho : G \to \mathrm{GL}(V)$ of $G$ on $V$.
+This specification of an action ``$\cdot$'' of $\cal G$ on the vector space $\cal E$ is equivalent to the choice of a linear representation $\rho : G \to \mathrm{End}(V)$ of $G$ on $V$.
 Thus, we may represent the group action as matrix product,
 \begin{math}
 	% (g \cdot \bm ψ)|_p = \rho(g|_p)\bm ψ|_p
@@ -152,13 +152,13 @@ A \emph{connection} on $\cal E$ is a derivation\footnotemark{} $\ts\nabla : \sec
 		\ts\nabla(\bm u \otimes \bm v) = \ts\nabla(\bm u) \otimes \bm v + \bm u \otimes \ts\nabla(\bm v)
 	.\end{math}
 }
-Employing a basis $\qty{\bm e_a}$ of $\cal E$ and local coordinates $\qty{x^μ}$ of $\cal M$, any connection is of the form
+Employing a basis $\qty{\bm e_a}$ of $\cal E$ and local coordinates $\qty{x^μ}$ of $\cal M$, \emph{any} connection is of the form
 \begin{align}
 	\ts\nabla \bm ψ &= \ts\dd\bm ψ + \tsbm A\bm ψ
 \\	&= \qty(\partial_\muψ^a{}_b + A_μ{}^a{}_bψ^b) \, \ts\dd x^μ \otimes \bm e_a
 \end{align}
-for some matrix-valued 1-form $\tsbm A$.
-If the connection is required to transform like the matter field $\bm ψ$ under local gauge transformations, that is, as
+for some matrix-valued 1-form $\tsbm A$, where $\ts\dd$ is the exterior derivative.
+If $\ts\nabla\bm ψ$ is required to transform like the matter field $\bm ψ$ under local gauge transformations, that is, as
 \begin{align}
 	\ts\nabla\bm ψ \overset{g}{\mapsto} g\cdot(\ts\nabla\bm ψ)
 	= (g\cdot\ts\nabla)(g_\rho\bm ψ)
@@ -171,7 +171,7 @@ then $\ts\nabla$ is called a \emph{covariant derivative} and the connection 1-fo
 
 Such a connection $\ts\nabla_{\!A}$ is not unique; it depends on the choice of the 1-form field $\tsbm A$.
 It is exactly this connection 1-form which is promoted to a dynamical object in a gauge theory and given the name \emph{the gauge field}.
-In order for the gauge field to be incorporated in the theory's equations of motion, we must have a notion of its derivative.
+In order for the gauge field to be incorporated in the theory's equations of motion, we would like to have a notion of its derivative.
 However, $\ts\nabla_{\!A} : \secs(\cal E) \cong \forms^0(\cal M, \cal E) \to \forms^1(\cal M, \cal E)$ is not defined on 1-forms such as $\tsbm A$ until we make the natural extension\footnotemark{} to a \emph{covariant exterior derivative}
 % Finally, the connection $\ts\nabla : \secs(\cal E) \cong \forms^0(\cal M, \cal E) \to \forms^1(\cal M, \cal E)$ may be naturally extended\footnotemark{} to a \emph{covariant exterior derivative}
 $\covdd : \forms^p(\cal M, \cal E) \to \forms^{p + 1}(\cal M, \cal E)$
@@ -198,7 +198,7 @@ to allow the construction of, among other things, the curvature 2-form, or \emph
 	= (\ts\dd\ts A^a{}_b + \ts A^a{}_c \wedge \ts A^c{}_b) \, \bm e_a \otimes \bm e^b
 ,\end{align}
 where we have written the r.h.s.\ with respect to a basis $\qty{\bm e_a}$ and dual basis $\qty{\bm e^a}$ of $\cal E$ (note that $V$ is equipped with the Euclidean inner product; $\bm e^a (\bm e_b) = \delta^a_b$).
-The field strength $\tsbm F$ is useful because it is geometrical in the sense that it transforms in the same matter as the matter fields $\tsbm F \mapsto g\cdot\tsbm F = g_\rho\tsbm F g_\rho^{-1}$ under gauge transformations, even though $\tsbm A$ does not.
+The field strength $\tsbm F$ is useful because it is geometrical, in the sense that it transforms like the matter field; $\tsbm F \mapsto g\cdot\tsbm F = g_\rho\tsbm F g_\rho^{-1}$ under gauge transformations, even though $\tsbm A$ does not.
 
 \note{The gauge field strength also satisfies the Bianchi identity $\covdd\tsbm F = 0$.}
 
@@ -217,12 +217,18 @@ For classical gauge theories, the equations of motion may be specified as the ex
 where $\LL$ is a local Lagrangian density.
 In order that the equations of motion are physically well-defined, we require the Lagrangian possesses the relevant symmetries: gauge symmetry, so that the equations of motion are gauge invariant; and Lorentz symmetry (which is automatic if $\LL = \mathscr{L}\,\vol$ is expressed as a volume form) \cite[§\,7.1]{Hamilton_2017}.
 % We let the Lagrangian depend on derivatives only of order $\le 1$ in the fields for reasons of respecting causality and ensuring that energy has lower-bound.
-The equations of motion are invariant under adjustments to the Lagrangian density by a total derivative $\ts\dd\alpha$, since by Stokes' theorem these contribute only to boundary terms.
+The equations of motion are invariant under adjustments to the Lagrangian density by a total derivative $\ts\dd\ts K$, since by Stokes' theorem these contribute only to boundary terms.
 Therefore, a Lagrangian which is said to possess gauge symmetry is still generally permitted to transform as
-\begin{math}
-	\LL \mapsto \LL + \ts\dd\alpha
-\end{math}
+\begin{align}
+	\LL \mapsto \LL + \ts\dd\ts K
+	\label{eqn:Lagrangian-transforming-by-exact-form}
+\end{align}
 under gauge transformations, if the fields vanish at the boundary.
+If a Lagrangian transforms as \eqref{eqn:Lagrangian-transforming-by-exact-form} under a gauge symmetry parametrised by $n$ parameters $α_i$, then Nöther's theorem implies the existence of $n$ conserved current densities (viz. 3-forms), one for each $α_i$,
+\begin{align}
+	\ts J_{(i)} = \pdv{\LL}{\ts\nabla\bm ψ} \eval{\fdv{\bm ψ}{α^i}}_{\mathrm{id}} - \ts K
+,\end{align}
+whose continuity equations read $\ts\dd\ts J_{(i)} = 0$.
 
 % The condition that Lagrangians of quantum field theories are , on the other hand, enjoy slightly enlarged symmetri, because of their origin in a path integral.
 Furthermore, the Lagrangian of a quantum field theory enjoys an enlarged criterion of gauge symmetry: it is also permitted to transform as
@@ -249,13 +255,7 @@ Loosely speaking, a classical field theory is renormalisable if it can be quanti
 This restricts the form of the Lagrangian considerably, but how this happens is beyond this review's scope.
 % For instance, in 4-dimensional spacetime, can be shown that
 
-\note{transition}
 
-
-Nöther
-
-
-% \subsection{The Dirac Lagrangian}
 
 \subsection{The Yang--Mills Lagrangian and the Topological \texorpdfstring{$θ$-Term}{θ-Term}}
 \label{sec:YM-and-topological}
@@ -392,20 +392,22 @@ The $θ$-term $\angbr{\tsbm F\wedge\tsbm F}$ also arises in quantum field theori
 The Dirac Lagrangian is invariant under global Abelian transformations known as \emph{vector fermion rotations}, $\U(1)_V$ given by
 \begin{align}
 	\bm ψ &\overset{\U(1)_V}{\mapsto} e^{iα}\bm ψ
-,&	δ\bm ψ = iδα \bm ψ
+% ,&	\eval{\fdv{\bm ψ}{α}}_0 = i \bm ψ
 .\end{align}
-By Nöther's theorem, there is a conserved current density (viz.\ a 3-form) associated to this symmetry,
+Since $\eval{\fdv*{\bm ψ}{α}}_0 = i \bm ψ$, the conserved Nöther current density associated to this symmetry is
 \begin{align}
-	\ts J &= \pdv{\ts{\cal L}_\text{Dirac}}{\ts\nabla ψ} \, \fdv{\bm ψ}{α} = \bar{\bm ψ} \bm γ_μ \bm ψ \star \ts\dd x^μ
+	\ts J_V %&= \pdv{\ts{\cal L}_\text{Dirac}}{\ts\nabla ψ} \, \fdv{\bm ψ}{α}
+	&= \bar{\bm ψ}\,\bm γ_μ \bm ψ \star \ts\dd x^μ
 ,&	\text{i.e.,}\quad
-	j^{\,μ} &= \bar{\bm ψ} \bm γ^μ \bm ψ
+	j_V^{\,μ} &= \bar{\bm ψ}\,\bm γ^μ \bm ψ
 	\quad\text{where}\quad
-	\star\ts J = j_μ \, \ts\dd x^μ
+	% \star\ts J = j^μ \,δ_{μν} \ts\dd x^ν
+	\star\ts J_V = \ts j_V
 ,\end{align}
-whose continuity equation reads $\ts\dd\ts J = 0$ (i.e., $\partial_μj^μ = 0$).
+whose continuity equation reads $\ts\dd\ts J_V = 0$ (i.e., $\partial_μj_V^μ = 0$).
 Classically, this corresponds to conservation of charge, and in the quantum regime, to the number of particles.
 
-The Dirac Lagrangian classically exhibits another global Abelian symmetry, given by \emph{axial fermion rotations} $\U(1)_A$, which transform left- $\bm ψ_+$ and right-handed $\bm ψ_+$ fermion components differently:
+The Dirac Lagrangian classically exhibits another global Abelian symmetry, given by \emph{axial fermion rotations} $\U(1)_A$, which transform left- $\bm ψ_+$ and right-handed $\bm ψ_-$ fermion components differently:
 \begin{align}
 	\bm ψ &\overset{\U(1)_A}\mapsto e^{i\bm γ^5 α}\bm ψ
 ,&	\text{i.e.,} \quad
@@ -413,12 +415,12 @@ The Dirac Lagrangian classically exhibits another global Abelian symmetry, given
 .\end{align}
 The associated Nöther current density,
 \begin{align}
-	\ts J_A &= \bar{\bm ψ} \bm γ_μ \bm γ_5 \bm ψ \star\ts\dd x^μ
+	\ts J_A &= \bar{\bm ψ}\,\bm γ_μ \bm γ_5 \bm ψ \star\ts\dd x^μ
 ,\end{align}
 is conserved classically.
 The charge associated to $\ts J_A$ is the number of particles minus antiparticles, named the \emph{baryon number} in QCD.
 However, $\U(1)_A$ symmetry does not survive the renormalisation procedure---it is \emph{anomalous}---and consequently, baryon number is not conserved in QCD.
-The continuity equation $\ts\dd\ts J = 0$ is violated by the presence of none-other than the $θ$-term,
+The continuity equation $\ts\dd\ts J = 0$ fails by the presence of none-other than the $θ$-term,
 \begin{align}
 	\ts\dd\ts J_A = \angbr{\tsbm F \wedge \tsbm F}
 	\label{eqn:chiral-anomaly}
@@ -426,7 +428,8 @@ The continuity equation $\ts\dd\ts J = 0$ is violated by the presence of none-ot
 This leads to parity violation...
 
 \note{What does this mean??
-Relevant because Peccei-Quinn mechanism depends on chiral symmetry breaking.}
+Relevant because Peccei-Quinn mechanism depends on chiral symmetry breaking.
+Why don't we just put $\ts K = \angbr{\tsbm F \wedge \tsbm F}$ in the Lagrangian, so that $\ts\dd\ts J_A = 0$?}
 
 \section{QCD and the Strong \CP\ Problem}
 
@@ -453,9 +456,11 @@ That is, there is not much freedom for QCD to be slightly different without bein
 
 The Lagrangian of pure, $N$-quark QCD is a sum of the Dirac Lagrangian and the Yang--Mills Lagrangian,
 \begin{align}
-	\cal L_\text{QCD} &= \bar{\bm ψ}\qty(i\bm γ^μ\nabla_μ - m)\bm ψ - \angbr{\tsbm F \wedge\star \tsbm F}
+	\LL_\text{QCD} &= \bar{\bm ψ}\qty(i\bm γ^μ\nabla_μ - m)\bm ψ \, \vol- \angbr{\tsbm F \wedge\star \tsbm F}
 	% \cal L_\text{QCD} &= \sum_q\overbar{\bm ψ^{(q)}}\qty(i\bm γ^μ\nabla_μ - m)\bm ψ^{(q)} - \angbr{\tsbm F \wedge\star \tsbm F}
-\\	&\equiv \sum_{q=1}^N\overbar{ψ}_a^{(q)}\qty(iγ^{μ a}{}_b\nabla_μ - m\delta^a{}_b)ψ^b_{(q)} - \frac14F^a{}_{bμν}F_a{}^{bμν}
+% \\	&\equiv \sum_{q=1}^N\overbar{ψ}_a^{(q)}\qty(iγ^{μ a}{}_b\nabla_μ - m\delta^a{}_b)ψ^b_{(q)} - \frac14F^a{}_{bμν}F_a{}^{bμν}
+\\	\text{i.e.,} \quad 
+	\cal L_\text{QCD} &= \sum_{q=1}^N\overbar{ψ}_a^{(q)}\qty(iγ^{μ a}{}_b\nabla_μ - m\delta^a{}_b)ψ^b_{(q)} - \frac14F^a{}_{bμν}F_a{}^{bμν}
 \end{align}
 where
 $\bm ψ \equiv \bm φ^{(1)} \oplus \cdots \oplus \bm φ^{(N)}$
@@ -468,7 +473,7 @@ At this point, we see that the issue which is given the name \emph{the strong \C
 As encountered in section~\ref{sec:YM-and-topological}, there is another term which may be included in the Lagrangian with no additional physical assumptions; the topological $θ$-term.
 In this sense, the most general pure QCD Lagrangian is
 \begin{align}
-	\cal L_\text{QCD} = \overbar{\bm ψ}\qty(i\bm γ^μ\nabla_μ - m)\bm ψ
+	\LL_\text{QCD} = \overbar{\bm ψ}\qty(i\bm γ^μ\nabla_μ - m)\bm ψ \,\vol
 	- \angbr{\tsbm F \wedge\star \tsbm F}
 	+ \frac{θ}{8\pi^2}\angbr{\tsbm F \wedge \tsbm F}
 	\label{eqn:pure-QCD-Lagrangian}
