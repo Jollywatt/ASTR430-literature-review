@@ -359,10 +359,11 @@ the coefficient $θ$, henceforth the \emph{$θ$-parameter}, is naturally an angu
 
 
 \subsection{Dirac Fermion Fields and the Chiral Anomaly}
+\label{sec:fermions-and-the-chiral-anomaly}
 
 An important kind of matter field in the standard model is the \emph{Dirac fermion field} $\bm φ$, which transform under the spin-$\frac12$ representation of the Lorentz group $\mathrm{SO}^+(1,3)$.
 The Dirac matrices $\bm γ^μ$ are basis elements of the Clifford algebra $\cal{Cl}_{1,3}(\mathds{C})$ satisfying $\bm γ^{(μ}\bm γ^{ν)} = \eta^{μν}\bm 1$, and are used to write 4-component Dirac fermions in the spin-$\frac12$ representation.
-An inner product on fermions $\angbr{\bm ψ, \bm φ} = \bar{\bm ψ}\bm φ \in \mathds R$ \note{or $\mathds C$?} is provided by the Dirac adjoint $\bar{\bm ψ} \coloneqq \bm ψ^\dagger \bm γ^0$, so that Lorentz-invariant quantities may be naturally constructed.
+An inner product on fermions $\angbr{\bm ψ, \bm φ} \equiv \bar{\bm ψ}\bm φ \in \mathds R$ \note{or $\mathds C$?} is provided by the Dirac adjoint $\bar{\bm ψ} \coloneqq \bm ψ^\dagger \bm γ^0$, so that Lorentz-invariant quantities may be naturally constructed.
 Finally, fermions may be separated into left-handed $\bm φ_+$ and right-handed $\bm φ_-$ components with the projection operators $\bm φ_\pm = \frac12(1 \pm \bm γ^5)$ where $\bm γ^5 = i\bm γ^0\bm γ^1\bm γ^2\bm γ^3$.
 In theories which violate parity, left- and right-handed fermions may experience different interactions.
 
@@ -379,39 +380,45 @@ The Dirac Lagrangian may be localised in the presence of gauge symmetry,
 	\label{eqn:Dirac-Lagrangian}
 ,\end{align}
 where $\ts\nabla\bm ψ \equiv (\nabla_μ\bm ψ) \, \ts\dd x^μ$ is the covariant derivative with respect to the gauge field, $\tsbm A$.
-The matter field $\bm ψ = \bm φ_{(1)} \oplus \cdots \oplus \bm φ_{(n)}$ may now more generally be comprised of multiple fermion fields, which may be rotated into one another by the gauge group.
+The matter field $\bm ψ = \bm φ_{(1)} \oplus \cdots \oplus \bm φ_{(n)}$ may now more generally be comprised of multiple fermion fields, which may be rotated into one another by the gauge group (as in \emph{flavour symmetry} in QCD).
 The localised Dirac Lagrangian describes fermions and their interactions with the gauge bosons.
-The electromagnetic interactions of charged fermionic matter are described by \eqref{eqn:Dirac-Lagrangian} in the case of a $\U(1)$ gauge symmetry.
+The electromagnetic interactions of charged fermionic matter are described by \eqref{eqn:Dirac-Lagrangian} in the case of a $\U(1)$ gauge symmetry, where the gauge field $\tsbm A = \ts A$ is the electromagnetic vector potential.
 
-The $θ$-term $\angbr{\tsbm F\wedge\tsbm F}$ also arises in quantum field theories of fermions via a seemingly unrelated source: the \emph{chiral anomaly}.
+In quantum theories of fermions, the $θ$-term $\angbr{\tsbm F\wedge\tsbm F}$ also arises in the Lagrangian via the \emph{chiral anomaly}.
+The chiral anomaly is the breaking of a classical symmetry of the Lagrangian upon quantisation, which leads to the 
 \note{Introduce this smoothly.}
 % Such QFTs exhibit two important symmetries relating to the fermion fields, and both give rise to conserved currents.
 % However, one of these sy
 % This is a symmetry of the classical Lagrangian which is violated in the corresponding quantum theory.
 
-The Dirac Lagrangian is invariant under global Abelian transformations known as \emph{vector fermion rotations}, $\U(1)_V$ given by
+The Dirac Lagrangian is invariant under global Abelian transformations known as \emph{vector fermion rotations}, $\U(1)_V$ parametrised by $α$ as
 \begin{align}
 	\bm ψ &\overset{\U(1)_V}{\mapsto} e^{iα}\bm ψ
 % ,&	\eval{\fdv{\bm ψ}{α}}_0 = i \bm ψ
 .\end{align}
-Since $\eval{\fdv*{\bm ψ}{α}}_0 = i \bm ψ$, the conserved Nöther current density associated to this symmetry is
+% Since $\eval{\fdv*{\bm ψ}{α}}_0 = i \bm ψ$, the conserved Nöther current density associated to this symmetry is
+The conserved Nöther current density associated to this symmetry is
 \begin{align}
 	\ts J_V %&= \pdv{\ts{\cal L}_\text{Dirac}}{\ts\nabla ψ} \, \fdv{\bm ψ}{α}
-	&= \bar{\bm ψ}\,\bm γ_μ \bm ψ \star \ts\dd x^μ
+	&= \bar{\bm ψ}\,\bm γ^μ \bm ψ \, δ_{μν} \star \ts\dd x^ν
 ,&	\text{i.e.,}\quad
 	j_V^{\,μ} &= \bar{\bm ψ}\,\bm γ^μ \bm ψ
 	\quad\text{where}\quad
 	% \star\ts J = j^μ \,δ_{μν} \ts\dd x^ν
 	\star\ts J_V = \ts j_V
 ,\end{align}
+\begin{align}
+	\ts j_V = \bar{\bm ψ}\,\bm γ^μ \bm ψ \, \ts\partial_μ
+\end{align}
 whose continuity equation reads $\ts\dd\ts J_V = 0$ (i.e., $\partial_μj_V^μ = 0$).
 Classically, this corresponds to conservation of charge, and in the quantum regime, to the number of particles.
 
-The Dirac Lagrangian classically exhibits another global Abelian symmetry, given by \emph{axial fermion rotations} $\U(1)_A$, which transform left- $\bm ψ_+$ and right-handed $\bm ψ_-$ fermion components differently:
+There is another global Abelian symmetry of the Dirac Lagrangian; invariance under \emph{axial fermion rotations} $\U(1)_A$, which transform left- $\bm ψ_+$ and right-handed $\bm ψ_-$ fermion components differently:
 \begin{align}
-	\bm ψ &\overset{\U(1)_A}\mapsto e^{i\bm γ^5 α}\bm ψ
+	\bm ψ &\overset{\U(1)_A}\mapsto e^{i\bm γ^5 θ}\bm ψ
 ,&	\text{i.e.,} \quad
-	\bm ψ_\pm &\overset{\U(1)_A}\mapsto e^{\pm iα}\bm ψ_\pm
+	\bm ψ_\pm &\overset{\U(1)_A}\mapsto e^{\pm iθ}\bm ψ_\pm
+	\label{eqn:chiral-rotation}
 .\end{align}
 The associated Nöther current density,
 \begin{align}
@@ -423,9 +430,14 @@ However, $\U(1)_A$ symmetry does not survive the renormalisation procedure---it 
 The continuity equation $\ts\dd\ts J = 0$ fails by the presence of none-other than the $θ$-term,
 \begin{align}
 	\ts\dd\ts J_A = \angbr{\tsbm F \wedge \tsbm F}
+	\quad\text{\note{coefficient?}}
 	\label{eqn:chiral-anomaly}
 .\end{align}
-This leads to parity violation...
+% Redefining $\ts J'_A = \ts J_A - \csform$ so that $\ts\dd\ts J'_A = 0$ generates the term $$ 
+In other words, the the axial rotation \eqref{eqn:chiral-rotation}, does not leave the Lagrangian invariant; but instead generates the term
+\begin{math}
+	\frac{θ}{8π^2}\angbr{\tsbm F \wedge \tsbm F}
+.\end{math}
 
 \note{What does this mean??
 Relevant because Peccei-Quinn mechanism depends on chiral symmetry breaking.
@@ -470,7 +482,8 @@ $\ts\nabla\bm ψ \equiv (\nabla_μ\bm ψ) \, \ts\dd x^μ$ is the covariant deriv
 
 
 At this point, we see that the issue which is given the name \emph{the strong \CP\ problem} offers itself as a question about the naturalness the QCD Lagrangian:
-As encountered in section~\ref{sec:YM-and-topological}, there is another term which may be included in the Lagrangian with no additional physical assumptions; the topological $θ$-term.
+As encountered in §\,\ref{sec:YM-and-topological}, there is another term which may be included in the Lagrangian with no additional physical assumptions; the topological $θ$-term.
+The $θ$-term also arises as a consequence of the chiral anomaly, as seen in §\,\ref{sec:fermions-and-the-chiral-anomaly}.
 In this sense, the most general pure QCD Lagrangian is
 \begin{align}
 	\LL_\text{QCD} = \overbar{\bm ψ}\qty(i\bm γ^μ\nabla_μ - m)\bm ψ \,\vol
