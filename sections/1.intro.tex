@@ -224,7 +224,7 @@ Therefore, a Lagrangian which is said to possess gauge symmetry is still general
 	\label{eqn:Lagrangian-transforming-by-exact-form}
 \end{align}
 under gauge transformations, if the fields vanish at the boundary.
-If a Lagrangian transforms as \eqref{eqn:Lagrangian-transforming-by-exact-form} under a gauge symmetry parametrised by $n$ parameters $α_i$, then Nöther's theorem implies the existence of $n$ conserved current densities (viz. 3-forms), one for each $α_i$,
+If a Lagrangian transforms as \eqref{eqn:Lagrangian-transforming-by-exact-form} under a gauge symmetry parametrised by $n$ parameters $α_i$, then Noether's theorem implies the existence of $n$ conserved current densities (viz. 3-forms), one for each $α_i$,
 \begin{align}
 	\ts J_{(i)} = \pdv{\LL}{\ts\nabla\bm ψ} \eval{\fdv{\bm ψ}{α^i}}_{\mathrm{id}} - \ts K
 ,\end{align}
@@ -238,21 +238,20 @@ Furthermore, the Lagrangian of a quantum field theory enjoys an enlarged criteri
 	\label{eqn:discrete-QFT-Lagrangian-transformation}
 ,\end{align}
 where $n \in \mathds Z$ may vary discretely under different gauges.
-This is because of the origin of a QFT's equations of motion in the path integral.
+This is because of the origin of a QFT's equations of motion in the Feynman path integral.
 For instance, the quantum mechanical amplitude that the fields $\bm ψ$ and $\tsbm F$ satisfy prescribed boundary conditions on $\partial\Omega$ surrounding some region of spacetime $\Omega \subseteq \cal M$ is given by the path integral
 \begin{align}
 	\mathscr A = \int_{\partial\Omega}\! \cal D[\bm ψ, \tsbm F] \exp\qty{\frac{i}{\hbar} \int_{\Omega}\! \LL\qty[\bm ψ, \ts\nabla_{\!A}\bm ψ, \tsbm F]}
 	\label{eqn:path-integral}
 ,\end{align}
 where the intended meaning of $\cal D[\cdots]$ is an integration over all field configurations on $\Omega$.
-If the Lagrangian were to undergo a gauge transformation \eqref{eqn:discrete-QFT-Lagrangian-transformation}, the amplitude $\mathscr A \mapsto \mathscr A\exp(n\cdot2\pi i)$ would be left invariant.
+If the Lagrangian were to undergo a discrete gauge transformation \eqref{eqn:discrete-QFT-Lagrangian-transformation}, the amplitude $\mathscr A \mapsto \mathscr A\exp(n\cdot2\pi i)$ would be left invariant.
 In other words, physical consistency of a QFT does not require the single-valuedness of $S$, but only of $\exp(iS/\hbar)$.
+This leads to an enlargement of the space of possible Lagrangian densities to include, in particular, topological terms.
+These prove to be especially relevant to QFTs and to the strong \CP\ problem itself.
 
 
 % Another condition on the Lagrangian in QFT comes from the expectation that the quantised theory be \emph{renormalisable}
-We also require that the quantum field theory associated to a Lagrangian be \emph{renormaliseble}.
-Loosely speaking, a classical field theory is renormalisable if it can be quantised consistently.
-This restricts the form of the Lagrangian considerably, but how this happens is beyond this review's scope.
 % For instance, in 4-dimensional spacetime, can be shown that
 
 
@@ -260,15 +259,20 @@ This restricts the form of the Lagrangian considerably, but how this happens is 
 \subsection{The Yang--Mills Lagrangian and the Topological \texorpdfstring{$θ$-Term}{θ-Term}}
 \label{sec:YM-and-topological}
 
-Taking Lorentz and gauge invariance into account, while requiring the theory be renormalisable, the only admissible QFT Lagrangians which may be constructed from the gauge field $\tsbm A$ alone are linear combinations of
+\note{We seek to describe the dynamics of the gauge field.}
+Along with requiring Lorentz and gauge invariance, we also require that the quantum field theory associated to a Lagrangian be \emph{renormaliseble}.
+Loosely speaking, a classical field theory is renormalisable if it can be ``quantised consistently''.
+(This restricts the form of the Lagrangian considerably, but how this happens is beyond this review's scope.)
+Under these constraints, the only admissible QFT Lagrangians which may be constructed from the gauge field $\tsbm A$ alone are linear combinations of
 \begin{align}
 	% \angbr{\tsbm F \wedge \star\tsbm F} &\equiv \frac12\angbrAd{\bm F_{μν}, \bm F^{μν}}\vol
 	\angbr{\tsbm F \wedge \star\tsbm F} &\equiv \frac12\angbrAd{\bm F_{μν}, \bm F_{\rho\sigma}}g^{μ\rho}g^{ν\sigma}\vol
 ,&	&\text{and}
 &	\angbr{\tsbm F \wedge \tsbm F} &\equiv \frac14\angbrAd{\bm F_{μν}, \bm F_{\rho\sigma}}\epsilon^{μν\rho\sigma}\vol
 ,\end{align}
-where $\star$ is the Hodge dual and $\angbrAd{\ ,\ }$ is a gauge-invariant inner product on the Lie algebra $\frak g$ of the gauge group $G$.
-(Recall that $\tsbm F$ is a $\frak g$-valued form, so an inner product on $\frak g$ is needed, and it must be gauge- or `$\mathrm{Ad}$-invariant' \cite[§\,7.1.2]{Hamilton_2017}.) % also [Folland ch. 9]
+where $\star$ is the Hodge dual \cite[§\,7.1.2]{Hamilton_2017}.
+The inner product $\angbrAd{\ ,\ }$ on the Lie algebra $\frak g$ of the gauge group $G$ is chosen such that it is gauge-invariant.
+(Recall that $\tsbm F$ is a $\frak g$-valued form, so an inner product on $\frak g$ is needed. \cite[§\,7.3]{Hamilton_2017}.) % also [Folland ch. 9]
 The inner product $\angbrAd{\ ,\ }$ on $\frak g$ is not unique; it depends on a choice of \emph{coupling constants}.
 In particular, if the gauge group $G$ is the direct sum of $n$ simple Lie groups,%
 \footnote{
@@ -279,14 +283,15 @@ Physically, the coupling constants determine the relative interaction strengths 
 (For instance, the gauge group of the standard model \eqref{eqn:SM-gauge-group} has three such coupling constants for the strong $\SU(3)$, weak $\SU(2)$, and electromagnetic $\mathrm{U}(1)$ interactions.)
 
 % This construction was first considered by Yang and Mills in 1954 [135] in the special case where G = SU(2) and Φ is a pair of Dirac spinor fields. [Folland pg 295]
-The term $\angbr{\tsbm F \wedge\star \tsbm F}$ is known as the \emph{Yang--Mills Lagrangian}, and is a major component in the standard model, describing boson force carrier self-interactions (such as gluon self-interactions).
+The term $\angbr{\tsbm F \wedge\star \tsbm F}$ is known as the \emph{Yang--Mills Lagrangian}, and is a major component in the standard model, describing boson force carrier propagation and self-interaction (such as gluon self-interactions).
 The Yang--Mills Lagrangian yields the equation of motion $\covdd\star\tsbm F = 0$.
 For the Abelian gauge group of electromagnetism $G = \mathrm{U}(1)$, this equation, together with the Bianchi identity $\covdd\tsbm F = 0$, are the source-free Maxwell's equations.
 
 
 The other term $\angbr{\tsbm F \wedge \tsbm F}$ is known as the \emph{Chern--Simons term} or the \emph{topological $θ$-term}, for reasons which will become apparent.
-The $θ$-term is odd under both time-reversal symmetry $T$ and parity $P$ (since $\epsilon^{μν\rho\sigma} \mapsto -\epsilon^{μν\rho\sigma}$ under $T$ or $P$).
-It is \emph{topological} because it does not depend on the spacetime metric $g^{μν}$ (instead, all spacetime indices are contracted with $\epsilon^{μν\rho\sigma}$), and hence $\int_{\cal M} \angbr{\tsbm F \wedge \tsbm F}$ depends only on the integrand's topology over $\cal M$.
+The Chern--Simons term is odd under both time-reversal symmetry $T$ and parity $P$ (notice $\epsilon^{μν\rho\sigma} \mapsto -\epsilon^{μν\rho\sigma}$ under $T$ or $P$).
+It is \emph{topological} because it does not depend on the geometry of spacetime via the metric $g^{μν}$ (instead, all spacetime indices are contracted with $\epsilon^{μν\rho\sigma}$).
+Hence, an action $\int_{\cal M} \angbr{\tsbm F \wedge \tsbm F}$ depends only on the integrand's topology over $\cal M$.
 In fact, the integral is a discrete topological invariant
 \begin{align}
 	n = \frac{1}{8\pi^2}\int_{\cal M} \angbr{\tsbm F \wedge \tsbm F} \in \mathds{Z}
@@ -298,17 +303,17 @@ Furthermore, $\angbr{\tsbm F \wedge \tsbm F}$ is a total derivative of the \emph
 	= \ts\dd\csform
 	= \ts\dd\tr\qty(\tsbm A\wedge\ts\dd\tsbm A + \frac{2}{3}\tsbm A\wedge\tsbm A\wedge\tsbm A)
 ,\end{align}
-meaning that such an integral depends only on the topology of $\angbr{\tsbm F \wedge \tsbm F}$ on the boundary $\partial\cal M$.\footnote{
+meaning that the action depends only on the topology of $\tsbm A$ on the spacetime boundary $\partial\cal M$.\footnote{
 	As such, the $θ$-term does not affect classical equations of motion.
 	However, in the quantum theory of fermions, it has important non-perturbative effects (an implication of the \emph{chiral anomaly}) \cite[§\,3]{Tong_lecture_notes}.
 }
 
 
 For an Abelian gauge group $\mathrm{U}(1)$, the space of gauge fields $\forms^1(\cal M, \mathfrak g)$ is path-connected to the identity, and the winding number $n$ is zero for all $\tsbm A \in \forms^1(\cal M, \mathfrak g)$.
-Consequently, the $θ$-term is neither relevant in classical electromagnetism nor in QED.
-However, for non-Abelian gauge groups such as $\SU(3)$ of QCD, the space of gauge fields $\forms^1(\cal M, \mathfrak g)$ has a non-trivial topology,\footnotemark containing disjointed regions labelled by $n \in \mathds{Z}$.
+Consequently, the Chern--Simons term is neither relevant in classical electromagnetism nor in QED.
+However, for non-Abelian gauge groups such as the $\SU(3)$ of QCD, the space of gauge fields $\forms^1(\cal M, \mathfrak g)$ has a non-trivial topology,\footnotemark\ containing disjointed regions labelled by $n \in \mathds{Z}$.
 \footnotetext{
-	Technically, we consider the subset of $\forms^1(\cal M, \mathfrak g)$ consisting of gauge fields $\tsbm A$ which approach zero at spatial infinity. 
+	Technically, we consider the topology of the subset of $\forms^1(\cal M, \mathfrak g)$ consisting only of gauge fields $\tsbm A$ which approach zero at spatial infinity.
 }
 In other words, gauge configurations in QCD can only be continuously transformed into each other if they share the same winding number.
 Gauge field configurations with $n \ne 0$, which live outside of the identity-connected component of $\forms^1(\cal M, \mathfrak g)$, are known as \emph{instanton configurations}.
@@ -318,8 +323,8 @@ Instantons are an important aspect of QCD and of general Yang--Mills theories, g
 
 
 
-The choice of the symbol $θ$ in the name reflects the cyclic property of a coefficient $θ$ attached to the topological $θ$-term:
-If the Lagrangian density includes the term
+The choice of the symbol $θ$ in the name ``$θ$-term'' reflects the cyclic property of any coefficient $θ$ attached to the Chern--Simons term:
+If the Lagrangian density includes such a term
 \begin{align}
 	\LL_θ[\tsbm F] = \frac{θ}{8\pi^2}\angbr{\tsbm F\wedge\tsbm F}
 ,\end{align}
@@ -329,6 +334,7 @@ Since
 	e^{iθ n} = e^{i(θ + 2\pi)n}
 ,\end{math}
 the coefficient $θ$, henceforth the \emph{$θ$-parameter}, is naturally an angular quantity.
+The Chern--Simons term is therefore also referred to as the $θ$-term when included in a Lagrangian.
 
 
 
@@ -361,13 +367,15 @@ the coefficient $θ$, henceforth the \emph{$θ$-parameter}, is naturally an angu
 \subsection{Dirac Fermion Fields and the Chiral Anomaly}
 \label{sec:fermions-and-the-chiral-anomaly}
 
-An important kind of matter field in the standard model is the \emph{Dirac fermion field} $\bm φ$, which transform under the spin-$\frac12$ representation of the Lorentz group $\mathrm{SO}^+(1,3)$.
+An important kind of matter field in the standard model is the \emph{Dirac fermion field} $\bm φ$, which transforms under the spin-$\frac12$ representation of the Lorentz group $\mathrm{SO}^+(1,3)$.
+(Dirac fermions describe the quarks and leptons of the standard model.)
 The Dirac matrices $\bm γ^μ$ are basis elements of the Clifford algebra $\cal{Cl}_{1,3}(\mathds{C})$ satisfying $\bm γ^{(μ}\bm γ^{ν)} = \eta^{μν}\bm 1$, and are used to write 4-component Dirac fermions in the spin-$\frac12$ representation.
 An inner product on fermions $\angbr{\bm ψ, \bm φ} \equiv \bar{\bm ψ}\bm φ \in \mathds R$ \note{or $\mathds C$?} is provided by the Dirac adjoint $\bar{\bm ψ} \coloneqq \bm ψ^\dagger \bm γ^0$, so that Lorentz-invariant quantities may be naturally constructed.
 Finally, fermions may be separated into left-handed $\bm φ_+$ and right-handed $\bm φ_-$ components with the projection operators $\bm φ_\pm = \frac12(1 \pm \bm γ^5)$ where $\bm γ^5 = i\bm γ^0\bm γ^1\bm γ^2\bm γ^3$.
 In theories which violate parity, left- and right-handed fermions may experience different interactions.
+(For instance, left-handed neutrinos interact in the standard model, while right-handed neutrinos are completely inert.)
 
-The simplest fermion equations of motion derive from the \emph{Dirac Lagrangian density}
+The simplest fermion equation of motion (namely, the Dirac equation) derives from the \emph{Dirac Lagrangian density}
 \begin{align}
 	\LL_\text{Dirac} = \bar{\bm φ}\qty(i\bm γ^μ\partial_μ - m)\bm φ \;\vol
 ,\end{align}
@@ -380,64 +388,71 @@ The Dirac Lagrangian may be localised in the presence of gauge symmetry,
 	\label{eqn:Dirac-Lagrangian}
 ,\end{align}
 where $\ts\nabla\bm ψ \equiv (\nabla_μ\bm ψ) \, \ts\dd x^μ$ is the covariant derivative with respect to the gauge field, $\tsbm A$.
-The matter field $\bm ψ = \bm φ_{(1)} \oplus \cdots \oplus \bm φ_{(n)}$ may now more generally be comprised of multiple fermion fields, which may be rotated into one another by the gauge group (as in \emph{flavour symmetry} in QCD).
+The matter field $\bm ψ = \bm φ_{(1)} \oplus \cdots \oplus \bm φ_{(n)}$ may now more generally be comprised of multiple fermion fields, which may be rotated into one another by the gauge group (an example being \emph{flavour symmetry} in QCD).
 The localised Dirac Lagrangian describes fermions and their interactions with the gauge bosons.
 The electromagnetic interactions of charged fermionic matter are described by \eqref{eqn:Dirac-Lagrangian} in the case of a $\U(1)$ gauge symmetry, where the gauge field $\tsbm A = \ts A$ is the electromagnetic vector potential.
 
 In quantum theories of fermions, the $θ$-term $\angbr{\tsbm F\wedge\tsbm F}$ also arises in the Lagrangian via the \emph{chiral anomaly}.
-The chiral anomaly is the breaking of a classical symmetry of the Lagrangian upon quantisation, which leads to the 
-\note{Introduce this smoothly.}
+The Dirac Lagrangian classically possesses two fundamental $\U(1)$ symmetries which rotate fermion phases \emph{vectorially} and \emph{axially}.
+The chiral anomaly is the breaking of the classical axial symmetry upon quantisation due to subtleties of renormalisation and the path integral formulation \eqref{eqn:path-integral}.
+% \note{Introduce this smoothly.}
 % Such QFTs exhibit two important symmetries relating to the fermion fields, and both give rise to conserved currents.
 % However, one of these sy
 % This is a symmetry of the classical Lagrangian which is violated in the corresponding quantum theory.
 
-The Dirac Lagrangian is invariant under global Abelian transformations known as \emph{vector fermion rotations}, $\U(1)_V$ parametrised by $α$ as
+The vectorial symmetry $\U(1)_V$ is the invariance of the Dirac Lagrangian under global Abelian transformations known as \emph{vector fermion rotations}, parametrised by $α$ as
 \begin{align}
 	\bm ψ &\overset{\U(1)_V}{\mapsto} e^{iα}\bm ψ
 % ,&	\eval{\fdv{\bm ψ}{α}}_0 = i \bm ψ
 .\end{align}
-% Since $\eval{\fdv*{\bm ψ}{α}}_0 = i \bm ψ$, the conserved Nöther current density associated to this symmetry is
-The conserved Nöther current density associated to this symmetry is
+% Since $\eval{\fdv*{\bm ψ}{α}}_0 = i \bm ψ$, the conserved Noether current density associated to this symmetry is
+The conserved Noether current density associated to this symmetry is
 \begin{align}
 	\ts J_V %&= \pdv{\ts{\cal L}_\text{Dirac}}{\ts\nabla ψ} \, \fdv{\bm ψ}{α}
-	&= \bar{\bm ψ}\,\bm γ^μ \bm ψ \, δ_{μν} \star \ts\dd x^ν
+	&= \bar{\bm ψ}\star\!\tsbm γ\, \bm ψ
 ,&	\text{i.e.,}\quad
 	j_V^{\,μ} &= \bar{\bm ψ}\,\bm γ^μ \bm ψ
-	\quad\text{where}\quad
-	% \star\ts J = j^μ \,δ_{μν} \ts\dd x^ν
-	\star\ts J_V = \ts j_V
 ,\end{align}
-\begin{align}
-	\ts j_V = \bar{\bm ψ}\,\bm γ^μ \bm ψ \, \ts\partial_μ
-\end{align}
-whose continuity equation reads $\ts\dd\ts J_V = 0$ (i.e., $\partial_μj_V^μ = 0$).
-Classically, this corresponds to conservation of charge, and in the quantum regime, to the number of particles.
+where $\tsbm γ = \bm γ_μ \, \ts\dd x^μ$.
+(These 3-form and vector representations are related by $\ts J_V = \star\ts j_V$.)
+% \begin{align}
+% 	\ts j_V = \bar{\bm ψ}\,\bm γ^μ \bm ψ \, \ts\partial_μ
+% \end{align}
+The associated continuity equation reads $\ts\dd\ts J_V = 0$ (i.e., $\partial_μj_V^μ = 0$).
+Classically, this corresponds to conservation of charge, and in the quantum regime, to conservation of the number of charged particles.
 
-There is another global Abelian symmetry of the Dirac Lagrangian; invariance under \emph{axial fermion rotations} $\U(1)_A$, which transform left- $\bm ψ_+$ and right-handed $\bm ψ_-$ fermion components differently:
+On the other hand, the axial symmetry $\U(1)_A$ is invariance under \emph{axial fermion rotations}, which transform left- $\bm ψ_+$ and right-handed $\bm ψ_-$ fermion components differently:
 \begin{align}
 	\bm ψ &\overset{\U(1)_A}\mapsto e^{i\bm γ^5 θ}\bm ψ
 ,&	\text{i.e.,} \quad
 	\bm ψ_\pm &\overset{\U(1)_A}\mapsto e^{\pm iθ}\bm ψ_\pm
 	\label{eqn:chiral-rotation}
 .\end{align}
-The associated Nöther current density,
+The associated Noether current density,
 \begin{align}
-	\ts J_A &= \bar{\bm ψ}\,\bm γ_μ \bm γ_5 \bm ψ \star\ts\dd x^μ
+	\ts J_A &= \bar{\bm ψ} \star\!\tsbm γ \, \bm γ_5 \, \bm ψ
+,&	\text{i.e.,}\quad
+	j_A^μ &= \bar{\bm ψ} \, \bm γ^μ \bm γ_5 \,\bm ψ
+	% \ts J_A &= \bar{\bm ψ}\,\bm γ_μ \bm γ_5 \bm ψ \star\ts\dd x^μ
 ,\end{align}
 is conserved classically.
 The charge associated to $\ts J_A$ is the number of particles minus antiparticles, named the \emph{baryon number} in QCD.
-However, $\U(1)_A$ symmetry does not survive the renormalisation procedure---it is \emph{anomalous}---and consequently, baryon number is not conserved in QCD.
-The continuity equation $\ts\dd\ts J = 0$ fails by the presence of none-other than the $θ$-term,
+However, $\U(1)_A$ symmetry is \emph{anomalous}, meaning it does not survive the renormalisation procedure, and consequently, is not an exact symmetry of the quantum theory.\footnote{
+	Indeed, baryon number need not conserved in QCD (although violations have not been observed).
+	This may provide a possible explanation of \emph{baryogenesis}---the mechanism by which the early universe produced more matter than antimatter \cite[§\,24.6]{ParticleDataGroup-review-2020}.
+}
+Instead, the continuity equation $\ts\dd\ts J = 0$ fails by the presence of none-other than the $θ$-term,
 \begin{align}
-	\ts\dd\ts J_A = \angbr{\tsbm F \wedge \tsbm F}
+	\ts\dd\ts J_A = \angbr{\tsbm F \wedge \tsbm F} = \ts\dd\csform
 	\quad\text{\note{coefficient?}}
 	\label{eqn:chiral-anomaly}
 .\end{align}
 % Redefining $\ts J'_A = \ts J_A - \csform$ so that $\ts\dd\ts J'_A = 0$ generates the term $$ 
-In other words, the the axial rotation \eqref{eqn:chiral-rotation}, does not leave the Lagrangian invariant; but instead generates the term
+By Noether's theorem, the Lagrangian which yields the true conserved axial current $\ts J_A' = \ts J_A - \csform$ possesses the $θ$-term 
 \begin{math}
 	\frac{θ}{8π^2}\angbr{\tsbm F \wedge \tsbm F}
 .\end{math}
+In other words, the the axial rotation \eqref{eqn:chiral-rotation}, does not leave the Lagrangian invariant; but instead generates the $θ$-term.
 
 \note{What does this mean??
 Relevant because Peccei-Quinn mechanism depends on chiral symmetry breaking.
@@ -501,6 +516,6 @@ Therefore, the $θ$-term's \CP\ violation is not satisfactory reason for its exc
 
 Proceeding without the assumption that $θ = 0$, one finds that the strong force violates \CP.
 A physical prediction of the standard model possessing a \CP-violating QCD sector is that the neutron is expected to possess an electric dipole moment of approximate magnitude $|d_n| \approx 10^{-18} \,e\,\mathrm{cm}$.
-In reality, current measurements \cite{electric_dipole_neutron_2020} of the neutron's electric dipole moment yield a tight upper bound of $|d_n| \lesssim 10^{-26} \,e\,\mathrm{cm}$, which in turn implies a stringent constraint on the $θ$-term, $|θ| \lesssim 10^{-10}$ \cite{Review_2018}.
+In reality, current measurements \cite{electric_dipole_neutron_2020} of the neutron's electric dipole moment yield a tight upper bound of $|d_n| \lesssim 10^{-26} \,e\,\mathrm{cm}$, which in turn implies a stringent constraint on the $θ$-term, $|θ| \lesssim 10^{-10}$ \cite{ParticleDataGroup-review-2020}.
 The strong \CP\ problem is the question, ``why is $θ$ so small?''
 
