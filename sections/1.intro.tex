@@ -227,8 +227,10 @@ under gauge transformations, if the fields vanish at the boundary.
 If a Lagrangian transforms as \eqref{eqn:Lagrangian-transforming-by-exact-form} under a gauge symmetry parametrised by $n$ parameters $α_i$, then Noether's theorem implies the existence of $n$ conserved current densities (viz. 3-forms), one for each $α_i$,
 \begin{align}
 	\ts J_{(i)} = \pdv{\LL}{\ts\nabla\bm ψ} \eval{\fdv{\bm ψ}{α^i}}_{\mathrm{id}} - \ts K
+	\label{eqn:Noether's-theorem}
 ,\end{align}
-whose continuity equations read $\ts\dd\ts J_{(i)} = 0$.
+whose continuity equations read $\ts\dd\ts J_{(i)} = 0$.%
+\footnote{The partial derivative $\pdv*{\LL}{\ts\nabla\bm ψ}$ of a volume form $\LL$ with respect to a 1-form $\ts\nabla\bm ψ$ is defined by extending the scalar partial derivative to be an anti-derivation on differential forms. For details, see \cite{mitsou2013differential}.}
 
 % The condition that Lagrangians of quantum field theories are , on the other hand, enjoy slightly enlarged symmetri, because of their origin in a path integral.
 Furthermore, the Lagrangian of a quantum field theory enjoys an enlarged criterion of gauge symmetry: it is also permitted to transform as
@@ -242,7 +244,7 @@ This is because of the origin of a QFT's equations of motion in the Feynman path
 For instance, the quantum mechanical amplitude that the fields $\bm ψ$ and $\tsbm F$ satisfy prescribed boundary conditions on $\partial\Omega$ surrounding some region of spacetime $\Omega \subseteq \cal M$ is given by the path integral
 \begin{align}
 	\mathscr A = \int_{\partial\Omega}\! \cal D[\bm ψ, \tsbm F] \exp\qty{\frac{i}{\hbar} \int_{\Omega}\! \LL\qty[\bm ψ, \ts\nabla_{\!A}\bm ψ, \tsbm F]}
-	\label{eqn:path-integral}
+\label{eqn:path-integral}
 ,\end{align}
 where the intended meaning of $\cal D[\cdots]$ is an integration over all field configurations on $\Omega$.
 If the Lagrangian were to undergo a discrete gauge transformation \eqref{eqn:discrete-QFT-Lagrangian-transformation}, the amplitude $\mathscr A \mapsto \mathscr A\exp(n\cdot2\pi i)$ would be left invariant.
@@ -352,11 +354,11 @@ The Chern--Simons term is therefore also referred to as the $θ$-term when inclu
 		\item \emph{chiral}
 	--- a transformation acting differently on left- and right-handed fermions.
 		\item \emph{anomalous symmetry}
-	--- a symmetry of the classical Lagrangian, but not of the measure $\cal D[\bm ψ, \tsbm F]$ in the path integral \eqref{eqn:path-integral}, and hence not a symmetry of the associated quantum theory.
+--- a symmetry of the classical Lagrangian, but not of the measure $\cal D[\bm ψ, \tsbm F]$ in the path integral \eqref{eqn:path-integral}, and hence not a symmetry of the associated quantum theory.
 		\item \emph{spontaneously broken symmetry}
-	---	a symmetry of the Lagrangian which is not exhibited by the ground state solutions.
+	---	a symmetry of the Lagrangian which fails to manifest in the ground state solutions.
 		\item \emph{Nambu--Goldstone boson}
-	--- scalar bosons that arise due to spontaneously broken symmetries. There is exactly one Nambu--Goldstone boson for each generator of the symmetry which is broken.
+	--- a scalar boson which arises due to a spontaneously broken symmetry. There is exactly one Nambu--Goldstone boson for each generator of the symmetry which is broken.
 	\end{itemize}
 \end{aside}
 \end{figure}
@@ -367,8 +369,10 @@ The Chern--Simons term is therefore also referred to as the $θ$-term when inclu
 \subsection{Dirac Fermion Fields and the Chiral Anomaly}
 \label{sec:fermions-and-the-chiral-anomaly}
 
-An important kind of matter field in the standard model is the \emph{Dirac fermion field} $\bm φ$, which transforms under the spin-$\frac12$ representation of the Lorentz group $\mathrm{SO}^+(1,3)$.
-(Dirac fermions describe the quarks and leptons of the standard model.)
+An important kind of matter field in the standard model is the \emph{Dirac fermion field} $\bm φ$, which transforms under the spin-$\frac12$ representation of the Lorentz group.
+The entire matter content of the standard model, including quarks and leptons, is comprised purely of fermion fields.
+% The matter field of the standard model, including all quarks and leptons as components, is a composite of fermion fields.
+
 The Dirac matrices $\bm γ^μ$ are basis elements of the Clifford algebra $\cal{Cl}_{1,3}(\mathds{C})$ satisfying $\bm γ^{(μ}\bm γ^{ν)} = \eta^{μν}\bm 1$, and are used to write 4-component Dirac fermions in the spin-$\frac12$ representation.
 An inner product on fermions $\angbr{\bm ψ, \bm φ} \equiv \bar{\bm ψ}\bm φ \in \mathds R$ \note{or $\mathds C$?} is provided by the Dirac adjoint $\bar{\bm ψ} \coloneqq \bm ψ^\dagger \bm γ^0$, so that Lorentz-invariant quantities may be naturally constructed.
 Finally, fermions may be separated into left-handed $\bm φ_+$ and right-handed $\bm φ_-$ components with the projection operators $\bm φ_\pm = \frac12(1 \pm \bm γ^5)$ where $\bm γ^5 = i\bm γ^0\bm γ^1\bm γ^2\bm γ^3$.
@@ -393,14 +397,16 @@ The localised Dirac Lagrangian describes fermions and their interactions with th
 The electromagnetic interactions of charged fermionic matter are described by \eqref{eqn:Dirac-Lagrangian} in the case of a $\U(1)$ gauge symmetry, where the gauge field $\tsbm A = \ts A$ is the electromagnetic vector potential.
 
 In quantum theories of fermions, the $θ$-term $\angbr{\tsbm F\wedge\tsbm F}$ also arises in the Lagrangian via the \emph{chiral anomaly}.
-The Dirac Lagrangian classically possesses two fundamental $\U(1)$ symmetries which rotate fermion phases \emph{vectorially} and \emph{axially}.
-The chiral anomaly is the breaking of the classical axial symmetry upon quantisation due to subtleties of renormalisation and the path integral formulation \eqref{eqn:path-integral}.
+The Dirac Lagrangian classically possesses two fundamental $\U(1)$ symmetries which rotate fermion phases \emph{vectorially} or \emph{axially}.
+The classical axial symmetry is violated upon quantisation (due to the variance of the integral measure $\cal D[\cdots]$ in \eqref{eqn:path-integral} under axial transformations), an effect known as the chiral anomaly.
+The effect of chiral anomaly is equivalent to the inclusion of the $θ$-term in the Lagrangian.
+% The chiral anomaly is the breaking of the classical axial symmetry upon quantisation due to subtleties of renormalisation and the path integral formulation \eqref{eqn:path-integral}.
 % \note{Introduce this smoothly.}
 % Such QFTs exhibit two important symmetries relating to the fermion fields, and both give rise to conserved currents.
 % However, one of these sy
 % This is a symmetry of the classical Lagrangian which is violated in the corresponding quantum theory.
 
-The vectorial symmetry $\U(1)_V$ is the invariance of the Dirac Lagrangian under global Abelian transformations known as \emph{vector fermion rotations}, parametrised by $α$ as
+To illustrate, the vectorial symmetry $\U(1)_V$ is the invariance of the Dirac Lagrangian under global Abelian transformations known as \emph{vector fermion rotations}, parametrised by $α$ as
 \begin{align}
 	\bm ψ &\overset{\U(1)_V}{\mapsto} e^{iα}\bm ψ
 % ,&	\eval{\fdv{\bm ψ}{α}}_0 = i \bm ψ
@@ -448,11 +454,12 @@ Instead, the continuity equation $\ts\dd\ts J = 0$ fails by the presence of none
 	\label{eqn:chiral-anomaly}
 .\end{align}
 % Redefining $\ts J'_A = \ts J_A - \csform$ so that $\ts\dd\ts J'_A = 0$ generates the term $$ 
-By Noether's theorem, the Lagrangian which yields the true conserved axial current $\ts J_A' = \ts J_A - \csform$ possesses the $θ$-term 
-\begin{math}
-	\frac{θ}{8π^2}\angbr{\tsbm F \wedge \tsbm F}
-.\end{math}
-In other words, the the axial rotation \eqref{eqn:chiral-rotation}, does not leave the Lagrangian invariant; but instead generates the $θ$-term.
+By Noether's theorem \eqref{eqn:Noether's-theorem}, this is equivalent to the presence of an extra term $\ts\dd\ts K = \angbr{\tsbm F\wedge\tsbm F}$ in the Lagrangian.
+% By Noether's theorem, the Lagrangian which yields the true conserved axial current $\ts J_A' = \ts J_A - \csform$ possesses the $θ$-term 
+% \begin{math}
+% 	\frac{θ}{8π^2}\angbr{\tsbm F \wedge \tsbm F}
+% .\end{math}
+In other words, an axial rotation \eqref{eqn:chiral-rotation} does not leave the Lagrangian invariant, but instead generates the $θ$-term \cite[§\,8]{Gripaios_BSM_2015}.
 
 \note{What does this mean??
 Relevant because Peccei-Quinn mechanism depends on chiral symmetry breaking.
@@ -499,7 +506,7 @@ $\ts\nabla\bm ψ \equiv (\nabla_μ\bm ψ) \, \ts\dd x^μ$ is the covariant deriv
 At this point, we see that the issue which is given the name \emph{the strong \CP\ problem} offers itself as a question about the naturalness the QCD Lagrangian:
 As encountered in §\,\ref{sec:YM-and-topological}, there is another term which may be included in the Lagrangian with no additional physical assumptions; the topological $θ$-term.
 The $θ$-term also arises as a consequence of the chiral anomaly, as seen in §\,\ref{sec:fermions-and-the-chiral-anomaly}.
-In this sense, the most general pure QCD Lagrangian is
+Therefore, from a theoretical perspective, it is more appropriate to consider the general pure QCD Lagrangian to be
 \begin{align}
 	\LL_\text{QCD} = \overbar{\bm ψ}\qty(i\bm γ^μ\nabla_μ - m)\bm ψ \,\vol
 	- \angbr{\tsbm F \wedge\star \tsbm F}
@@ -508,14 +515,15 @@ In this sense, the most general pure QCD Lagrangian is
 ,\end{align}
 which includes the \CP-violating $θ$-term $\angbr{\tsbm F\wedge\tsbm F}$.
 
-The inclusion of the $θ$-term is ``natural'' because we lack reason to exclude it on a theoretical basis: it is Lorentz and gauge invariant, etc., just like its \CP-symmetric counterpart, $\angbr{\tsbm F \wedge\star\tsbm F}$.
-If there were no \CP-violating interactions in the theory, then $θ$ could be set to zero on the basis of symmetry---however, the weak interaction is explicitly parity-violating.
-In fact, the standard model is asymmetric under all combinations of charge conjugation, $C$; parity $P$; and time-reversal $T$ modulo the prevailing combined $CPT$ symmetry. 
+Proceeding with the assumption that $θ \ne 0$, one finds that the strong force now violates \CP.
+A physical prediction of the standard model modified with such a \CP-violating QCD sector is that the neutron is expected to possess an electric dipole moment of approximate magnitude $|d_n| \approx 10^{-18} \,e\,\mathrm{cm}$.
+In reality, current measurements \cite{electric_dipole_neutron_2020} of the neutron's electric dipole moment yield a tight upper bound of $|d_n| \lesssim 10^{-26} \,e\,\mathrm{cm}$, which in turn implies a stringent constraint on the $θ$-parameter, $|θ| \lesssim 10^{-10}$ \cite{ParticleDataGroup-review-2020}.
+Thus, the $θ$-term is not presently considered to be part of the standard model.
+
+
+However, the inclusion of the $θ$-term is ``natural'' because we lack reason to exclude it on a theoretical basis: it is Lorentz and gauge invariant, etc., just like its \CP-symmetric counterpart, $\angbr{\tsbm F \wedge\star\tsbm F}$; it arises via chiral anomaly; and it is a consequence of the non-trivial vacuum structure of QCD.
+From an empirical perspective, if no \CP-violating interactions were observed in Nature, then $θ$ could be set to zero on the basis of symmetry.
+However, the weak interaction is explicitly parity-violating.
+(In fact, the standard model is asymmetric under all combinations of charge conjugation, $C$; parity $P$; and time-reversal $T$ modulo the prevailing combined $CPT$ symmetry.)
 Therefore, the $θ$-term's \CP\ violation is not satisfactory reason for its exclusion.
-\note{There is also an argument that the $θ$-term arises due to the rich structure of the QCD vacuum.}
-
-Proceeding without the assumption that $θ = 0$, one finds that the strong force violates \CP.
-A physical prediction of the standard model possessing a \CP-violating QCD sector is that the neutron is expected to possess an electric dipole moment of approximate magnitude $|d_n| \approx 10^{-18} \,e\,\mathrm{cm}$.
-In reality, current measurements \cite{electric_dipole_neutron_2020} of the neutron's electric dipole moment yield a tight upper bound of $|d_n| \lesssim 10^{-26} \,e\,\mathrm{cm}$, which in turn implies a stringent constraint on the $θ$-term, $|θ| \lesssim 10^{-10}$ \cite{ParticleDataGroup-review-2020}.
-The strong \CP\ problem is the question, ``why is $θ$ so small?''
-
+The strong \CP\ problem is the question, ``why, then, is $θ$ so small?''

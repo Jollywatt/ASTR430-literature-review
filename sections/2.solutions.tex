@@ -51,7 +51,7 @@ In the full quantum theory of $N$ massive quarks, the Lagrangian admits a global
 where $\bm ψ_{(q)}$ are the quark fields and $m_q$ are their masses.
 \note{Not actually that simple. Only works for massless quarks; works approximately for $m_u$ and $m_d$, resulting in an approximate $\U(2)_L \oplus \U(2)_R$ symmetry or something...}
 This transformation is \emph{chiral}, meaning that it affects left- and right-handed fermions differently.\footnotemark\
-% \footnotetext{If the quark fields are split into left-handed $\bm ψ_+$ and right-handed $\bm ψ_-$ components defined by $\bm ψ_\pm \coloneqq \frac12(1 \pm \bmγ^5)\bm ψ$, then the first mapping of \eqref{eqn:quark-mass-phase-transform} can be written as $\bm ψ_\pm \mapsto e^{\pm ia_q/2}\bm ψ_\pm$.}
+% \footnote4text{If the quark fields are split into left-handed $\bm ψ_+$ and right-handed $\bm ψ_-$ components defined by $\bm ψ_\pm \coloneqq \frac12(1 \pm \bmγ^5)\bm ψ$, then the first mapping of \eqref{eqn:quark-mass-phase-transform} can be written as $\bm ψ_\pm \mapsto e^{\pm ia_q/2}\bm ψ_\pm$.}
 The fact that the $θ$-parameter may be redefined by phase-shifting the quark fields and their masses means that $θ$ is not directly observable.
 However, this gauge freedom can be fixed by defining the quantity
 \begin{align}
@@ -106,18 +106,22 @@ Instead, another mechanism is required to explain the smallness of the $\barθ$-
 
 Perhaps the most famous proposed resolution to the strong \CP\ problem is the Peccei--Quinn theory of the \emph{axion}, first proposed in 1977 \cite{PecceiQuinn_1977}.
 The axion is well-known in cosmology because of the its allure as a dark matter candidate.
-It arises as a Nambu--Goldstone boson of an additional spontaneously broken symmetry, and dynamically solves the strong \CP\ problem via the Peccei--Quinn mechanism.
+It arises as a Nambu--Goldstone boson of an additional spontaneously broken symmetry, and dynamically solves the strong \CP\ problem via the \emph{Peccei--Quinn mechanism}.
 \note{There are a variety of implementations (``models'') of the Peccei--Quinn mechanism.}
 
 The Peccei--Quinn mechanism involves extending the standard model (usually by the addition of fields) so that the Lagrangian possesses another global chiral $\U(1)$ symmetry, named the Peccei--Quinn symmetry $\UPQ$.
-Because $\UPQ$ is chiral, it is broken by the chiral anomaly (see §\,\ref{sec:fermions-and-the-chiral-anomaly}).
-Consequently, the Noether current $\ts J_\text{PQ}$ associated to the $\UPQ$ symmetry is not conserved, instead obeying
+There are different ways to achieve this symmetry, leading to different axion models.
+In the simplest case, a complex scalar field is adjoined to the standard model, whose phase transforms under $\UPQ$.
+
+Because $\UPQ$ is chiral, like $\U(1)_A$, it is also broken by the chiral anomaly (see §\,\ref{sec:fermions-and-the-chiral-anomaly}).
+Consequently, the Noether current $\ts J_\text{PQ}$ associated to the $\UPQ$ symmetry is not conserved, but instead obeys
 \begin{align}
 	\ts\dd\ts J_\text{PQ} &= ξ \angbr{\tsbm F\wedge\tsbm F}
 ,&	\text{i.e.,} \quad \partial_\mu j_\text{PQ}^\mu &= \fracξ4\angbrAd{\bm F_{μν}, \bm F_{\rho\sigma}}\epsilon^{μν\rho\sigma}
 ,\end{align}
-where $ξ$ is a model-dependent parameter.
+where $ξ$ is a parameter particular to the axion model of interest.
 
+As for the axial rotation symmetry, the anomalous Peccei--Quinn symmetry gives rise to an extra term in the Lagrangian
 The non-conservation of $\ts J_\text{PQ}$ implies the presence 
 % Because of the chiral anomaly, however, L_eff must also have a term in which the axion field couples
 % μ
