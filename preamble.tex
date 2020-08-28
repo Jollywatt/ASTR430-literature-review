@@ -115,6 +115,7 @@
 
 \newcommand{\CP}{{$CP$}}
 
+% fonts and annotations
 \renewcommand{\cal}{\mathcal}
 \renewcommand{\frak}{\mathfrak}
 
@@ -122,28 +123,35 @@
 \newcommand{\ts}[1]{\underaccent{\sim}{#1}} % David's tensor 'twiddle'
 \newcommand{\tsbm}[1]{\ts{\bm{#1}}}
 
-\newcommand{\covdd}{\ts\dd_\nabla} % covariant exterior derivative
-
+% operators
 \newcommand{\secs}{\symrm{Γ}}
 \newcommand{\forms}{\symrm{\Omega}}
+\newcommand{\covdd}{\ts\dd_\nabla} % covariant exterior derivative
+\newcommand{\angbr}[1]{\left\langle{#1}\right\rangle}
+\newcommand{\angbrAd}[1]{\angbr{#1}_{\raisemath{2pt}{\mathrm{Ad}}}}
+\newcommand{\fibrebundle}[4][]{#2 \rightarrowtail #3 \overset{#1}{\twoheadrightarrow} #4}
+\newcommand{\braketpm}[2]{\raisemath{-.5ex}{\scalemath{0.7}{+\!}}\braket{#1}{#2}\raisemath{-.5ex}{\scalemath{0.7}{\!-}}}
 
-\renewcommand{\U}{\mathrm{U}} % I hope this is ok
-\newcommand{\SU}{\mathrm{SU}}
-\newcommand{\UPQ}{\U(1)_\text{PQ}}
-
+% spaces and special objects
 \newcommand{\T}{\mathrm{T}}
 \newcommand{\TT}{\mathds{T}}
+\newcommand{\ZZ}{\mathds{Z}}
+
 \newcommand{\LL}{\ts{\cal L}}
 \newcommand{\M}{\mathcal{M}}
 
-\newcommand{\angbr}[1]{\left\langle{#1}\right\rangle}
-\newcommand{\angbrAd}[1]{\angbr{#1}_{\raisemath{2pt}{\mathrm{Ad}}}}
-
-\newcommand{\fibrebundle}[4][]{#2 \rightarrowtail #3 \overset{#1}{\twoheadrightarrow} #4}
-
-% \newcommand{\csform}{\phi_{\text{CS}}^{(3)}}
 \newcommand{\csform}{\ts\omega_3}
 \newcommand{\vol}{\ts{\mathrm{vol}}}
+
+% group theoretic symbols
+\renewcommand{\U}{\mathrm{U}} % I hope overloading \U is ok
+\newcommand{\SU}{\mathrm{SU}}
+\newcommand{\UPQ}{\U(1)_\text{PQ}}
+\newcommand{\iden}{\mathrm{id}}
+
+
+
+% \newcommand{\csform}{\phi_{\text{CS}}^{(3)}}
 
 \newenvironment{baligned}
 	{\left\{\begin{aligned}}

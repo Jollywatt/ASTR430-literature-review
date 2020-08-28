@@ -109,20 +109,38 @@ The axion is well-known in cosmology because of the its allure as a dark matter 
 It arises as a Nambu--Goldstone boson of an additional spontaneously broken symmetry, and dynamically solves the strong \CP\ problem via the \emph{Peccei--Quinn mechanism}.
 \note{There are a variety of implementations (``models'') of the Peccei--Quinn mechanism.}
 
-The Peccei--Quinn mechanism involves extending the standard model (usually by the addition of fields) so that the Lagrangian possesses another global chiral $\U(1)$ symmetry, named the Peccei--Quinn symmetry $\UPQ$.
-There are different ways to achieve this symmetry, leading to different axion models.
-In the simplest case, a complex scalar field is adjoined to the standard model, whose phase transforms under $\UPQ$.
+The Peccei--Quinn mechanism involves extending the standard model (usually by the addition of fields) so that the entire Lagrangian possesses an additional approximate global chiral $\U(1)$ symmetry, named the Peccei--Quinn symmetry $\UPQ$.
+(Different ways of realising $\UPQ$ in an extended standard model lead to different axion models.
+In the simplest case, a complex scalar field $φ$ is adjoined to the standard model, whose phase transforms under $\UPQ$ as $φ \mapsto e^{iα}φ$.)
+If $\UPQ$ was indeed an exact symmetry, then combined with existing $\U(1)_A$ axial fermion rotations, there would be enough gauge freedom to rotate $\bar θ$ to zero.
+Similar to the massless quark solution, this would render the $θ$-parameter unphysical thereby trivially solving the strong \CP\ problem.
+However, $\UPQ$ cannot be an exact symmetry because it is subject to the chiral anomaly (see §\,\ref{sec:fermions-and-the-chiral-anomaly}).
+What Peccei and Quinn showed was that even if the $\UPQ$ symmetry is not exact, then $\bar θ$ would be dynamically driven to zero, provided $\UPQ$ was also spontaneously broken.
+The chiral anomaly and spontaneous breakage together translate into an effective potential for $\bar θ$, whose minimum is at zero.
 
-Because $\UPQ$ is chiral, like $\U(1)_A$, it is also broken by the chiral anomaly (see §\,\ref{sec:fermions-and-the-chiral-anomaly}).
+
+Because $\UPQ$ is chiral, like $\U(1)_A$, it is also broken by the chiral anomaly.
 Consequently, the Noether current $\ts J_\text{PQ}$ associated to the $\UPQ$ symmetry is not conserved, but instead obeys
 \begin{align}
 	\ts\dd\ts J_\text{PQ} &= ξ \angbr{\tsbm F\wedge\tsbm F}
 ,&	\text{i.e.,} \quad \partial_\mu j_\text{PQ}^\mu &= \fracξ4\angbrAd{\bm F_{μν}, \bm F_{\rho\sigma}}\epsilon^{μν\rho\sigma}
 ,\end{align}
 where $ξ$ is a parameter particular to the axion model of interest.
+Simultaneously, $\UPQ$ is spontaneously broken.
+In the simple case of a scalar field $φ$, spontaneous $\UPQ$-breakdown means that the expectation value of $φ$ in a vacuum state is not zero, but some complex number of fixed magnitude, $φ = |φ_0|e^{iα}$, which is not invariant under $\UPQ$.
+The phase $α$ is an effective $\U(1)$ degree of freedom which, in the quantum theory, is a spin-$0$ particle.
+This particle---the axion---is the \emph{pseudo-Nambu--Goldstone boson} of the spontaneously broken $\UPQ$ symmetry.
 
-As for the axial rotation symmetry, the anomalous Peccei--Quinn symmetry gives rise to an extra term in the Lagrangian
-The non-conservation of $\ts J_\text{PQ}$ implies the presence 
+
+As with the axial rotation symmetry, the anomalous Peccei--Quinn symmetry gives rise to an extra term in the Lagrangian.
+\note{I don't understand how.}
+\begin{align}
+	\LL_\text{anomaly} = \frac{a}{f_a}ξ\angbr{\tsbm F\wedge\tsbm F}
+.\end{align}
+
+% Instead of coupling to 
+
+% The non-conservation of $\ts J_\text{PQ}$ implies the presence 
 % Because of the chiral anomaly, however, L_eff must also have a term in which the axion field couples
 % μ
 % directly to the gluon density GG̃, so as to guarantee that J PQ

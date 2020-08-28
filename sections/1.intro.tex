@@ -13,7 +13,7 @@ The introduction of the quark model explained the properties of numerous hadrons
 
 The modern statement of the standard model is that it is a Lorentz-invariant \emph{quantum field theory} whose \emph{gauge group} is the compact connected Lie group
 \begin{align}
-	\qty\big(\SU(3)\oplus\SU(2)\oplus\mathrm{U}(1))\big/\mathds{Z}_6
+	\qty\big(\SU(3)\oplus\SU(2)\oplus\mathrm{U}(1))\big/\ZZ_6
 	\label{eqn:SM-gauge-group}
 ,\end{align}
 which is equipped with a particular action on matter fields.
@@ -167,6 +167,7 @@ If $\ts\nabla\bm ψ$ is required to transform like the matter field $\bm ψ$ und
 then $\ts\nabla$ is called a \emph{covariant derivative} and the connection 1-form $\tsbm A$ consequently obeys
 \begin{align}
 	\tsbm A \overset{g}{\mapsto} g\cdot\tsbm A = g_\rho\tsbm A g_\rho^{-1} - \qty(\ts\dd g_\rho)g_\rho^{-1}
+	\label{eqn:gauge-field-transformation-law}
 .\end{align}
 
 Such a connection $\ts\nabla_{\!A}$ is not unique; it depends on the choice of the 1-form field $\tsbm A$.
@@ -226,7 +227,7 @@ Therefore, a Lagrangian which is said to possess gauge symmetry is still general
 under gauge transformations, if the fields vanish at the boundary.
 If a Lagrangian transforms as \eqref{eqn:Lagrangian-transforming-by-exact-form} under a gauge symmetry parametrised by $n$ parameters $α_i$, then Noether's theorem implies the existence of $n$ conserved current densities (viz. 3-forms), one for each $α_i$,
 \begin{align}
-	\ts J_{(i)} = \pdv{\LL}{\ts\nabla\bm ψ} \eval{\fdv{\bm ψ}{α^i}}_{\mathrm{id}} - \ts K
+	\ts J_{(i)} = \pdv{\LL}{\ts\nabla\bm ψ} \eval{\fdv{\bm ψ}{α^i}}_\iden - \ts K
 	\label{eqn:Noether's-theorem}
 ,\end{align}
 whose continuity equations read $\ts\dd\ts J_{(i)} = 0$.%
@@ -239,7 +240,7 @@ Furthermore, the Lagrangian of a quantum field theory enjoys an enlarged criteri
 	S \mapsto S + n\cdot2\pi\hbar
 	\label{eqn:discrete-QFT-Lagrangian-transformation}
 ,\end{align}
-where $n \in \mathds Z$ may vary discretely under different gauges.
+where $n \in \ZZ$ may vary discretely under different gauges.
 This is because of the origin of a QFT's equations of motion in the Feynman path integral.
 For instance, the quantum mechanical amplitude that the fields $\bm ψ$ and $\tsbm F$ satisfy prescribed boundary conditions on $\partial\Omega$ surrounding some region of spacetime $\Omega \subseteq \cal M$ is given by the path integral
 \begin{align}
@@ -249,7 +250,7 @@ For instance, the quantum mechanical amplitude that the fields $\bm ψ$ and $\ts
 where the intended meaning of $\cal D[\cdots]$ is an integration over all field configurations on $\Omega$.
 If the Lagrangian were to undergo a discrete gauge transformation \eqref{eqn:discrete-QFT-Lagrangian-transformation}, the amplitude $\mathscr A \mapsto \mathscr A\exp(n\cdot2\pi i)$ would be left invariant.
 In other words, physical consistency of a QFT does not require the single-valuedness of $S$, but only of $\exp(iS/\hbar)$.
-This leads to an enlargement of the space of possible Lagrangian densities to include, in particular, topological terms.
+This leads to an enlargement of the space of possible Lagrangian densities to include, in particular, \emph{topological terms}.
 These prove to be especially relevant to QFTs and to the strong \CP\ problem itself.
 
 
@@ -287,16 +288,17 @@ Physically, the coupling constants determine the relative interaction strengths 
 % This construction was first considered by Yang and Mills in 1954 [135] in the special case where G = SU(2) and Φ is a pair of Dirac spinor fields. [Folland pg 295]
 The term $\angbr{\tsbm F \wedge\star \tsbm F}$ is known as the \emph{Yang--Mills Lagrangian}, and is a major component in the standard model, describing boson force carrier propagation and self-interaction (such as gluon self-interactions).
 The Yang--Mills Lagrangian yields the equation of motion $\covdd\star\tsbm F = 0$.
-For the Abelian gauge group of electromagnetism $G = \mathrm{U}(1)$, this equation, together with the Bianchi identity $\covdd\tsbm F = 0$, are the source-free Maxwell's equations.
+For the Abelian gauge group of electromagnetism $G = \mathrm{U}(1)$, this equation, together with the Bianchi identity $\covdd\tsbm F = 0$, are the source-free Maxwell equations.
 
 
 The other term $\angbr{\tsbm F \wedge \tsbm F}$ is known as the \emph{Chern--Simons term} or the \emph{topological $θ$-term}, for reasons which will become apparent.
-The Chern--Simons term is odd under both time-reversal symmetry $T$ and parity $P$ (notice $\epsilon^{μν\rho\sigma} \mapsto -\epsilon^{μν\rho\sigma}$ under $T$ or $P$).
+The Chern--Simons term is odd under both time-reversal symmetry $T$ and parity $P$ (notice $\epsilon^{μν\rho\sigma} \mapsto -\epsilon^{μν\rho\sigma}$ under $T$ or $P$) but not under charge conjugation $C$.
 It is \emph{topological} because it does not depend on the geometry of spacetime via the metric $g^{μν}$ (instead, all spacetime indices are contracted with $\epsilon^{μν\rho\sigma}$).
 Hence, an action $\int_{\cal M} \angbr{\tsbm F \wedge \tsbm F}$ depends only on the integrand's topology over $\cal M$.
 In fact, the integral is a discrete topological invariant
 \begin{align}
-	n = \frac{1}{8\pi^2}\int_{\cal M} \angbr{\tsbm F \wedge \tsbm F} \in \mathds{Z}
+	n = \frac{1}{8\pi^2}\int_{\cal M} \angbr{\tsbm F \wedge \tsbm F} \in \ZZ
+	\label{eqn:winding-number}
 ,\end{align}
 known as the \emph{Pontryagin number}, the \emph{second Chern class} \cite[§\,1]{Witten_1989} or simply the `winding number' \cite[§\,2.2]{Tong_lecture_notes} of the gauge field configuration $\tsbm A$.
 Furthermore, $\angbr{\tsbm F \wedge \tsbm F}$ is a total derivative of the \emph{Chern--Simons 3-form} $\csform$,
@@ -310,17 +312,17 @@ meaning that the action depends only on the topology of $\tsbm A$ on the spaceti
 	However, in the quantum theory of fermions, it has important non-perturbative effects (an implication of the \emph{chiral anomaly}) \cite[§\,3]{Tong_lecture_notes}.
 }
 
-
-For an Abelian gauge group $\mathrm{U}(1)$, the space of gauge fields $\forms^1(\cal M, \mathfrak g)$ is path-connected to the identity, and the winding number $n$ is zero for all $\tsbm A \in \forms^1(\cal M, \mathfrak g)$.
-Consequently, the Chern--Simons term is neither relevant in classical electromagnetism nor in QED.
-However, for non-Abelian gauge groups such as the $\SU(3)$ of QCD, the space of gauge fields $\forms^1(\cal M, \mathfrak g)$ has a non-trivial topology,\footnotemark\ containing disjointed regions labelled by $n \in \mathds{Z}$.
-\footnotetext{
-	Technically, we consider the topology of the subset of $\forms^1(\cal M, \mathfrak g)$ consisting only of gauge fields $\tsbm A$ which approach zero at spatial infinity.
-}
-In other words, gauge configurations in QCD can only be continuously transformed into each other if they share the same winding number.
-Gauge field configurations with $n \ne 0$, which live outside of the identity-connected component of $\forms^1(\cal M, \mathfrak g)$, are known as \emph{instanton configurations}.
-\note{Actually, instantons must satisfy $\star\tsbm F = \pm\tsbm F$, and enable quantum tunnelling between homotopy classes.}
-Instantons are an important aspect of QCD and of general Yang--Mills theories, giving rise to topologically distinct vacuum states and highly non-perturbative dynamical effects (for an introduction, see \cite{Tong_lecture_notes,lectures-on-instantons,instantons-whats-happening}).
+% The topolo
+% For an Abelian gauge group $\mathrm{U}(1)$, the space of gauge fields $\forms^1(\cal M, \mathfrak g)$ is path-connected to the identity, and the winding number $n$ is zero for all $\tsbm A \in \forms^1(\cal M, \mathfrak g)$.
+% Consequently, the Chern--Simons term is neither relevant in classical electromagnetism nor in QED.
+% However, for non-Abelian gauge groups such as the $\SU(3)$ of QCD, the space of gauge fields $\forms^1(\cal M, \mathfrak g)$ has a non-trivial topology,\footnotemark\ containing disjointed regions labelled by $n \in \ZZ$.
+% \footnotetext{
+% 	Technically, we consider the topology of the subset of $\forms^1(\cal M, \mathfrak g)$ consisting only of gauge fields $\tsbm A$ which approach zero at spatial infinity.
+% }
+% In other words, gauge configurations in QCD can only be continuously transformed into each other if they share the same winding number.
+% Gauge field configurations with $n \ne 0$, which live outside of the identity-connected component of $\forms^1(\cal M, \mathfrak g)$, are known as \emph{instanton configurations}.
+% \note{Actually, instantons must satisfy $\star\tsbm F = \pm\tsbm F$, and enable quantum tunnelling between homotopy classes.}
+% Instantons are an important aspect of QCD and of general Yang--Mills theories, giving rise to topologically distinct vacuum states and highly non-perturbative dynamical effects (for an introduction, see \cite{Tong_lecture_notes,lectures-on-instantons,instantons-whats-happening}).
 
 
 
@@ -336,10 +338,73 @@ Since
 	e^{iθ n} = e^{i(θ + 2\pi)n}
 ,\end{math}
 the coefficient $θ$, henceforth the \emph{$θ$-parameter}, is naturally an angular quantity.
-The Chern--Simons term is therefore also referred to as the $θ$-term when included in a Lagrangian.
+In this context, the Chern--Simons term is also referred to as the $θ$-term.
 
 
+\subsubsection{The \texorpdfstring{$θ$-Term}{θ-Term} is a Consequence of the Non-trivial Vacuum}
 
+The $θ$-term is more than just a mathematical possibility which lacks reason for its inclusion in  physical theories.
+It is in fact central to non-Abelian gauge theories as a direct consequence of their \emph{non-trivial vacuum structure}.
+
+For an Abelian gauge group $\U(1)$, the space of gauge transformations $\secs(\cal G)$ is continuously connected to the identity, and the winding number is zero for all $\tsbm A \in \forms^1(\cal M, \mathfrak g)$.
+Consequently, the $θ$-term (with fixed $θ$) is neither relevant in classical electromagnetism nor in QED.
+However, for non-Abelian gauge groups such as the $\SU(3)$ of QCD, the space of gauge transformations\footnotemark\ $\secs(\cal G)$ has a non-trivial topology, with path-disconnected regions labelled by some $ν \in \ZZ$.
+(This is precisely because the third homotopy group of $\cal G$ is $π_3(\cal G) = \ZZ$. \note{Why third? Has a 3+1 split snuck in here? Is this general or specific to $\SU(3)$ and (3+1)D?})
+\footnotetext{
+	Specifically, we consider the space of asymptotically-identity gauge transformations $\secs^{\iden}(\cal G)$ (whose elements are maps $g : \cal M \to G$ with $g(x) \to \iden$ as $x \to \infty$), to ensure that $\tsbm A$ satisfies prescribed boundary conditions.
+	\note{Who realised this? 't Hooft? Wigner?}
+}
+Elements in the identity-connected component of $\secs(\cal G)$ are named \emph{small} gauge transformations, and all others \emph{large}.
+A large gauge transformation $g_ν \in \secs(\cal G)$ shifts the winding number $n$ of a gauge field $\tsbm A$ to $n + ν$, giving rise to $\ZZ$-many gauge-equivalent fields $\qty{g_ν \cdot \tsbm A}_ν$ which cannot be continuously gauge transformed into one another.
+Because of the involvement of large gauge transformations, the physical implications of a topologically-rich $\secs(\cal G)$ are inherently non-perturbative.
+Of particular relevance are the implications for the QCD vacuum.
+
+In a Yang--Mills theory whose Lagrangian includes the term
+\begin{align}
+	\LL_\text{YM} = \angbr{\tsbm F\wedge\star\tsbm F}
+,\end{align}
+a vacuum state is one in which the field strength (and all other fields) vanish; $\tsbm F = \tsbm 0$.
+Not only is this consistent with an identically vanishing gauge field $\tsbm A_0 = \tsbm 0$, but also with gauge transformations \eqref{eqn:gauge-field-transformation-law} of zero,
+\begin{align}
+	g \cdot \tsbm A_0 = (\ts\dd g_ρ)(g_ρ)^{-1}
+.\end{align}
+Large gauge transformations $g_n$ lead to `perturbatively distinct' vacua $\ket{n}$, each labelled by winding number.
+The vacua have the same energy, i.e., are degenerate.
+Since $g_ν \cdot \ket{n} = \ket{n + ν}$, the vacua are not gauge-invariant.
+The only states which are invariant under the gauge up to an overall phase are those of the form
+\begin{align}
+	\ket{θ} = \sum_{n \in \ZZ} e^{iθn}\ket{n}
+,\end{align}
+for some constant parameter $θ$.
+Thus, the theory possesses a topological circle of distinct gauge-invariant vacua $\ket{θ}$ labelled by the \emph{vacuum angle} $θ \in [0, 2π)$.
+
+
+Denoting by $\braketpm{n}{m}$ the quantum amplitude that the vacuum state $\ket{n}$ at $t \to -\infty$ evolves to $\ket{m}$ at $t \to \infty$, then the vacuum-to-vacuum amplitude is
+\begin{align}
+	\braketpm{θ}{θ}
+	= \sum_{n, m} e^{iθ(n - m)}\braketpm{m}{n}
+	= \sum_ν e^{iθν} \sum_n \braketpm{n}{n + ν}
+	\label{eqn:vacuum-transition-1}
+,\end{align}
+with all summations over $\ZZ$.
+In the path integral formulation \eqref{eqn:path-integral}, the amplitude $\braketpm{n}{n + ν}$ can also be expressed explicitly
+\begin{align}
+ 	\braketpm{n}{n + ν} =
+ 	\int_{\partial\Omega}\! \cal D[\tsbm A; ν] \exp\qty{\frac{i}{\hbar} \int_{\Omega}\! \LL}
+	\label{eqn:vacuum-transition-2}
+,\end{align}
+where $\cal D[\tsbm A; ν]$ means that the path integral is over all gauge fields with winding number $ν$.
+Combining \eqref{eqn:vacuum-transition-1} and \eqref{eqn:vacuum-transition-2}, the amplitude of evolution from and to the gauge invariant vacuum is
+\begin{align}
+	\braketpm{θ}{θ}
+	&= \sum_ν e^{iθν} \int_{\partial\Omega}\! \cal D[\tsbm A; ν] \exp\qty{\frac{i}{\hbar} \int_{\Omega}\! \LL}
+\\	&= \sum_ν \int_{\partial\Omega}\! \cal D[\tsbm A; ν] \exp\qty{\frac{i}{\hbar} \int_{\Omega}\! \LL + iθν}
+,\intertext{
+which, using \eqref{eqn:winding-number} to write $iθν$ as an effective term in the Lagrangian, is
+}
+	&= \int_{\partial\Omega}\! \cal D[\tsbm A] \exp\qty\bigg{\frac{i}{\hbar} \int_{\Omega}\! \qty\bigg[\underbrace{\LL + θ\frac{\hbar}{8π^2}\angbr{\tsbm F\wedge\tsbm F}}_{\displaystyle\LL_\text{eff}}]}
+.\end{align}
+Thus, the non-perturbative nature of the vacuum can be encapsulated in an effective Lagrangian $\LL_\text{eff}$, which includes the $θ$-term.
 
 
 \begin{figure}[t]
@@ -347,6 +412,8 @@ The Chern--Simons term is therefore also referred to as the $θ$-term when inclu
 	\begin{itemize}[leftmargin=0.75em]
 		% \setlength{\itemindent}{1em}
 		\setlength\itemsep{0.25ex}
+		\item \emph{degenerate}
+	--- quantum eigenstates which share the same eigenvalues (usually energy) but which are physically distinct
 		\item \emph{global symmetry}
 	--- a symmetry of the Lagrangian that acts uniformly across spacetime.
 		\item \emph{local symmetry}
@@ -394,7 +461,7 @@ The Dirac Lagrangian may be localised in the presence of gauge symmetry,
 where $\ts\nabla\bm ψ \equiv (\nabla_μ\bm ψ) \, \ts\dd x^μ$ is the covariant derivative with respect to the gauge field, $\tsbm A$.
 The matter field $\bm ψ = \bm φ_{(1)} \oplus \cdots \oplus \bm φ_{(n)}$ may now more generally be comprised of multiple fermion fields, which may be rotated into one another by the gauge group (an example being \emph{flavour symmetry} in QCD).
 The localised Dirac Lagrangian describes fermions and their interactions with the gauge bosons.
-The electromagnetic interactions of charged fermionic matter are described by \eqref{eqn:Dirac-Lagrangian} in the case of a $\U(1)$ gauge symmetry, where the gauge field $\tsbm A = \ts A$ is the electromagnetic vector potential.
+The electromagnetic interactions of charged fermionic matter are described by \eqref{eqn:Dirac-Lagrangian} in the case of a $\U(1)$ gauge symmetry, where the gauge field $\tsbm A \equiv \ts A$ is the electromagnetic vector potential.
 
 In quantum theories of fermions, the $θ$-term $\angbr{\tsbm F\wedge\tsbm F}$ also arises in the Lagrangian via the \emph{chiral anomaly}.
 The Dirac Lagrangian classically possesses two fundamental $\U(1)$ symmetries which rotate fermion phases \emph{vectorially} or \emph{axially}.
@@ -454,16 +521,20 @@ Instead, the continuity equation $\ts\dd\ts J = 0$ fails by the presence of none
 	\label{eqn:chiral-anomaly}
 .\end{align}
 % Redefining $\ts J'_A = \ts J_A - \csform$ so that $\ts\dd\ts J'_A = 0$ generates the term $$ 
+\note{WRONG:
 By Noether's theorem \eqref{eqn:Noether's-theorem}, this is equivalent to the presence of an extra term $\ts\dd\ts K = \angbr{\tsbm F\wedge\tsbm F}$ in the Lagrangian.
-% By Noether's theorem, the Lagrangian which yields the true conserved axial current $\ts J_A' = \ts J_A - \csform$ possesses the $θ$-term 
-% \begin{math}
-% 	\frac{θ}{8π^2}\angbr{\tsbm F \wedge \tsbm F}
-% .\end{math}
 In other words, an axial rotation \eqref{eqn:chiral-rotation} does not leave the Lagrangian invariant, but instead generates the $θ$-term \cite[§\,8]{Gripaios_BSM_2015}.
+}
+Thus, in the presence of instantons (where $\angbr{\tsbm F\wedge\tsbm F}$ integrates to a non-zero winding number) the axial current exhibits non-zero divergence.
+
 
 \note{What does this mean??
 Relevant because Peccei-Quinn mechanism depends on chiral symmetry breaking.
-Why don't we just put $\ts K = \angbr{\tsbm F \wedge \tsbm F}$ in the Lagrangian, so that $\ts\dd\ts J_A = 0$?}
+Why don't we just put $\ts K = \angbr{\tsbm F \wedge \tsbm F}$ in the Lagrangian, so that $\ts\dd\ts J_A = 0$?
+Write something about the gauge invariant QCD vacuum $\ket{θ}$.
+``Recognizing the complicated nature of the QCD vacuum, effectively adds an extra term to the QCD Lagrangian.'' - [lecture notes on axions]
+}
+
 
 \section{QCD and the Strong \CP\ Problem}
 
