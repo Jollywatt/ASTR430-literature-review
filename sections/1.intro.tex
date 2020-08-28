@@ -42,7 +42,7 @@ Then, QCD is defined and the origin of the so-called \emph{strong \CP\ problem} 
 
 \note{Justify focus on classical gauge theory}
 
-\section{Overview of Classical Gauge Theory}
+\section{Overview of Classical and Quantum Gauge Theory}
 \label{sec:overview-of-gauge-theory}
 
 Gauge theories take place on a spacetime manifold and consist of two mathematically distinct dynamical entities: a \emph{matter field} and a \emph{gauge field}.
@@ -53,12 +53,13 @@ The underlying premise of gauge theory is that there may be physical redundancy 
 (For example, the complex phase of a wavefunction is physically irrelevant.)
 This redundancy results in mathematical degrees of freedoms of the matter fields which are non-physical, called \emph{local gauge freedoms}.
 (Keeping with our example: local rotations of phase are a gauge freedom.)
-Crucially, local gauge freedoms introduce ambiguity in the notion of the physical rate of change of matter fields about a point, because the point-wise independence of its gauge freedom means that the difference in the matter field between nearby points is gauge-dependent.
+Crucially, local gauge freedoms introduce ambiguity in the notion of the physical rate of change of matter fields about a point.
+This is because the point-wise independence of the matter field's gauge freedom means that differences in the field's value between nearby points is gauge-dependent.
 In other words, there is no preferred directional derivative of a matter field with local gauge freedom, until the choice of a \emph{connection} is made.
 The triumph of gauge theory is that, by introducing the gauge field to act as a connection, this ambiguity is promoted to a separate set of physical degrees of freedom.
 The implications of this are twofold:
-Firstly, the gauge field yields a choice of derivative (namely, the covariant derivative with respect to the gauge field), allowing the inclusion of well-defined derivatives of matter fields in the theory's equations of motion.
-Secondly, the gauge field has a dynamical role in the theory, describing a new kind of field: force fields (and, after quantisation, the force carrier bosons).
+Firstly, the gauge field yields a choice of derivative (namely, the covariant derivative with respect to the gauge field), allowing the inclusion of well-defined derivatives of the matter field in the theory's equations of motion.
+Secondly, the gauge field has a dynamical role in the theory, describing a new kind of field: force fields (and, after quantisation, force carrier bosons).
 
 
 
@@ -70,8 +71,8 @@ Secondly, the gauge field has a dynamical role in the theory, describing a new k
 	&	objects with manifold structure
 	\\	$\fibrebundle{}{;\,}{};\,\leftrightarrow$
 	&	injection; surjection; bijection
-	\\	$\fibrebundle[\pi]{F}{\cal E}{\cal M}$
-	&	fibre bundle $\cal E$ over base space $\cal M$ with fibre $F$ and projection $\pi : \cal E \twoheadrightarrow \cal M$
+	\\	$\fibrebundle[π]{F}{\cal E}{\cal M}$
+	&	fibre bundle $\cal E$ over base space $\cal M$ with fibre $F$ and projection $π : \cal E \twoheadrightarrow \cal M$
 	\\	$\T_p\cal M$; $\T\cal M$
 	&	tangent space at $p \in \cal M$; tangent bundle of $\cal M$
 	\\	$\T^r_s\cal M$
@@ -100,7 +101,7 @@ Secondly, the gauge field has a dynamical role in the theory, describing a new k
 	&	space of $p$-forms on $\cal M$, equal to $\secs(\wedge^p \T^*\cal M)$
 	\\	$\forms^p(\cal M, V)$
 	&	space of $V$-valued $p$-forms, equal to $\secs(\cal E\otimes\wedge^p \T^*\cal M)$ where $\fibrebundle{V}{\cal E}{\cal M}$
-	% \\	$\frak g$
+	% \\	$\lieg$
 	% &	Lie algebra of group $G$
 	% \\	$\dd$
 	% &	exterior derivative
@@ -126,22 +127,23 @@ The action of $\cal G$ on the space of matter fields $\cal E$ may be denoted
 	\bm ψ \overset{g}{\mapsto} \bm ψ' = g\cdot\bm ψ
 \end{align}
 for $\bm ψ \in \secs(\cal E)$ and $g \in \secs(\cal G)$ (i.e., $\bm ψ : \cal M \to V$ and $g : \cal M \to G$).
-This specification of an action ``$\cdot$'' of $\cal G$ on the vector space $\cal E$ is equivalent to the choice of a linear representation $\rho : G \to \mathrm{End}(V)$ of $G$ on $V$.
+This specification of an action ``$\cdot$'' of $\cal G$ on the vector space $\cal E$ is equivalent to the choice of a linear representation $ρ : G \to \mathrm{End}(V)$ of $G$ on $V$.
 Thus, we may represent the group action as matrix product,
 \begin{math}
-	% (g \cdot \bm ψ)|_p = \rho(g|_p)\bm ψ|_p
-	g \cdot \bm ψ = \rho(g)\bm ψ
+	% (g \cdot \bm ψ)|_p = ρ(g|_p)\bm ψ|_p
+	g \cdot \bm ψ = ρ(g)\bm ψ \equiv g_ρ\bm ψ
 ,\end{math}
-remembering that both $\bm ψ$ and $g$ (but not $\rho$) vary across $\cal M$.
+remembering that both $\bm ψ$ and $g$ (but not $ρ$) vary across $\cal M$.
 
-Here, it is worth noting that all gauge theories are isomorphic to a gauge theory possessing only one matter field $\bm ψ_\text{total}$ with one gauge group $(G, \rho)$.
-For instance, if a theory consists of different fundamental particles and forces, represented by fields $\bm\phi$ and $\bm\varphi$ with gauge groups $(G_\phi, \rho_\phi)$ and $(G_\varphi, \rho_\varphi)$,
-% If a theory consists of qualitatively distinct fields $\bm\phi$ and $\bm\varphi$ with gauge groups $(G_\phi, \rho_\phi)$ and $(G_\varphi, \rho_\varphi)$, representing distinct fundamental particles and forces,
-then we may take the total matter field $\bm ψ_\text{total} = \bm\phi \oplus \bm\varphi$ to be the direct sum of the fields in the theory, and similarly equip it with the gauge group $G_\text{total} = G_\phi \oplus G_\varphi$ with representation $\rho_\text{total} = \rho_\phi \oplus \rho_\varphi$.
+Here, it is worth noting that all gauge theories are isomorphic to a gauge theory possessing only one matter field $\bm ψ_\text{total}$ with one gauge group $(G, ρ)$.
+For instance, if a theory consists of different fundamental particles and forces, represented by fields $\bm φ$ and $\bm ϕ$ with gauge groups $(G_φ, ρ_φ)$ and $(G_ϕ, ρ_ϕ)$,
+% If a theory consists of qualitatively distinct fields $\bm\phi$ and $\bm\varphi$ with gauge groups $(G_\phi, ρ_\phi)$ and $(G_\varphi, ρ_\varphi)$, representing distinct fundamental particles and forces,
+then we may take the total matter field $\bm ψ_\text{total} = \bm φ \oplus \bmϕ$ to be the direct sum of the fields in the theory, and similarly equip it with the gauge group $G_\text{total} = G_φ \oplus G_ϕ$ with representation $ρ_\text{total} = ρ_φ \oplus ρ_ϕ$.
 This new theory is physically identical to the original.
 In full generality, therefore, we treat our theory as possessing one matter and one gauge field, while freely speaking of its composite parts as separate fields where convenient.
 
-A \emph{connection} on $\cal E$ is a derivation\footnotemark{} $\ts\nabla : \secs(\cal E) \to \forms^1(\cal M, \cal E)$ from vector fields to vector-valued 1-forms, designed so that $(\ts\nabla\bm ψ)(\ts X)$---that is, the action of the $V$-valued 1-form $\ts\nabla\bm ψ$ on a vector $\ts X \in \T\cal M$---gives the directional derivative of $\bm ψ$ along $\ts X$ with respect to $\ts\nabla$.
+A \emph{connection} on $\cal E$ is a derivation\footnotemark{} $\ts\nabla : \secs(\cal E) \to \forms^1(\cal M, \cal E)$ from vector fields to vector-valued 1-forms.
+The intended meaning is that $(\ts\nabla\bm ψ)(\ts X)$---that is, the action of the $V$-valued 1-form $\ts\nabla\bm ψ$ on a vector $\ts X \in \T\cal M$---gives the directional derivative of $\bm ψ$ along $\ts X$ (with respect to the connection $\ts\nabla$).
 \footnotetext{
 	More precisely, $\ts\nabla$ is a $\cal C^\infty(\cal M)$-linear derivation, meaning
 	\begin{math}
@@ -155,51 +157,52 @@ A \emph{connection} on $\cal E$ is a derivation\footnotemark{} $\ts\nabla : \sec
 Employing a basis $\qty{\bm e_a}$ of $\cal E$ and local coordinates $\qty{x^μ}$ of $\cal M$, \emph{any} connection is of the form
 \begin{align}
 	\ts\nabla \bm ψ &= \ts\dd\bm ψ + \tsbm A\bm ψ
-\\	&= \qty(\partial_\muψ^a{}_b + A_μ{}^a{}_bψ^b) \, \ts\dd x^μ \otimes \bm e_a
+\\	&= \qty(\partial_μ ψ^a{}_b + A_μ{}^a{}_bψ^b) \, \bm e_a \otimes \ts\dd x^μ
 \end{align}
 for some matrix-valued 1-form $\tsbm A$, where $\ts\dd$ is the exterior derivative.
+(More precisely, $\tsbm A \in \forms^1(\M, \lieg)$ is a $\lieg$-valued 1-form, where $\lieg$ is the Lie algebra of the gauge group $G$.)
 If $\ts\nabla\bm ψ$ is required to transform like the matter field $\bm ψ$ under local gauge transformations, that is, as
 \begin{align}
 	\ts\nabla\bm ψ \overset{g}{\mapsto} g\cdot(\ts\nabla\bm ψ)
-	= (g\cdot\ts\nabla)(g_\rho\bm ψ)
-	= g_\rho\ts\nabla\bm ψ
+	= (g\cdot\ts\nabla)(g_ρ\bm ψ)
+	= g_ρ\ts\nabla\bm ψ
 ,\end{align}
 then $\ts\nabla$ is called a \emph{covariant derivative} and the connection 1-form $\tsbm A$ consequently obeys
 \begin{align}
-	\tsbm A \overset{g}{\mapsto} g\cdot\tsbm A = g_\rho\tsbm A g_\rho^{-1} - \qty(\ts\dd g_\rho)g_\rho^{-1}
+	\tsbm A \overset{g}{\mapsto} g\cdot\tsbm A = g_ρ\tsbm A g_ρ^{-1} - \qty(\ts\dd g_ρ)g_ρ^{-1}
 	\label{eqn:gauge-field-transformation-law}
 .\end{align}
 
 Such a connection $\ts\nabla_{\!A}$ is not unique; it depends on the choice of the 1-form field $\tsbm A$.
 It is exactly this connection 1-form which is promoted to a dynamical object in a gauge theory and given the name \emph{the gauge field}.
 In order for the gauge field to be incorporated in the theory's equations of motion, we would like to have a notion of its derivative.
-However, $\ts\nabla_{\!A} : \secs(\cal E) \cong \forms^0(\cal M, \cal E) \to \forms^1(\cal M, \cal E)$ is not defined on 1-forms such as $\tsbm A$ until we make the natural extension\footnotemark{} to a \emph{covariant exterior derivative}
-% Finally, the connection $\ts\nabla : \secs(\cal E) \cong \forms^0(\cal M, \cal E) \to \forms^1(\cal M, \cal E)$ may be naturally extended\footnotemark{} to a \emph{covariant exterior derivative}
-$\covdd : \forms^p(\cal M, \cal E) \to \forms^{p + 1}(\cal M, \cal E)$
+However, the covariant derivative $\ts\nabla : \secs(\cal E) \cong \forms^0(\cal M, \cal E) \to \forms^1(\cal M, \cal E)$ is not readily defined on 1-forms such as $\tsbm A$ until we make the natural extension\footnotemark{} to a \emph{covariant exterior derivative}
+$\covdd : \forms^p(\cal M, \cal E) \to \forms^{p + 1}(\cal M, \cal E)$,
+given by
 \begin{align}
 	% \covdd &: \forms^p(\cal M, \cal E) \to \forms^{p + 1}(\cal M, \cal E)
 % ,&	\covdd &= \ts\dd + \tsbm A	
-	\covdd &= \ts\dd + \tsbm A
+	% \covdd &= \ts\dd + \tsbm A
 % \\	\covddψ^a &= \ts\ddψ^a + \ts A^a{}_bψ^b
-	% \covdd\tsbm\phi &= \ts\dd\tsbm\phi + \tsbm A\tsbm\phi
-% \\	\qty(\partial_μ\phi_ν{}^a + A_μ{}^a{}_b\phi_ν{}^b) \, \ts\dd x^μ \otimes \bm e_a
-,\end{align}
+\\	\covdd\tsbm φ &= \ts\dd\tsbm φ + \tsbm A\wedge\tsbm φ
+% \\	\qty(\partial_μ φ_ν{}^a + A_μ{}^a{}_b φ_ν{}^b) \, \ts\dd x^μ \otimes \bm e_a
+.\end{align}
 \footnotetext{
 	% Note that $\secs(\cal E) = \forms^0(\cal M, \cal E)$.
 	The extension is obtained by requiring the graded Leibniz property
 	\begin{math}
-		\covdd(\ts\phi\otimes\bm ψ) = \ts\dd\ts\phi \otimes\bm ψ + (-1)^p\ts\phi \wedge \ts\nabla\bm ψ
+		\covdd(\ts φ\otimes\bm ψ) = \ts\dd\ts φ \otimes\bm ψ + (-1)^p\ts φ \wedge \ts\nabla\bm ψ
 	\end{math}
-	for $\ts\phi \in \forms^p(\cal M)$ and $\bm ψ \in \secs(\cal E)$, analogous to the usual exterior derivative.
+	for $\ts φ \in \forms^p(\cal M)$ and $\bm ψ \in \secs(\cal E)$, analogous to the usual exterior derivative.
 }%
-to allow the construction of, among other things, the curvature 2-form, or \emph{gauge field strength}
+This enables the construction of, among other things, the curvature 2-form or \emph{gauge field strength}
 \begin{align}
 	\tsbm F &\coloneq \covdd\tsbm A
 \\	&= \ts\dd\tsbm A + \tsbm A \wedge \tsbm A
 	= (\ts\dd\ts A^a{}_b + \ts A^a{}_c \wedge \ts A^c{}_b) \, \bm e_a \otimes \bm e^b
 ,\end{align}
-where we have written the r.h.s.\ with respect to a basis $\qty{\bm e_a}$ and dual basis $\qty{\bm e^a}$ of $\cal E$ (note that $V$ is equipped with the Euclidean inner product; $\bm e^a (\bm e_b) = \delta^a_b$).
-The field strength $\tsbm F$ is useful because it is geometrical, in the sense that it transforms like the matter field; $\tsbm F \mapsto g\cdot\tsbm F = g_\rho\tsbm F g_\rho^{-1}$ under gauge transformations, even though $\tsbm A$ does not.
+where we have written the r.h.s.\ with respect to a basis $\qty{\bm e_a}$ and dual basis $\qty{\bm e^a}$ of $\cal E$ (note that $V$ is equipped with the Euclidean inner product; $\bm e^a (\bm e_b) = δ^a_b$).
+The field strength $\tsbm F$ is useful because it is geometrical, in the sense that it transforms like the matter field; $\tsbm F \mapsto g\cdot\tsbm F = g_ρ\tsbm F g_ρ^{-1}$ under gauge transformations, even though $\tsbm A$ does not.
 
 \note{The gauge field strength also satisfies the Bianchi identity $\covdd\tsbm F = 0$.}
 
@@ -216,7 +219,7 @@ For classical gauge theories, the equations of motion may be specified as the ex
 	S\qty[\bm ψ, \ts\nabla_{\!A}\bm ψ, \tsbm F] = \int_{\cal M}\! \LL\qty[\bm ψ, \ts\nabla_{\!A}\bm ψ, \tsbm F]
 ,\end{align}
 where $\LL$ is a local Lagrangian density.
-In order that the equations of motion are physically well-defined, we require the Lagrangian possesses the relevant symmetries: gauge symmetry, so that the equations of motion are gauge invariant; and Lorentz symmetry (which is automatic if $\LL = \mathscr{L}\,\vol$ is expressed as a volume form) \cite[§\,7.1]{Hamilton_2017}.
+In order that the equations of motion are physically well-defined, we require the Lagrangian possesses the relevant symmetries: gauge symmetry, so that the equations of motion are gauge invariant; and Lorentz symmetry (which is automatic if $\LL = \cal L\,\vol$ is expressed as a volume form) \cite[§\,7.1]{Hamilton_2017}.
 % We let the Lagrangian depend on derivatives only of order $\le 1$ in the fields for reasons of respecting causality and ensuring that energy has lower-bound.
 The equations of motion are invariant under adjustments to the Lagrangian density by a total derivative $\ts\dd\ts K$, since by Stokes' theorem these contribute only to boundary terms.
 Therefore, a Lagrangian which is said to possess gauge symmetry is still generally permitted to transform as
@@ -225,31 +228,38 @@ Therefore, a Lagrangian which is said to possess gauge symmetry is still general
 	\label{eqn:Lagrangian-transforming-by-exact-form}
 \end{align}
 under gauge transformations, if the fields vanish at the boundary.
-If a Lagrangian transforms as \eqref{eqn:Lagrangian-transforming-by-exact-form} under a gauge symmetry parametrised by $n$ parameters $α_i$, then Noether's theorem implies the existence of $n$ conserved current densities (viz. 3-forms), one for each $α_i$,
+If a Lagrangian transforms as \eqref{eqn:Lagrangian-transforming-by-exact-form} under a gauge symmetry parametrised by $n$ parameters $α_i$, then Noether's theorem implies the existence of $n$ conserved current densities (viz. 3-forms\footnotemark), one for each $α_i$,
 \begin{align}
 	\ts J_{(i)} = \pdv{\LL}{\ts\nabla\bm ψ} \eval{\fdv{\bm ψ}{α^i}}_\iden - \ts K
 	\label{eqn:Noether's-theorem}
 ,\end{align}
-whose continuity equations read $\ts\dd\ts J_{(i)} = 0$.%
-\footnote{The partial derivative $\pdv*{\LL}{\ts\nabla\bm ψ}$ of a volume form $\LL$ with respect to a 1-form $\ts\nabla\bm ψ$ is defined by extending the scalar partial derivative to be an anti-derivation on differential forms. For details, see \cite{mitsou2013differential}.}
+whose continuity equations read $\ts\dd\ts J_{(i)} = 0$.
+\footnotetext{The partial derivative $\pdv*{\LL}{\ts\nabla\bm ψ}$ of a volume form $\LL$ with respect to a 1-form $\ts\nabla\bm ψ$ is itself a 3-form, and is defined by naturally extending the scalar partial derivative to be an anti-derivation on differential forms. For details, see \cite{mitsou2013differential}.}
 
 % The condition that Lagrangians of quantum field theories are , on the other hand, enjoy slightly enlarged symmetri, because of their origin in a path integral.
-Furthermore, the Lagrangian of a quantum field theory enjoys an enlarged criterion of gauge symmetry: it is also permitted to transform as
+On the other hand, the Lagrangian of a quantum field theory enjoys an enlarged criterion of gauge symmetry: it is also permitted to transform as
 \begin{align}
-	% \int\LL \mapsto \int\LL + n\cdot2\pi\hbar
-	S \mapsto S + n\cdot2\pi\hbar
+	% \int\LL \mapsto \int\LL + n\cdot2π\hbar
+	\int_\M\LL \mapsto \int_\M\LL + n\cdot2π\hbar
 	\label{eqn:discrete-QFT-Lagrangian-transformation}
 ,\end{align}
 where $n \in \ZZ$ may vary discretely under different gauges.
 This is because of the origin of a QFT's equations of motion in the Feynman path integral.
-For instance, the quantum mechanical amplitude that the fields $\bm ψ$ and $\tsbm F$ satisfy prescribed boundary conditions on $\partial\Omega$ surrounding some region of spacetime $\Omega \subseteq \cal M$ is given by the path integral
+For instance, the quantum mechanical amplitude that the fields $\bm ψ$ and $\tsbm F$ satisfy prescribed boundary conditions on $\partialΩ$ surrounding some region of spacetime $Ω \subseteq \cal M$ is given by the path integral
 \begin{align}
-	\mathscr A = \int_{\partial\Omega}\! \cal D[\bm ψ, \tsbm F] \exp\qty{\frac{i}{\hbar} \int_{\Omega}\! \LL\qty[\bm ψ, \ts\nabla_{\!A}\bm ψ, \tsbm F]}
-\label{eqn:path-integral}
+	\mathscr A = \int_{\partialΩ}\! \cal D[\bm ψ, \tsbm A] \exp\qty\bigg{\frac{i}{\hbar}
+	% \underbrace{\int_{Ω}\! \LL\qty[\bm ψ, \ts\nabla_{\!A}\bm ψ, \tsbm A]}_{S[\bm ψ, \ts\nabla_{\!A}\bm ψ, \tsbm A]}
+	S[\bm ψ, \ts\nabla_{\!A}\bm ψ, \tsbm A]
+	}
+% 	\mathscr A = \int_{\partialΩ}\! \cal D[\bm ψ, \tsbm F] \exp\qty(\frac{i}{\hbar} S)
+% 	\quad\text{where}\quad
+% 	S = \int_{Ω}\! \LL\qty[\bm ψ, \ts\nabla_{\!A}\bm ψ, \tsbm F]
+	\label{eqn:path-integral}
 ,\end{align}
-where the intended meaning of $\cal D[\cdots]$ is an integration over all field configurations on $\Omega$.
-If the Lagrangian were to undergo a discrete gauge transformation \eqref{eqn:discrete-QFT-Lagrangian-transformation}, the amplitude $\mathscr A \mapsto \mathscr A\exp(n\cdot2\pi i)$ would be left invariant.
-In other words, physical consistency of a QFT does not require the single-valuedness of $S$, but only of $\exp(iS/\hbar)$.
+where the intended meaning of $\cal D[\cdots]$ is an integration over all field configurations on $Ω$.
+If the Lagrangian were to undergo a discrete gauge transformation \eqref{eqn:discrete-QFT-Lagrangian-transformation}, the amplitude $\mathscr A \mapsto \mathscr A\exp(n\cdot2π i)$ would be left invariant.
+In other words, physical consistency of a QFT does not require the single-valuedness of the action $S$, but only of $\exp(iS/\hbar)$.
+% In other words, physical consistency of a QFT does not require the single-valuedness of $\int\LL$, but only of $\exp(i\int\LL/\hbar)$.
 This leads to an enlargement of the space of possible Lagrangian densities to include, in particular, \emph{topological terms}.
 These prove to be especially relevant to QFTs and to the strong \CP\ problem itself.
 
@@ -262,21 +272,25 @@ These prove to be especially relevant to QFTs and to the strong \CP\ problem its
 \subsection{The Yang--Mills Lagrangian and the Topological \texorpdfstring{$θ$-Term}{θ-Term}}
 \label{sec:YM-and-topological}
 
-\note{We seek to describe the dynamics of the gauge field.}
-Along with requiring Lorentz and gauge invariance, we also require that the quantum field theory associated to a Lagrangian be \emph{renormaliseble}.
-Loosely speaking, a classical field theory is renormalisable if it can be ``quantised consistently''.
+An important component of a gauge theory's equations of motion are the terms in the Lagrangian which describe the dynamics of the gauge field.
+These specify how the gauge field behaves in the vacuum (e.g., describing the classical electromagnetic field, or the quantum theory of photons, in the absence of matter).
+Thus, we are interested in the possible \emph{consistent} Lagrangians which may be constructed from the gauge field $\tsbm A$ and not the matter field $\ts ψ$.
+
+Along with requiring Lorentz and gauge invariance, consistency also requires that the quantum field theory associated to a Lagrangian be \emph{renormaliseble}.
+Loosely speaking, a classical field theory is renormalisable if it can be ``quantised safely''.
 (This restricts the form of the Lagrangian considerably, but how this happens is beyond this review's scope.)
 Under these constraints, the only admissible QFT Lagrangians which may be constructed from the gauge field $\tsbm A$ alone are linear combinations of
 \begin{align}
 	% \angbr{\tsbm F \wedge \star\tsbm F} &\equiv \frac12\angbrAd{\bm F_{μν}, \bm F^{μν}}\vol
-	\angbr{\tsbm F \wedge \star\tsbm F} &\equiv \frac12\angbrAd{\bm F_{μν}, \bm F_{\rho\sigma}}g^{μ\rho}g^{ν\sigma}\vol
+	\angbr{\tsbm F \wedge \star\tsbm F} &\equiv \frac12\angbrAd{\bm F_{μν}, \bm F_{ρσ}}g^{μρ}g^{νσ}\vol
 ,&	&\text{and}
-&	\angbr{\tsbm F \wedge \tsbm F} &\equiv \frac14\angbrAd{\bm F_{μν}, \bm F_{\rho\sigma}}\epsilon^{μν\rho\sigma}\vol
+&	\angbr{\tsbm F \wedge \tsbm F} &\equiv \frac14\angbrAd{\bm F_{μν}, \bm F_{ρσ}}\epsilon^{μνρσ}\vol
 ,\end{align}
 where $\star$ is the Hodge dual \cite[§\,7.1.2]{Hamilton_2017}.
-The inner product $\angbrAd{\ ,\ }$ on the Lie algebra $\frak g$ of the gauge group $G$ is chosen such that it is gauge-invariant.
-(Recall that $\tsbm F$ is a $\frak g$-valued form, so an inner product on $\frak g$ is needed. \cite[§\,7.3]{Hamilton_2017}.) % also [Folland ch. 9]
-The inner product $\angbrAd{\ ,\ }$ on $\frak g$ is not unique; it depends on a choice of \emph{coupling constants}.
+The inner product $\angbrAd{\ ,\ }$ on the Lie algebra $\lieg$ of the gauge group $G$ is chosen such that it is gauge-invariant.\footnote{
+	Recall that $\tsbm A$, and hence $\tsbm F$, is a $\lieg$-valued form, so an inner product on $\lieg$ is needed to produce a scalar. For this scalar to be gauge invariant, the inner product must additionally be `$\mathrm{Ad}$-invariant' \cite[§\,7.3]{Hamilton_2017}. % also [Folland ch. 9]
+}
+The inner product $\angbrAd{\ ,\ }$ on $\lieg$ is not unique; it depends on a choice of \emph{coupling constants}.
 In particular, if the gauge group $G$ is the direct sum of $n$ simple Lie groups,%
 \footnote{
 	Any compact connected Lie group is either of this form, or is a finite quotient of such a group, if $\mathrm U(1)$ is counted as `simple'. \cite[§\,2.4.3]{Hamilton_2017}.
@@ -291,85 +305,115 @@ The Yang--Mills Lagrangian yields the equation of motion $\covdd\star\tsbm F = 0
 For the Abelian gauge group of electromagnetism $G = \mathrm{U}(1)$, this equation, together with the Bianchi identity $\covdd\tsbm F = 0$, are the source-free Maxwell equations.
 
 
-The other term $\angbr{\tsbm F \wedge \tsbm F}$ is known as the \emph{Chern--Simons term} or the \emph{topological $θ$-term}, for reasons which will become apparent.
-The Chern--Simons term is odd under both time-reversal symmetry $T$ and parity $P$ (notice $\epsilon^{μν\rho\sigma} \mapsto -\epsilon^{μν\rho\sigma}$ under $T$ or $P$) but not under charge conjugation $C$.
-It is \emph{topological} because it does not depend on the geometry of spacetime via the metric $g^{μν}$ (instead, all spacetime indices are contracted with $\epsilon^{μν\rho\sigma}$).
-Hence, an action $\int_{\cal M} \angbr{\tsbm F \wedge \tsbm F}$ depends only on the integrand's topology over $\cal M$.
-In fact, the integral is a discrete topological invariant
-\begin{align}
-	n = \frac{1}{8\pi^2}\int_{\cal M} \angbr{\tsbm F \wedge \tsbm F} \in \ZZ
-	\label{eqn:winding-number}
-,\end{align}
-known as the \emph{Pontryagin number}, the \emph{second Chern class} \cite[§\,1]{Witten_1989} or simply the `winding number' \cite[§\,2.2]{Tong_lecture_notes} of the gauge field configuration $\tsbm A$.
+The other term $\angbr{\tsbm F \wedge \tsbm F}$ is known as the \emph{Chern--Simons term} or the \emph{topological $θ$-term}, for reasons which will become apparent after surveying its properties.
+\begin{itemize}
+\item 
+The Chern--Simons term is odd under both time-reversal symmetry $T$ and parity $P$ (notice $\epsilon^{μνρσ} \mapsto -\epsilon^{μνρσ}$ under $T$ or $P$) but not under charge conjugation $C$.
+Hence, it may give rise to \CP-violating dynamics.
+
+\item 
+It is \emph{topological} because it does not depend on the geometry of spacetime via the metric $g^{μν}$ (instead, all spacetime indices are contracted with $\epsilon^{μνρσ}$).
+Hence, an action $\int_\M \angbr{\tsbm F \wedge \tsbm F}$ depends only on the integrand's topology over $\M$.
+
+\item 
 Furthermore, $\angbr{\tsbm F \wedge \tsbm F}$ is a total derivative of the \emph{Chern--Simons 3-form} $\csform$,
 \begin{align}
 	\angbr{\tsbm F \wedge \tsbm F}
 	= \ts\dd\csform
 	= \ts\dd\tr\qty(\tsbm A\wedge\ts\dd\tsbm A + \frac{2}{3}\tsbm A\wedge\tsbm A\wedge\tsbm A)
 ,\end{align}
-meaning that the action depends only on the topology of $\tsbm A$ on the spacetime boundary $\partial\cal M$.\footnote{
-	As such, the $θ$-term does not affect classical equations of motion.
-	However, in the quantum theory of fermions, it has important non-perturbative effects (an implication of the \emph{chiral anomaly}) \cite[§\,3]{Tong_lecture_notes}.
-}
-
-% The topolo
-% For an Abelian gauge group $\mathrm{U}(1)$, the space of gauge fields $\forms^1(\cal M, \mathfrak g)$ is path-connected to the identity, and the winding number $n$ is zero for all $\tsbm A \in \forms^1(\cal M, \mathfrak g)$.
-% Consequently, the Chern--Simons term is neither relevant in classical electromagnetism nor in QED.
-% However, for non-Abelian gauge groups such as the $\SU(3)$ of QCD, the space of gauge fields $\forms^1(\cal M, \mathfrak g)$ has a non-trivial topology,\footnotemark\ containing disjointed regions labelled by $n \in \ZZ$.
-% \footnotetext{
-% 	Technically, we consider the topology of the subset of $\forms^1(\cal M, \mathfrak g)$ consisting only of gauge fields $\tsbm A$ which approach zero at spatial infinity.
-% }
-% In other words, gauge configurations in QCD can only be continuously transformed into each other if they share the same winding number.
-% Gauge field configurations with $n \ne 0$, which live outside of the identity-connected component of $\forms^1(\cal M, \mathfrak g)$, are known as \emph{instanton configurations}.
-% \note{Actually, instantons must satisfy $\star\tsbm F = \pm\tsbm F$, and enable quantum tunnelling between homotopy classes.}
-% Instantons are an important aspect of QCD and of general Yang--Mills theories, giving rise to topologically distinct vacuum states and highly non-perturbative dynamical effects (for an introduction, see \cite{Tong_lecture_notes,lectures-on-instantons,instantons-whats-happening}).
+meaning that the action $\int_\M \angbr{\tsbm F \wedge \tsbm F}$ depends only on the topology of $\tsbm A$ on the spacetime boundary $\partial\cal M$.
+As such, it does not affect the equations of motion.
+However, it has important implications in the quantum theory.
 
 
-
-
-The choice of the symbol $θ$ in the name ``$θ$-term'' reflects the cyclic property of any coefficient $θ$ attached to the Chern--Simons term:
-If the Lagrangian density includes such a term
+\item 
+The integral is a discrete topological invariant
 \begin{align}
-	\LL_θ[\tsbm F] = \frac{θ}{8\pi^2}\angbr{\tsbm F\wedge\tsbm F}
+	n = \frac{1}{8π^2}\int_\M \angbr{\tsbm F \wedge \tsbm F}
+	= \frac{1}{8π^2}\int_{\partial\M} \csform
+	\in \ZZ
+	\label{eqn:winding-number}
 ,\end{align}
-then its contribution to the action in the path-integral \eqref{eqn:path-integral} is $θ n$.
-Since
+known as the \emph{Pontryagin number}, the \emph{second Chern class} \cite[§\,1]{Witten_1989} or simply the `winding number' \cite[§\,2.2]{Tong_lecture_notes} of the gauge field configuration $\tsbm A$.
+
+Importantly, this means that the Chern--Simons term is not gauge invariant, if there are topologically distinct gauge fields $\tsbm A$ with varying winding number.
+% However, if the Lagrangian density includes a term
+% then the Lagrangian transforms as \eqref{eqn:discrete-QFT-Lagrangian-transformation}, which \emph{is} admissible in a quantum theory.
+% \note{Wrong. The action picks up a phase $iθn$. The equivalence described by \eqref{eqn:discrete-QFT-Lagrangian-transformation} makes $θ$ periodic.}
+
+\end{itemize}
+The choice of the symbol $θ$ in the name ``$θ$-term'' reflects the cyclic property of any coefficient $θ$ attached to the Chern--Simons term, such as
+\begin{align}
+	\LL_θ[\tsbm A] = \frac{θ}{8π^2}\angbr{\tsbm F\wedge\tsbm F}\hbar
+	\label{eqn:theta-term}
+.\end{align}
+The action of this Lagrangian is $θn\hbar$, where $\tsbm A$ has winding number $n$.
+Since this enters the path integral \eqref{eqn:path-integral} as
 \begin{math}
-	e^{iθ n} = e^{i(θ + 2\pi)n}
+	e^{iθn} = e^{i(θ + 2π)n}
 ,\end{math}
-the coefficient $θ$, henceforth the \emph{$θ$-parameter}, is naturally an angular quantity.
-In this context, the Chern--Simons term is also referred to as the $θ$-term.
+the coefficient $θ$, henceforth the \emph{$θ$-parameter}, does not affect the amplitude $\mathscr A$ if it undergoes additions of $2π$.
+The $θ$-parameter is an angular quantity, hence its symbol.
+As a whole, \eqref{eqn:theta-term} is referred to as the $θ$-term.
+
+The standard model employs the Yang--Mills Lagrangian $\angbr{\tsbm F\wedge\star\tsbm F}$, but does not include the more exotic $θ$-term, because it has not found empirical use.
+The unwanted $θ$-term is therefore quickly overlooked, historically being considered an unphysical gauge-variant anomaly. \note{Cite.}
 
 
-\subsubsection{The \texorpdfstring{$θ$-Term}{θ-Term} is a Consequence of the Non-trivial Vacuum}
 
-The $θ$-term is more than just a mathematical possibility which lacks reason for its inclusion in  physical theories.
-It is in fact central to non-Abelian gauge theories as a direct consequence of their \emph{non-trivial vacuum structure}.
 
-For an Abelian gauge group $\U(1)$, the space of gauge transformations $\secs(\cal G)$ is continuously connected to the identity, and the winding number is zero for all $\tsbm A \in \forms^1(\cal M, \mathfrak g)$.
-Consequently, the $θ$-term (with fixed $θ$) is neither relevant in classical electromagnetism nor in QED.
-However, for non-Abelian gauge groups such as the $\SU(3)$ of QCD, the space of gauge transformations\footnotemark\ $\secs(\cal G)$ has a non-trivial topology, with path-disconnected regions labelled by some $ν \in \ZZ$.
-(This is precisely because the third homotopy group of $\cal G$ is $π_3(\cal G) = \ZZ$. \note{Why third? Has a 3+1 split snuck in here? Is this general or specific to $\SU(3)$ and (3+1)D?})
+\subsection{The \texorpdfstring{$θ$-Term}{θ-Term} is a Consequence of the Non-trivial Vacuum}
+
+The $θ$-term is more than just a mathematical possibility which lacks physical reason for its inclusion in the Lagrangian.
+It is in fact central to non-Abelian gauge theories as a direct consequence of their \emph{non-trivial vacuum structure}, and is responsible for many interesting non-perturbative dynamical effects.
+
+
+For an Abelian gauge group $G = \U(1)$ with total gauge group bundle $\cal G = \cal U(1)$, the space of asymptotically-identity gauge transformations\footnotemark\ $\secs^\iden(\cal U(1))$ is continuously connected to the identity.
 \footnotetext{
-	Specifically, we consider the space of asymptotically-identity gauge transformations $\secs^{\iden}(\cal G)$ (whose elements are maps $g : \cal M \to G$ with $g(x) \to \iden$ as $x \to \infty$), to ensure that $\tsbm A$ satisfies prescribed boundary conditions.
+	We consider the space of asymptotically-identity gauge transformations $\secs^{\iden}(\cal G)$, whose elements are maps $g : \cal M \to G$ with $g|_{\partial\M} = \iden$ (or equivalently with $g(x) \to \iden$ as $x \to \infty$), because $\tsbm A$ must be fixed on the boundary in order to prescribe boundary conditions.
 	\note{Who realised this? 't Hooft? Wigner?}
 }
-Elements in the identity-connected component of $\secs(\cal G)$ are named \emph{small} gauge transformations, and all others \emph{large}.
-A large gauge transformation $g_ν \in \secs(\cal G)$ shifts the winding number $n$ of a gauge field $\tsbm A$ to $n + ν$, giving rise to $\ZZ$-many gauge-equivalent fields $\qty{g_ν \cdot \tsbm A}_ν$ which cannot be continuously gauge transformed into one another.
-Because of the involvement of large gauge transformations, the physical implications of a topologically-rich $\secs(\cal G)$ are inherently non-perturbative.
-Of particular relevance are the implications for the QCD vacuum.
+% (Explicitly, any map $g : \M \to \U(1)$ for which $g(x) \to \iden$ as $x \to \infty$ may be continuously brought to the identity. E.g., by defining $g'(x; λ) = λg(x)$ and taking $λ$ from $1 \to 0$.)
+This means that any gauge field configuration $\tsbm A$ can be continuously gauge transformed to $\tsbm A = \tsbm 0$, which has winding number zero. 
+Hence, the winding number is zero for all $\tsbm A \in \forms^1(\cal M, \frak u(1))$.
+Consequently, the $θ$-term (with constant $θ$) is neither relevant in classical electromagnetism nor in QED, because it vanishes.
+% However, for non-Abelian gauge groups such as the $\SU(3)$ of QCD, the space of gauge transformations $\secs^\iden(\cal G)$ has a non-trivial topology, and contains gauge transformations which cannot be continuously transformed into one another.
+However, for non-Abelian gauge groups such as the $\SU(3)$ of QCD, the space of gauge transformations $\secs^\iden(\cal G)$ may have a non-trivial topology, containing gauge transformations which are not diffeomorphic.
+In the case where $\M$ is spacetime and $\cal G = \cal{SU}(3)$, the space $\secs^\iden(\cal{SU}(3))$ consists of path-disconnected regions labelled by some $ν \in \ZZ$.
+% (In topological language, the third homotopy group $π_3(\secs^\iden(\cal G)) \cong \ZZ$ is the integers.)
+(In topological language, the third homotopy group $π_3(\secs^\iden(\cal{SU}(3))) \cong \ZZ$ is the group of integers.)
+% \note{Why third? Has a 3+1 split snuck in here? Is this general or specific to $\SU(3)$ and (3+1)D?}
+This means that there are topologically inequivalent gauge field configurations $\tsbm A$, with the winding number labelling each topological class.
 
+Elements $g_0 : \M \to G$ in the identity-connected component of $\secs^\iden(\cal G)$ are named \emph{small} gauge transformations, and all others \emph{large}.
+A large gauge transformation $g_ν \in \secs^\iden(\cal G)$ shifts the winding number $n$ of a gauge field $\tsbm A$ to $n + ν$, giving rise to $\ZZ$-many gauge-equivalent fields $\qty{g_ν \cdot \tsbm A}_{ν \in \ZZ}$ which belong to distinct homotopy classes.
+Such gauge fields are know as \emph{instantons}.
+
+Despite the name, large gauge transformations are not truly gauge symmetries, in the sense that they are not genuine automorphisms of the equations of motion.
+Indeed, large gauge transformations may transition between states which can be distinguished by physical measurement.
+For instance, if the gauge field $\tsbm A$ has winding number $n$, then the action of the $θ$-term
+\begin{align}
+	S[\tsbm A] = \int_\M \LL_θ[\tsbm A] = θn\hbar
+\end{align}
+is proportional to $n$.
+A large gauge transformation $g_ν$ then shifts this action $S[\tsbm A] \to {S[g_ν \cdot \tsbm A]} = S[\tsbm A] + θν\hbar$.
+From the path integral \eqref{eqn:path-integral}, this induces relative phases $e^{iθν}$ across the domain of integration which may interfere and non-trivially alter the amplitude.
+In other words, instantons are measurable.
+
+Of particular interest are the implications of instantons for the QCD vacuum.
 In a Yang--Mills theory whose Lagrangian includes the term
 \begin{align}
 	\LL_\text{YM} = \angbr{\tsbm F\wedge\star\tsbm F}
 ,\end{align}
 a vacuum state is one in which the field strength (and all other fields) vanish; $\tsbm F = \tsbm 0$.
-Not only is this consistent with an identically vanishing gauge field $\tsbm A_0 = \tsbm 0$, but also with gauge transformations \eqref{eqn:gauge-field-transformation-law} of zero,
+Not only is this consistent with an identically vanishing gauge field $\tsbm A_0 = \tsbm 0$, but also with gauge transformations \eqref{eqn:gauge-field-transformation-law} of $\tsbm A_0$,
 \begin{align}
 	g \cdot \tsbm A_0 = (\ts\dd g_ρ)(g_ρ)^{-1}
-.\end{align}
-Large gauge transformations $g_n$ lead to `perturbatively distinct' vacua $\ket{n}$, each labelled by winding number.
-The vacua have the same energy, i.e., are degenerate.
+,\end{align}
+which are called `pure gauge'.
+Small gauge transformations describe the same vacuum state, while large ones $g_n \cdot \tsbm A_0$ describe \emph{distinct vacua} $\ket{n}$ labelled by winding number.
+% The vacua have the same energy, i.e., are degenerate.
 Since $g_ν \cdot \ket{n} = \ket{n + ν}$, the vacua are not gauge-invariant.
 The only states which are invariant under the gauge up to an overall phase are those of the form
 \begin{align}
@@ -378,8 +422,9 @@ The only states which are invariant under the gauge up to an overall phase are t
 for some constant parameter $θ$.
 Thus, the theory possesses a topological circle of distinct gauge-invariant vacua $\ket{θ}$ labelled by the \emph{vacuum angle} $θ \in [0, 2π)$.
 
-
-Denoting by $\braketpm{n}{m}$ the quantum amplitude that the vacuum state $\ket{n}$ at $t \to -\infty$ evolves to $\ket{m}$ at $t \to \infty$, then the vacuum-to-vacuum amplitude is
+This enriched vacuum $\ket{θ}$ is equivalent to the inclusion of the $θ$-term in an effective Lagrangian, in the following way.
+Denote by $\braketpm{n}{m}$ the quantum amplitude that the vacuum state $\ket{n}$ at $t \to -\infty$ evolves to $\ket{m}$ at $t \to \infty$.
+The vacuum-to-vacuum amplitude is then
 \begin{align}
 	\braketpm{θ}{θ}
 	= \sum_{n, m} e^{iθ(n - m)}\braketpm{m}{n}
@@ -387,25 +432,28 @@ Denoting by $\braketpm{n}{m}$ the quantum amplitude that the vacuum state $\ket{
 	\label{eqn:vacuum-transition-1}
 ,\end{align}
 with all summations over $\ZZ$.
-In the path integral formulation \eqref{eqn:path-integral}, the amplitude $\braketpm{n}{n + ν}$ can also be expressed explicitly
+In the path integral formulation \eqref{eqn:path-integral}, the amplitude $\braketpm{n}{n + ν}$ can also be expressed explicitly as
 \begin{align}
  	\braketpm{n}{n + ν} =
- 	\int_{\partial\Omega}\! \cal D[\tsbm A; ν] \exp\qty{\frac{i}{\hbar} \int_{\Omega}\! \LL}
+ 	\int_{\partialΩ}\! \cal D[\tsbm A; ν] \exp\qty{\frac{i}{\hbar} \int_{Ω}\! \LL}
 	\label{eqn:vacuum-transition-2}
 ,\end{align}
-where $\cal D[\tsbm A; ν]$ means that the path integral is over all gauge fields with winding number $ν$.
-Combining \eqref{eqn:vacuum-transition-1} and \eqref{eqn:vacuum-transition-2}, the amplitude of evolution from and to the gauge invariant vacuum is
+where $\cal D[\tsbm A; ν]$ means that the path integral is over all gauge fields with winding number $ν$, since only those induce the transition $\ket{n} \mapsto \ket{n + ν}$.
+Combining \eqref{eqn:vacuum-transition-1} and \eqref{eqn:vacuum-transition-2}, the amplitude of evolution from the gauge invariant vacuum to itself is
 \begin{align}
 	\braketpm{θ}{θ}
-	&= \sum_ν e^{iθν} \int_{\partial\Omega}\! \cal D[\tsbm A; ν] \exp\qty{\frac{i}{\hbar} \int_{\Omega}\! \LL}
-\\	&= \sum_ν \int_{\partial\Omega}\! \cal D[\tsbm A; ν] \exp\qty{\frac{i}{\hbar} \int_{\Omega}\! \LL + iθν}
+	&= \sum_ν e^{iθν} \int_{\partialΩ}\! \cal D[\tsbm A; ν] \exp\qty{\frac{i}{\hbar} \int_{Ω}\! \LL}
+\\	&= \sum_ν \int_{\partialΩ}\! \cal D[\tsbm A; ν] \exp\qty{\frac{i}{\hbar} \int_{Ω}\! \LL + iθν}
 ,\intertext{
-which, using \eqref{eqn:winding-number} to write $iθν$ as an effective term in the Lagrangian, is
+which, using \eqref{eqn:winding-number} to write $iθν$ as the $θ$-term in the Lagrangian, is
 }
-	&= \int_{\partial\Omega}\! \cal D[\tsbm A] \exp\qty\bigg{\frac{i}{\hbar} \int_{\Omega}\! \qty\bigg[\underbrace{\LL + θ\frac{\hbar}{8π^2}\angbr{\tsbm F\wedge\tsbm F}}_{\displaystyle\LL_\text{eff}}]}
+	&= \int_{\partialΩ}\! \cal D[\tsbm A] \exp\qty\bigg{\frac{i}{\hbar} \int_{Ω}\! \qty\bigg[\underbrace{\LL + \frac{θ}{8π^2}\angbr{\tsbm F\wedge\tsbm F}\hbar}_{\displaystyle\LL_\text{eff}}]}
 .\end{align}
-Thus, the non-perturbative nature of the vacuum can be encapsulated in an effective Lagrangian $\LL_\text{eff}$, which includes the $θ$-term.
-
+Hence, the effects of the non-trivial vacuum can be encapsulated in the effective Lagrangian
+\begin{align}
+	\LL_\text{eff} = \LL + \frac{θ}{8π^2}\angbr{\tsbm F\wedge\tsbm F}\hbar
+.\end{align}
+It is in this sense that the $θ$-term is a consequence of the non-trivial vacuum in QCD.
 
 \begin{figure}[t]
 \begin{aside}[Glossary of technical terms]
@@ -437,7 +485,7 @@ Thus, the non-perturbative nature of the vacuum can be encapsulated in an effect
 \label{sec:fermions-and-the-chiral-anomaly}
 
 An important kind of matter field in the standard model is the \emph{Dirac fermion field} $\bm φ$, which transforms under the spin-$\frac12$ representation of the Lorentz group.
-The entire matter content of the standard model, including quarks and leptons, is comprised purely of fermion fields.
+The entire matter content of the standard model, including quarks and leptons, is comprised purely of such fermion fields.
 % The matter field of the standard model, including all quarks and leptons as components, is a composite of fermion fields.
 
 The Dirac matrices $\bm γ^μ$ are basis elements of the Clifford algebra $\cal{Cl}_{1,3}(\mathds{C})$ satisfying $\bm γ^{(μ}\bm γ^{ν)} = \eta^{μν}\bm 1$, and are used to write 4-component Dirac fermions in the spin-$\frac12$ representation.
@@ -448,14 +496,14 @@ In theories which violate parity, left- and right-handed fermions may experience
 
 The simplest fermion equation of motion (namely, the Dirac equation) derives from the \emph{Dirac Lagrangian density}
 \begin{align}
-	\LL_\text{Dirac} = \bar{\bm φ}\qty(i\bm γ^μ\partial_μ - m)\bm φ \;\vol
+	\LL_\text{Dirac} = \bar{\bm φ}\qty(i\hbar c\bm γ^μ\partial_μ - mc^2)\bm φ \;\vol
 ,\end{align}
 which describes a non-interacting spin-$\frac12$ fermion of mass $m$.
 % Consider a theory whose matter field $\bm ψ$ may consist of one or more fermion fields $\bm φ$...
 % If a theory possesses a local gauge symmetry $\bm ψ \mapsto g \cdot \bm ψ$ for $g \in G$, then the Dirac Lagrangian may be localised, giving
 The Dirac Lagrangian may be localised in the presence of gauge symmetry,
 \begin{align}
-	\LL_\text{Dirac} = \bar{\bm ψ}\qty(i\bm γ^μ\nabla_μ - m)\bm ψ \;\vol
+	\LL_\text{Dirac} = \bar{\bm ψ}\qty(i\hbar c\bm γ^μ\nabla_μ - mc^2)\bm ψ \;\vol
 	\label{eqn:Dirac-Lagrangian}
 ,\end{align}
 where $\ts\nabla\bm ψ \equiv (\nabla_μ\bm ψ) \, \ts\dd x^μ$ is the covariant derivative with respect to the gauge field, $\tsbm A$.
@@ -463,10 +511,10 @@ The matter field $\bm ψ = \bm φ_{(1)} \oplus \cdots \oplus \bm φ_{(n)}$ may n
 The localised Dirac Lagrangian describes fermions and their interactions with the gauge bosons.
 The electromagnetic interactions of charged fermionic matter are described by \eqref{eqn:Dirac-Lagrangian} in the case of a $\U(1)$ gauge symmetry, where the gauge field $\tsbm A \equiv \ts A$ is the electromagnetic vector potential.
 
-In quantum theories of fermions, the $θ$-term $\angbr{\tsbm F\wedge\tsbm F}$ also arises in the Lagrangian via the \emph{chiral anomaly}.
+In quantum theories of fermions, the $θ$-term makes another important appearance, arising via the \emph{chiral anomaly}.
 The Dirac Lagrangian classically possesses two fundamental $\U(1)$ symmetries which rotate fermion phases \emph{vectorially} or \emph{axially}.
 The classical axial symmetry is violated upon quantisation (due to the variance of the integral measure $\cal D[\cdots]$ in \eqref{eqn:path-integral} under axial transformations), an effect known as the chiral anomaly.
-The effect of chiral anomaly is equivalent to the inclusion of the $θ$-term in the Lagrangian.
+The effect of chiral anomaly is equivalent to the inclusion of the $θ$-term in the Lagrangian.\note{Is it though?}
 % The chiral anomaly is the breaking of the classical axial symmetry upon quantisation due to subtleties of renormalisation and the path integral formulation \eqref{eqn:path-integral}.
 % \note{Introduce this smoothly.}
 % Such QFTs exhibit two important symmetries relating to the fermion fields, and both give rise to conserved currents.
@@ -542,7 +590,7 @@ Quantum chromodynamics describes the strong interactions between hadronic matter
 Pure $N$-quark QCD is a quantum gauge theory whose matter field (a direct product of $N$ fermionic Dirac fields) describes $N$ quark types, or \emph{flavours}, and whose gauge group $\SU(N)$ gives rise to $N^2 - 1$ gauge fields, or \emph{gluons}.
 The QCD sector of the standard model is an extension of pure QCD where the quarks partition into \emph{up type} and \emph{down type}, and again into three \emph{generations}, so that the standard model contains six quark flavours.
 {
-\newcommand{\quark}[2]{$\raisemath{0.7ex}{\underset{#2}{\mathrm{#1}}}$}
+\newcommand{\quark}[2]{$\raisemath{0.7ex}{\underset{#2/c^2}{\mathrm{#1}}}$}
 \renewcommand{\arraystretch}{1.5}
 \begin{center}
 	\begin{tabular}{r|ccc}
@@ -561,11 +609,11 @@ That is, there is not much freedom for QCD to be slightly different without bein
 
 The Lagrangian of pure, $N$-quark QCD is a sum of the Dirac Lagrangian and the Yang--Mills Lagrangian,
 \begin{align}
-	\LL_\text{QCD} &= \bar{\bm ψ}\qty(i\bm γ^μ\nabla_μ - m)\bm ψ \, \vol- \angbr{\tsbm F \wedge\star \tsbm F}
+	\LL_\text{QCD} &= \bar{\bm ψ}\qty(i\hbar c\bm γ^μ\nabla_μ - mc^2)\bm ψ \, \vol- \angbr{\tsbm F \wedge\star \tsbm F}\hbar
 	% \cal L_\text{QCD} &= \sum_q\overbar{\bm ψ^{(q)}}\qty(i\bm γ^μ\nabla_μ - m)\bm ψ^{(q)} - \angbr{\tsbm F \wedge\star \tsbm F}
 % \\	&\equiv \sum_{q=1}^N\overbar{ψ}_a^{(q)}\qty(iγ^{μ a}{}_b\nabla_μ - m\delta^a{}_b)ψ^b_{(q)} - \frac14F^a{}_{bμν}F_a{}^{bμν}
 \\	\text{i.e.,} \quad 
-	\cal L_\text{QCD} &= \sum_{q=1}^N\overbar{ψ}_a^{(q)}\qty(iγ^{μ a}{}_b\nabla_μ - m\delta^a{}_b)ψ^b_{(q)} - \frac14F^a{}_{bμν}F_a{}^{bμν}
+	\cal L_\text{QCD} &= \sum_{q=1}^N\overbar{ψ}_a^{(q)}\qty(i\hbar cγ^{μ a}{}_b\nabla_μ - mc^2\delta^a{}_b)ψ^b_{(q)} - \frac\hbar4F^a{}_{bμν}F_a{}^{bμν}
 \end{align}
 where
 $\bm ψ \equiv \bm φ^{(1)} \oplus \cdots \oplus \bm φ^{(N)}$
@@ -581,7 +629,7 @@ Therefore, from a theoretical perspective, it is more appropriate to consider th
 \begin{align}
 	\LL_\text{QCD} = \overbar{\bm ψ}\qty(i\bm γ^μ\nabla_μ - m)\bm ψ \,\vol
 	- \angbr{\tsbm F \wedge\star \tsbm F}
-	+ \frac{θ}{8\pi^2}\angbr{\tsbm F \wedge \tsbm F}
+	+ \frac{θ}{8π^2}\angbr{\tsbm F \wedge \tsbm F}
 	\label{eqn:pure-QCD-Lagrangian}
 ,\end{align}
 which includes the \CP-violating $θ$-term $\angbr{\tsbm F\wedge\tsbm F}$.
