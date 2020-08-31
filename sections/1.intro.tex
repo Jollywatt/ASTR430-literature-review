@@ -530,9 +530,9 @@ To illustrate, the vectorial symmetry $\U(1)_V$ is the invariance of the Dirac L
 The conserved Noether current density associated to this symmetry is
 \begin{align}
 	\ts J_V %&= \pdv{\ts{\cal L}_\text{Dirac}}{\ts\nabla ψ} \, \fdv{\bm ψ}{α}
-	&= \bar{\bm ψ}\star\!\tsbm γ\, \bm ψ
+	&= \hbar c\,\bar{\bm ψ}\star\!\tsbm γ\, \bm ψ
 ,&	\text{i.e.,}\quad
-	j_V^{\,μ} &= \bar{\bm ψ}\,\bm γ^μ \bm ψ
+	j_V^{\,μ} &= \hbar c\,\bar{\bm ψ}\,\bm γ^μ \bm ψ
 ,\end{align}
 where $\tsbm γ = \bm γ_μ \, \ts\dd x^μ$.
 (These 3-form and vector representations are related by $\ts J_V = \star\ts j_V$.)
@@ -551,29 +551,31 @@ On the other hand, the axial symmetry $\U(1)_A$ is invariance under \emph{axial 
 .\end{align}
 The associated Noether current density,
 \begin{align}
-	\ts J_A &= \bar{\bm ψ} \star\!\tsbm γ \, \bm γ_5 \, \bm ψ
+	\ts J_A &= \hbar c\,\bar{\bm ψ} \star\!\tsbm γ \, \bm γ_5 \, \bm ψ
 ,&	\text{i.e.,}\quad
-	j_A^μ &= \bar{\bm ψ} \, \bm γ^μ \bm γ_5 \,\bm ψ
+	j_A^μ &= \hbar c\,\bar{\bm ψ} \, \bm γ^μ \bm γ_5 \,\bm ψ
 	% \ts J_A &= \bar{\bm ψ}\,\bm γ_μ \bm γ_5 \bm ψ \star\ts\dd x^μ
 ,\end{align}
 is conserved classically.
-The charge associated to $\ts J_A$ is the number of particles minus antiparticles, named the \emph{baryon number} in QCD.
+The charge associated to $\ts J_A$ is the number of left-handed particles minus the number of right-handed, named the \emph{baryon number} in QCD.
 However, $\U(1)_A$ symmetry is \emph{anomalous}, meaning it does not survive the renormalisation procedure, and consequently, is not an exact symmetry of the quantum theory.\footnote{
 	Indeed, baryon number need not conserved in QCD (although violations have not been observed).
 	This may provide a possible explanation of \emph{baryogenesis}---the mechanism by which the early universe produced more matter than antimatter \cite[§\,24.6]{ParticleDataGroup-review-2020}.
 }
 Instead, the continuity equation $\ts\dd\ts J = 0$ fails by the presence of none-other than the $θ$-term,
 \begin{align}
-	\ts\dd\ts J_A = \angbr{\tsbm F \wedge \tsbm F} = \ts\dd\csform
-	\quad\text{\note{coefficient?}}
+	\ts\dd\ts J_A \propto \angbr{\tsbm F \wedge \tsbm F}
 	\label{eqn:chiral-anomaly}
-.\end{align}
+,\end{align}
+with the constant of proportionality depending on the model.
+This means that $\ts J_A$ is not conserved---and hence \CP\ symmetry is violated---in the presence of instantons.
+
 % Redefining $\ts J'_A = \ts J_A - \csform$ so that $\ts\dd\ts J'_A = 0$ generates the term $$ 
-\note{WRONG:
+\note{MISCONCEPTION:
 By Noether's theorem \eqref{eqn:Noether's-theorem}, this is equivalent to the presence of an extra term $\ts\dd\ts K = \angbr{\tsbm F\wedge\tsbm F}$ in the Lagrangian.
 In other words, an axial rotation \eqref{eqn:chiral-rotation} does not leave the Lagrangian invariant, but instead generates the $θ$-term \cite[§\,8]{Gripaios_BSM_2015}.
 }
-Thus, in the presence of instantons (where $\angbr{\tsbm F\wedge\tsbm F}$ integrates to a non-zero winding number) the axial current exhibits non-zero divergence.
+% Thus, in the presence of instantons (where $\angbr{\tsbm F\wedge\tsbm F}$ integrates to a non-zero winding number) the axial current exhibits non-zero divergence.
 
 
 \note{What does this mean??
@@ -587,7 +589,13 @@ Write something about the gauge invariant QCD vacuum $\ket{θ}$.
 \section{QCD and the Strong \CP\ Problem}
 
 Quantum chromodynamics describes the strong interactions between hadronic matter.
-Pure $N$-quark QCD is a quantum gauge theory whose matter field (a direct product of $N$ fermionic Dirac fields) describes $N$ quark types, or \emph{flavours}, and whose gauge group $\SU(N)$ gives rise to $N^2 - 1$ gauge fields, or \emph{gluons}.
+Pure QCD with a single quark is a quantum gauge theory with the matter field $\bm ψ = \bm φ \otimes \bm c$, where $\bm c \in \CC^3$, which can be viewed as a fermion with components in \emph{colour space}, $\CC^3$.
+The gauge group is $\SU(3)$, and its action on $\bm ψ$ is to transform colour space under the fundamental representation.
+
+
+
+Pure $N$-quark QCD is a quantum gauge theory whose matter field is a direct product of $N$ fermionic Dirac fields, describes $N$ types, or \emph{flavours}, of quark.
+The and whose gauge group $\SU(N)$ gives rise to $N^2 - 1$ gauge fields, or \emph{gluons}.
 The QCD sector of the standard model is an extension of pure QCD where the quarks partition into \emph{up type} and \emph{down type}, and again into three \emph{generations}, so that the standard model contains six quark flavours.
 {
 \newcommand{\quark}[2]{$\raisemath{0.7ex}{\underset{#2/c^2}{\mathrm{#1}}}$}
