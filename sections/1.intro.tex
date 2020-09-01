@@ -180,12 +180,7 @@ However, the covariant derivative $\ts\nabla : \secs(\cal E) \cong \forms^0(\cal
 $\covdd : \forms^p(\cal M, \cal E) \to \forms^{p + 1}(\cal M, \cal E)$,
 given by
 \begin{align}
-	% \covdd &: \forms^p(\cal M, \cal E) \to \forms^{p + 1}(\cal M, \cal E)
-% ,&	\covdd &= \ts\dd + \tsbm A	
-	% \covdd &= \ts\dd + \tsbm A
-% \\	\covddψ^a &= \ts\ddψ^a + \ts A^a{}_bψ^b
-\\	\covdd\tsbm φ &= \ts\dd\tsbm φ + \tsbm A\wedge\tsbm φ
-% \\	\qty(\partial_μ φ_ν{}^a + A_μ{}^a{}_b φ_ν{}^b) \, \ts\dd x^μ \otimes \bm e_a
+	\covdd\tsbm φ &\coloneqq \ts\dd\tsbm φ + \tsbm A\wedge\tsbm φ
 .\end{align}
 \footnotetext{
 	% Note that $\secs(\cal E) = \forms^0(\cal M, \cal E)$.
@@ -198,11 +193,13 @@ given by
 This enables the construction of, among other things, the curvature 2-form or \emph{gauge field strength}
 \begin{align}
 	\tsbm F &\coloneq \covdd\tsbm A
-\\	&= \ts\dd\tsbm A + \tsbm A \wedge \tsbm A
-	= (\ts\dd\ts A^a{}_b + \ts A^a{}_c \wedge \ts A^c{}_b) \, \bm e_a \otimes \bm e^b
-,\end{align}
-where we have written the r.h.s.\ with respect to a basis $\qty{\bm e_a}$ and dual basis $\qty{\bm e^a}$ of $\cal E$ (note that $V$ is equipped with the Euclidean inner product; $\bm e^a (\bm e_b) = δ^a_b$).
-The field strength $\tsbm F$ is useful because it is geometrical, in the sense that it transforms like the matter field; $\tsbm F \mapsto g\cdot\tsbm F = g_ρ\tsbm F g_ρ^{-1}$ under gauge transformations, even though $\tsbm A$ does not.
+\\	&= \ts\dd\tsbm A + \tsbm A \wedge \tsbm A \equiv (\ts\dd\ts A^a{}_b + \ts A^a{}_c \wedge \ts A^c{}_b) \, \bm e_a \otimes \bm e^b
+,\intertext{where $\qty{\bm e_a}$ and $\qty{\bm e^a}$ form a basis and dual basis of $\cal E$.
+The field strength is also equivalent to}
+	&= \ts\nabla\wedge\ts\nabla \equiv [\nabla_μ, \nabla_ν]\,\ts\dd x^μ\!\wedge \ts\dd x^ν
+.\end{align}
+% which is expressed here in various equivalent ways by using a basis $\qty{\bm e_a}$ and dual basis $\qty{\bm e^a}$ of $\cal E$ (note that $V$ is equipped with the Euclidean inner product; $\bm e^a (\bm e_b) = δ^a_b$).
+The field strength $\tsbm F$ is useful because it is geometric, in the sense that it transforms like the matter field; $\tsbm F \mapsto g\cdot\tsbm F = g_ρ\tsbm F g_ρ^{-1}$ under gauge transformations, even though $\tsbm A$ does not.
 
 \note{The gauge field strength also satisfies the Bianchi identity $\covdd\tsbm F = 0$.}
 
@@ -453,7 +450,7 @@ Hence, the effects of the non-trivial vacuum can be encapsulated in the effectiv
 \begin{align}
 	\LL_\text{eff} = \LL + \frac{θ}{8π^2}\angbr{\tsbm F\wedge\tsbm F}\hbar
 .\end{align}
-It is in this sense that the $θ$-term is a consequence of the non-trivial vacuum in QCD.
+It is in this sense that the $θ$-term arises in the Lagrangian due to the non-trivial QCD vacuum.
 
 \begin{figure}[t]
 \begin{aside}[Glossary of technical terms]
@@ -485,6 +482,7 @@ It is in this sense that the $θ$-term is a consequence of the non-trivial vacuu
 \label{sec:fermions-and-the-chiral-anomaly}
 
 An important kind of matter field in the standard model is the \emph{Dirac fermion field} $\bm φ$, which transforms under the spin-$\frac12$ representation of the Lorentz group.
+Dirac fermions take their values in a 4-component complex space, denoted $\CC^4_\text{D}$.
 The entire matter content of the standard model, including quarks and leptons, is comprised purely of such fermion fields.
 % The matter field of the standard model, including all quarks and leptons as components, is a composite of fermion fields.
 
@@ -498,23 +496,23 @@ The simplest fermion equation of motion (namely, the Dirac equation) derives fro
 \begin{align}
 	\LL_\text{Dirac} = \bar{\bm φ}\qty(i\hbar c\bm γ^μ\partial_μ - mc^2)\bm φ \;\vol
 ,\end{align}
-which describes a non-interacting spin-$\frac12$ fermion of mass $m$.
+which describes a single non-interacting spin-$\frac12$ fermion of mass $m$.
 % Consider a theory whose matter field $\bm ψ$ may consist of one or more fermion fields $\bm φ$...
 % If a theory possesses a local gauge symmetry $\bm ψ \mapsto g \cdot \bm ψ$ for $g \in G$, then the Dirac Lagrangian may be localised, giving
-The Dirac Lagrangian may be localised in the presence of gauge symmetry,
+The Dirac Lagrangian may be localised in the presence of a gauge symmetry, giving
 \begin{align}
-	\LL_\text{Dirac} = \bar{\bm ψ}\qty(i\hbar c\bm γ^μ\nabla_μ - mc^2)\bm ψ \;\vol
+	\LL_\text{Dirac} = \bar{\bm ψ}\qty(i\bm γ^μ\nabla_μ - m)\bm ψ \;\vol
 	\label{eqn:Dirac-Lagrangian}
 ,\end{align}
-where $\ts\nabla\bm ψ \equiv (\nabla_μ\bm ψ) \, \ts\dd x^μ$ is the covariant derivative with respect to the gauge field, $\tsbm A$.
+where $\ts\nabla\bm ψ \equiv (\nabla_μ\bm ψ) \, \ts\dd x^μ$ is the covariant derivative with respect to the gauge field, and where we have now begun to employ units where $\hbar = c = 1$ for brevity.
 The matter field $\bm ψ = \bm φ_{(1)} \oplus \cdots \oplus \bm φ_{(n)}$ may now more generally be comprised of multiple fermion fields, which may be rotated into one another by the gauge group (an example being \emph{flavour symmetry} in QCD).
-The localised Dirac Lagrangian describes fermions and their interactions with the gauge bosons.
+The localised Dirac Lagrangian describes multiple fermion types and their interactions with the gauge bosons.
 The electromagnetic interactions of charged fermionic matter are described by \eqref{eqn:Dirac-Lagrangian} in the case of a $\U(1)$ gauge symmetry, where the gauge field $\tsbm A \equiv \ts A$ is the electromagnetic vector potential.
 
-In quantum theories of fermions, the $θ$-term makes another important appearance, arising via the \emph{chiral anomaly}.
+In quantum theories of fermions, the $θ$-term makes another important appearance, arising in the context of the \emph{chiral anomaly}.
 The Dirac Lagrangian classically possesses two fundamental $\U(1)$ symmetries which rotate fermion phases \emph{vectorially} or \emph{axially}.
 The classical axial symmetry is violated upon quantisation (due to the variance of the integral measure $\cal D[\cdots]$ in \eqref{eqn:path-integral} under axial transformations), an effect known as the chiral anomaly.
-The effect of chiral anomaly is equivalent to the inclusion of the $θ$-term in the Lagrangian.\note{Is it though?}
+% The effect of chiral anomaly is equivalent to the inclusion of the $θ$-term in the Lagrangian.\note{Is it though?}
 % The chiral anomaly is the breaking of the classical axial symmetry upon quantisation due to subtleties of renormalisation and the path integral formulation \eqref{eqn:path-integral}.
 % \note{Introduce this smoothly.}
 % Such QFTs exhibit two important symmetries relating to the fermion fields, and both give rise to conserved currents.
@@ -558,7 +556,7 @@ The associated Noether current density,
 ,\end{align}
 is conserved classically.
 The charge associated to $\ts J_A$ is the number of left-handed particles minus the number of right-handed, named the \emph{baryon number} in QCD.
-However, $\U(1)_A$ symmetry is \emph{anomalous}, meaning it does not survive the renormalisation procedure, and consequently, is not an exact symmetry of the quantum theory.\footnote{
+However, the $\U(1)_A$ symmetry is \emph{anomalous}, meaning it does not survive the quantisation procedure, and is not an exact symmetry of the quantum theory.\footnote{
 	Indeed, baryon number need not conserved in QCD (although violations have not been observed).
 	This may provide a possible explanation of \emph{baryogenesis}---the mechanism by which the early universe produced more matter than antimatter \cite[§\,24.6]{ParticleDataGroup-review-2020}.
 }
@@ -568,7 +566,7 @@ Instead, the continuity equation $\ts\dd\ts J = 0$ fails by the presence of none
 	\label{eqn:chiral-anomaly}
 ,\end{align}
 with the constant of proportionality depending on the model.
-This means that $\ts J_A$ is not conserved---and hence \CP\ symmetry is violated---in the presence of instantons.
+This means that the axial current $\ts J_A$ is not conserved---and hence \CP\ symmetry is violated---in the presence of instantons, where $\int \angbr{\tsbm F\wedge\tsbm F}$ is nonzero.
 
 % Redefining $\ts J'_A = \ts J_A - \csform$ so that $\ts\dd\ts J'_A = 0$ generates the term $$ 
 \note{MISCONCEPTION:
@@ -589,14 +587,60 @@ Write something about the gauge invariant QCD vacuum $\ket{θ}$.
 \section{QCD and the Strong \CP\ Problem}
 
 Quantum chromodynamics describes the strong interactions between hadronic matter.
-Pure QCD with a single quark is a quantum gauge theory with the matter field $\bm ψ = \bm φ \otimes \bm c$, where $\bm c \in \CC^3$, which can be viewed as a fermion with components in \emph{colour space}, $\CC^3$.
-The gauge group is $\SU(3)$, and its action on $\bm ψ$ is to transform colour space under the fundamental representation.
+Pure QCD with a single quark is a quantum gauge theory with matter field $\bm ψ = \bm φ \otimes \bm c$, whose values lie in $\CC^4_\text{D} \otimes \CC^3_\text{C}$, where $\bm φ(x) \in \CC^3_\text{D}$ is a Dirac fermion and $\bm c(x) \in \CC^3_\text{C}$ is 3-component vector in \emph{colour space}.
+A quark field $\bm ψ$ can be viewed as a fermion with components in colour space, or equivalently as a triplet of fermions.
+The action of the QCD gauge group $\SU(3)$ on $\bm ψ$ is to transform colour space under the fundamental representation; i.e., $\bm ψ = \bm φ \otimes \bm c \mapsto \bm φ \otimes U\bm c$ with $U \in \SU(3)$. % is a $\CC^{3\times3}$ special unitary matrix.
+% The $\SU(N)$ gauge freedom gives rise to $N^2 - 1$ gauge fields, or \emph{gluons}.
+The gauge field $\tsbm A$ associated with the $\SU(3)$ gauge group, named the \emph{gluon field}, is an $\frak{su}(3)$-valued $1$-form, which can equivalently be viewed as a collection of $\dim\frak{su}(3) = 8$ independent $1$-form fields, or eight distinct gluon types.
+% The gluon gauge field $\tsbm A$ can be viewed 
+
+\note{One of the attractive qualities of pure QCD is that, given the gauge group $G = \SU(3)$ and its action on a matter field $\bm ψ$, the theory is almost completely specified.
+That is, there is not much freedom for QCD to be slightly different without being a drastically different theory.
+}
+
+With more than one quark, pure $N$-quark QCD is a quantum gauge theory whose matter field is a direct product of $N$ copies---or \emph{flavours}---of the quark field.
+The QCD sector of the standard model is an extension of $6$-quark QCD where the quarks are partitioned into \emph{up type} and \emph{down type}, and again into three \emph{generations}, each with varying properties.
+The Lagrangian of pure, $N$-quark QCD is a sum of the Dirac Lagrangian and the Yang--Mills Lagrangian,
+\begin{align}
+	\LL_\text{QCD} &= \bar{\bm ψ}\qty(i\bm γ^μ\nabla_μ - m)\bm ψ \, \vol- \angbr{\tsbm F \wedge\star \tsbm F}
+	% \cal L_\text{QCD} &= \sum_q\overbar{\bm ψ^{(q)}}\qty(i\bm γ^μ\nabla_μ - m)\bm ψ^{(q)} - \angbr{\tsbm F \wedge\star \tsbm F}
+% \\	&\equiv \sum_{q=1}^N\overbar{ψ}_a^{(q)}\qty(iγ^{μ a}{}_b\nabla_μ - m\delta^a{}_b)ψ^b_{(q)} - \frac14F^a{}_{bμν}F_a{}^{bμν}
+\\	\text{i.e.,} \quad 
+	\cal L_\text{QCD} &= \sum_{q=1}^N\overbar{ψ}_a^{(q)}\qty(iγ^{μ a}{}_b\nabla_μ - m\delta^a{}_b)ψ^b_{(q)} - \frac14F^a{}_{bμν}F_a{}^{bμν}
+\end{align}
+where
+$\bm ψ \equiv \bm ψ^{(1)} \oplus \cdots \oplus \bm ψ^{(N)}$
+is the matter field separated into its quark flavours $\bm ψ^{(f)} = \bm φ \otimes \bm c$, and $\ts\nabla\bm ψ \equiv (\nabla_μ\bm ψ) \, \ts\dd x^μ$ is the covariant derivative with respect to the gluon field, $\tsbm A$.
 
 
+At this point, we see that the issue which is given the name \emph{the strong \CP\ problem} offers itself as a question about the naturalness the QCD Lagrangian:
+As encountered in §\,\ref{sec:YM-and-topological}, there is another term which may---in fact, \emph{should}---be included in the Lagrangian; the topological $θ$-term.
+% The $θ$-term also arises as a consequence of the chiral anomaly, as seen in §\,\ref{sec:fermions-and-the-chiral-anomaly}.
+Therefore, from a theoretical perspective, it is more appropriate to consider the general pure QCD Lagrangian to be
+\begin{align}
+	\LL_\text{QCD} = \overbar{\bm ψ}\qty(i\bm γ^μ\nabla_μ - m)\bm ψ \,\vol
+	- \angbr{\tsbm F \wedge\star \tsbm F}
+	+ \frac{θ}{8π^2}\angbr{\tsbm F \wedge \tsbm F}
+	\label{eqn:pure-QCD-Lagrangian}
+,\end{align}
+which includes the \CP-violating $θ$-term $\angbr{\tsbm F\wedge\tsbm F}$.
 
-Pure $N$-quark QCD is a quantum gauge theory whose matter field is a direct product of $N$ fermionic Dirac fields, describes $N$ types, or \emph{flavours}, of quark.
-The and whose gauge group $\SU(N)$ gives rise to $N^2 - 1$ gauge fields, or \emph{gluons}.
-The QCD sector of the standard model is an extension of pure QCD where the quarks partition into \emph{up type} and \emph{down type}, and again into three \emph{generations}, so that the standard model contains six quark flavours.
+
+In the pure QCD Lagrangian \eqref{eqn:pure-QCD-Lagrangian}, which includes the mass term $m\bar{\bm ψ}\bm ψ$, quarks possess intrinsic mass given by the parameter $m$.
+This is \emph{not} the mechanism by which quarks exhibit mass in the standard model---instead, quarks obtain mass via the \emph{Higgs mechanism}, whereby $\bm ψ$ is coupled to the Higgs field in \emph{Yukawa interaction terms} in the Lagrangian.
+The Yukawa terms contain quark--Higgs coupling parameters $m_q$ which can be arranged into the \emph{quark mass matrix} $\cal M$ \cite[§~7.6.6]{Hamilton_2017}.
+
+In a slight abuse of notation, the overall effect of this complex mechanism of quark mass acquisition can be conveyed by the \emph{effective Lagrangian}
+\begin{align}
+	\LL_\text{QCD} = \overbar{\bm ψ}\qty(i\bmγ^μ\nabla_μ - \bm{\cal M})\bm ψ \,\vol
+	- \angbr{\tsbm F \wedge\star \tsbm F}
+	+ \frac{θ}{8\pi^2}\angbr{\tsbm F \wedge \tsbm F}
+,\end{align}
+where $\bar{\bm ψ} \cal M \bm ψ = \sum_{pq} \bar ψ_{(p)}\cal M_{pq} ψ_{(q)}$ are quark mass terms.\footnote{
+	These fermion mass terms are not gauge invariant under chiral transformations; only Yukawa mass terms can give rise to massive fermions in a gauge invariant manner.
+	Effective Lagrangians of this kind are often written for simplicity, with this abuse of notation in mind (e.g., in \cite{Peccei_1996,Agrawal_2018}).
+}
+
 {
 \newcommand{\quark}[2]{$\raisemath{0.7ex}{\underset{#2/c^2}{\mathrm{#1}}}$}
 \renewcommand{\arraystretch}{1.5}
@@ -609,48 +653,46 @@ The QCD sector of the standard model is an extension of pure QCD where the quark
 	\end{tabular}
 \end{center}
 }
-% Pure QCD can be interpolated with QED or the standard model, in which case 
-% Quarks are fermionic Dirac fields which come in pairs of \emph{up type} and \emph{down type} quarks, each transforming under different representations of weak hypercharge $\mathrm{U}(1)$ (but which are identical in pure QCD).
-% Pure QCD is agnostic to the number of quark pairs, but when included in the standard model, three copies (each called a \emph{generation}) of quark pairs are used, meaning the standard model contains six quark fields in total . \note{??}
-One of the attractive qualities of pure QCD is that, given the gauge group $G = \SU(3)$ and its action on a matter field $\bm ψ$, the theory is almost completely specified.
-That is, there is not much freedom for QCD to be slightly different without being a drastically different theory.
 
-The Lagrangian of pure, $N$-quark QCD is a sum of the Dirac Lagrangian and the Yang--Mills Lagrangian,
+
+
+In the full quantum theory of $N$ quarks with masses $m_q$, the Lagrangian admits a global chiral symmetry defined by $N$ parameters $a_i \in \mathds{R}$ and the mappings
 \begin{align}
-	\LL_\text{QCD} &= \bar{\bm ψ}\qty(i\hbar c\bm γ^μ\nabla_μ - mc^2)\bm ψ \, \vol- \angbr{\tsbm F \wedge\star \tsbm F}\hbar
-	% \cal L_\text{QCD} &= \sum_q\overbar{\bm ψ^{(q)}}\qty(i\bm γ^μ\nabla_μ - m)\bm ψ^{(q)} - \angbr{\tsbm F \wedge\star \tsbm F}
-% \\	&\equiv \sum_{q=1}^N\overbar{ψ}_a^{(q)}\qty(iγ^{μ a}{}_b\nabla_μ - m\delta^a{}_b)ψ^b_{(q)} - \frac14F^a{}_{bμν}F_a{}^{bμν}
-\\	\text{i.e.,} \quad 
-	\cal L_\text{QCD} &= \sum_{q=1}^N\overbar{ψ}_a^{(q)}\qty(i\hbar cγ^{μ a}{}_b\nabla_μ - mc^2\delta^a{}_b)ψ^b_{(q)} - \frac\hbar4F^a{}_{bμν}F_a{}^{bμν}
-\end{align}
-where
-$\bm ψ \equiv \bm φ^{(1)} \oplus \cdots \oplus \bm φ^{(N)}$
-is the matter field separated into its quark components, each of which is a Dirac fermion.
-The gauge field is $\SU(N)$, and its action is 
-$\ts\nabla\bm ψ \equiv (\nabla_μ\bm ψ) \, \ts\dd x^μ$ is the covariant derivative with respect to the gluon field, $\tsbm A$.
-
-
-At this point, we see that the issue which is given the name \emph{the strong \CP\ problem} offers itself as a question about the naturalness the QCD Lagrangian:
-As encountered in §\,\ref{sec:YM-and-topological}, there is another term which may be included in the Lagrangian with no additional physical assumptions; the topological $θ$-term.
-The $θ$-term also arises as a consequence of the chiral anomaly, as seen in §\,\ref{sec:fermions-and-the-chiral-anomaly}.
-Therefore, from a theoretical perspective, it is more appropriate to consider the general pure QCD Lagrangian to be
-\begin{align}
-	\LL_\text{QCD} = \overbar{\bm ψ}\qty(i\bm γ^μ\nabla_μ - m)\bm ψ \,\vol
-	- \angbr{\tsbm F \wedge\star \tsbm F}
-	+ \frac{θ}{8π^2}\angbr{\tsbm F \wedge \tsbm F}
-	\label{eqn:pure-QCD-Lagrangian}
+	\bm ψ_{(q)} &\mapsto e^{\frac{i}2\bmγ^5a_q}\bm ψ_{(q)}
+,&	m_q &\mapsto e^{-ia_q}m_q
+,&	θ &\mapsto θ + \sum_{q=1}^N a_q
+	\label{eqn:quark-mass-phase-transform}
 ,\end{align}
-which includes the \CP-violating $θ$-term $\angbr{\tsbm F\wedge\tsbm F}$.
+where $\bm ψ_{(q)}$ are the quark fields and $m_q$ are their masses.
+\note{Not actually that simple. Only works for massless quarks; works approximately for $m_u$ and $m_d$, resulting in an approximate $\U(2)_L \oplus \U(2)_R$ symmetry or something...}
+This transformation is \emph{chiral}, meaning that it affects left- and right-handed fermions differently.\footnotemark\
+% \footnote4text{If the quark fields are split into left-handed $\bm ψ_+$ and right-handed $\bm ψ_-$ components defined by $\bm ψ_\pm \coloneqq \frac12(1 \pm \bmγ^5)\bm ψ$, then the first mapping of \eqref{eqn:quark-mass-phase-transform} can be written as $\bm ψ_\pm \mapsto e^{\pm ia_q/2}\bm ψ_\pm$.}
+The fact that the $θ$-parameter may be redefined by phase-shifting the quark fields and their masses means that $θ$ is not directly observable.
+However, this gauge freedom can be fixed by defining the quantity
+\begin{align}
+	\barθ
+	= θ + \arg\det\cal M
+	= θ + \arg\prod_{q=1}^Nm_q
+	% = θ + \sum_{q=1}^N\arg m_q
+.\end{align}
+% The gauge-fixed $\barθ$-parameter is invariant under \eqref{eqn:quark-mass-phase-transform}, as the two right-hand terms transform by the addition of $\pm\sum_{i=1}^Na_i$, respectively.
+The gauge-fixed $\barθ$-parameter is invariant under \eqref{eqn:quark-mass-phase-transform}, as the two right-hand terms transform by the addition of $\pm\sum a_q$, respectively.
+The significance of this is that only the value of $\barθ$ may have physical effects.
+The fact that $\bar θ$ can only be zero if apparently unrelated parameters perfectly cancel each other---$θ$, a QCD parameter; and $\cal M$, derived from electroweak parameters---highlights the fine-tuning nature of the strong \CP\ problem.
 
-Proceeding with the assumption that $θ \ne 0$, one finds that the strong force now violates \CP.
-A physical prediction of the standard model modified with such a \CP-violating QCD sector is that the neutron is expected to possess an electric dipole moment of approximate magnitude $|d_n| \approx 10^{-18} \,e\,\mathrm{cm}$.
-In reality, current measurements \cite{electric_dipole_neutron_2020} of the neutron's electric dipole moment yield a tight upper bound of $|d_n| \lesssim 10^{-26} \,e\,\mathrm{cm}$, which in turn implies a stringent constraint on the $θ$-parameter, $|θ| \lesssim 10^{-10}$ \cite{ParticleDataGroup-review-2020}.
-Thus, the $θ$-term is not presently considered to be part of the standard model.
 
 
-However, the inclusion of the $θ$-term is ``natural'' because we lack reason to exclude it on a theoretical basis: it is Lorentz and gauge invariant, etc., just like its \CP-symmetric counterpart, $\angbr{\tsbm F \wedge\star\tsbm F}$; it arises via chiral anomaly; and it is a consequence of the non-trivial vacuum structure of QCD.
-From an empirical perspective, if no \CP-violating interactions were observed in Nature, then $θ$ could be set to zero on the basis of symmetry.
-However, the weak interaction is explicitly parity-violating.
-(In fact, the standard model is asymmetric under all combinations of charge conjugation, $C$; parity $P$; and time-reversal $T$ modulo the prevailing combined $CPT$ symmetry.)
-Therefore, the $θ$-term's \CP\ violation is not satisfactory reason for its exclusion.
-The strong \CP\ problem is the question, ``why, then, is $θ$ so small?''
+
+Proceeding with the assumption that $\bar θ \ne 0$, one finds that the strong force now violates \CP\ symmetry.
+A physical prediction of the standard model modified with a \CP-violating QCD sector \eqref{eqn:pure-QCD-Lagrangian} is that the neutron is expected to possess an electric dipole moment of approximate magnitude $|d_n| \approx 10^{-18} \,e\,\mathrm{cm}$.
+In reality, current measurements \cite{electric_dipole_neutron_2020} of the neutron's electric dipole moment yield a tight upper bound of $|d_n| \lesssim 10^{-26} \,e\,\mathrm{cm}$, which in turn implies a stringent constraint on the $\bar θ$-parameter, $|\bar θ| \lesssim 10^{-10}$ \cite{ParticleDataGroup-review-2020}.
+Thus, the $\bar θ$-term is not considered to be part of the standard model.
+
+
+However, the inclusion of the $\bar θ$-term is ``natural'': we lack reason to exclude it on a theoretical basis (it is Lorentz and gauge invariant, etc.); it arises via chiral anomaly; and it is a theoretical prediction of the non-trivial vacuum structure of QCD.
+From an empirical perspective, if no \CP-violating interactions were observed in Nature, then $\bar θ$ could be justifiably set to zero on the basis of symmetry.
+However, the weak interaction is explicitly parity-violating.\footnote{
+	In fact, the standard model is asymmetric under all combinations of charge conjugation, $C$; parity $P$; and time-reversal $T$ modulo the prevailing combined $CPT$ symmetry.
+}
+Hence, the $\bar θ$-term's \CP\ violation alone is not a totally satisfactory reason for its exclusion, even if 
+The strong \CP\ problem is the question, ``why, then, is $\bar θ$ so small?''

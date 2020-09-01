@@ -24,46 +24,6 @@ The strong \CP\ is therefore a strong theoretical indication that the standard m
 \section{The Massless Quark Solution}
 
 
-In the pure QCD Lagrangian \eqref{eqn:pure-QCD-Lagrangian}, which includes the mass term $m\bar{\bm ψ}\bm ψ$, quarks possess intrinsic mass given by the parameter $m$.
-This is \emph{not} the mechanism by which quarks exhibit mass in the standard model---instead, quarks obtain mass via the \emph{Higgs mechanism}, whereby $\bm ψ$ is coupled to the Higgs field by \emph{Yukawa interaction} terms in the Lagrangian \cite[§~7.6.6]{Hamilton_2017}.
-The Yukawa terms contain quark--Higgs coupling parameters $m_q$ which can be arranged into the \emph{quark mass matrix} $\cal M$.
-In general
-
-In a slight abuse of notation, the overall effect of this complex mechanism of quark mass acquisition can be conveyed by the \emph{effective Lagrangian}
-\begin{align}
-	\LL_\text{QCD} = \overbar{\bm ψ}\qty(i\bmγ^μ\nabla_μ - \bm{\cal M})\bm ψ \,\vol
-	- \angbr{\tsbm F \wedge\star \tsbm F}
-	+ \frac{θ}{8\pi^2}\angbr{\tsbm F \wedge \tsbm F}
-,\end{align}
-where $\bar{\bm ψ} \cal M \bm ψ = \sum_{pq} \bar ψ_{(p)}\cal M_{pq} ψ_{(q)}$ are quark mass terms.\footnote{
-	These fermion mass terms are not gauge invariant under chiral transformations; only Yukawa mass terms can give rise to massive fermions in a gauge invariant manner.
-	Effective Lagrangians of this kind are often written for simplicity, with this abuse of notation in mind (e.g., in \cite{Peccei_1996,Agrawal_2018}).
-}
-
-
-In the full quantum theory of $N$ massive quarks, the Lagrangian admits a global chiral symmetry defined by $N$ parameters $a_i \in \mathds{R}$ and the mappings
-\begin{align}
-	\bm ψ_{(q)} &\mapsto e^{\frac{i}2\bmγ^5a_q}\bm ψ_{(q)}
-,&	m_q &\mapsto e^{-ia_q}m_q
-,&	θ &\mapsto θ + \sum_{q=1}^N a_q
-	\label{eqn:quark-mass-phase-transform}
-,\end{align}
-where $\bm ψ_{(q)}$ are the quark fields and $m_q$ are their masses.
-\note{Not actually that simple. Only works for massless quarks; works approximately for $m_u$ and $m_d$, resulting in an approximate $\U(2)_L \oplus \U(2)_R$ symmetry or something...}
-This transformation is \emph{chiral}, meaning that it affects left- and right-handed fermions differently.\footnotemark\
-% \footnote4text{If the quark fields are split into left-handed $\bm ψ_+$ and right-handed $\bm ψ_-$ components defined by $\bm ψ_\pm \coloneqq \frac12(1 \pm \bmγ^5)\bm ψ$, then the first mapping of \eqref{eqn:quark-mass-phase-transform} can be written as $\bm ψ_\pm \mapsto e^{\pm ia_q/2}\bm ψ_\pm$.}
-The fact that the $θ$-parameter may be redefined by phase-shifting the quark fields and their masses means that $θ$ is not directly observable.
-However, this gauge freedom can be fixed by defining the quantity
-\begin{align}
-	\barθ
-	= θ + \arg\det\cal M
-	= θ + \arg\prod_{q=1}^Nm_q
-.\end{align}
-% The gauge-fixed $\barθ$-parameter is invariant under \eqref{eqn:quark-mass-phase-transform}, as the two right-hand terms transform by the addition of $\pm\sum_{i=1}^Na_i$, respectively.
-The gauge-fixed $\barθ$-parameter is invariant under \eqref{eqn:quark-mass-phase-transform}, as the two right-hand terms transform by the addition of $\pm\sum a_q$, respectively.
-The significance of this is that only the value of $\barθ$ may have physical effects.
-The fact that $\bar θ$ can only be zero if apparently unrelated parameters---$θ$, a QCD parameter; and $\cal M$, derived from electroweak parameters---perfectly cancel each other highlights the fine-tuning nature of the strong \CP\ problem.
-
 In particular, $\barθ$ becomes singular when one of the quark masses is zero.
 Therefore, the $\barθ$-parameter, and hence the $θ$-term, are entirely unphysical in the case of a massless quark.
 The \emph{massless quark solution} to the strong \CP\ problem is the claim that $\barθ = 0$ because at least one quark is in fact massless.
@@ -113,9 +73,9 @@ The Peccei--Quinn mechanism involves extending the standard model (usually by th
 (Different ways of realising $\UPQ$ in an extended standard model lead to different axion models.
 In the simplest case, a complex scalar field $φ$ is adjoined to the standard model, whose phase transforms under $\UPQ$ as $φ \mapsto e^{iα}φ$.)
 If $\UPQ$ was indeed an exact symmetry, then combined with existing $\U(1)_A$ axial fermion rotations, there would be enough gauge freedom to rotate $\bar θ$ to zero.
-Similar to the massless quark solution, this would render the $θ$-parameter unphysical thereby trivially solving the strong \CP\ problem.
+Similar to the massless quark solution, this would render the $\bar θ$-parameter unphysical thereby trivially solving the strong \CP\ problem.
 However, $\UPQ$ cannot be an exact symmetry because it is subject to the chiral anomaly (see §\,\ref{sec:fermions-and-the-chiral-anomaly}).
-What Peccei and Quinn showed was that even if the $\UPQ$ symmetry is not exact, then $\bar θ$ would be dynamically driven to zero, provided $\UPQ$ was also spontaneously broken.
+What Peccei and Quinn showed was that even if the $\UPQ$ symmetry is not exact, then $\bar θ$ would be dynamically driven to zero---provided that $\UPQ$ was also spontaneously broken.
 The chiral anomaly and spontaneous breakage together translate into an effective potential for $\bar θ$, whose minimum is at zero.
 
 
@@ -129,7 +89,7 @@ where $ξ$ is a parameter particular to the axion model of interest.
 Simultaneously, $\UPQ$ is spontaneously broken.
 In the simple case of a scalar field $φ$, spontaneous $\UPQ$-breakdown means that the expectation value of $φ$ in a vacuum state is not zero, but some complex number of fixed magnitude, $φ = |φ_0|e^{iα}$, which is not invariant under $\UPQ$.
 The phase $α$ is an effective $\U(1)$ degree of freedom which, in the quantum theory, is a spin-$0$ particle.
-This particle---the axion---is the \emph{pseudo-Nambu--Goldstone boson} of the spontaneously broken $\UPQ$ symmetry.
+This particle---the axion---is the \emph{pseudo-Nambu--Goldstone boson} associated to the spontaneously broken $\UPQ$ symmetry.
 
 
 As with the axial rotation symmetry, the anomalous Peccei--Quinn symmetry gives rise to an extra term in the Lagrangian.
