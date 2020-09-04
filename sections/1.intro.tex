@@ -549,6 +549,7 @@ On the other hand, the axial symmetry $\U(1)_A$ is invariance under \emph{axial 
 	\bm ψ_\pm &\overset{\U(1)_A}\mapsto e^{\pm iθ}\bm ψ_\pm
 	\label{eqn:chiral-rotation}
 .\end{align}
+\note{Isn't the mass term not invariant here?}
 The associated Noether current density,
 \begin{align}
 	\ts J_A &= \hbar c\,\bar{\bm ψ} \star\!\tsbm γ \, \bm γ_5 \, \bm ψ
@@ -610,27 +611,40 @@ That is, there is not much freedom for QCD to be slightly different without bein
 
 With more than one quark type, or \emph{flavour}, pure $N$-quark QCD is constructed with a matter field which is a direct product of $N$ copies of the quark field.
 The QCD sector of the standard model is an extension of $6$-quark QCD where the quarks are partitioned into \emph{up type} and \emph{down type}, and again into three \emph{generations}, each with varying properties.
-The Lagrangian of pure, $N$-quark QCD is a sum of the Dirac Lagrangian and the Yang--Mills Lagrangian,
+{
+\newcommand{\quark}[2]{$\raisemath{0.7ex}{\underset{#2/c^2}{\text{#1}}}$}
+\renewcommand{\arraystretch}{1.5}
+\begin{center}
+	\begin{tabular}{r|ccc}
+	generation & I & I\hspace{-1pt}I & I\hspace{-1pt}I\hspace{-1pt}I \\
+	\hline
+	up type & \quark{u}{\SI{2.2}{\mega\eV}} & \quark{c}{\SI{1.3}{\giga\eV}} & \quark{t}{\SI{170}{\giga\eV}} \\
+	down type & \quark{d}{\SI{4.7}{\mega\eV}} & \quark{s}{\SI{0.1}{\giga\eV}} & \quark{b}{\SI{4.2}{\giga\eV}} \\
+	\end{tabular}
+\end{center}
+}
+The Lagrangian of pure, $N$-quark QCD is a sum of the Dirac and Yang--Mills Lagrangians,
 \begin{align}
 	\LL_\text{QCD} &= \bar{\bm ψ}\qty(i\bm γ^μ\nabla_μ - \mat m)\bm ψ \, \vol- \angbr{\tsbm F \wedge\star \tsbm F}
 	% \cal L_\text{QCD} &= \sum_q\overbar{\bm ψ^{(q)}}\qty(i\bm γ^μ\nabla_μ - m)\bm ψ^{(q)} - \angbr{\tsbm F \wedge\star \tsbm F}
 % \\	&\equiv \sum_{q=1}^N\overbar{ψ}_a^{(q)}\qty(iγ^{μ a}{}_b\nabla_μ - m\delta^a{}_b)ψ^b_{(q)} - \frac14F^a{}_{bμν}F_a{}^{bμν}
-\end{align}
+,\end{align}
 where
 $\bm ψ \equiv \bm ψ^{(1)} \oplus \cdots \oplus \bm ψ^{(N)}$
-is the matter field separated into its quark flavours $\bm ψ^{(q)} = \bm φ \otimes \bm c$,
-$\mat m$ is the quark mass matrix,
-and $\ts\nabla\bm ψ \equiv (\nabla_μ\bm ψ) \, \ts\dd x^μ$ is the covariant derivative with respect to the gluon field.
+is the matter field separated into its quark flavours $\bm ψ^{(q)} = \bm φ \otimes \bm c$, and $\mat m = m_1 \oplus \cdots \oplus m_N$ is a diagonal matrix of quark masses.
+% and $\ts\nabla\bm ψ \equiv (\nabla_μ\bm ψ) \, \ts\dd x^μ$ is the covariant derivative with respect to the gluon field.
 
 % One may be explicitly show components by denoting $\CC^4_\text{D}$ fermion components with Latin indices and denoting $\CC^3_\text{C}$ colour components with Fraktur indices, the Lagrangian scalar takes the form
 
-If one prefers to explicitly exhibit components, then by denoting $\CC^4_\text{D}$ fermion components and $\CC^3_\text{C}$ colour components with Latin and Fraktur indices, respectively, the Lagrangian density scalar is spelled as
+% If one prefers to explicate components, then by denoting $\CC^4_\text{D}$ fermion components and $\CC^3_\text{C}$ colour components with Latin and Fraktur indices, respectively, the Lagrangian density scalar is spelled as
+With indices written explicitly, and $\hbar$ and $c$ temporarily reinstated for completeness, the Lagrangian density scalar is spelled as
 \begin{align}
 	% \cal L_\text{QCD} &= \sum_{q=1}^N\overbar{ψ}_a^{(q)}\qty(iγ^{μ a}{}_b\nabla_μ - m\delta^a{}_b)ψ^b_{(q)} - \frac14F^a{}_{bμν}F_a{}^{bμν}
-	\cal L_\text{QCD} &= \sum_{q=1}^N\overbar{ψ}_{a,\frak c}^{(q)}\qty(i\hbar cγ^{μ a}{}_b\nabla_μ - \mat m^a{}_bc^2)ψ^{b,\frak c}_{(q)} - \frac\hbar4F^{\frak a}{}_{\frak bμν}F_{\frak a}{}^{\frak bμν}
+	\cal L_\text{QCD} &= \sum_{q=1}^N\overbar{ψ}_{a\frak c}^{(q)}\qty(i\hbar cγ^{μ a}{}_b\nabla_μ - m_qc^2δ^a{}_b)ψ^{b\frak c}_{(q)} - \frac\hbar4F^{\frak a}{}_{\frak bμν}F_{\frak a}{}^{\frak bμν}
 ,\end{align}
-where $\hbar$ and $c$ are temporarily reinstated for completeness.
-\note{Is this correct?}
+where Latin and Fraktur indices denote $\CC^4_\text{D}$ fermion components and $\CC^3_\text{C}$ colour components, respectively. 
+
+\note{Is this all correct?}
 
 
 At this point, we see that the issue which is given the name \emph{the strong \CP\ problem} offers itself as a question about the naturalness the QCD Lagrangian:
@@ -645,71 +659,77 @@ Therefore, at least from a theoretical perspective, it is more appropriate to co
 ,\end{align}
 which includes the \CP-violating $θ$-term $\angbr{\tsbm F\wedge\tsbm F}$.
 
-The pure QCD Lagrangian \eqref{eqn:pure-QCD-Lagrangian} is not quite the same as the QCD sector of the standard model Lagrangian.
-Because it includes the mass term $\bar{\bm ψ}\,\mat m\bm ψ$, quarks possess intrinsic mass given by the parameters $\mat m^a{}_b$.
-This is \emph{not} the mechanism by which quarks exhibit mass in the standard model.
-Instead, quarks obtain mass via the \emph{Higgs mechanism}, whereby $\bm ψ$ is coupled to the Higgs field in \emph{Yukawa interaction terms} in the Lagrangian.
-The Yukawa terms contain quark--Higgs coupling parameters $m_q$ which can be arranged into the \emph{quark mass matrix} $\cal M$ \cite[§~7.6.6]{Hamilton_2017}.
+\subsubsection{Yukawa Couplings and the Measurable $\bar θ$-parameter}
 
-\note{
-In a slight abuse of notation, the overall effect of this complex mechanism of quark mass acquisition can be conveyed by the \emph{effective Lagrangian}
-\begin{align}
-	\LL_\text{QCD} = \overbar{\bm ψ}\qty(i\bmγ^μ\nabla_μ - \bm{\cal M})\bm ψ \,\vol
-	- \angbr{\tsbm F \wedge\star \tsbm F}
-	+ \frac{θ}{8\pi^2}\angbr{\tsbm F \wedge \tsbm F}
-,\end{align}
-where $\bar{\bm ψ} \cal M \bm ψ = \sum_{pq} \bar ψ_{(p)}\cal M_{pq} ψ_{(q)}$ are quark mass terms.\footnote{
-	These fermion mass terms are not gauge invariant under chiral transformations; only Yukawa mass terms can give rise to massive fermions in a gauge invariant manner.
-	Effective Lagrangians of this kind are often written for simplicity, with this abuse of notation in mind (e.g., in \cite{Peccei_1996,Agrawal_2018}).
-}
-}
+The pure QCD Lagrangian \eqref{eqn:pure-QCD-Lagrangian} is not quite the same as the QCD sector of the standard model Lagrangian.
+% Because it includes the mass term $\bar{\bm ψ}\mat m\bm ψ$, quarks possess intrinsic mass given by the parameters $\mat m^a{}_b$.
+Because it includes the mass term $\bar{\bm ψ}\mat m\bm ψ$, quarks in pure QCD possess intrinsic mass given by the parameters $m_q$.
+This is \emph{not} the mechanism by which quarks exhibit mass in the standard model---it cannot be, since is $\bar{\bm ψ}\mat m\bm ψ$ not invariant under axial rotations. \note{Why must axial rotations be a symmetry at all?} Instead, quarks obtain mass via the \emph{Higgs mechanism}, whereby $\bm ψ$ is coupled to the Higgs field $h$ in \emph{Yukawa interaction terms} in the Lagrangian:
+% The Yukawa terms contain quark--Higgs coupling parameters $m_q$ which can be arranged into the \emph{quark mass matrix} $\mat m$ \cite[§~7.6.6]{Hamilton_2017}.
 \begin{align}
 	% \LL_\text{QCD} = \bar{\bm ψ}i\bm γ^μ\nabla_μ\bm ψ\,\vol
 	% - \angbr{\tsbm F \wedge\star \tsbm F}
 	% + \frac{θ}{8\pi^2}\angbr{\tsbm F \wedge \tsbm F}
-	\LL_\text{mass} =
-	h \bar{\bm ψ}_+ \mat M \bm ψ_-
-	+ h^\dagger \bar{\bm ψ}_- \mat M^\dagger \bm ψ_+
+	\LL_\text{mass}
+	= h\,\mathds{Re}\qty(\bar{\bm ψ}_+\mat m\,\bm ψ_-)
+	= \frac{h}2\qty(\bar{\bm ψ}_+ \mat m\,\bm ψ_- + \bar{\bm ψ}_- \mat m^\dagger \bm ψ_+)
 \end{align}
 
-{
-\newcommand{\quark}[2]{$\raisemath{0.7ex}{\underset{#2/c^2}{\mathrm{#1}}}$}
-\renewcommand{\arraystretch}{1.5}
-\begin{center}
-	\begin{tabular}{r|ccc}
-	generation & I & I\hspace{-1pt}I & I\hspace{-1pt}I\hspace{-1pt}I \\
-	\hline
-	up type & \quark{u}{\SI{2.2}{\mega\eV}} & \quark{c}{\SI{1.3}{\giga\eV}} & \quark{t}{\SI{170}{\giga\eV}} \\
-	down type & \quark{d}{\SI{4.7}{\mega\eV}} & \quark{s}{\SI{0.1}{\giga\eV}} & \quark{b}{\SI{4.2}{\giga\eV}} \\
-	\end{tabular}
-\end{center}
-}
+% \note{
+% In a slight abuse of notation, the overall effect of this complex mechanism of quark mass acquisition can be conveyed by the \emph{effective Lagrangian}
+% \begin{align}
+% 	\LL_\text{QCD} = \overbar{\bm ψ}\qty(i\bmγ^μ\nabla_μ - \bm{\cal M})\bm ψ \,\vol
+% 	- \angbr{\tsbm F \wedge\star \tsbm F}
+% 	+ \frac{θ}{8\pi^2}\angbr{\tsbm F \wedge \tsbm F}
+% ,\end{align}
+% where $\bar{\bm ψ} \cal M \bm ψ = \sum_{pq} \bar ψ_{(p)}\cal M_{pq} ψ_{(q)}$ are quark mass terms.\footnote{
+% 	These fermion mass terms are not gauge invariant under chiral transformations; only Yukawa mass terms can give rise to massive fermions in a gauge invariant manner.
+% 	Effective Lagrangians of this kind are often written for simplicity, with this abuse of notation in mind (e.g., in \cite{Peccei_1996,Agrawal_2018}).
+% }
+% }
 
-
-
-In the full quantum theory of $N$ quarks with masses $m_q$, the Lagrangian admits a global chiral symmetry defined by $N$ parameters $a_i \in \mathds{R}$ and the mappings
+Under independent axial rotations of each of the quark fields, the Yukawa mass term is invariant provided the quark masses also shift phase.
+In addition, each independent $\U(1)_A$ rotation parametrised by $α_q$ generates a corresponding $θ$-term with coefficient $α_q$, due to the chiral anomaly (§\,\ref{sec:fermions-and-the-chiral-anomaly}).
+Thus, the full QCD Lagrangian \note{haven't written it yet} is invariant under transformations of the form
 \begin{align}
-	\bm ψ_{(q)} &\mapsto e^{\frac{i}2\bmγ^5a_q}\bm ψ_{(q)}
+	\bm ψ_{(q)} &\mapsto e^{i\bmγ^5{a_q}/{2}}\bm ψ_{(q)}
 ,&	m_q &\mapsto e^{-ia_q}m_q
 ,&	θ &\mapsto θ + \sum_{q=1}^N a_q
 	\label{eqn:quark-mass-phase-transform}
-,\end{align}
-where $\bm ψ_{(q)}$ are the quark fields and $m_q$ are their masses.
-\note{Not actually that simple. Only works for massless quarks; works approximately for $m_u$ and $m_d$, resulting in an approximate $\U(2)_L \oplus \U(2)_R$ symmetry or something...}
-This transformation is \emph{chiral}, meaning that it affects left- and right-handed fermions differently.\footnotemark\
+.\end{align}
+% Under axial rotations, the Yukawa mass term transforms as
+% \begin{align}
+% 	h\,\mathds{Re}\qty(\bar{\bm ψ}_+m\,\bm ψ_-)
+% 	\mapsto
+% 	h\,\mathds{Re}\qty(\bar{\bm ψ}_+e^{2iα}m\,\bm ψ_-)
+% 	= h\,\mathds{Re}\qty(\bar{\bm ψ}_+m'\,\bm ψ_-)
+% ,\end{align}
+% and so the quark masses obtain phases $m' = e^{-2iα}m$.
+% Because 
+
+% In the full quantum theory of $N$ quarks with masses $m_q$, the Lagrangian admits a global chiral symmetry defined by $N$ parameters $a_i \in \mathds{R}$ and the mappings
+% \begin{align}
+% 	\bm ψ_{(q)} &\mapsto e^{\frac{i}2\bmγ^5a_q}\bm ψ_{(q)}
+% ,&	m_q &\mapsto e^{-ia_q}m_q
+% ,&	θ &\mapsto θ + \sum_{q=1}^N a_q
+% 	\label{eqn:quark-mass-phase-transform}
+% ,\end{align}
+% where $\bm ψ_{(q)}$ are the quark fields and $m_q$ are their masses.
+% \note{Not actually that simple. Only works for massless quarks; works approximately for $m_u$ and $m_d$, resulting in an approximate $\U(2)_L \oplus \U(2)_R$ symmetry or something...}
+% This transformation is \emph{chiral}, meaning that it affects left- and right-handed fermions differently.\footnotemark\
 % \footnote4text{If the quark fields are split into left-handed $\bm ψ_+$ and right-handed $\bm ψ_-$ components defined by $\bm ψ_\pm \coloneqq \frac12(1 \pm \bmγ^5)\bm ψ$, then the first mapping of \eqref{eqn:quark-mass-phase-transform} can be written as $\bm ψ_\pm \mapsto e^{\pm ia_q/2}\bm ψ_\pm$.}
 The fact that the $θ$-parameter may be redefined by phase-shifting the quark fields and their masses means that $θ$ is not directly observable.
-However, this gauge freedom can be fixed by defining the quantity
+However, this gauge freedom can be fixed by defining the invariant quantity
 \begin{align}
 	\barθ
-	= θ + \arg\det\cal M
+	= θ + \arg\det\mat m
 	= θ + \arg\prod_{q=1}^Nm_q
 	% = θ + \sum_{q=1}^N\arg m_q
 .\end{align}
 % The gauge-fixed $\barθ$-parameter is invariant under \eqref{eqn:quark-mass-phase-transform}, as the two right-hand terms transform by the addition of $\pm\sum_{i=1}^Na_i$, respectively.
 The gauge-fixed $\barθ$-parameter is invariant under \eqref{eqn:quark-mass-phase-transform}, as the two right-hand terms transform by the addition of $\pm\sum a_q$, respectively.
-The significance of this is that only the value of $\barθ$ may have physical effects.
-The fact that $\bar θ$ can only be zero if apparently unrelated parameters perfectly cancel each other---$θ$, a QCD parameter; and $\cal M$, derived from electroweak parameters---highlights the fine-tuning nature of the strong \CP\ problem.
+% The significance of this is that only the value of $\barθ$ may have physical effects.
+% The fact that $\bar θ$ can only be zero if apparently unrelated parameters perfectly cancel each other---$θ$, a QCD parameter; and $\cal M$, derived from electroweak parameters---highlights the fine-tuning nature of the strong \CP\ problem.
 
 
 
@@ -719,11 +739,15 @@ A physical prediction of the standard model modified with a \CP-violating QCD se
 In reality, current measurements \cite{electric_dipole_neutron_2020} of the neutron's electric dipole moment yield a tight upper bound of $|d_n| \lesssim 10^{-26} \,e\,\mathrm{cm}$, which in turn implies a stringent constraint on the $\bar θ$-parameter, $|\bar θ| \lesssim 10^{-10}$ \cite{ParticleDataGroup-review-2020}.
 Thus, the $\bar θ$-term is not considered to be part of the standard model.
 
-
-However, the inclusion of the $\bar θ$-term is ``natural'': we lack reason to exclude it on a theoretical basis (it is Lorentz and gauge invariant, etc.); it arises via chiral anomaly; and it is a theoretical prediction of the non-trivial vacuum structure of QCD.
-From an empirical perspective, if no \CP-violating interactions were observed in Nature, then $\bar θ$ could be justifiably set to zero on the basis of symmetry.
-However, the weak interaction is explicitly parity-violating.\footnote{
-	In fact, the standard model is asymmetric under all combinations of charge conjugation, $C$; parity $P$; and time-reversal $T$ modulo the prevailing combined $CPT$ symmetry.
-}
-Hence, the $\bar θ$-term's \CP\ violation alone is not a totally satisfactory reason for its exclusion, even if 
+However, $\bar θ$ can only be zero if apparently unrelated parameters of the standard model perfectly cancel each other: the vacuum angle $θ$, a QCD parameter; and the quark mass phases $\arg\det\mat m$, deriving from electroweak parameters.
+One therefore expects $\bar θ$ to be of order $\cal O(1)$ in Nature.
+Its extremely small value is therefore a problem of fine-tuning.
 The strong \CP\ problem is the question, ``why, then, is $\bar θ$ so small?''
+
+
+% However, the inclusion of the $\bar θ$-term is ``natural'': we lack reason to exclude it on a theoretical basis (it is Lorentz and gauge invariant, etc.); it it is a theoretical prediction of the non-trivial vacuum structure of QCD; and arises via the chiral anomaly.
+% From an empirical perspective, if no \CP-violating interactions were observed in Nature, then $\bar θ$ could be justifiably set to zero on the basis of symmetry.
+% However, the weak interaction is explicitly parity-violating.\footnote{
+% 	In fact, the standard model is asymmetric under all combinations of charge conjugation, $C$; parity $P$; and time-reversal $T$ modulo the prevailing combined $CPT$ symmetry.
+% }
+% Hence, the fact that the $\bar θ$-term violates \CP\ is not theoretically satisfactory reason for its exclusion, even if it is good empirical reason to set $\bar θ = 0$.

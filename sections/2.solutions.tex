@@ -2,40 +2,53 @@
 
 At first sight, the strong \CP\ problem may not appear to be a problem at all.
 After all, QCD is a theory whose Lagrangian possibly---but not necessarily---admits a term $\propto \angbr{\tsbm F \wedge \tsbm F}$ which gives rise to \CP-violating interactions in the strong force, predicting an electric dipole moment of the neutron.
-Empirical data is consistent with the neutron's electric dipole moment (and hence the \CP-violating term) being non-existent.
-From a phenomenological perspective, it is satisfactory to simply leave the $θ$-term out of the theory's Lagrangian and end the story there.
+Empirical data is consistent with the neutron's electric dipole moment (and hence the \CP-violating term) being zero.
+From a phenomenological perspective, it is satisfactory to simply leave the $\bar θ$-term out of the theory's Lagrangian and end the story there.
 Indeed, a tautological way to `resolve' the strong \CP\ problem is to simply require that \CP\ be a symmetry of the strong force.
 However, this only begs the question of why \CP\ symmetry appears to be preserved in some sectors of the standard model while it is broken in others.
 
-Furthermore, there is a strong sense that the inclusion of the \CP-violating term is natural while its exclusion requires theoretical justification.
-As mentioned in the previous section, the standard model is not \CP\ symmetric, and hence the \CP-violating $θ$-parameter is expected to be of $\mathcal{O}(1)$: why it is so small is a fine-tuning problem.
+Furthermore, there is a strong sense that the inclusion of the \CP-violating term is ``natural''.
+That is, we lack reason to exclude it on a theoretical basis: it is Lorentz and gauge invariant, etc.; it is a theoretical prediction of the non-trivial vacuum structure of QCD (instantons); and arises via the chiral anomaly.
+From an empirical perspective, if no \CP-violating interactions were observed in Nature, then $\bar θ$ could be justifiably set to zero on the basis of symmetry.
+However, the weak interaction is explicitly parity-violating.\footnote{
+	In fact, the standard model is asymmetric under all combinations of charge conjugation, $C$; parity $P$; and time-reversal $T$ modulo the prevailing combined $CPT$ symmetry.
+}
+Hence, the fact that the $\bar θ$-term violates \CP\ is not theoretically satisfactory reason for its exclusion.
+
+
 % Similarly, the advent of instantons in QCD demonstrated that the $θ$-term does not necessarily vanish \cite{lectures-on-instantons,instantons-whats-happening}.\note{?????}
+
+
 
 The strong \CP\ problem differers from other fine-tuning problems in the standard model in the sense that it is of almost no consequence to everyday physics.
 Variation of the $θ$-parameter hardly affects nuclear physics at all because its effects are suppressed by the quark masses \cite{Dine_2018}.
-On the other hand, variations of the cosmological constant predict universes drastically different to our own, and similarly for the value of the weak scale, or the quark and lepton masses.
+On the other hand, variations of the cosmological constant, for example, predict universes drastically different to our own, and similarly for the value of the weak scale, or the quark and lepton masses.
 Such fine-tuning problems at least have anthropic solutions---but the strong \CP\ problem does not.\footnote{
 	Given a theory linking the presence of dark matter to the smallness of $θ$, an anthropic solution may exist if it turns out that dark matter is necessary for, e.g., galaxy formation (investigated in \cite{Dine_2018}).
 }
 % from http://scipp.ucsc.edu/~dine/solutions_of_strong_cp.pdf
-The strong \CP\ is therefore a strong theoretical indication that the standard model remains incomplete.
+The strong \CP\ problem is therefore a compelling theoretical indication that the standard model remains incomplete.
+
+\note{Introduce and outline solutions}
 
 
 \section{The Massless Quark Solution}
 
+The simplest resolution to the strong \CP\ problem is to stipulate that at least one quark was in fact massless.
+If this were true, then $\det\mat m$ would vanish, and the parameter $\bar θ = θ + \arg\det\mat m$ would render unphysical.
+The \emph{massless quark solution} is the claim that $\bar θ \approx 0$ because the up quark is massless, $m_u = 0$.
 
-In particular, $\barθ$ becomes singular when one of the quark masses is zero.
-Therefore, the $\barθ$-parameter, and hence the $θ$-term, are entirely unphysical in the case of a massless quark.
-The \emph{massless quark solution} to the strong \CP\ problem is the claim that $\barθ = 0$ because at least one quark is in fact massless.
+% In particular, $\barθ$ becomes singular when one of the quark masses is zero.
+% Therefore, the $\barθ$-parameter, and hence the $θ$-term, are entirely unphysical in the case of a massless quark.
 
-At first sight, this economical resolution to the strong \CP\ problem appears to be in contradiction with the experimentally determined masses of the quarks, all of which are non-zero (including the up quark, whose mass is estimated to be $\sim 2\,\mathrm{MeV}$).
+At first sight, this economical resolution to the strong \CP\ problem appears to be in contradiction with the experimentally determined masses of the quarks, all of which are non-zero (including the up quark, with mass $\sim \SI{2.2}{\mega\eV}$).
 However, it was realised in the mid-1980s that the mass of the up quark has two contributions in the standard model Lagrangian: not only the Yukawa mass $m_u$ (the `bare mass') introduced above, but also a non-perturbative contribution $m_\text{eff}$ from topological effects (i.e., instantons) \cite{ruling-out-massless-uquark_2020}.
 Only the bare masses contribute to the value of $\bar θ$ via the quark mass matrix $\cal M$.
-Importantly, it was plausible that this secondary source of the up quark's mass is of order $m_\text{eff} \approx 2\,\mathrm{MeV}$, allowing $m_u$ to vanish by another mechanism while still preserving the up quark's overall mass.
+Importantly, it was plausible that this secondary source of the up quark's mass could be of order $m_\text{eff} \approx \SI{2.2}{\mega\eV}$, allowing $m_u$ to vanish while still preserving the up quark's overall mass.
 
 The massless up quark hypothesis remained controversial until \emph{lattice gauge theory} had advanced sufficiently to made numerical simulations of non-perturbative effects in QCD possible.
 Consensus was reached by 2019 that the instanton contribution $m_\text{eff}$ is not sufficiently large, and hence that the massless up quark hypothesis is false \cite{ruling-out-massless-uquark_2015,aoki2016review,ruling-out-massless-uquark_2020}.
-Instead, another mechanism is required to explain the smallness of the $\barθ$-parameter and solve the strong \CP\ problem.
+Instead, another mechanism is required to explain the smallness of the $\barθ$-parameter.
 
 
 
@@ -64,8 +77,8 @@ Instead, another mechanism is required to explain the smallness of the $\barθ$-
 \section{The Peccei--Quinn Mechanism}
 
 
-Perhaps the most famous proposed resolution to the strong \CP\ problem is the Peccei--Quinn theory of the \emph{axion}, first proposed in 1977 \cite{PecceiQuinn_1977}.
-The axion is well-known in cosmology because of the its allure as a dark matter candidate.
+Perhaps the most famous resolution to the strong \CP\ problem is the Peccei--Quinn theory of the \emph{axion}, first proposed in 1977 \cite{PecceiQuinn_1977}.
+The axion is well-known in cosmology because of its allure as a dark matter candidate.
 It arises as a Nambu--Goldstone boson of an additional spontaneously broken symmetry, and dynamically solves the strong \CP\ problem via the \emph{Peccei--Quinn mechanism}.
 \note{There are a variety of implementations (``models'') of the Peccei--Quinn mechanism.}
 
