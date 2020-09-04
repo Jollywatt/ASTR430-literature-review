@@ -287,12 +287,12 @@ Under these constraints, the only admissible QFT Lagrangians which may be constr
 ,\end{align}
 where $\star$ is the Hodge dual \cite[§\,7.1.2]{Hamilton_2017}.
 The inner product $\angbrAd{\ ,\ }$ on the Lie algebra $\lieg$ of the gauge group $G$ is chosen such that it is gauge-invariant.\footnote{
-	Recall that $\tsbm A$, and hence $\tsbm F$, is a $\lieg$-valued form, so an inner product on $\lieg$ is needed to produce a scalar. For this scalar to be gauge invariant, the inner product must additionally be `$\mathrm{Ad}$-invariant' \cite[§\,7.3]{Hamilton_2017}. % also [Folland ch. 9]
+	Recall that $\tsbm A$, and hence $\tsbm F$, are $\lieg$-valued forms, so an inner product on $\lieg$ is needed to produce a scalar. For this scalar to be gauge invariant, the inner product must additionally be ``$\mathrm{Ad}$-invariant'' \cite[§\,7.3]{Hamilton_2017}. % also [Folland ch. 9]
 }
 The inner product $\angbrAd{\ ,\ }$ on $\lieg$ is not unique; it depends on a choice of \emph{coupling constants}.
 In particular, if the gauge group $G$ is the direct sum of $n$ simple Lie groups,%
 \footnote{
-	Any compact connected Lie group is either of this form, or is a finite quotient of such a group, if $\mathrm U(1)$ is counted as `simple'. \cite[§\,2.4.3]{Hamilton_2017}.
+	Any compact connected Lie group is either of this form, or is a finite quotient of such a group, if $\mathrm U(1)$ is counted as ``simple''. \cite[§\,2.4.3]{Hamilton_2017}.
 }
 then $\angbrAd{\ ,\ }$ is specified by the choice of exactly $n$ coupling constants, one corresponding to each factor of $G$ \cite[§\,2.5]{Hamilton_2017}.
 Physically, the coupling constants determine the relative interaction strengths of the forces associated to each factor of $G$, and must enter the theory as free parameters determined experimentally.
@@ -342,18 +342,17 @@ Importantly, this means that the Chern--Simons term is not gauge invariant, if t
 % \note{Wrong. The action picks up a phase $iθn$. The equivalence described by \eqref{eqn:discrete-QFT-Lagrangian-transformation} makes $θ$ periodic.}
 
 \end{itemize}
-The choice of the symbol $θ$ in the name ``$θ$-term'' reflects the cyclic property of any coefficient $θ$ attached to the Chern--Simons term, such as
+The choice of the symbol $θ$ in the name ``$θ$-term'' reflects the angular nature of any coefficient $θ$ attached to the Chern--Simons term, such as
 \begin{align}
 	\LL_θ[\tsbm A] = \frac{θ}{8π^2}\angbr{\tsbm F\wedge\tsbm F}\hbar
 	\label{eqn:theta-term}
 .\end{align}
-The action of this Lagrangian is $θn\hbar$, where $\tsbm A$ has winding number $n$.
-Since this enters the path integral \eqref{eqn:path-integral} as
+The action of this Lagrangian is $θn\hbar$ wherever $\tsbm A$ has winding number $n$.
+Since this enters the path integral as
 \begin{math}
 	e^{iθn} = e^{i(θ + 2π)n}
 ,\end{math}
-the coefficient $θ$, henceforth the \emph{$θ$-parameter}, does not affect the amplitude $\mathscr A$ if it undergoes additions of $2π$.
-The $θ$-parameter is an angular quantity, hence its symbol.
+the coefficient $θ$, henceforth the \emph{$θ$-parameter}, does not affect the amplitude $\mathscr A$ if it undergoes additions of $2π$: it is an angular quantity.
 As a whole, \eqref{eqn:theta-term} is referred to as the $θ$-term.
 
 The standard model employs the Yang--Mills Lagrangian $\angbr{\tsbm F\wedge\star\tsbm F}$, but does not include the more exotic $θ$-term, because it has not found empirical use.
@@ -365,10 +364,10 @@ The unwanted $θ$-term is therefore quickly overlooked, historically being consi
 \subsection{The \texorpdfstring{$θ$-Term}{θ-Term} is a Consequence of the Non-trivial Vacuum}
 
 The $θ$-term is more than just a mathematical possibility which lacks physical reason for its inclusion in the Lagrangian.
-It is in fact central to non-Abelian gauge theories as a direct consequence of their \emph{non-trivial vacuum structure}, and is responsible for many interesting non-perturbative dynamical effects.
+It is in fact central to non-Abelian gauge theories as a direct consequence of their \emph{non-trivial vacuum structure}, which is responsible for many interesting non-perturbative dynamical effects.
 
 
-For an Abelian gauge group $G = \U(1)$ with total gauge group bundle $\cal G = \cal U(1)$, the space of asymptotically-identity gauge transformations\footnotemark\ $\secs^\iden(\cal U(1))$ is continuously connected to the identity.
+For an Abelian gauge group $G = \U(1)$ with total gauge group bundle $\cal G = \cal U(1)$, the space of asymptotically-identity gauge transformations $\secs^\iden(\cal U(1))$ is continuously connected to the identity.\footnotemark
 \footnotetext{
 	We consider the space of asymptotically-identity gauge transformations $\secs^{\iden}(\cal G)$, whose elements are maps $g : \cal M \to G$ with $g|_{\partial\M} = \iden$ (or equivalently with $g(x) \to \iden$ as $x \to \infty$), because $\tsbm A$ must be fixed on the boundary in order to prescribe boundary conditions.
 	\note{Who realised this? 't Hooft? Wigner?}
@@ -376,10 +375,11 @@ For an Abelian gauge group $G = \U(1)$ with total gauge group bundle $\cal G = \
 % (Explicitly, any map $g : \M \to \U(1)$ for which $g(x) \to \iden$ as $x \to \infty$ may be continuously brought to the identity. E.g., by defining $g'(x; λ) = λg(x)$ and taking $λ$ from $1 \to 0$.)
 This means that any gauge field configuration $\tsbm A$ can be continuously gauge transformed to $\tsbm A = \tsbm 0$, which has winding number zero. 
 Hence, the winding number is zero for all $\tsbm A \in \forms^1(\cal M, \frak u(1))$.
-Consequently, the $θ$-term (with constant $θ$) is neither relevant in classical electromagnetism nor in QED, because it vanishes.
+Consequently, the $θ$-term (with constant $θ$) is neither relevant in classical electromagnetism nor in QED, because it vanishes identically.
 % However, for non-Abelian gauge groups such as the $\SU(3)$ of QCD, the space of gauge transformations $\secs^\iden(\cal G)$ has a non-trivial topology, and contains gauge transformations which cannot be continuously transformed into one another.
-However, for non-Abelian gauge groups such as the $\SU(3)$ of QCD, the space of gauge transformations $\secs^\iden(\cal G)$ may have a non-trivial topology, containing gauge transformations which are not diffeomorphic.
-In the case where $\M$ is spacetime and $\cal G = \cal{SU}(3)$, the space $\secs^\iden(\cal{SU}(3))$ consists of path-disconnected regions labelled by some $ν \in \ZZ$.
+
+However, for non-Abelian gauge groups, the space of gauge transformations $\secs^\iden(\cal G)$ may have a non-trivial topology, containing gauge transformations which are not diffeomorphic.
+In the case where $\M$ is spacetime and $\cal G = \cal{SU}(3)$ is the total gauge group of QCD, the space $\secs^\iden(\cal{SU}(3))$ consists of path-disconnected regions labelled by some $ν \in \ZZ$.
 % (In topological language, the third homotopy group $π_3(\secs^\iden(\cal G)) \cong \ZZ$ is the integers.)
 (In topological language, the third homotopy group $π_3(\secs^\iden(\cal{SU}(3))) \cong \ZZ$ is the group of integers.)
 % \note{Why third? Has a 3+1 split snuck in here? Is this general or specific to $\SU(3)$ and (3+1)D?}
@@ -397,24 +397,26 @@ For instance, if the gauge field $\tsbm A$ has winding number $n$, then the acti
 \end{align}
 is proportional to $n$.
 A large gauge transformation $g_ν$ then shifts this action $S[\tsbm A] \to {S[g_ν \cdot \tsbm A]} = S[\tsbm A] + θν\hbar$.
-From the path integral \eqref{eqn:path-integral}, this induces relative phases $e^{iθν}$ across the domain of integration which may interfere and non-trivially alter the amplitude.
+From the path integral \eqref{eqn:path-integral}, this induces relative phases $e^{iθν}$ across the domain of integration which may interfere and alter the amplitude.
 In other words, instantons are measurable.
+
+\subsubsection{The $θ$-Vacuum}
 
 Of particular interest are the implications of instantons for the QCD vacuum.
 In a Yang--Mills theory whose Lagrangian includes the term
-\begin{align}
+\begin{math}
 	\LL_\text{YM} = \angbr{\tsbm F\wedge\star\tsbm F}
-,\end{align}
-a vacuum state is one in which the field strength (and all other fields) vanish; $\tsbm F = \tsbm 0$.
+,\end{math}
+a \emph{vacuum state} is one in which the field strength (and all other fields) vanish; $\tsbm F = \tsbm 0$.
 Not only is this consistent with an identically vanishing gauge field $\tsbm A_0 = \tsbm 0$, but also with gauge transformations \eqref{eqn:gauge-field-transformation-law} of $\tsbm A_0$,
 \begin{align}
 	g \cdot \tsbm A_0 = (\ts\dd g_ρ)(g_ρ)^{-1}
 ,\end{align}
-which are called `pure gauge'.
-Small gauge transformations describe the same vacuum state, while large ones $g_n \cdot \tsbm A_0$ describe \emph{distinct vacua} $\ket{n}$ labelled by winding number.
+which are called ``pure gauge'' configurations.
+Small gauge transformations are not measurable and describe the same vacuum state, whereas large ones $g_n \cdot \tsbm A_0$ are, hence describing \emph{distinct vacua} $\ket{n}$ labelled by winding number.
 % The vacua have the same energy, i.e., are degenerate.
-Since $g_ν \cdot \ket{n} = \ket{n + ν}$, the vacua are not gauge-invariant.
-The only states which are invariant under the gauge up to an overall phase are those of the form
+Since $g_ν \cdot \ket{n} = \ket{n + ν}$, these states are not gauge-invariant.
+The only vacuum states which are invariant under the gauge (up to an overall phase) are those of the form
 \begin{align}
 	\ket{θ} = \sum_{n \in \ZZ} e^{iθn}\ket{n}
 ,\end{align}
@@ -431,13 +433,13 @@ The vacuum-to-vacuum amplitude is then
 	\label{eqn:vacuum-transition-1}
 ,\end{align}
 with all summations over $\ZZ$.
-In the path integral formulation \eqref{eqn:path-integral}, the amplitude $\braketpm{n}{n + ν}$ can also be expressed explicitly as
+In the path integral formulation \eqref{eqn:path-integral}, the amplitude $\braketpm{n}{n + ν}$ can be expressed explicitly as
 \begin{align}
  	\braketpm{n}{n + ν} =
  	\int_{\partialΩ}\! \cal D[\tsbm A; ν] \exp\qty{\frac{i}{\hbar} \int_{Ω}\! \LL}
 	\label{eqn:vacuum-transition-2}
 ,\end{align}
-where $\cal D[\tsbm A; ν]$ means that the path integral is over all gauge fields with winding number $ν$, since only those induce the transition $\ket{n} \mapsto \ket{n + ν}$.
+where $\cal D[\tsbm A; ν]$ means that the path integral is over all instanton gauge fields with winding number $ν$, since only those induce a transition $\ket{n} \mapsto \ket{n + ν}$.
 Combining \eqref{eqn:vacuum-transition-1} and \eqref{eqn:vacuum-transition-2}, the amplitude of evolution from the gauge invariant vacuum to itself is
 \begin{align}
 	\braketpm{θ}{θ}
@@ -448,7 +450,7 @@ which, using \eqref{eqn:winding-number} to write $iθν$ as the $θ$-term in the
 }
 	&= \int_{\partialΩ}\! \cal D[\tsbm A] \exp\qty\bigg{\frac{i}{\hbar} \int_{Ω}\! \qty\bigg[\underbrace{\LL + \frac{θ}{8π^2}\angbr{\tsbm F\wedge\tsbm F}\hbar}_{\displaystyle\LL_\text{eff}}]}
 .\end{align}
-Hence, the effects of the non-trivial vacuum can be encapsulated in the effective Lagrangian
+The effects of the non-trivial vacuum are encapsulated in the effective Lagrangian
 \begin{align}
 	\LL_\text{eff} = \LL + \frac{θ}{8π^2}\angbr{\tsbm F\wedge\tsbm F}\hbar
 .\end{align}
@@ -460,7 +462,7 @@ It is in this sense that the $θ$-term arises in the Lagrangian due to the non-t
 		% \setlength{\itemindent}{1em}
 		\setlength\itemsep{0.25ex}
 		\item \emph{degenerate}
-	--- quantum eigenstates which share the same eigenvalues (usually energy) but which are physically distinct
+	--- quantum eigenstates which share the same eigenvalues (usually energy) but which are physically distinguishable
 		\item \emph{global symmetry}
 	--- a symmetry of the Lagrangian that acts uniformly across spacetime.
 		\item \emph{local symmetry}
@@ -483,13 +485,15 @@ It is in this sense that the $θ$-term arises in the Lagrangian due to the non-t
 \subsection{Dirac Fermion Fields and the Chiral Anomaly}
 \label{sec:fermions-and-the-chiral-anomaly}
 
+\note{Need flowing introduction.}
+
 An important kind of matter field in the standard model is the \emph{Dirac fermion field} $\bm φ$, which transforms under the spin-$\frac12$ representation of the Lorentz group.
 Dirac fermions take their values in a 4-component complex space, denoted $\CC^4_\text{D}$.
 The entire matter content of the standard model, including quarks and leptons, is comprised purely of such fermion fields.
 % The matter field of the standard model, including all quarks and leptons as components, is a composite of fermion fields.
 
-The Dirac matrices $\bm γ^μ$ are basis elements of the Clifford algebra $\cal{Cl}_{1,3}(\mathds{C})$ satisfying $\bm γ^{(μ}\bm γ^{ν)} = \eta^{μν}\bm 1$, and are used to write 4-component Dirac fermions in the spin-$\frac12$ representation.
-An inner product on fermions $\angbr{\bm ψ, \bm φ} \equiv \bar{\bm ψ}\bm φ \in \mathds C$ is provided by the Dirac adjoint $\bar{\bm ψ} \coloneqq \bm ψ^\dagger \bm γ^0$, so that Lorentz-invariant quantities may be naturally constructed.
+The Dirac matrices $\bm γ^μ$ are basis elements of the Clifford algebra $\cal{Cl}_{1,3}(\CC)$ satisfying $\bm γ^{(μ}\bm γ^{ν)} = \eta^{μν}\bm 1$, and are used to write 4-component Dirac fermions in the spin-$\frac12$ representation.
+An inner product on fermions $\angbr{\bm ψ, \bm φ} \equiv \bar{\bm ψ}\bm φ \in \RR$ is provided by the Dirac adjoint $\bar{\bm ψ} \coloneqq \bm ψ^\dagger \bm γ^0$, so that Lorentz-invariant quantities may be naturally constructed.
 Finally, fermions may be separated into left-handed $\bm φ_+$ and right-handed $\bm φ_-$ components with the projection operators $\bm φ_\pm = \frac12(1 \pm \bm γ^5)$ where $\bm γ^5 = i\bm γ^0\bm γ^1\bm γ^2\bm γ^3$.
 In theories which violate parity, left- and right-handed fermions may experience different interactions.
 (For instance, left-handed neutrinos interact in the standard model, while right-handed neutrinos are completely inert.)
@@ -506,10 +510,12 @@ The Dirac Lagrangian may be localised in the presence of a gauge symmetry, givin
 	\LL_\text{Dirac} = \bar{\bm ψ}\qty(i\bm γ^μ\nabla_μ - m)\bm ψ \;\vol
 	\label{eqn:Dirac-Lagrangian}
 ,\end{align}
-where $\ts\nabla\bm ψ \equiv (\nabla_μ\bm ψ) \, \ts\dd x^μ$ is the covariant derivative with respect to the gauge field, and where we have now begun to employ units where $\hbar = c = 1$ for brevity.
+where $\ts\nabla\bm ψ \equiv (\nabla_μ\bm ψ) \, \ts\dd x^μ$ is the covariant derivative with respect to the gauge field, and where we have now begun to employ units in which $\hbar = c = 1$ for brevity.
 The matter field $\bm ψ = \bm φ_{(1)} \oplus \cdots \oplus \bm φ_{(n)}$ may now more generally be comprised of multiple fermion fields, which may be rotated into one another by the gauge group (an example being \emph{flavour symmetry} in QCD).
 The localised Dirac Lagrangian describes multiple fermion types and their interactions with the gauge bosons.
 The electromagnetic interactions of charged fermionic matter are described by \eqref{eqn:Dirac-Lagrangian} in the case of a $\U(1)$ gauge symmetry, where the gauge field $\tsbm A \equiv \ts A$ is the electromagnetic vector potential.
+
+\subsubsection{The Anomalous Axial Symmetry}
 
 In quantum theories of fermions, the $θ$-term makes another important appearance, arising in the context of the \emph{chiral anomaly}.
 The Dirac Lagrangian classically possesses two fundamental $\U(1)$ symmetries which rotate fermion phases \emph{vectorially} or \emph{axially}.
@@ -521,11 +527,14 @@ The classical axial symmetry is violated upon quantisation, an effect known as t
 % However, one of these sy
 % This is a symmetry of the classical Lagrangian which is violated in the corresponding quantum theory.
 
-To illustrate, the vectorial symmetry $\U(1)_V$ is the invariance of the Dirac Lagrangian under global Abelian transformations known as \emph{vector fermion rotations}, parametrised by $α$ as
-\begin{align}
-	\bm ψ &\overset{\U(1)_V}{\mapsto} e^{iα}\bm ψ
+To illustrate, the vectorial symmetry $\U(1)_V$ is the invariance of the Dirac Lagrangian under global Abelian transformations known as \emph{vector fermion rotations}.
+The action of $\U(1)_V$ is a simple phase rotation
+\begin{math}
+	% \bm ψ \overset{\U(1)_V}{\mapsto} e^{iα}\bm ψ
+	\bm ψ \mapsto e^{iα}\bm ψ
 % ,&	\eval{\fdv{\bm ψ}{α}}_0 = i \bm ψ
-.\end{align}
+,\end{math}
+where $α$ is the parameter.
 % Since $\eval{\fdv*{\bm ψ}{α}}_0 = i \bm ψ$, the conserved Noether current density associated to this symmetry is
 The conserved Noether current density associated to this symmetry is
 \begin{align}
@@ -596,21 +605,45 @@ Write something about the gauge invariant QCD vacuum $\ket{θ}$.
 
 \section{QCD and the Strong \CP\ Problem}
 
-Quantum chromodynamics describes the strong interactions between hadronic matter.
-A quark is a colour-charged Dirac fermion, represented by a matter field $\bm ψ = \bm φ \otimes \bm c$ with values in $\CC^4_\text{D} \otimes \CC^3_\text{C}$, where $\bm φ(x) \in \CC^3_\text{D}$ is a Dirac fermion and $\bm c(x) \in \CC^3_\text{C}$ is a 3-component vector in \emph{colour space}.
-A quark field $\bm ψ$ can be viewed as a fermion with components in colour space, or equivalently as a triplet of fermions.
+Quantum chromodynamics describes the strong interactions among hadronic matter.
+Fields which interact via the strong force are called \emph{colour-charged}, and in QCD, the colour-charged fields are the \emph{quarks}.
+
+In QCD with $N_c$ colours, a quark is a colour-charged Dirac fermion, represented by a matter field $\bm ψ = \bm φ \otimes \bm c$ with values in $\CC^4_\text{D} \otimes \CC^{N_c}_\text{C}$, where $\bm φ(x) \in \CC^4_\text{D}$ is a plain Dirac fermion and $\bm c(x) \in \CC^{N_c}_\text{C}$ is a $N_c$-component vector in \emph{colour space}.
+A quark field $\bm ψ$ can either be viewed as a fermion with components in colour space, or equivalently as a $N_c$-tuple of fermions.
 % The action of the QCD gauge group $\SU(3)$ on $\bm ψ$ is to transform colour space under the fundamental representation; i.e., $\bm ψ = \bm φ \otimes \bm c \mapsto \bm φ \otimes U\bm c$ with $U \in \SU(3)$. % is a $\CC^{3\times3}$ special unitary matrix.
-The action of the QCD gauge group $\SU(3)$ on $\bm ψ$ is to transform colour space under the fundamental representation; i.e., $\bm ψ \mapsto \bm ψ' = \bm φ \otimes \mat U\bm c$ with $\mat U \in \SU(3)$. % is a $\CC^{3\times3}$ special unitary matrix.
-% The $\SU(N)$ gauge freedom gives rise to $N^2 - 1$ gauge fields, or \emph{gluons}.
-The gauge field $\tsbm A$ associated with the $\SU(3)$ gauge group, named the \emph{gluon field}, is an $\frak{su}(3)$-valued $1$-form, which can equivalently be viewed as a collection of $\dim\frak{su}(3) = 8$ independent $1$-form fields, or eight distinct gluon types.
-% The gluon gauge field $\tsbm A$ can be viewed 
+The gauge group is $\SU(N_c)$, and its action on $\bm ψ$ is to transform colour space under the fundamental representation; i.e., $\bm ψ \mapsto \bm ψ' = \bm φ \otimes \mat U\bm c$ with $\mat U \in \SU(N_c)$.
+The gauge field $\tsbm A$, named the \emph{gluon field}, is an $\frak{su}(N_c)$-valued $1$-form, which can equivalently be viewed as a collection of $\dim\frak{su}(N_c) = N_c^2 - 1$ independent $1$-form fields, or eight distinct gluon types.
+%
+% \note{One of the attractive qualities of pure QCD is that, given the gauge group $G = \SU(3)$ and its action on a matter field $\bm ψ$, the theory is almost completely specified.
+% That is, there is not much freedom for QCD to be slightly different without being a drastically different theory.
+% }
+%
+QCD can be constructed with $N_f$ quark types---or \emph{flavours}---by taking the matter field to be a direct product of $N_f$ quark fields, each sharing the same $\SU(N_c)$ gauge action.
 
-\note{One of the attractive qualities of pure QCD is that, given the gauge group $G = \SU(3)$ and its action on a matter field $\bm ψ$, the theory is almost completely specified.
-That is, there is not much freedom for QCD to be slightly different without being a drastically different theory.
-}
+The Lagrangian of pure QCD is a sum of the Dirac and Yang--Mills Lagrangians,
+\begin{align}
+	\LL_\text{QCD} &= \bar{\bm ψ}\qty(i\bm γ^μ\nabla_μ - \mat m)\bm ψ \, \vol- \angbr{\tsbm F\wedge\star \tsbm F}
+	+ \frac{θ}{8π^2}\angbr{\tsbm F\wedge\tsbm F}
+	% \cal L_\text{QCD} &= \sum_q\overbar{\bm ψ^{(q)}}\qty(i\bm γ^μ\nabla_μ - m)\bm ψ^{(q)} - \angbr{\tsbm F \wedge\star \tsbm F}
+% \\	&\equiv \sum_{q=1}^N\overbar{ψ}_a^{(q)}\qty(iγ^{μ a}{}_b\nabla_μ - m\delta^a{}_b)ψ^b_{(q)} - \frac14F^a{}_{bμν}F_a{}^{bμν}
+,\end{align}
+where
+$\bm ψ \equiv \bm ψ^{(1)} \oplus \cdots \oplus \bm ψ^{(N_f)}$
+is the matter field separated into its quark flavours, and $\mat m = m_1 \oplus \cdots \oplus m_{N_f}$ is a diagonal matrix of quark masses.
+With indices written explicitly, and $\hbar$ and $c$ temporarily reinstated for completeness, the Lagrangian density may be spelled as
+\begin{align}
+	\cal L_\text{QCD} &= \sum_{q=1}^{N_f}\overbar{ψ}_{a\frak c}^{(q)}\qty(i\hbar cγ^{μ a}{}_b\nabla_μ - m_qc^2δ^a{}_b)ψ^{b\frak c}_{(q)}
+	- \frac\hbar4F^{\frak a}{}_{\frak bμν}F_{\frak a}{}^{\frak bμν}
+	+ \frac{θ\hbar}{8π^2}F^{\frak a}{}_{\frak bμν}F_{\frak a}{}^{\frak b}{}_{ρσ}\epsilon^{μνρσ}
+,\end{align}
+where Latin and Fraktur indices denote $\CC^4_\text{D}$ fermion components and $\CC^3_\text{C}$ colour components, respectively. 
+\note{Is this all correct?}
 
-With more than one quark type, or \emph{flavour}, pure $N$-quark QCD is constructed with a matter field which is a direct product of $N$ copies of the quark field.
-The QCD sector of the standard model is an extension of $6$-quark QCD where the quarks are partitioned into \emph{up type} and \emph{down type}, and again into three \emph{generations}, each with varying properties.
+
+\subsubsection{Yukawa Couplings and the Measurable $\bar θ$-parameter}
+
+The QCD sector of the standard model is an extension of pure QCD with three colours and six quarks.
+The quarks are partitioned into \emph{up type} and \emph{down type}, and again into three \emph{generations}, each with varying masses and charges under the other components of the standard model gauge group.
 {
 \newcommand{\quark}[2]{$\raisemath{0.7ex}{\underset{#2/c^2}{\text{#1}}}$}
 \renewcommand{\arraystretch}{1.5}
@@ -623,48 +656,8 @@ The QCD sector of the standard model is an extension of $6$-quark QCD where the 
 	\end{tabular}
 \end{center}
 }
-The Lagrangian of pure, $N$-quark QCD is a sum of the Dirac and Yang--Mills Lagrangians,
-\begin{align}
-	\LL_\text{QCD} &= \bar{\bm ψ}\qty(i\bm γ^μ\nabla_μ - \mat m)\bm ψ \, \vol- \angbr{\tsbm F \wedge\star \tsbm F}
-	% \cal L_\text{QCD} &= \sum_q\overbar{\bm ψ^{(q)}}\qty(i\bm γ^μ\nabla_μ - m)\bm ψ^{(q)} - \angbr{\tsbm F \wedge\star \tsbm F}
-% \\	&\equiv \sum_{q=1}^N\overbar{ψ}_a^{(q)}\qty(iγ^{μ a}{}_b\nabla_μ - m\delta^a{}_b)ψ^b_{(q)} - \frac14F^a{}_{bμν}F_a{}^{bμν}
-,\end{align}
-where
-$\bm ψ \equiv \bm ψ^{(1)} \oplus \cdots \oplus \bm ψ^{(N)}$
-is the matter field separated into its quark flavours $\bm ψ^{(q)} = \bm φ \otimes \bm c$, and $\mat m = m_1 \oplus \cdots \oplus m_N$ is a diagonal matrix of quark masses.
-% and $\ts\nabla\bm ψ \equiv (\nabla_μ\bm ψ) \, \ts\dd x^μ$ is the covariant derivative with respect to the gluon field.
-
-% One may be explicitly show components by denoting $\CC^4_\text{D}$ fermion components with Latin indices and denoting $\CC^3_\text{C}$ colour components with Fraktur indices, the Lagrangian scalar takes the form
-
-% If one prefers to explicate components, then by denoting $\CC^4_\text{D}$ fermion components and $\CC^3_\text{C}$ colour components with Latin and Fraktur indices, respectively, the Lagrangian density scalar is spelled as
-With indices written explicitly, and $\hbar$ and $c$ temporarily reinstated for completeness, the Lagrangian density scalar is spelled as
-\begin{align}
-	% \cal L_\text{QCD} &= \sum_{q=1}^N\overbar{ψ}_a^{(q)}\qty(iγ^{μ a}{}_b\nabla_μ - m\delta^a{}_b)ψ^b_{(q)} - \frac14F^a{}_{bμν}F_a{}^{bμν}
-	\cal L_\text{QCD} &= \sum_{q=1}^N\overbar{ψ}_{a\frak c}^{(q)}\qty(i\hbar cγ^{μ a}{}_b\nabla_μ - m_qc^2δ^a{}_b)ψ^{b\frak c}_{(q)} - \frac\hbar4F^{\frak a}{}_{\frak bμν}F_{\frak a}{}^{\frak bμν}
-,\end{align}
-where Latin and Fraktur indices denote $\CC^4_\text{D}$ fermion components and $\CC^3_\text{C}$ colour components, respectively. 
-
-\note{Is this all correct?}
-
-
-At this point, we see that the issue which is given the name \emph{the strong \CP\ problem} offers itself as a question about the naturalness the QCD Lagrangian:
-As encountered in §\,\ref{sec:YM-and-topological}, there is another term which may---in fact, \emph{should}---be included in the Lagrangian; the topological $θ$-term.
-% The $θ$-term also arises as a consequence of the chiral anomaly, as seen in §\,\ref{sec:fermions-and-the-chiral-anomaly}.
-Therefore, at least from a theoretical perspective, it is more appropriate to consider the general pure QCD Lagrangian to be
-\begin{align}
-	\LL_\text{QCD} = \overbar{\bm ψ}\qty(i\bm γ^μ\nabla_μ - \mat m)\bm ψ \,\vol
-	- \angbr{\tsbm F \wedge\star \tsbm F}
-	+ \frac{θ}{8π^2}\angbr{\tsbm F \wedge \tsbm F}
-	\label{eqn:pure-QCD-Lagrangian}
-,\end{align}
-which includes the \CP-violating $θ$-term $\angbr{\tsbm F\wedge\tsbm F}$.
-
-\subsubsection{Yukawa Couplings and the Measurable $\bar θ$-parameter}
-
-The pure QCD Lagrangian \eqref{eqn:pure-QCD-Lagrangian} is not quite the same as the QCD sector of the standard model Lagrangian.
-% Because it includes the mass term $\bar{\bm ψ}\mat m\bm ψ$, quarks possess intrinsic mass given by the parameters $\mat m^a{}_b$.
-Because it includes the mass term $\bar{\bm ψ}\mat m\bm ψ$, quarks in pure QCD possess intrinsic mass given by the parameters $m_q$.
-This is \emph{not} the mechanism by which quarks exhibit mass in the standard model---it cannot be, since is $\bar{\bm ψ}\mat m\bm ψ$ not invariant under axial rotations. \note{Why must axial rotations be a symmetry at all?} Instead, quarks obtain mass via the \emph{Higgs mechanism}, whereby $\bm ψ$ is coupled to the Higgs field $h$ in \emph{Yukawa interaction terms} in the Lagrangian:
+Pure QCD contains a mass term $\bar{\bm ψ}\mat m\bm ψ$, giving each quark $\bm ψ^{(q)}$ an intrinsic mass $m_q$.
+This is \emph{not} the mechanism by which quarks exhibit mass in the standard model---it cannot be, since is $\bar{\bm ψ}\mat m\bm ψ$ not invariant under axial rotations. \note{Why must axial rotations be a symmetry at all?} Instead, quarks obtain mass via the \emph{Higgs mechanism}, whereby $\bm ψ$ is coupled to the Higgs field $h$ in \emph{Yukawa interaction terms} in the Lagrangian \cite[§~7.6.6]{Hamilton_2017}.
 % The Yukawa terms contain quark--Higgs coupling parameters $m_q$ which can be arranged into the \emph{quark mass matrix} $\mat m$ \cite[§~7.6.6]{Hamilton_2017}.
 \begin{align}
 	% \LL_\text{QCD} = \bar{\bm ψ}i\bm γ^μ\nabla_μ\bm ψ\,\vol
@@ -674,74 +667,69 @@ This is \emph{not} the mechanism by which quarks exhibit mass in the standard mo
 	= h\,\mathds{Re}\qty(\bar{\bm ψ}_+\mat m\,\bm ψ_-)
 	= \frac{h}2\qty(\bar{\bm ψ}_+ \mat m\,\bm ψ_- + \bar{\bm ψ}_- \mat m^\dagger \bm ψ_+)
 \end{align}
+The Lagrangian of the standard model QCD sector is thus
+\begin{align}
+	\LL^\text{\,SM}_\text{QCD} &= \qty[\bar{\bm ψ}i\bm γ^μ\nabla_μ\bm ψ
+	+ h\,\mathds{Re}\qty(\bar{\bm ψ}_+\mat m\,\bm ψ_-)]\,\vol
+	- \angbr{\tsbm F\wedge\star \tsbm F}
+	+ \frac{θ}{8π^2}\angbr{\tsbm F\wedge\tsbm F}
+	\label{eqn:qcd-sector-lagrangian}
+.\end{align}
 
-% \note{
-% In a slight abuse of notation, the overall effect of this complex mechanism of quark mass acquisition can be conveyed by the \emph{effective Lagrangian}
-% \begin{align}
-% 	\LL_\text{QCD} = \overbar{\bm ψ}\qty(i\bmγ^μ\nabla_μ - \bm{\cal M})\bm ψ \,\vol
-% 	- \angbr{\tsbm F \wedge\star \tsbm F}
-% 	+ \frac{θ}{8\pi^2}\angbr{\tsbm F \wedge \tsbm F}
-% ,\end{align}
-% where $\bar{\bm ψ} \cal M \bm ψ = \sum_{pq} \bar ψ_{(p)}\cal M_{pq} ψ_{(q)}$ are quark mass terms.\footnote{
-% 	These fermion mass terms are not gauge invariant under chiral transformations; only Yukawa mass terms can give rise to massive fermions in a gauge invariant manner.
-% 	Effective Lagrangians of this kind are often written for simplicity, with this abuse of notation in mind (e.g., in \cite{Peccei_1996,Agrawal_2018}).
-% }
-% }
 
-Under independent axial rotations of each of the quark fields, the Yukawa mass term is invariant provided the quark masses also shift phase.
-In addition, each independent $\U(1)_A$ rotation parametrised by $α_q$ generates a corresponding $θ$-term with coefficient $α_q$, due to the chiral anomaly (§\,\ref{sec:fermions-and-the-chiral-anomaly}).
-Thus, the full QCD Lagrangian \note{haven't written it yet} is invariant under transformations of the form
+
+
+Under independent axial rotations of each of the quark fields, the Yukawa mass term is invariant if the quark masses also shift phase.
+In addition, each independent $\U(1)_A$ rotation generates a corresponding $θ$-term, due to the chiral anomaly (§\,\ref{sec:fermions-and-the-chiral-anomaly}).
+Thus, the full QCD Lagrangian \eqref{eqn:qcd-sector-lagrangian} is invariant under transformations of the form
 \begin{align}
 	\bm ψ_{(q)} &\mapsto e^{i\bmγ^5{a_q}/{2}}\bm ψ_{(q)}
 ,&	m_q &\mapsto e^{-ia_q}m_q
-,&	θ &\mapsto θ + \sum_{q=1}^N a_q
+,&	θ &\mapsto θ + \sum_{q=1}^{N_f} a_q
 	\label{eqn:quark-mass-phase-transform}
-.\end{align}
-% Under axial rotations, the Yukawa mass term transforms as
-% \begin{align}
-% 	h\,\mathds{Re}\qty(\bar{\bm ψ}_+m\,\bm ψ_-)
-% 	\mapsto
-% 	h\,\mathds{Re}\qty(\bar{\bm ψ}_+e^{2iα}m\,\bm ψ_-)
-% 	= h\,\mathds{Re}\qty(\bar{\bm ψ}_+m'\,\bm ψ_-)
-% ,\end{align}
-% and so the quark masses obtain phases $m' = e^{-2iα}m$.
-% Because 
+,\end{align}
+where $α_q$ parametrise the $N_f$ independent $\U(1)_A$ rotations.
 
-% In the full quantum theory of $N$ quarks with masses $m_q$, the Lagrangian admits a global chiral symmetry defined by $N$ parameters $a_i \in \mathds{R}$ and the mappings
-% \begin{align}
-% 	\bm ψ_{(q)} &\mapsto e^{\frac{i}2\bmγ^5a_q}\bm ψ_{(q)}
-% ,&	m_q &\mapsto e^{-ia_q}m_q
-% ,&	θ &\mapsto θ + \sum_{q=1}^N a_q
-% 	\label{eqn:quark-mass-phase-transform}
-% ,\end{align}
-% where $\bm ψ_{(q)}$ are the quark fields and $m_q$ are their masses.
-% \note{Not actually that simple. Only works for massless quarks; works approximately for $m_u$ and $m_d$, resulting in an approximate $\U(2)_L \oplus \U(2)_R$ symmetry or something...}
-% This transformation is \emph{chiral}, meaning that it affects left- and right-handed fermions differently.\footnotemark\
-% \footnote4text{If the quark fields are split into left-handed $\bm ψ_+$ and right-handed $\bm ψ_-$ components defined by $\bm ψ_\pm \coloneqq \frac12(1 \pm \bmγ^5)\bm ψ$, then the first mapping of \eqref{eqn:quark-mass-phase-transform} can be written as $\bm ψ_\pm \mapsto e^{\pm ia_q/2}\bm ψ_\pm$.}
-The fact that the $θ$-parameter may be redefined by phase-shifting the quark fields and their masses means that $θ$ is not directly observable.
-However, this gauge freedom can be fixed by defining the invariant quantity
+The fact that the $θ$-parameter may be redefined by axially rotating the quark fields means that $θ$ is not directly observable.
+However, this gauge freedom can be fixed by defining
 \begin{align}
 	\barθ
 	= θ + \arg\det\mat m
-	= θ + \arg\prod_{q=1}^Nm_q
+	= θ + \arg\prod_{q=1}^{N_f}m_q
 	% = θ + \sum_{q=1}^N\arg m_q
+,\end{align}
+which is invariant under \eqref{eqn:quark-mass-phase-transform}, as the two right-hand terms transform by $\pm\sum a_q$.
+The Lagrangian of the QCD sector of the standard model, complete with the $\bar θ$-term, is thus
+\begin{align}
+	\LL^\text{\,SM}_\text{QCD} &= \qty[\bar{\bm ψ}i\bm γ^μ\nabla_μ\bm ψ
+	+ h\,\mathds{Re}\qty(\bar{\bm ψ}_+\mat m\,\bm ψ_-)]\,\vol
+	- \angbr{\tsbm F\wedge\star \tsbm F}
+	+ \frac{\bar θ}{8π^2}\angbr{\tsbm F\wedge\tsbm F}
+	\label{eqn:qcd-sector-lagrangian-bar}
 .\end{align}
-% The gauge-fixed $\barθ$-parameter is invariant under \eqref{eqn:quark-mass-phase-transform}, as the two right-hand terms transform by the addition of $\pm\sum_{i=1}^Na_i$, respectively.
-The gauge-fixed $\barθ$-parameter is invariant under \eqref{eqn:quark-mass-phase-transform}, as the two right-hand terms transform by the addition of $\pm\sum a_q$, respectively.
-% The significance of this is that only the value of $\barθ$ may have physical effects.
-% The fact that $\bar θ$ can only be zero if apparently unrelated parameters perfectly cancel each other---$θ$, a QCD parameter; and $\cal M$, derived from electroweak parameters---highlights the fine-tuning nature of the strong \CP\ problem.
 
+% At this point, we see that the issue which is given the name \emph{the strong \CP\ problem} offers itself as a question about the naturalness the QCD Lagrangian:
+% As encountered in §\,\ref{sec:YM-and-topological}, there is another term which may---in fact, \emph{should}---be included in the Lagrangian; the topological $θ$-term.
+% % The $θ$-term also arises as a consequence of the chiral anomaly, as seen in §\,\ref{sec:fermions-and-the-chiral-anomaly}.
+% Therefore, at least from a theoretical perspective, it is more appropriate to consider the general pure QCD Lagrangian to be
+% \begin{align}
+% 	\LL_\text{QCD} = \overbar{\bm ψ}\qty(i\bm γ^μ\nabla_μ - \mat m)\bm ψ \,\vol
+% 	- \angbr{\tsbm F \wedge\star \tsbm F}
+% 	+ \frac{θ}{8π^2}\angbr{\tsbm F \wedge \tsbm F}
+% 	\label{eqn:pure-QCD-Lagrangian}
+% ,\end{align}
+% which includes the \CP-violating $θ$-term $\angbr{\tsbm F\wedge\tsbm F}$.
 
+\subsubsection{The Statement of the Strong \CP\ Problem}
 
 
 Proceeding with the assumption that $\bar θ \ne 0$, one finds that the strong force now violates \CP\ symmetry.
-A physical prediction of the standard model modified with a \CP-violating QCD sector \eqref{eqn:pure-QCD-Lagrangian} is that the neutron is expected to possess an electric dipole moment of approximate magnitude $|d_n| \approx 10^{-18} \,e\,\mathrm{cm}$.
+A physical prediction of the standard model modified with a \CP-violating QCD sector \eqref{eqn:qcd-sector-lagrangian-bar} is that the neutron is expected to possess an electric dipole moment of approximate magnitude $|d_n| \approx 10^{-18} \,e\,\mathrm{cm}$.
 In reality, current measurements \cite{electric_dipole_neutron_2020} of the neutron's electric dipole moment yield a tight upper bound of $|d_n| \lesssim 10^{-26} \,e\,\mathrm{cm}$, which in turn implies a stringent constraint on the $\bar θ$-parameter, $|\bar θ| \lesssim 10^{-10}$ \cite{ParticleDataGroup-review-2020}.
 Thus, the $\bar θ$-term is not considered to be part of the standard model.
 
-However, $\bar θ$ can only be zero if apparently unrelated parameters of the standard model perfectly cancel each other: the vacuum angle $θ$, a QCD parameter; and the quark mass phases $\arg\det\mat m$, deriving from electroweak parameters.
-One therefore expects $\bar θ$ to be of order $\cal O(1)$ in Nature.
-Its extremely small value is therefore a problem of fine-tuning.
+However, $\bar θ$ can only be zero if apparently unrelated parameters of the standard model perfectly cancel each other: the vacuum angle $θ$, a QCD parameter; and the quark mass phases $\arg\det\mat m$, deriving from multiple electroweak parameters.
+One therefore expects $\bar θ$ to be $\cal O(1)$ in Nature, and its extremely small value is a problem of fine-tuning.
 The strong \CP\ problem is the question, ``why, then, is $\bar θ$ so small?''
 
 
