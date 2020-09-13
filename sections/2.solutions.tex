@@ -84,25 +84,26 @@ In doing so, a new massive boson described by the scalar axion field $a(x)$ is n
 There are different inequivalent ways to extend the standard model to realise the axion solution, but all Peccei--Quinn axion models share the same necessary features:
 \begin{itemize}
 	\item The extended Lagrangian $\LL^\text{\,SM}_{+\text{PQ}}$ possesses an additional global chiral symmetry $\UPQ$.
-	The action of this \emph{Peccei--Quinn symmetry} depends on the particular axion model, and is not of central importance.
+	The exact action of this \emph{Peccei--Quinn symmetry} depends on the particular axion model, and is not of central importance.
 	The main feature of $\UPQ$ is that it is chiral, so that a $\UPQ$ transformation by $α$ radians anomalously induces a $θ$-term $α\angbr{\tsbm F\wedge\tsbm F}$ in the effective Lagrangian (via the chiral anomaly).
 
 	\item The Peccei--Quinn symmetry $\UPQ$ is \emph{spontaneously broken}, and the single resulting Nambu--Goldstone boson is named the axion field, $a(x)$.
 	Being a Nambu--Goldstone boson, the axion transforms as $a(x) \mapsto a(x) + α$ under a $\UPQ$ rotation of $α$ radians.
-	The chiral anomaly results in a potential for the axion $a(x)$, which gives rise to axion mass, and whose potential minimum occurs where $a(x) = -\bar θ_\text{SM}$.
+	The chiral anomaly results in a potential for the axion $a(x)$ (giving rise to axion mass) with a potential minimum occurring where $a(x) = -\bar θ_\text{SM}$.
 \end{itemize}
 
-If the $\UPQ$ symmetry was indeed an exact gauge symmetry, then the strong \CP\ problem is trivially solved, because a $\UPQ$ rotation by $\bar θ$ radians cancels the $\bar θ$-term in the effective Lagrangian, meaning the dynamics of the theory are equivalent to one where $\bar θ = 0$.
-However, $\UPQ$ need not be exact: if $\UPQ$ is spontaneously broken, then $\bar θ$ is still driven to zero because it obtains a potential from the chiral anomaly.
+If the extra $\UPQ$ symmetry was indeed an exact gauge symmetry, then the strong \CP\ problem is trivially solved, because a $\UPQ$ rotation by $\bar θ$ radians cancels the $\bar θ$-term in the effective Lagrangian, meaning the dynamics of the theory are equivalent to one in which $\bar θ = 0$.
+However, the main result of Peccei and Quinn \cite{PecceiQuinn_1977} is that $\UPQ$ need not be exact: if $\UPQ$ is spontaneously broken, then $\bar θ$ is still driven to zero because it obtains a potential from the chiral anomaly.
 
 \subsubsection{A Toy Axion Model}
 
-To illustrate the Peccei--Quinn mechanism explicitly, consider a minimal toy axion model, which involves the addition of two fields to the standard model: a complex scalar field $Φ$, the \emph{parent field}; and an additional fermion $q$.
+To illustrate the Peccei--Quinn mechanism explicitly, consider a minimal toy axion model, which involves the addition of two fields to the standard model: a complex scalar field $Φ$ known as the \emph{parent field}; and an additional fermion $q$.
 The extended Lagrangian takes the form
 \begin{align}
-	\LL_\text{PQ} = \LL^{\bar θ}_\text{SM} + \angbr{\ts\dd Φ, \ts\dd Φ} + \RR(\bar q_+Φq_-) \vol + \LL_q
+	\LL_\text{PQ} = \LL^{\bar θ}_\text{SM} + \angbr{\ts\dd Φ, \ts\dd Φ} + \RR(\bar q_+Φq_-)\,\vol + \LL_q
+	\label{eqn:toy-axion-Lagrangian}
 ,\end{align}
-where $\LL^{\bar θ}_\text{SM}$ is the standard model Lagrangian including the $\bar θ$-term, $\angbr{\ts\dd Φ, \ts\dd Φ}$ is a kinetic term, $\RR(\bar q_+Φq_-)$ is a Yukawa coupling term, and $\LL_q$ stands for any other terms involving the new fermion $q$.
+where $\LL^{\bar θ}_\text{SM}$ is the standard model Lagrangian including the $\bar θ$-term; $\angbr{\ts\dd Φ, \ts\dd Φ}$ is a kinetic term; $\RR(\bar q_+Φq_-)$ is a Yukawa coupling term; and $\LL_q$ stands for any other terms involving the new fermion $q$.
 The action of $\UPQ$ on these fields is
 \begin{align}
 	Φ &\mapsto e^{i2α}Φ
@@ -118,10 +119,11 @@ The action of $\UPQ$ on these fields is
 ,\end{align}
 which indeed leaves $\angbr{\ts\dd Φ, \ts\dd Φ}$ and $\RR(\bar q_+Φq_-)$ invariant.
 % Because of the chiral anomaly, the axial rotation of $q$ gives rise to a term $α \angbr{\tsbm F\wedge\tsbm F}$ in the effective Lagrangian.
-Since $q$ undergoes an axial rotation, the entire (effective) Lagrangian $\LL_\text{PQ}$ is only invariant with the addition of the term $α \angbr{\tsbm F\wedge\tsbm F}/8π^2$, due to the chiral anomaly.
-Therefore, the entire action of $\UPQ$ is to transform $\bar θ \mapsto \bar θ + α$, as well as the fields as in \eqref{eqn:toy-axion-transformation}.
+However, since $q$ undergoes an axial rotation, the entire (effective) Lagrangian $\LL_\text{PQ}$ is only invariant with the subtraction of the term $α \angbr{\tsbm F\wedge\tsbm F}/8π^2$ which arises from the chiral anomaly.
+Therefore, the entire action of $\UPQ$ is to transform $\bar θ \mapsto \bar θ - α$, as well as the fields as in \eqref{eqn:toy-axion-transformation}.
+At this stage, the theory predicts \CP\ violation in the strong sector in areas where the axions and instantons interact such that $\bar θ(x) \ne 0$.
 
-The final component of the model is to make the parent field $Φ$ spontaneously break.
+The final component of the axion solution is to make the parent field $Φ$ spontaneously break.
 This may be done by adding a ``Mexican hat'' potential to $\LL_\text{PQ}$ of the form
 \begin{align}
 	V(|Φ|) = λ\qty(|Φ|^2 - f_a^2)^2
@@ -133,74 +135,22 @@ Below this energy scale, the parent field $Φ$ relaxes to some minimum of the fo
 ,\end{align}
 where $a$ varies across space.
 This field $a(x)$ is the Nambu--Goldstone boson associated with the spontaneous breaking of $\UPQ$ by the parent field $Φ$, and is identified as the axion field.
-\begin{align}
-	\LL_\text{PQ} = \LL_\text{SM} + \angbr{\ts\dd a, \ts\dd a} + \qty(\bar θ - \frac{a}{f_a})\frac{1}{8π^2}\angbr{\tsbm F\wedge\tsbm F} + \LL_q
-,\end{align}
-
-
-The Yukawa term \note{how/why} can be normalised by a $\UPQ$ rotation by $-a/f_a$
+After spontaneous breaking, the Yukawa term involves a complex mass, which can be normalised by a $\UPQ$ rotation by $-a/f_a$
 \begin{align}
 	\RR(\bar q_+ Φ q_-) = f_a\RR(\bar q_+ e^{ia/f_a} q_-)
 	\mapsto f_a\RR(\bar q_+ q_-)
-,\end{align}
-inducing an axial rotation of $q$ and a corresponding rotation of $θ \mapsto θ - a/f_a$.
-
-
-
-
-
-\clearpage
-
-
-
-
-
-The axion is well-known in cosmology because of its allure as a dark matter candidate.
-It arises as a Nambu--Goldstone boson of an additional spontaneously broken symmetry, and dynamically solves the strong \CP\ problem via the \emph{Peccei--Quinn mechanism}.
-\note{There are a variety of implementations (``models'') of the Peccei--Quinn mechanism.}
-
-
-
-
-
-The Peccei--Quinn mechanism involves extending the standard model (usually by the addition of fields) so that the entire Lagrangian possesses an additional approximate global chiral $\U(1)$ symmetry, named the Peccei--Quinn symmetry $\UPQ$.
-(Different ways of realising $\UPQ$ in an extended standard model lead to different axion models.
-In the simplest case, a complex scalar field $φ$ is adjoined to the standard model, whose phase transforms under $\UPQ$ as $φ \mapsto e^{iα}φ$.)
-If $\UPQ$ was indeed an exact symmetry, then combined with existing $\U(1)_A$ axial fermion rotations, there would be enough gauge freedom to rotate $\bar θ$ to zero.
-Similar to the massless quark solution, this would render the $\bar θ$-parameter unphysical thereby trivially solving the strong \CP\ problem.
-However, $\UPQ$ cannot be an exact symmetry because it is subject to the chiral anomaly (see §\,\ref{sec:fermions-and-the-chiral-anomaly}).
-What Peccei and Quinn showed was that even if the $\UPQ$ symmetry is not exact, then $\bar θ$ would be dynamically driven to zero---provided that $\UPQ$ was also spontaneously broken.
-The chiral anomaly and spontaneous breakage together translate into an effective potential for $\bar θ$, whose minimum is at zero.
-
-
-Because $\UPQ$ is chiral, like $\U(1)_A$, it is also broken by the chiral anomaly.
-Consequently, the Noether current $\ts J_\text{PQ}$ associated to the $\UPQ$ symmetry is not conserved, but instead obeys
-\begin{align}
-	\ts\dd\ts J_\text{PQ} &= ξ \angbr{\tsbm F\wedge\tsbm F}
-,&	\text{i.e.,} \quad \partial_\mu j_\text{PQ}^\mu &= \fracξ4\angbrAd{\bm F_{μν}, \bm F_{\rho\sigma}}\epsilon^{μν\rho\sigma}
-,\end{align}
-where $ξ$ is a parameter particular to the axion model of interest.
-Simultaneously, $\UPQ$ is spontaneously broken.
-In the simple case of a scalar field $φ$, spontaneous $\UPQ$-breakdown means that the expectation value of $φ$ in a vacuum state is not zero, but some complex number of fixed magnitude, $φ = |φ_0|e^{iα}$, which is not invariant under $\UPQ$.
-The phase $α$ is an effective $\U(1)$ degree of freedom which, in the quantum theory, is a spin-$0$ particle.
-This particle---the axion---is the \emph{pseudo-Nambu--Goldstone boson} associated to the spontaneously broken $\UPQ$ symmetry.
-
-
-As with the axial rotation symmetry, the anomalous Peccei--Quinn symmetry gives rise to an extra term in the Lagrangian.
-\note{I don't understand how.}
-\begin{align}
-	\LL_\text{anomaly} = \frac{a}{f_a}ξ\angbr{\tsbm F\wedge\tsbm F}
 .\end{align}
+This axial rotation of $q$ induces a corresponding rotation of $θ \mapsto θ - a/f_a$, so that Lagrangian \eqref{eqn:toy-axion-Lagrangian} is effectively
+\begin{align}
+	\LL_\text{PQ} = \LL_\text{SM}
+	+ f_a^2\angbr{\ts\dd a, \ts\dd a}
+	+ f_a\RR(\bar q_+ q_-)
+	+ \LL_q
+	+ \qty(\bar θ - \frac{a}{f_a})\frac{1}{8π^2}\angbr{\tsbm F\wedge\tsbm F}
+	\label{eqn:toy-axion-Lagrangian-broken}
+,\end{align}
+after spontaneous symmetry breaking of $Φ$.
 
+Peccei and Quinn showed that the last term in \eqref{eqn:toy-axion-Lagrangian-broken} provides an effective potential $V(a)$ whose minimum occurs at $V(\barθf_a) = 0$, giving the axion a vacuum expectation value $\angbr{a} = \barθf_a$ and a mass $m_a = \pdv*{V}{a}$.
 
-% The non-conservation of $\ts J_\text{PQ}$ implies the presence 
-% Because of the chiral anomaly, however, L_eff must also have a term in which the axion field couples directly to the gluon density GG̃, so as to guarantee that J PQ has the correct QCD chiral anomaly
-
-The \emph{chiral solution} to the strong \CP\ problem postulates that the standard model Lagrangian possesses another global chiral symmetry, in addition to the symmetry \eqref{eqn:quark-mass-phase-transform}.
-In their original paper \cite{PecceiQuinn_1977}, Peccei and Quinn showed that the existence of such a symmetry would resolve the strong \CP\ problem, even if it was spontaneously broken (in which case, another boson would arise---the \emph{axion}).
-This Peccei--Quinn symmetry $\UPQ$ is specified by the action of $\U(1)$ on quark fields by a chiral rotation $\bm ψ_{(q)} \mapsto e^{i\bm γ^5 a}\bm ψ_{(q)}$, with $a \in [0, 2π)$, enabling the phases of all quark flavours to be rotated uniformly in a chiral manner.
-
-If $\UPQ$ were in fact an exact symmetry of the standard model Lagrangian, then, used in conjunction with the chiral symmetry \eqref{eqn:quark-mass-phase-transform}, $\bar θ$ could be set to zero by a simple choice of gauge, rendering it unphysical. \note{I do not actually understand how this works.}
-However, $\UPQ$ is not an exact symmetry of the standard model.
-Nevertheless, Peccei and Quinn showed that if $\UPQ$ was a symmetry that was spontaneously broken, then the parameter $\bar θ$ would be dynamically driven to zero \cite{Peccei_1996}.
 

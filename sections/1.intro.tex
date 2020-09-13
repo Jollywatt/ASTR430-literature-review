@@ -492,7 +492,7 @@ Dirac fermions take their values in a 4-component complex space, denoted $\CC^4_
 The entire matter content of the standard model, including quarks and leptons, is comprised purely of such fermion fields.
 % The matter field of the standard model, including all quarks and leptons as components, is a composite of fermion fields.
 
-The Dirac matrices $\bm γ^μ$ are basis elements of the Clifford algebra $\cal{Cl}_{1,3}(\CC)$ satisfying $\bm γ^{(μ}\bm γ^{ν)} = \eta^{μν}\bm 1$, and are used to write 4-component Dirac fermions in the spin-$\frac12$ representation.
+The Dirac matrices $\bm γ^μ$ form a basis for the algebra of spacetime, the Clifford algebra $\cal{Cl}_{1,3}(\CC)$, satisfying $\bm γ^{(μ}\bm γ^{ν)} = \eta^{μν}$, and are used to write 4-component Dirac fermions in the spin-$\frac12$ representation.
 An inner product on fermions $\angbr{\bm ψ, \bm φ} \equiv \bar{\bm ψ}\bm φ \in \RR$ is provided by the Dirac adjoint $\bar{\bm ψ} \coloneqq \bm ψ^\dagger \bm γ^0$, so that Lorentz-invariant quantities may be naturally constructed.
 Finally, fermions may be separated into left-handed $\bm φ_+$ and right-handed $\bm φ_-$ components with the projection operators $\bm φ_\pm = \frac12(1 \pm \bm γ^5)$ where $\bm γ^5 = i\bm γ^0\bm γ^1\bm γ^2\bm γ^3$.
 In theories which violate parity, left- and right-handed fermions may experience different interactions.
@@ -664,8 +664,8 @@ This is \emph{not} the mechanism by which quarks exhibit mass in the standard mo
 	% - \angbr{\tsbm F \wedge\star \tsbm F}
 	% + \frac{θ}{8\pi^2}\angbr{\tsbm F \wedge \tsbm F}
 	\LL_\text{mass}
-	= h\,\mathds{Re}\qty(\bar{\bm ψ}_+\mat m\,\bm ψ_-)
-	= \frac{h}2\qty(\bar{\bm ψ}_+ \mat m\,\bm ψ_- + \bar{\bm ψ}_- \mat m^\dagger \bm ψ_+)
+	= \mathds{Re}\qty(h\bar{\bm ψ}_+\mat m\,\bm ψ_-)
+	= \frac12\qty(h\bar{\bm ψ}_+ \mat m\,\bm ψ_- + h^\dagger\bar{\bm ψ}_- \mat m^\dagger \bm ψ_+)
 \end{align}
 The Lagrangian of the standard model QCD sector is thus
 \begin{align}
@@ -689,6 +689,7 @@ Thus, the full QCD Lagrangian \eqref{eqn:qcd-sector-lagrangian} is invariant und
 	\label{eqn:quark-mass-phase-transform}
 ,\end{align}
 where $α_q$ parametrise the $N_f$ independent $\U(1)_A$ rotations.
+To aid physical interpretation, these $\U(1)_A$ freedoms are exploited in order to \emph{normalise} the Yukawa mass terms by making the mass phases real. \note{This is only a guess.}
 
 The fact that the $θ$-parameter may be redefined by axially rotating the quark fields means that $θ$ is not directly observable.
 However, this gauge freedom can be fixed by defining
