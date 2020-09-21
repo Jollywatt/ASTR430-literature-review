@@ -35,15 +35,15 @@
 \section{The Massless Quark Solution}
 
 The simplest resolution to the strong \CP\ problem is to stipulate that at least one quark was in fact massless.
-If this were true, then $\det\mat m$ would vanish, and the parameter $\bar θ = θ + \arg\det\mat m$ would render unphysical.
+If this were true, then $\det\mat m$ would vanish, and the parameter $\bar θ = θ + \arg\det\mat m$ would be rendered unphysical.
 The \emph{massless quark solution} is the claim that $\bar θ \approx 0$ because the up quark is massless, $m_u = 0$.
 
 % In particular, $\barθ$ becomes singular when one of the quark masses is zero.
 % Therefore, the $\barθ$-parameter, and hence the $θ$-term, are entirely unphysical in the case of a massless quark.
 
 At first sight, this economical resolution to the strong \CP\ problem appears to be in contradiction with the experimentally determined masses of the quarks, all of which are non-zero (including the up quark, with mass $\sim \SI{2.2}{\mega\eV}$).
-However, it was realised in the mid-1980s that the mass of the up quark has two contributions in the standard model Lagrangian: not only the Yukawa mass $m_u$ (the `bare mass') introduced above, but also a non-perturbative contribution $m_\text{eff}$ from topological effects (i.e., instantons) \cite{ruling-out-massless-uquark_2020}.
-Only the bare masses contribute to the value of $\bar θ$ via the quark mass matrix $\cal M$.
+However, it was realised in the mid-1980s that the mass of the up quark has \emph{two} contributions in the standard model Lagrangian: not only the Yukawa mass $m_u$ (the `bare mass') as introduced above, but also a non-perturbative contribution $m_\text{eff}$ from topological effects (i.e., instantons) \cite{ruling-out-massless-uquark_2020}.
+Only the bare quark masses contribute to the value of $\bar θ$ via the quark mass matrix $\mat m$.
 Importantly, it was plausible that this secondary source of the up quark's mass could be of order $m_\text{eff} \approx \SI{2.2}{\mega\eV}$, allowing $m_u$ to vanish while still preserving the up quark's overall mass.
 
 The massless up quark hypothesis remained controversial until \emph{lattice gauge theory} had advanced sufficiently to made numerical simulations of non-perturbative effects in QCD possible.
@@ -85,7 +85,7 @@ There are different inequivalent ways to extend the standard model to realise th
 \begin{itemize}
 	\item The extended Lagrangian $\LL^\text{\,SM}_{+\text{PQ}}$ possesses an additional global chiral symmetry $\UPQ$.
 	The exact action of this \emph{Peccei--Quinn symmetry} depends on the particular axion model, and is not of central importance.
-	The main feature of $\UPQ$ is that it is chiral, so that a $\UPQ$ transformation by $α$ radians anomalously induces a $θ$-term $α\angbr{\tsbm F\wedge\tsbm F}$ in the effective Lagrangian (via the chiral anomaly).
+	The defining feature of $\UPQ$ is that it is chiral, so that a $\UPQ$ transformation by $α$ radians anomalously induces a $θ$-term $α\angbr{\tsbm F\wedge\tsbm F}$ in the effective Lagrangian (via the chiral anomaly).
 
 	\item The Peccei--Quinn symmetry $\UPQ$ is \emph{spontaneously broken}, and the single resulting Nambu--Goldstone boson is named the axion field, $a(x)$.
 	Being a Nambu--Goldstone boson, the axion transforms as $a(x) \mapsto a(x) + α$ under a $\UPQ$ rotation of $α$ radians.
@@ -93,33 +93,33 @@ There are different inequivalent ways to extend the standard model to realise th
 \end{itemize}
 
 If the extra $\UPQ$ symmetry was indeed an exact gauge symmetry, then the strong \CP\ problem is trivially solved, because a $\UPQ$ rotation by $\bar θ$ radians cancels the $\bar θ$-term in the effective Lagrangian, meaning the dynamics of the theory are equivalent to one in which $\bar θ = 0$.
-However, the main result of Peccei and Quinn \cite{PecceiQuinn_1977} is that $\UPQ$ need not be exact: if $\UPQ$ is spontaneously broken, then $\bar θ$ is still driven to zero because it obtains a potential from the chiral anomaly.
+However, the main result of Peccei and Quinn \cite{PecceiQuinn_1977} is that $\UPQ$ need not be an exact symmetry of the theory: if $\UPQ$ is spontaneously broken, then $\bar θ$ is still driven to zero because it obtains a potential from the chiral anomaly.
 
 \subsubsection{A Toy Axion Model}
 
-To illustrate the Peccei--Quinn mechanism explicitly, consider a minimal toy axion model, which involves the addition of two fields to the standard model: a complex scalar field $Φ$ known as the \emph{parent field}; and an additional fermion $q$.
+To illustrate the Peccei--Quinn mechanism explicitly, consider a minimal toy axion model, which involves the addition of two fields to the standard model: a complex scalar field $Φ$ known as the \emph{parent field} (since it begets the axion field); and an additional fermion $\bm q$.
 The extended Lagrangian takes the form
 \begin{align}
-	\LL_\text{PQ} = \LL^{\bar θ}_\text{SM} + \angbr{\ts\dd Φ, \ts\dd Φ} + \RR(\bar q_+Φq_-)\,\vol + \LL_q
+	\LL_\text{PQ} = \LL^{\bar θ}_\text{SM} + \angbr{\ts\dd Φ, \ts\dd Φ} + \RR(\bar\bm q_+Φ\bm q_-)\,\vol + \LL_q
 	\label{eqn:toy-axion-Lagrangian}
 ,\end{align}
-where $\LL^{\bar θ}_\text{SM}$ is the standard model Lagrangian including the $\bar θ$-term; $\angbr{\ts\dd Φ, \ts\dd Φ}$ is a kinetic term; $\RR(\bar q_+Φq_-)$ is a Yukawa coupling term; and $\LL_q$ stands for any other terms involving the new fermion $q$.
+where $\LL^{\bar θ}_\text{SM}$ is the standard model Lagrangian (including the $\bar θ$-term); $\angbr{\ts\dd Φ, \ts\dd Φ}$ is a kinetic term for the parent field; $\RR(\bar\bm q_+Φ\bm q_-)$ is a Yukawa coupling term; and $\LL_q$ stands for any other terms involving the new fermion $\bm q$.
 The action of $\UPQ$ on these fields is
 \begin{align}
 	Φ &\mapsto e^{i2α}Φ
-,&	q &\mapsto e^{i\bm γ^5α}q
+,&	\bm q &\mapsto e^{i\bm γ^5α}\bm q
 	\quad\text{or}\quad
 	\left\{
 	\begin{aligned}
-	\bar q_+ &\mapsto e^{iα}\bar q_+
-\\	q_- &\mapsto e^{iα}q_-
+	\bar\bm q_+ &\mapsto e^{iα}\bar\bm q_+
+\\	\bm q_- &\mapsto e^{iα}\bm q_-
 	\end{aligned}
 	\right.
 	\label{eqn:toy-axion-transformation}
 ,\end{align}
-which indeed leaves $\angbr{\ts\dd Φ, \ts\dd Φ}$ and $\RR(\bar q_+Φq_-)$ invariant.
+which indeed leaves $\angbr{\ts\dd Φ, \ts\dd Φ}$ and $\RR(\bar\bm q_+Φ\bm q_-)$ invariant.
 % Because of the chiral anomaly, the axial rotation of $q$ gives rise to a term $α \angbr{\tsbm F\wedge\tsbm F}$ in the effective Lagrangian.
-However, since $q$ undergoes an axial rotation, the entire (effective) Lagrangian $\LL_\text{PQ}$ is only invariant with the subtraction of the term $α \angbr{\tsbm F\wedge\tsbm F}/8π^2$ which arises from the chiral anomaly.
+However, since $\bm q$ undergoes an axial rotation, the entire (effective) Lagrangian $\LL_\text{PQ}$ is only invariant with the simultaneous subtraction of $α \angbr{\tsbm F\wedge\tsbm F}$, which arises via the chiral anomaly.
 Therefore, the entire action of $\UPQ$ is to transform $\bar θ \mapsto \bar θ - α$, as well as the fields as in \eqref{eqn:toy-axion-transformation}.
 At this stage, the theory predicts \CP\ violation in the strong sector in areas where the axions and instantons interact such that $\bar θ(x) \ne 0$.
 
@@ -137,14 +137,14 @@ where $a$ varies across space.
 This field $a(x)$ is the Nambu--Goldstone boson associated with the spontaneous breaking of $\UPQ$ by the parent field $Φ$, and is identified as the axion field.
 After spontaneous breaking, the Yukawa term involves a complex mass, which can be normalised by a $\UPQ$ rotation by $-a/f_a$
 \begin{align}
-	\RR(\bar q_+ Φ q_-) = f_a\RR(\bar q_+ e^{ia/f_a} q_-)
-	\mapsto f_a\RR(\bar q_+ q_-)
+	\RR(\bar\bm q_+ Φ \bm q_-) = f_a\RR(\bar\bm q_+ e^{ia/f_a} \bm q_-)
+	\mapsto f_a\RR(\bar\bm q_+ \bm q_-)
 .\end{align}
-This axial rotation of $q$ induces a corresponding rotation of $θ \mapsto θ - a/f_a$, so that Lagrangian \eqref{eqn:toy-axion-Lagrangian} is effectively
+This axial rotation of $\bm q$ induces a corresponding rotation of $θ \mapsto θ - a/f_a$, so that Lagrangian \eqref{eqn:toy-axion-Lagrangian} is effectively
 \begin{align}
 	\LL_\text{PQ} = \LL_\text{SM}
 	+ f_a^2\angbr{\ts\dd a, \ts\dd a}
-	+ f_a\RR(\bar q_+ q_-)
+	+ f_a\RR(\bar\bm q_+ \bm q_-)
 	+ \LL_q
 	+ \qty(\bar θ - \frac{a}{f_a})\frac{1}{8π^2}\angbr{\tsbm F\wedge\tsbm F}
 	\label{eqn:toy-axion-Lagrangian-broken}

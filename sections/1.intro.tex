@@ -301,13 +301,29 @@ Physically, the coupling constants determine the relative interaction strengths 
 % This construction was first considered by Yang and Mills in 1954 [135] in the special case where G = SU(2) and Φ is a pair of Dirac spinor fields. [Folland pg 295]
 The term $\angbr{\tsbm F \wedge\star \tsbm F}$ is known as the \emph{Yang--Mills Lagrangian}, and is a major component in the standard model, describing boson force carrier propagation and self-interaction (such as gluon self-interactions).
 The Yang--Mills Lagrangian yields the equation of motion $\covdd\star\tsbm F = 0$.
-For the Abelian gauge group of electromagnetism $G = \mathrm{U}(1)$, this equation, together with the Bianchi identity $\covdd\tsbm F = 0$, are the source-free Maxwell equations.
+For the Abelian gauge group $G = \mathrm{U}(1)$ of electromagnetism, this equation, together with the Bianchi identity $\covdd\ts F = 0$, are the source-free Maxwell equations.
+(Since the Lie algebra of $\U(1)$ is $\RR$, the 2-form $\ts F$ is scalar-valued for electromagnetism.)
+Expressing
+% \begin{math}
+% 	\tsbm F
+% 	= \ts\dd ct\wedge\tsbm E + \tsbm B
+% 	= \bm E_i\,\ts\dd ct\wedge\ts\dd x^i + \bm B_i \star(\ts\dd ct\wedge\ts\dd x^i)
+% \end{math}
+\begin{math}
+	\ts F = \ts\dd ct\wedge\ts E + \star(\ts\dd ct\wedge \ts B)
+\end{math}
+in terms of the non-relativistic electric and magnetic field 1-forms by choosing a spacetime split, the Yang--Mills term is the familiar electromagnetic energy density $\ts F \wedge\star \ts F = \ts B^2 - \ts E^2/c^2$.
 
 
-The other term $\angbr{\tsbm F \wedge \tsbm F}$ is known as the \emph{Chern--Simons term} or the \emph{topological $θ$-term}, for reasons which will become apparent after surveying its properties.
+The other term $\angbr{\tsbm F \wedge \tsbm F}$ is known as the \emph{Chern--Simons term} or the \emph{topological $θ$-term}, for reasons which will become apparent after a survey of its properties.
 \begin{itemize}
 \item 
 The Chern--Simons term is odd under both time-reversal symmetry $T$ and parity $P$ (notice $\epsilon^{μνρσ} \mapsto -\epsilon^{μνρσ}$ under $T$ or $P$) but not under charge conjugation $C$.
+This may also be seen by introducing a spacetime split, whereby
+\begin{math}
+	\angbr{\tsbm F\wedge\tsbm F} = \tr(\bm E \cdot \bm B)\,\vol
+,\end{math}
+since $\tsbm E$ is a vector of odd-parity and $\tsbm B$ is a pseudovector of even-parity.
 Hence, it may give rise to \CP-violating dynamics.
 
 \item 
@@ -322,7 +338,7 @@ Furthermore, $\angbr{\tsbm F \wedge \tsbm F}$ is a total derivative of the \emph
 	= \ts\dd\tr\qty(\tsbm A\wedge\ts\dd\tsbm A + \frac{2}{3}\tsbm A\wedge\tsbm A\wedge\tsbm A)
 ,\end{align}
 meaning that the action $\int_\M \angbr{\tsbm F \wedge \tsbm F}$ depends only on the topology of $\tsbm A$ on the spacetime boundary $\partial\cal M$.
-As such, it does not affect the equations of motion.
+As such, it does not affect the classical equations of motion.
 However, it has important implications in the quantum theory.
 
 
@@ -336,7 +352,7 @@ The integral is a discrete topological invariant
 ,\end{align}
 known as the \emph{Pontryagin number}, the \emph{second Chern class} \cite[§\,1]{Witten_1989} or simply the `winding number' \cite[§\,2.2]{Tong_lecture_notes} of the gauge field configuration $\tsbm A$.
 
-Importantly, this means that the Chern--Simons term is not gauge invariant, if there are topologically distinct gauge fields $\tsbm A$ with varying winding number.
+Importantly, this means that the Chern--Simons term is \emph{not} gauge invariant if there are topologically distinct gauge fields $\tsbm A$ with varying winding number.
 % However, if the Lagrangian density includes a term
 % then the Lagrangian transforms as \eqref{eqn:discrete-QFT-Lagrangian-transformation}, which \emph{is} admissible in a quantum theory.
 % \note{Wrong. The action picks up a phase $iθn$. The equivalence described by \eqref{eqn:discrete-QFT-Lagrangian-transformation} makes $θ$ periodic.}
@@ -352,11 +368,12 @@ Since this enters the path integral as
 \begin{math}
 	e^{iθn} = e^{i(θ + 2π)n}
 ,\end{math}
-the coefficient $θ$, henceforth the \emph{$θ$-parameter}, does not affect the amplitude $\mathscr A$ if it undergoes additions of $2π$: it is an angular quantity.
+the coefficient $θ$, henceforth the \emph{$θ$-parameter}, is only defined modulo $2π$: it is an angular quantity.
 As a whole, \eqref{eqn:theta-term} is referred to as the $θ$-term.
 
-The standard model employs the Yang--Mills Lagrangian $\angbr{\tsbm F\wedge\star\tsbm F}$, but does not include the more exotic $θ$-term, because it has not found empirical use.
-The unwanted $θ$-term is therefore quickly overlooked, historically being considered an unphysical gauge-variant anomaly. \note{Cite.}
+% The standard model employs the Yang--Mills Lagrangian $\angbr{\tsbm F\wedge\star\tsbm F}$, but does not include the more exotic $θ$-term, because it has not found empirical use.
+The standard model employs the Yang--Mills Lagrangian $\angbr{\tsbm F\wedge\star\tsbm F}$, but does not find use for the $θ$-term.
+The unwanted $θ$-term is therefore quickly overlooked, and was historically considered an unphysical gauge-variant anomaly. \note{Cite.}
 
 
 
@@ -364,7 +381,7 @@ The unwanted $θ$-term is therefore quickly overlooked, historically being consi
 \subsection{The \texorpdfstring{$θ$-Term}{θ-Term} is a Consequence of the Non-trivial Vacuum}
 
 The $θ$-term is more than just a mathematical possibility which lacks physical reason for its inclusion in the Lagrangian.
-It is in fact central to non-Abelian gauge theories as a direct consequence of their \emph{non-trivial vacuum structure}, which is responsible for many interesting non-perturbative dynamical effects.
+It is in fact central to non-Abelian gauge theories as a direct consequence of their \emph{non-trivial vacuum structure}, which is responsible for interesting non-perturbative dynamical effects.
 
 
 For an Abelian gauge group $G = \U(1)$ with total gauge group bundle $\cal G = \cal U(1)$, the space of asymptotically-identity gauge transformations $\secs^\iden(\cal U(1))$ is continuously connected to the identity.\footnotemark
@@ -373,7 +390,8 @@ For an Abelian gauge group $G = \U(1)$ with total gauge group bundle $\cal G = \
 	\note{Who realised this? 't Hooft? Wigner?}
 }
 % (Explicitly, any map $g : \M \to \U(1)$ for which $g(x) \to \iden$ as $x \to \infty$ may be continuously brought to the identity. E.g., by defining $g'(x; λ) = λg(x)$ and taking $λ$ from $1 \to 0$.)
-This means that any gauge field configuration $\tsbm A$ can be continuously gauge transformed to $\tsbm A = \tsbm 0$, \note{Incorrect} which has winding number zero. 
+% This means that any gauge field configuration $\tsbm A$ can be continuously gauge transformed to $\tsbm A = \tsbm 0$, \note{Incorrect} which has winding number zero. 
+This means that any two gauge-equivalent gauge field configurations can be continuously gauge transformed into each other, meaning all gauge transformations preserve the topology of the gauge field.
 Hence, the winding number is zero for all $\tsbm A \in \forms^1(\cal M, \frak u(1))$.
 Consequently, the $θ$-term (with constant $θ$) is neither relevant in classical electromagnetism nor in QED, because it vanishes identically.
 % However, for non-Abelian gauge groups such as the $\SU(3)$ of QCD, the space of gauge transformations $\secs^\iden(\cal G)$ has a non-trivial topology, and contains gauge transformations which cannot be continuously transformed into one another.
