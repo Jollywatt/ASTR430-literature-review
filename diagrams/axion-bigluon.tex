@@ -1,0 +1,14 @@
+\RequirePackage{luatex85}
+\documentclass{standalone}
+
+\usepackage{unicode-math}
+\usepackage{tikz-feynman}
+
+\begin{document}
+	
+\feynmandiagram [small,horizontal=a to b] {
+  i1 [particle=$g$] -- [gluon] a -- [scalar] b [particle=$a$],
+  i2 [particle=$g$] -- [gluon] a
+};
+
+\end{document}
