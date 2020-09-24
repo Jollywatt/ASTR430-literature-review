@@ -83,7 +83,7 @@ In essence, the axion solution involves extending the standard model in order to
 In doing so, a new massive boson described by the scalar axion field $a(x)$ is necessarily introduced.
 There are different inequivalent ways to extend the standard model to realise the axion solution, but all Peccei--Quinn axion models share the same necessary features:
 \begin{itemize}
-	\item The extended Lagrangian $\LL^\text{\,SM}_{+\text{PQ}}$ possesses an additional global chiral symmetry $\UPQ$.
+	\item The extended Lagrangian $\LL_\text{PQ}$ possesses an additional global chiral symmetry $\UPQ$.
 	The exact action of this \emph{Peccei--Quinn symmetry} depends on the particular axion model, and is not of central importance.
 	The defining feature of $\UPQ$ is that it is chiral, so that a $\UPQ$ transformation by $α$ radians anomalously induces a $θ$-term $α\angbr{\tsbm F\wedge\tsbm F}$ in the effective Lagrangian (via the chiral anomaly).
 
@@ -100,10 +100,10 @@ However, the main result of Peccei and Quinn \cite{PecceiQuinn_1977} is that $\U
 To illustrate the Peccei--Quinn mechanism explicitly, consider a minimal toy axion model, which involves the addition of two fields to the standard model: a complex scalar field $Φ$ known as the \emph{parent field} (since it begets the axion field); and an additional fermion $\bm q$.
 The extended Lagrangian takes the form
 \begin{align}
-	\LL_\text{PQ} = \LL^{\bar θ}_\text{SM} + \qty[\angbr{\ts\dd Φ, \ts\dd Φ} + \RR(\bar\bm q_+Φ\bm q_-)]\vol + \LL_q
+	\LL_\text{PQ} = \LL^{\bar θ}_\text{SM} + \qty[\angbr{\ts\dd Φ, \ts\dd Φ} + \RR(\bar{\bm q_+}Φ\bm q_-)]\vol + \LL_q
 	\label{eqn:toy-axion-Lagrangian}
 ,\end{align}
-where $\LL^{\bar θ}_\text{SM}$ is the standard model Lagrangian (including the $\bar θ$-term); $\angbr{\ts\dd Φ, \ts\dd Φ}$ is a kinetic term for the parent field; $\RR(\bar\bm q_+Φ\bm q_-)$ is a Yukawa coupling term; and $\LL_q$ stands for any other terms involving the new fermion $\bm q$.
+where $\LL^{\bar θ}_\text{SM}$ is the standard model Lagrangian (including the $\bar θ$-term); $\angbr{\ts\dd Φ, \ts\dd Φ}$ is a kinetic term for the parent field; $\RR(\bar{\bm q_+}Φ\bm q_-)$ is a Yukawa coupling term; and $\LL_q$ stands for any other terms involving the new fermion $\bm q$.
 The action of $\UPQ$ on these fields is
 \begin{align}
 	Φ &\mapsto e^{i2α}Φ
@@ -111,16 +111,16 @@ The action of $\UPQ$ on these fields is
 	\quad\text{or}\quad
 	\left\{
 	\begin{aligned}
-	\bar\bm q_+ &\mapsto e^{iα}\bar\bm q_+
+	\bar{\bm q_+} &\mapsto e^{iα}\bar{\bm q_+}
 \\	\bm q_- &\mapsto e^{iα}\bm q_-
 	\end{aligned}
 	\right.
 	\label{eqn:toy-axion-transformation}
 ,\end{align}
-which indeed leaves $\angbr{\ts\dd Φ, \ts\dd Φ}$ and $\RR(\bar\bm q_+Φ\bm q_-)$ invariant.
+which indeed leaves $\angbr{\ts\dd Φ, \ts\dd Φ}$ and $\RR(\bar{\bm q_+}Φ\bm q_-)$ invariant.
 % Because of the chiral anomaly, the axial rotation of $q$ gives rise to a term $α \angbr{\tsbm F\wedge\tsbm F}$ in the effective Lagrangian.
 However, since $\bm q$ undergoes an axial rotation, the entire (effective) Lagrangian $\LL_\text{PQ}$ is only invariant with the simultaneous subtraction of a term $α \angbr{\tsbm F\wedge\tsbm F}$ arising from the chiral anomaly.
-Therefore, the entire action of $\UPQ$ is to transform $\bar θ \mapsto \bar θ - α$, as well as the fields as in \eqref{eqn:toy-axion-transformation}.
+Therefore, the entire action of $\UPQ$ is to transform $\bar θ \mapsto \bar θ - α$, as well as the fields.
 At this stage, the theory predicts \CP\ violation in the strong sector in areas where the axions and instantons interact such that $\bar θ(x) \ne 0$.
 
 The final component of the axion solution is to make the parent field $Φ$ spontaneously break.
@@ -138,14 +138,14 @@ At sufficiently low energies, the effective degree of freedom is the phase of $�
 The phase $a(x)$ is the Nambu--Goldstone boson associated with the spontaneous breaking of $\UPQ$ by the parent field $Φ$, and is identified as the axion field.
 After spontaneous breaking, the Yukawa term involves a complex mass, which can be normalised by a $\UPQ$ rotation by $-a/f_a$
 \begin{align}
-	\RR(\bar\bm q_+ Φ \bm q_-) = f_a\RR(\bar\bm q_+ e^{ia/f_a} \bm q_-)
-	\mapsto f_a\RR(\bar\bm q_+ \bm q_-)
+	\RR(\bar{\bm q_+} Φ \bm q_-) = f_a\RR(\bar{\bm q_+} e^{ia/f_a} \bm q_-)
+	\mapsto f_a\RR(\bar{\bm q_+} \bm q_-)
 .\end{align}
 This axial rotation of $\bm q$ induces a corresponding rotation of $θ \mapsto θ - a/f_a$, so that the Lagrangian \eqref{eqn:toy-axion-Lagrangian} becomes
 \begin{align}
 	\LL_\text{PQ} = \LL_\text{SM}
 	+ \qty[f_a^2\angbr{\ts\dd a, \ts\dd a}
-	+ f_a\RR(\bar\bm q_+ \bm q_-)]\vol
+	+ f_a\RR(\bar{\bm q_+} \bm q_-)]\vol
 	+ \LL_q
 	+ \qty(\bar θ - \frac{a}{f_a})\frac{1}{8π^2}\angbr{\tsbm F\wedge\tsbm F}
 	\label{eqn:toy-axion-Lagrangian-broken}
@@ -154,9 +154,9 @@ after spontaneous symmetry breaking of $Φ$.
 
 \begingroup
 \newcommand{\aphys}{a_\text{phys}}
-Peccei and Quinn showed that the last term in \eqref{eqn:toy-axion-Lagrangian-broken} provides an effective potential $V(a)$ whose minimum occurs at $V(\barθf_a) = 0$, giving the axion a vacuum expectation value $\angbr{a} = \barθf_a$ and a mass $m_a = \pdv*[2]{V}{a}|_{\angbr{a}}$.
+Peccei and Quinn showed that the last term in \eqref{eqn:toy-axion-Lagrangian-broken} provides an effective potential $V(a)$ for the axion whose minimum occurs at $V(\barθf_a) = 0$, giving the axion a vacuum expectation value $\angbr{a} = \barθf_a$ and a mass $m_a = \pdv*[2]{V}{a}|_{\angbr{a}}$.
 The axion field $a$ is not physical, since $a \mapsto a + α$ under a $\UPQ$ rotation; however, the deviation from the expectation value $a_\text{phys} \coloneqq a - \angbr{a}$ is physical.
-Expressing the Lagrangian in terms of the physical axion field reveals that the $\bar θ$-term vanishes, solving the strong \CP\ problem.
+Expressing the Lagrangian in terms of the physical axion field reveals that the $\bar θ$-term vanishes, thus solving the strong \CP\ problem.
 Focusing on terms involving $\aphys$, the effective Lagrangian is
 \begin{align}
 	\LL_\text{PQ} = \LL_\text{SM}
@@ -167,20 +167,36 @@ Focusing on terms involving $\aphys$, the effective Lagrangian is
 	\label{eqn:axion-Lagrangian}
 ,\end{align}
 where $\LL_q'$ includes all terms involving $\bm q$.
+Different axion models give rise to different $\LL_q'$, but otherwise share the Lagrangian \eqref{eqn:axion-Lagrangian}.
 \endgroup
 
 
-The precise axion--matter interactions entering through the term $\LL_q'$ are model dependent, but generally have coupling strengths inversely proportional to the axion scale, $f_a$ \cite{Duffy_2009}.
-However, all Peccei--Quinn axions interact with the gauge field though the last term in the Lagrangian \eqref{eqn:axion-Lagrangian}.
-In perturbation theory, this corresponds to a Feynman vertex in which an axion and two photons meet, as in figure~\ref{fig:axion-biphoton}.
-Since the term is proportional to $\angbr{\tsbm F\wedge\tsbm F} = \ts F\wedge\ts F + \angbr{\tsbm G\wedge\tsbm G}$, where $\tsbm F = \ts F \oplus \tsbm G$ is the total gauge field decomposed into the electromagnetic $\ts F$ and gluonic $\tsbm G$ gauge fields, the interaction is strong where $\ts F\wedge\ts F = (\bm E \cdot \bm B)\,\vol$ is large.
 \begin{figure}[h]
 	\centering
-	\includegraphics{diagrams/build/axion-biphoton.pdf}
+	\includegraphics{diagrams/axion-biphoton.pdf}
 	\hspace{4em}
-	\includegraphics{diagrams/build/axion-bigluon.pdf}
+	\includegraphics{diagrams/axion-bigluon.pdf}
 	\caption{Axion--photon and axion-gluon interaction vertices.}
 	\label{fig:axion-biphoton}
 \end{figure}
-Thus, axions may be generated from photons, and vice-versa, in strong magnetic fields.
-This suggests methods for experimentally detecting axions.
+The precise axion--matter interactions entering through the term $\LL_q'$ are model dependent, but generally have coupling strengths inversely proportional to the axion scale, $f_a$ \cite{Duffy_2009}.
+However, all Peccei--Quinn axions interact with the gauge field though the last term in the Lagrangian \eqref{eqn:axion-Lagrangian}.
+The last term is proportional to $\angbr{\tsbm F\wedge\tsbm F} = \ts F\wedge\ts F + \angbr{\tsbm G\wedge\tsbm G}$, where $\tsbm F = \ts F \oplus \tsbm G$ is the total gauge field decomposed into the electromagnetic $\ts F$ and gluonic $\tsbm G$ gauge fields.
+In perturbation theory, this corresponds to a Feynman vertex in which an axion and two photons $aγγ$, or an axion and two gluons $agg$ meet, as in figure~\ref{fig:axion-biphoton}.
+The $aγγ$ interaction is strong where $\ts F\wedge\ts F = (\bm E \cdot \bm B)\,\vol$ is large.
+This implies that axions may be generated from photons, and vice-versa, in the presence of strong electromagnetic fields, suggesting methods for experimentally detecting axions in the lab or in astrophysical data.
+
+
+\subsection{Axion Models}
+
+\subsubsection{Original Peccei--Quinn Axion}
+
+The original Peccei--Quinn model of the axion, which was proposed in \cite{PecceiQuinn_1977} alongside the Peccei--Quinn mechanism, implemented the $\UPQ$ symmetry by supposing that the standard model possessed two Higgs fields $h_1$ and $h_2$ which couple differently to up and down quarks.
+Denoting by $\bm ψ_\pm = \bm ψ_\pm^{(u)} \oplus \bm ψ_\pm^{(d)}$ the left- and right-handed quarks arranged into up-type and down-type parts, the two Higgs fields
+\begin{align}
+	\LL_\text{Yukawa} = \Re\qty(h_1 \bar{\bm ψ}_+ \mat m_u \bm ψ_-^{(u)} + h_2 \bar{\bm ψ}_+ \mat m_d \bm ψ_-^{(d)})
+,\end{align}
+where $\mat m_u$ and $\mat m_d$ are (non-square) matrices of Yukawa coupling constants.
+The presence of the two Higgs fields lets $\LL_\text{Yukawa}$ be invariant under two independent chiral rotations of the up and down quarks, hence accomplishing the additional $\UPQ$ symmetry.
+
+In this model, the axion scale is necessarily equal to the electroweak scale, $f_a \approx \SI{246}{\giga\eV}$.
