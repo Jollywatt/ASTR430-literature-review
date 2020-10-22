@@ -93,11 +93,11 @@ There are different inequivalent ways to extend the standard model to realise th
 \end{itemize}
 
 If the extra $\UPQ$ symmetry was indeed an exact gauge symmetry, then the strong \CP\ problem is trivially solved, because a $\UPQ$ rotation by $\bar θ$ radians cancels the $\bar θ$-term in the effective Lagrangian, meaning the dynamics of the theory are equivalent to one in which $\bar θ = 0$.
-However, the main result of Peccei and Quinn \cite{PecceiQuinn_1977} is that $\UPQ$ need not be an exact symmetry of the theory: if $\UPQ$ is spontaneously broken, then $\bar θ$ is still driven to zero because it obtains a potential from the chiral anomaly.
+However, the main result of Peccei and Quinn \cite{PecceiQuinn_1977} is that $\UPQ$ need not be an exact symmetry of the theory: if $\UPQ$ is spontaneously broken, then $\bar θ$ is still driven to zero because it obtains a potential from the chiral anomaly with a minimum at $\bar θ = 0$, \cite{Peccei_1996}.
 
 \subsubsection{A Toy Axion Model}
 
-To illustrate the Peccei--Quinn mechanism explicitly, consider a minimal toy axion model, which involves the addition of two fields to the standard model: a complex scalar field $Φ$ known as the \emph{parent field} (since it begets the axion field); and an additional fermion $\bm q$.
+To illustrate the Peccei--Quinn mechanism explicitly, consider a minimal toy axion model, which involves the addition of two fields to the standard model: a complex scalar field $Φ$ known as the \emph{parent field} (so named since it begets the axion field after spontaneous breaking); and an additional fermion $\bm q$.
 The extended Lagrangian takes the form
 \begin{align}
 	\LL_\text{PQ} = \LL^{\bar θ}_\text{SM} + \qty[\angbr{\ts\dd Φ, \ts\dd Φ} + \RR(\bar{\bm q_+}Φ\bm q_-)]\vol + \LL_q
@@ -129,19 +129,21 @@ This may be done by adding a ``Mexican hat'' potential to $\LL_\text{PQ}$ of the
 	V(|Φ|) = λ\qty(|Φ|^2 - f_a^2)^2
 ,\end{align}
 where the parameter $f_a$ is interpreted as the \emph{axion scale}, the energy below which axion dynamics are relevant.\note{???}
-Below this energy scale, the parent field $Φ$ relaxes to some minimum of the form
+Below this energy scale, the parent field $Φ$ relaxes to some non-unique minimum of the form
 \begin{align}
 	Φ = |Φ|e^{i\arg Φ} = f_a e^{ia/f_a}
 ,\end{align}
 where $a$ varies across space.
-At sufficiently low energies, the effective degree of freedom is the phase of $Φ$, not $Φ$ itself.
+At sufficiently low energies, the effective degree of freedom is the phase of $Φ$, not $Φ$ itself.\footnote{
+	We assume that $λ$ is sufficiently large that the radial degree of freedom $ρ$ in $Φ = (f_a + ρ)e^{ia/f_a}$ can be neglected at the energy scale $f_a$.
+}
 The phase $a(x)$ is the Nambu--Goldstone boson associated with the spontaneous breaking of $\UPQ$ by the parent field $Φ$, and is identified as the axion field.
 After spontaneous breaking, the Yukawa term involves a complex mass, which can be normalised by a $\UPQ$ rotation by $-a/f_a$
 \begin{align}
 	\RR(\bar{\bm q_+} Φ \bm q_-) = f_a\RR(\bar{\bm q_+} e^{ia/f_a} \bm q_-)
 	\mapsto f_a\RR(\bar{\bm q_+} \bm q_-)
 .\end{align}
-This axial rotation of $\bm q$ induces a corresponding rotation of $θ \mapsto θ - a/f_a$, so that the Lagrangian \eqref{eqn:toy-axion-Lagrangian} becomes
+This axial rotation of $\bm q$ induces a corresponding rotation of $θ \mapsto θ - a/f_a$, so that the (effective, normalised) Lagrangian \eqref{eqn:toy-axion-Lagrangian} becomes
 \begin{align}
 	\LL_\text{PQ} = \LL_\text{SM}
 	+ \qty[f_a^2\angbr{\ts\dd a, \ts\dd a}
@@ -156,7 +158,7 @@ after spontaneous symmetry breaking of $Φ$.
 \newcommand{\aphys}{a_\text{phys}}
 Peccei and Quinn showed that the last term in \eqref{eqn:toy-axion-Lagrangian-broken} provides an effective potential $V(a)$ for the axion whose minimum occurs at $V(\barθf_a) = 0$, giving the axion a vacuum expectation value $\angbr{a} = \barθf_a$ and a mass $m_a = \pdv*[2]{V}{a}|_{\angbr{a}}$.
 The axion field $a$ is not physical, since $a \mapsto a + α$ under a $\UPQ$ rotation; however, the deviation from the expectation value $a_\text{phys} \coloneqq a - \angbr{a}$ is physical.
-Expressing the Lagrangian in terms of the physical axion field reveals that the $\bar θ$-term vanishes, thus solving the strong \CP\ problem.
+Expressing the Lagrangian in terms of the physical axion field reveals that the $\bar θ$-term vanishes, thus solving the strong \CP\ problem \cite{Peccei_1996}.
 Focusing on terms involving $\aphys$, the effective Lagrangian is
 \begin{align}
 	\LL_\text{PQ} = \LL_\text{SM}
@@ -168,6 +170,11 @@ Focusing on terms involving $\aphys$, the effective Lagrangian is
 ,\end{align}
 where $\LL_q'$ includes all terms involving $\bm q$.
 Different axion models give rise to different $\LL_q'$, but otherwise share the Lagrangian \eqref{eqn:axion-Lagrangian}.
+The axion mass $m_a$ depends on the axion scale $f_a$ as
+\begin{align}
+	m_a \approx \SI{6}{\eV}\,\qty(\frac{10^6\si{\giga\eV}}{f_a})
+\end{align}
+and is otherwise independent of the axion model, using accepted values of standard model parameters \cite{Cadamuro_2011}.
 \endgroup
 
 
@@ -184,7 +191,8 @@ However, all Peccei--Quinn axions interact with the gauge field though the last 
 The last term is proportional to $\angbr{\tsbm F\wedge\tsbm F} = \ts F\wedge\ts F + \angbr{\tsbm G\wedge\tsbm G}$, where $\tsbm F = \ts F \oplus \tsbm G$ is the total gauge field decomposed into the electromagnetic $\ts F$ and gluonic $\tsbm G$ gauge fields.
 In perturbation theory, this corresponds to a Feynman vertex in which an axion and two photons $aγγ$, or an axion and two gluons $agg$ meet, as in figure~\ref{fig:axion-biphoton}.
 The $aγγ$ interaction is strong where $\ts F\wedge\ts F = (\bm E \cdot \bm B)\,\vol$ is large.
-This implies that axions may be generated from photons, and vice-versa, in the presence of strong electromagnetic fields, suggesting methods for experimentally detecting axions in the lab or in astrophysical data.
+This implies that axions may be generated from photons, and vice-versa, in the presence of strong electromagnetic fields, suggesting methods for experimentally detecting axions in the lab or in magnetised stellar bodies.
+The $agg$ vertex gives rise to interactions between axions and strongly-interacting hadronic matter (in particular pions) \cite{Cadamuro_2011}.
 
 
 \subsection{Axion Models}
@@ -192,19 +200,38 @@ This implies that axions may be generated from photons, and vice-versa, in the p
 \subsubsection{The Original Peccei--Quinn--Weinberg--Wilczek Axion}
 
 
-The first proposed axion model, the Peccei--Quinn--Weinberg--Wilczek axion, \note{cite} implements the $\UPQ$ symmetry by supposing that the standard model possessed two Higgs fields $h_1$ and $h_2$ which couple differently to up and down quarks.
+The first proposed axion model, the Peccei--Quinn--Weinberg--Wilczek (PQWW) axion, \cite{Marsh_2016} implements the $\UPQ$ symmetry by supposing that the standard model possessed two Higgs fields $h_1$ and $h_2$ which couple differently to up and down quarks, instead of just one.
+\note{Additionally, a complex scalar field $Φ$ is introduced as in the toy model, which is spontaneously broken and contains the axion as its angular degree of freedom.}
+\note{
+	WRONG: Apparently the complex scalar field is also a Higgs doublet!? [Marsh - Axion Cosmology, pg 7]
+}
 Denoting by $\bm ψ_\pm = \bm ψ_\pm^{(u)} \oplus \bm ψ_\pm^{(d)}$ the left- and right-handed quarks arranged into up-type and down-type parts, the two Higgs fields
 \begin{align}
 	\LL_\text{Yukawa} = \Re\qty(h_1 \bar{\bm ψ}_+ \mat m_u \bm ψ_-^{(u)} + h_2 \bar{\bm ψ}_+ \mat m_d \bm ψ_-^{(d)})
 ,\end{align}
 where $\mat m_u$ and $\mat m_d$ are (non-square) matrices of Yukawa coupling constants.
+The first Higgs field $h_1$ gives mass to the up-type quarks, and $h_2$ to down-type quarks.
 The presence of the two Higgs fields lets $\LL_\text{Yukawa}$ be invariant under two independent chiral rotations of the up and down quarks, hence accomplishing the additional $\UPQ$ symmetry.
 
-In this model, the axion scale is necessarily equal to the electroweak scale, $f_a \approx \SI{246}{\giga\eV}$.
+In this model, the axion scale $f_a$ is necessarily on the order of the electroweak scale, $f_\text{EW} \approx \SI{246}{\giga\eV}$ (which is the vacuum expectation value of the Higgs field).
+This resulting axions are too massive ($m_a \approx \SI{25}{\kilo\eV}$) and too strongly interacting to agree with experiment.
+In particular, the PQWW axion is ruled out by the non-observation of the kaon decay $K^+ \to π^+ + a$ in electron beam-dump experiments\footnotemark\ \cite{Peccei_1996}.
+\footnotetext{
+	Beam-dump experiments involve firing high-energy protons into a high-absorption material in order to isolate neutral particles which are created from the decelerating protons and which propagate through the absorber.	
+}
+Any successful axion model must have a higher energy scale $f_a$ (i.e., lighter mass $m_a$) to be compatible with the constraints which excluded the PQWW model \cite{Marsh_2016,riordan1987search}.
+
 
 \note{State that is physically excluded}
 
-\subsubsection{Invisible Axions}
+\subsubsection{Light Invisible Axions}
 
-KSVZ (Kim--Shifman--Vainshtein--Zakharov)
-DFSZ (Dine--Fischler--Srednicki--Zhitnitsky)
+Axions with a larger energy scale $f_a \gg f_\text{EW}$ are light ($m_a \sim 1/f_a$), long lived (e.g., the rate of $a \to 2γ$ goes as $(f_a)^5$) and weakly interacting (couplings are suppressed by $1/f_a$).
+In particular, electromagnetic interactions are weak, rendering them invisible.
+Such axion models generally fall into two classes: \cite{Peccei_1996,Marsh_2016}
+\begin{itemize}
+	\item \textit{The Kim--Shifman--Vainshtein--Zakharov (KSVZ) Axion} \\
+	The KSVZ model introduces an additional massive quark $\bm q$ as well as the parent field $Φ$.
+	\item \textit{The Dine--Fischler--Srednicki--Zhitnitsky (DFSZ) Axion} \\
+	The DFSZ model contains two Higgs doubles like the PQWW model, but also contains a separate scalar parent field $Φ$.
+\end{itemize}
