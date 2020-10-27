@@ -47,7 +47,7 @@ Only the bare quark masses contribute to the value of $\bar θ$ via the quark ma
 Importantly, it was plausible that this secondary source of the up quark's mass could be of order $m_\text{eff} \approx \SI{2.2}{\mega\eV}$, allowing $m_u$ to vanish while still preserving the up quark's overall mass.
 
 The massless up quark hypothesis remained controversial until \emph{lattice gauge theory} had advanced sufficiently to made numerical simulations of non-perturbative effects in QCD possible.
-Consensus was reached by 2019 that the instanton contribution $m_\text{eff}$ is not sufficiently large, and hence that the massless up quark hypothesis is false \cite{ruling-out-massless-uquark_2015,aoki2016review,ruling-out-massless-uquark_2020}.
+Strong consensus that the instanton contribution $m_\text{eff}$ is not sufficiently large was reached in late 2019 \cite{ruling-out-massless-uquark_2015,aoki2016review,ruling-out-massless-uquark_2020}.
 Instead, another mechanism is required to explain the smallness of the $\barθ$-parameter.
 
 
@@ -97,7 +97,7 @@ However, the main result of Peccei and Quinn \cite{PecceiQuinn_1977} is that $\U
 
 \subsubsection{A Toy Axion Model}
 
-To illustrate the Peccei--Quinn mechanism explicitly, consider a minimal toy axion model, which involves the addition of two fields to the standard model: a complex scalar field $Φ$ known as the \emph{parent field} (so named since it begets the axion field after spontaneous breaking); and an additional fermion $\bm q$.
+To illustrate the Peccei--Quinn mechanism explicitly, consider a minimal toy axion model, which involves the addition of two fields to the standard model: a complex scalar field $Φ$ known as the \emph{parent field} (so named since its phase, after spontaneous breaking, is the axion field); and an additional fermion $\bm q$.
 The extended Lagrangian takes the form
 \begin{align}
 	\LL_\text{PQ} = \LL^{\bar θ}_\text{SM} + \qty[\angbr{\ts\dd Φ, \ts\dd Φ} + \RR(\bar{\bm q_+}Φ\bm q_-)]\vol + \LL_q
@@ -128,7 +128,7 @@ This may be done by adding a ``Mexican hat'' potential to $\LL_\text{PQ}$ of the
 \begin{align}
 	V(|Φ|) = λ\qty(|Φ|^2 - f_a^2)^2
 ,\end{align}
-where the parameter $f_a$ is interpreted as the \emph{axion scale}, the energy below which axion dynamics are relevant.\note{???}
+where the parameter $f_a$ is interpreted as the \emph{axion scale}: the energy below which axion dynamics are relevant.\note{???}
 Below this energy scale, the parent field $Φ$ relaxes to some non-unique minimum of the form
 \begin{align}
 	Φ = |Φ|e^{i\arg Φ} = f_a e^{ia/f_a}
@@ -137,7 +137,7 @@ where $a$ varies across space.
 At sufficiently low energies, the effective degree of freedom is the phase of $Φ$, not $Φ$ itself.\footnote{
 	We assume that $λ$ is sufficiently large that the radial degree of freedom $ρ$ in $Φ = (f_a + ρ)e^{ia/f_a}$ can be neglected at the energy scale $f_a$.
 }
-The phase $a(x)$ is the Nambu--Goldstone boson associated with the spontaneous breaking of $\UPQ$ by the parent field $Φ$, and is identified as the axion field.
+The resulting phase $a(x)$ is named the Nambu--Goldstone boson associated with the spontaneous breaking of $\UPQ$ by the parent field $Φ$, and is identified as the axion field.
 After spontaneous breaking, the Yukawa term involves a complex mass, which can be normalised by a $\UPQ$ rotation by $-a/f_a$
 \begin{align}
 	\RR(\bar{\bm q_+} Φ \bm q_-) = f_a\RR(\bar{\bm q_+} e^{ia/f_a} \bm q_-)
@@ -186,6 +186,7 @@ and is otherwise independent of the axion model, using accepted values of standa
 	\caption{Axion--photon and axion-gluon interaction vertices.}
 	\label{fig:axion-biphoton}
 \end{figure}
+
 The precise axion--matter interactions entering through the term $\LL_q'$ are model dependent, but generally have coupling strengths inversely proportional to the axion scale, $f_a$ \cite{Duffy_2009}.
 However, all Peccei--Quinn axions interact with the gauge field though the last term in the Lagrangian \eqref{eqn:axion-Lagrangian}.
 The last term is proportional to $\angbr{\tsbm F\wedge\tsbm F} = \ts F\wedge\ts F + \angbr{\tsbm G\wedge\tsbm G}$, where $\tsbm F = \ts F \oplus \tsbm G$ is the total gauge field decomposed into the electromagnetic $\ts F$ and gluonic $\tsbm G$ gauge fields.
@@ -200,29 +201,27 @@ The $agg$ vertex gives rise to interactions between axions and strongly-interact
 \subsubsection{The Original Peccei--Quinn--Weinberg--Wilczek Axion}
 
 
-The first proposed axion model, the Peccei--Quinn--Weinberg--Wilczek (PQWW) axion, \cite{Marsh_2016} implements the $\UPQ$ symmetry by supposing that the standard model possessed two Higgs fields $h_1$ and $h_2$ which couple differently to up and down quarks, instead of just one.
+The first proposed axion model, the Peccei--Quinn--Weinberg--Wilczek (PQWW) axion, \cite{Marsh_2016} implements the $\UPQ$ symmetry by supposing that the standard model possessed two Higgs fields $H_1$ and $H_2$ which couple differently to up and down quarks, instead of just one.
 \note{Additionally, a complex scalar field $Φ$ is introduced as in the toy model, which is spontaneously broken and contains the axion as its angular degree of freedom.}
 \note{
 	WRONG: Apparently the complex scalar field is also a Higgs doublet!? [Marsh - Axion Cosmology, pg 7]
 }
 Denoting by $\bm ψ_\pm = \bm ψ_\pm^{(u)} \oplus \bm ψ_\pm^{(d)}$ the left- and right-handed quarks arranged into up-type and down-type parts, the two Higgs fields
 \begin{align}
-	\LL_\text{Yukawa} = \Re\qty(h_1 \bar{\bm ψ}_+ \mat m_u \bm ψ_-^{(u)} + h_2 \bar{\bm ψ}_+ \mat m_d \bm ψ_-^{(d)})
+	\LL_\text{Yukawa} = \Re\qty(H_1 \bar{\bm ψ}_+ \mat m_u \bm ψ_-^{(u)} + H_2 \bar{\bm ψ}_+ \mat m_d \bm ψ_-^{(d)})
 ,\end{align}
 where $\mat m_u$ and $\mat m_d$ are (non-square) matrices of Yukawa coupling constants.
-The first Higgs field $h_1$ gives mass to the up-type quarks, and $h_2$ to down-type quarks.
+The first Higgs field $H_1$ gives mass to the up-type quarks, and $H_2$ to down-type quarks.
 The presence of the two Higgs fields lets $\LL_\text{Yukawa}$ be invariant under two independent chiral rotations of the up and down quarks, hence accomplishing the additional $\UPQ$ symmetry.
 
 In this model, the axion scale $f_a$ is necessarily on the order of the electroweak scale, $f_\text{EW} \approx \SI{246}{\giga\eV}$ (which is the vacuum expectation value of the Higgs field).
-This resulting axions are too massive ($m_a \approx \SI{25}{\kilo\eV}$) and too strongly interacting to agree with experiment.
-In particular, the PQWW axion is ruled out by the non-observation of the kaon decay $K^+ \to π^+ + a$ in electron beam-dump experiments\footnotemark\ \cite{Peccei_1996}.
+The resulting axions are too massive ($m_a \approx \SI{25}{\kilo\eV}$) and too strongly interacting to agree with experiment.
+In particular, the PQWW axion is ruled out by the non-observation of the kaon decay $K^+ \to π^+ + a$ in electron beam-dump experiments\footnotemark\ \cite{Peccei_1996,riordan1987search}.
 \footnotetext{
 	Beam-dump experiments involve firing high-energy protons into a high-absorption material in order to isolate neutral particles which are created from the decelerating protons and which propagate through the absorber.	
 }
-Any successful axion model must have a higher energy scale $f_a$ (i.e., lighter mass $m_a$) to be compatible with the constraints which excluded the PQWW model \cite{Marsh_2016,riordan1987search}.
+Any successful axion model must have a higher energy scale $f_a$ (i.e., lighter mass $m_a$) to be compatible with the constraints which excluded the PQWW model \cite{Marsh_2016}.
 
-
-\note{State that is physically excluded}
 
 \subsubsection{Light Invisible Axions}
 
