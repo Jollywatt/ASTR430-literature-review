@@ -1,0 +1,16 @@
+\RequirePackage{luatex85}
+\documentclass{standalone}
+
+\usepackage{unicode-math}
+\usepackage{tikz-feynman}
+
+\begin{document}
+	
+\feynmandiagram [small,horizontal=a to b] {
+  i2 [particle=$γ$] -- [photon] a,
+  i1 [particle=$e^-$] -- [fermion] a -- [fermion] b -- [scalar] o1 [particle=$a$],
+  b -- [fermion] o2 [particle=$e^-$],
+  % a -- [fermion] b,
+};
+
+\end{document}

@@ -36,26 +36,36 @@ If a species' most dominant interactions freeze-out, then it becomes thermally i
 
 \section{Axion Interactions and Processes}
 
+
+Axions decay into photons via the axion-photon vertex at a rate
+\begin{align}
+	Γ_{a\to 2γ} = \frac{g_{aγγ}^2m_a^3}{64π} \approx 10^{-24}\,\si{\per\second}\qty(\frac{m_a}{\si{\eV}})^5
+,\end{align}
+where the coupling strength $g_{aγγ}$ can be approximately written in terms of the mass given, with an $\cal O(1)$ model dependence.
+Thus, for axions to exist in significant abundance, they must be sufficiently light, less the decay process dominates.
+The inverse decay $2γ \to a$ is also possible, with a rate $Γ_{2γ \to a} \propto 1/T$ which increases as the universe cools, so that axions recouple at late epochs \cite{Cadamuro_2011,Marsh_2016}.
+
+Axions also interact by the strong force with hadronic matter via the gluon-axion vertex, \ref{fig:axion-bigluon}.
+In particular, this gives rise to Primakoff and Compton electron scattering processes shown in figure~\ref{fig:scattering-processes}.
+These two scattering processes, along with photon decay and inverse decay, are the dominant interactions relevant to cosmology.
+
+
 \begin{figure}[h]
 	\centering
-	\begin{subfigure}[]{0.3\textwidth}
+	\begin{subfigure}[]{0.4\textwidth}
 		\centering
 		\includegraphics{diagrams/primakoff-process.pdf}
 		\caption{Primakoff}
-		\label{fig:Primakoff}
+		\label{fig:Primakoff-scattering}
 	\end{subfigure}
-	\begin{subfigure}[]{0.3\textwidth}
+	\begin{subfigure}[]{0.4\textwidth}
 		\centering
 		\includegraphics{diagrams/compton-process.pdf}
 		\caption{Compton}
-		\label{fig:Compton}
+		\label{fig:Compton-scattering}
 	\end{subfigure}
 	\caption{Dominant axion processes with electrons (or positrons with arrows reversed).}
-	\label{fig:axion-biphoton}
+	\label{fig:scattering-processes}
 \end{figure}
 
-
-\begin{align}
-	Γ_{a\to γγ} \approx \SI{1.1e-24}{\per\second}\qty(\frac{m_a}{\si{\eV}})^5
-\end{align}
 

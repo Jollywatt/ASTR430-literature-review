@@ -1,4 +1,4 @@
-\chapter{Solutions to the Strong \CP\ Problem}
+\chapter{The Axion Solution}
 
 % At first sight, the strong \CP\ problem may not appear to be a problem at all.
 % After all, QCD is a theory whose Lagrangian possibly---but not necessarily---admits a term $\propto \angbr{\tsbm F \wedge \tsbm F}$ which gives rise to \CP-violating interactions in the strong force, predicting an electric dipole moment of the neutron.
@@ -29,27 +29,6 @@
 % % from http://scipp.ucsc.edu/~dine/solutions_of_strong_cp.pdf
 % The strong \CP\ problem is therefore a compelling theoretical indication that the standard model remains incomplete.
 
-\note{Introduce and outline solutions}
-
-
-\section{The Massless Quark Solution}
-
-The simplest resolution to the strong \CP\ problem is to stipulate that at least one quark is in fact massless.
-If this were true, then $\det\mat m$ would vanish, and the parameter $\bar θ = θ + \arg\det\mat m$ would be rendered unphysical.
-The \emph{massless quark solution} is the claim that $\bar θ \approx 0$ because the up quark is massless, $m_u = 0$.
-
-% In particular, $\barθ$ becomes singular when one of the quark masses is zero.
-% Therefore, the $\barθ$-parameter, and hence the $θ$-term, are entirely unphysical in the case of a massless quark.
-
-At first sight, this economical resolution to the strong \CP\ problem appears to be in contradiction with the experimentally determined masses of the quarks, all of which are non-zero (including the up quark, with mass $\sim \SI{2.2}{\mega\eV}$).
-However, it was realised in the mid-1980s that the mass of the up quark has \emph{two} contributions in the standard model Lagrangian: not only the Yukawa mass $m_u$ (the `bare mass') as introduced above, but also a non-perturbative contribution $m_\text{eff}$ from topological effects (i.e., instantons) \cite{ruling-out-massless-uquark_2020}.
-Only the bare quark masses contribute to the value of $\bar θ$ via the quark mass matrix $\mat m$.
-Importantly, it was plausible that this secondary source of the up quark's mass could be of order $m_\text{eff} \approx \SI{2.2}{\mega\eV}$, allowing $m_u$ to vanish while still preserving the up quark's overall mass.
-
-The massless up quark hypothesis remained controversial until \emph{lattice gauge theory} had advanced sufficiently to made numerical simulations of non-perturbative effects in QCD possible.
-Strong consensus that the instanton contribution $m_\text{eff}$ is not sufficiently large was reached in late 2019 \cite{ruling-out-massless-uquark_2015,aoki2016review,ruling-out-massless-uquark_2020}.
-Instead, another mechanism is required to explain the smallness of the $\barθ$-parameter.
-
 
 
 
@@ -74,7 +53,7 @@ Instead, another mechanism is required to explain the smallness of the $\barθ$-
 
 
 
-\section{The Peccei--Quinn Mechanism}
+\subsubsection{The Peccei--Quinn Mechanism}
 
 
 Perhaps the most famous resolution to the strong \CP\ problem is the Peccei--Quinn theory of the \emph{axion}, first proposed in 1977 \cite{PecceiQuinn_1977}.
@@ -94,6 +73,8 @@ There are different inequivalent ways to extend the standard model to realise th
 
 If the extra $\UPQ$ symmetry was indeed an exact gauge symmetry, then the strong \CP\ problem is trivially solved, because a $\UPQ$ rotation by $\bar θ$ radians cancels the $\bar θ$-term in the effective Lagrangian, meaning the dynamics of the theory are equivalent to one in which $\bar θ = 0$.
 However, the main result of Peccei and Quinn \cite{PecceiQuinn_1977} is that $\UPQ$ need not be an exact symmetry of the theory: if $\UPQ$ is spontaneously broken, then $\bar θ$ is still driven to zero because it obtains a potential from the chiral anomaly with a minimum at $\bar θ = 0$, \cite{Peccei_1996}.
+
+\section{Axion Models}
 
 \subsubsection{A Toy Axion Model}
 
@@ -178,13 +159,24 @@ and is otherwise independent of the axion model, using accepted values of standa
 \endgroup
 
 
+
 \begin{figure}[h]
 	\centering
-	\includegraphics{diagrams/axion-biphoton.pdf}
-	\hspace{4em}
-	\includegraphics{diagrams/axion-bigluon.pdf}
+	\begin{subfigure}[]{0.2\textwidth}
+		\centering
+		\includegraphics{diagrams/axion-biphoton.pdf}
+		\caption{}
+		\label{fig:axion-biphoton}
+	\end{subfigure}
+	\hspace{3em}
+	\begin{subfigure}[]{0.2\textwidth}
+		\centering
+		\includegraphics{diagrams/axion-bigluon.pdf}
+		\caption{}
+		\label{fig:axion-bigluon}
+	\end{subfigure}
 	\caption{Axion--photon and axion-gluon interaction vertices.}
-	\label{fig:axion-biphoton}
+	\label{fig:axion-vertices}
 \end{figure}
 
 The precise axion--matter interactions entering through the term $\LL_q'$ are model dependent, but generally have coupling strengths inversely proportional to the axion scale, $f_a$ \cite{Duffy_2009}.
@@ -196,9 +188,7 @@ This implies that axions may be generated from photons, and vice-versa, in the p
 The $agg$ vertex gives rise to interactions between axions and strongly-interacting hadronic matter (in particular pions) \cite{Cadamuro_2011}.
 
 
-\subsection{Axion Models}
-
-\subsubsection{The Original Peccei--Quinn--Weinberg--Wilczek Axion}
+\subsection{The Original Peccei--Quinn--Weinberg--Wilczek Axion}
 
 
 The first proposed axion model, the Peccei--Quinn--Weinberg--Wilczek (PQWW) axion, \cite{Marsh_2016} implements the $\UPQ$ symmetry by supposing that the standard model possesses two Higgs fields $H_1$ and $H_2$ which couple differently to up and down quarks, instead of just one which couples to all quarks.
@@ -223,7 +213,7 @@ In particular, the PQWW axion is ruled out by the non-observation of the kaon de
 Any successful axion model must have a higher energy scale $f_a$ (i.e., lighter mass $m_a$) to be compatible with the constraints which excluded the PQWW model \cite{Marsh_2016}.
 
 
-\subsubsection{Light Invisible Axions}
+\subsection{Light Invisible Axions}
 
 Axions with a larger energy scale $f_a \gg f_\text{EW}$ are light ($m_a \sim 1/f_a$), long lived (e.g., the rate of $a \to 2γ$ goes as $(f_a)^5$) and weakly interacting (couplings are suppressed by $1/f_a$).
 In particular, electromagnetic interactions are weak, rendering them invisible.
@@ -234,3 +224,10 @@ Such axion models generally fall into two classes: \cite{Peccei_1996,Marsh_2016}
 	\item \textit{The Dine--Fischler--Srednicki--Zhitnitsky (DFSZ) Axion} \\
 	The DFSZ model contains two Higgs doubles like the PQWW model, but also contains a separate scalar parent field $Φ$.
 \end{itemize}
+
+
+\section{Laboratory Bounds on Axions}
+
+\subsubsection{Detection of Axions from Astrophysical Sources}
+
+\subsubsection{Axion Production}
