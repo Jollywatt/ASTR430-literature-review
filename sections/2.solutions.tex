@@ -1,64 +1,8 @@
-\chapter{The Axion Solution}
-
-% At first sight, the strong \CP\ problem may not appear to be a problem at all.
-% After all, QCD is a theory whose Lagrangian possibly---but not necessarily---admits a term $\propto \angbr{\tsbm F \wedge \tsbm F}$ which gives rise to \CP-violating interactions in the strong force, predicting an electric dipole moment of the neutron.
-% Empirical data is consistent with the neutron's electric dipole moment (and hence the \CP-violating term) being zero.
-% From a phenomenological perspective, it is satisfactory to simply leave the $\bar θ$-term out of the theory's Lagrangian and end the story there.
-% Indeed, a tautological way to `resolve' the strong \CP\ problem is to simply require that \CP\ be a symmetry of the strong force.
-% However, this only begs the question of why \CP\ symmetry appears to be preserved in some sectors of the standard model while it is broken in others.
-
-% Furthermore, there is a strong sense that the inclusion of the \CP-violating term is ``natural''.
-% That is, we lack reason to exclude it on a theoretical basis: it is Lorentz and gauge invariant, etc.; it is a theoretical prediction of the non-trivial vacuum structure of QCD (instantons); and arises via the chiral anomaly.
-% From an empirical perspective, if no \CP-violating interactions were observed in Nature, then $\bar θ$ could be justifiably set to zero on the basis of symmetry.
-% However, the weak interaction is explicitly parity-violating.\footnote{
-% 	In fact, the standard model is asymmetric under all combinations of charge conjugation, $C$; parity $P$; and time-reversal $T$ modulo the prevailing combined $CPT$ symmetry.
-% }
-% Hence, the fact that the $\bar θ$-term violates \CP\ is not theoretically satisfactory reason for its exclusion.
-
-
-% % Similarly, the advent of instantons in QCD demonstrated that the $θ$-term does not necessarily vanish \cite{lectures-on-instantons,instantons-whats-happening}.\note{?????}
-
-
-
-% The strong \CP\ problem differers from other fine-tuning problems in the standard model in the sense that it is of almost no consequence to everyday physics.
-% Variation of the $θ$-parameter hardly affects nuclear physics at all because its effects are suppressed by the quark masses \cite{Dine_2018}.
-% On the other hand, variations of the cosmological constant, for example, predict universes drastically different to our own, and similarly for the value of the weak scale, or the quark and lepton masses.
-% Such fine-tuning problems at least have anthropic solutions---but the strong \CP\ problem does not.\footnote{
-% 	Given a theory linking the presence of dark matter to the smallness of $θ$, an anthropic solution may exist if it turns out that dark matter is necessary for, e.g., galaxy formation (investigated in \cite{Dine_2018}).
-% }
-% % from http://scipp.ucsc.edu/~dine/solutions_of_strong_cp.pdf
-% The strong \CP\ problem is therefore a compelling theoretical indication that the standard model remains incomplete.
-
-
-
-
-
-% \section{Peccei--Quinn Theory}
-
-% Perhaps the most famous proposed resolution to the strong \CP\ problem is the Peccei--Quinn theory of the \emph{axion}, first proposed in 1977 \cite{PecceiQuinn_1977}.
-% The axion is well-known in cosmology because of the its allure as a dark matter candidate.
-
-% Peccei--Quinn theory explains the small value of $θ$ by its promotion to a dynamical field whose potential is minimised when $\barθ = 0$.
-% In other words, a new $\U(1)$ symmetry is introduced (whose action is to rotate $θ$) and is adjoined to the gauge group of QCD.
-% The QCD Lagrangian is modified by the addition of a potential with minimum at $θ = 0$, which is said to \emph{spontaneously break} the Peccei--Quinn $\U(1)$ symmetry.
-% The gauge field associated to this $\U(1)$ symmetry is named the \emph{axion field}, and the gauge bosons obtained upon quantisation are named \emph{axions}.
-
-% \note{
-% 	\begin{enumerate}
-% 		\item Predictions of PC theory
-% 		\item Theoretical limitations
-% 		\item Experimental evidence
-% 	\end{enumerate}
-% }
-
-
-
-\subsubsection{The Peccei--Quinn Mechanism}
+\chapter{The Peccei--Quinn Axion Solution}
 
 
 Perhaps the most famous resolution to the strong \CP\ problem is the Peccei--Quinn theory of the \emph{axion}, first proposed in 1977 \cite{PecceiQuinn_1977}.
-% In essence, the axion solution involves making the $\bar θ$-parameter to a field in such a way that which is dynamically relaxed to zero.
-In essence, the axion solution involves extending the standard model in order to promote the original $\bar θ$-parameter to a field $\bar θ(x) = \bar θ_\text{SM} + a(x)$ in such a way that it is dynamically relaxed to zero.
+In essence, the axion solution involves extending the standard model in order to promote the original $\bar θ$-parameter to a field $\bar θ(x) = \bar θ_\text{SM} + a(x)$ in such a way that it is dynamically relaxed to zero, $\bar θ \to 0$.
 In doing so, a new massive boson described by the scalar axion field $a(x)$ is necessarily introduced.
 There are different inequivalent ways to extend the standard model to realise the axion solution, but all Peccei--Quinn axion models share the same necessary features:
 \begin{itemize}
@@ -74,7 +18,13 @@ There are different inequivalent ways to extend the standard model to realise th
 If the extra $\UPQ$ symmetry was indeed an exact gauge symmetry, then the strong \CP\ problem is trivially solved, because a $\UPQ$ rotation by $\bar θ$ radians cancels the $\bar θ$-term in the effective Lagrangian, meaning the dynamics of the theory are equivalent to one in which $\bar θ = 0$.
 However, the main result of Peccei and Quinn \cite{PecceiQuinn_1977} is that $\UPQ$ need not be an exact symmetry of the theory: if $\UPQ$ is spontaneously broken, then $\bar θ$ is still driven to zero because it obtains a potential from the chiral anomaly with a minimum at $\bar θ = 0$, \cite{Peccei_1996}.
 
+
 \section{Axion Models}
+
+Different extensions to the standard model which fulfil the requirements of a $\UPQ$ symmetry have been proposed, resulting in phenomenologically distinct classes of axion, with varying masses and couplings to various standard model particles.
+When the Peccei--Quinn symmetry was first described \cite{PecceiQuinn_1977}, the proposed model predicted strongly interacting, visible axions which were experimentally refuted within a decade.
+Since then, the axion has remained a possibility through models compatible with very weakly interacting, `invisible' particles, in particular as dark matter candidates \cite{Duffy_2009}.
+
 
 \subsubsection{A Toy Axion Model}
 
@@ -181,11 +131,35 @@ and is otherwise independent of the axion model, using accepted values of standa
 
 The precise axion--matter interactions entering through the term $\LL_q'$ are model dependent, but generally have coupling strengths inversely proportional to the axion scale, $f_a$ \cite{Duffy_2009}.
 However, all Peccei--Quinn axions interact with the gauge field though the last term in the Lagrangian \eqref{eqn:axion-Lagrangian}.
-The last term is proportional to $\angbr{\tsbm F\wedge\tsbm F} = \ts F\wedge\ts F + \angbr{\tsbm G\wedge\tsbm G}$, where $\tsbm F = \ts F \oplus \tsbm G$ is the total gauge field decomposed into the electromagnetic $\ts F$ and gluonic $\tsbm G$ gauge fields.
+The last term is proportional to $\angbr{\tsbm F\wedge\tsbm F} = \ts F\wedge\ts F + \angbr{\tsbm G\wedge\tsbm G}$, where $\tsbm F = \ts F \oplus \tsbm G$ is the total gauge field split into the electromagnetic $\ts F$ and gluonic $\tsbm G$ sectors.
 In perturbation theory, this corresponds to a Feynman vertex in which an axion and two photons $aγγ$, or an axion and two gluons $agg$ meet, as in figure~\ref{fig:axion-biphoton}.
-The $aγγ$ interaction is strong where $\ts F\wedge\ts F = (\bm E \cdot \bm B)\,\vol$ is large.
-This implies that axions may be generated from photons, and vice-versa, in the presence of strong electromagnetic fields, suggesting methods for experimentally detecting axions in the lab or in magnetised stellar bodies.
-The $agg$ vertex gives rise to interactions between axions and strongly-interacting hadronic matter (in particular pions) \cite{Cadamuro_2011}.
+
+The $aγγ$ interaction is strong where $\ts F\wedge\ts F = (\vec E \cdot \vec B)\,\vol$ is large.
+This implies that axions may be generated from photons and vice-versa in the presence of strong electromagnetic fields.
+Near a charged particle such as an electron, where the field is concentrated in a Coulomb potential, the $γ \leftrightarrow a$ conversion is best viewed as a scattering process, $γ + e^\pm \to e^\pm + a$, and is named the \emph{Primakoff effect} \cite[§\,93.1.3]{ParticleDataGroup-review-2020}
+The two most dominant Primakoff diagrams are shown in figure~\ref{fig:scattering-processes}.
+
+\begin{figure}[h]
+	\centering
+	\begin{subfigure}[]{0.4\textwidth}
+		\centering
+		\includegraphics{diagrams/primakoff-process.pdf}
+		\caption{Primakoff}
+		\label{fig:Primakoff-scattering}
+	\end{subfigure}
+	\begin{subfigure}[]{0.4\textwidth}
+		\centering
+		\includegraphics{diagrams/compton-process.pdf}
+		\caption{Compton}
+		\label{fig:Compton-scattering}
+	\end{subfigure}
+	\caption{Dominant axion processes with electrons (or positrons with arrows reversed) \cite{Cadamuro_2011}.}
+	\label{fig:scattering-processes}
+\end{figure}
+
+
+ suggesting methods for experimentally detecting axions in the lab or in magnetised stellar bodies.
+The $agg$ vertex gives rise to interactions between axions and strongly-interacting hadronic matter (particularly pions and kaons) \cite{Cadamuro_2011}.
 
 
 \subsection{The Original Peccei--Quinn--Weinberg--Wilczek Axion}
@@ -215,9 +189,9 @@ Any successful axion model must have a higher energy scale $f_a$ (i.e., lighter 
 
 \subsection{Light Invisible Axions}
 
-Axions with a larger energy scale $f_a \gg f_\text{EW}$ are light ($m_a \sim 1/f_a$), long lived (e.g., the rate of $a \to 2γ$ goes as $(f_a)^5$) and weakly interacting (couplings are suppressed by $1/f_a$).
-In particular, electromagnetic interactions are weak, rendering them invisible.
-Such axion models generally fall into two classes: \cite{Peccei_1996,Marsh_2016}
+Axions with a larger energy scale $f_a \gg f_\text{EW}$ are light ($m_a \sim 1/f_a$), long lived (e.g., the rate of $a \to 2γ$ goes as $(f_a)^5$) and weakly interacting (couplings generally are suppressed by $1/f_a$).
+In particular, their electromagnetic interactions are weak, rendering them invisible \cite{Peccei_1996,Marsh_2016}.
+Such axion models generally fall into two classes:
 \begin{itemize}
 	\item \textit{The Kim--Shifman--Vainshtein--Zakharov (KSVZ) Axion} \\
 	The KSVZ model introduces an additional massive quark $\bm q$ as well as the parent field $Φ$.
@@ -228,6 +202,60 @@ Such axion models generally fall into two classes: \cite{Peccei_1996,Marsh_2016}
 
 \section{Laboratory Bounds on Axions}
 
-\subsubsection{Detection of Axions from Astrophysical Sources}
-
 \subsubsection{Axion Production}
+In the presence of a strong, uniform electromagnetic field with $\vec E \parallel \vec B$ so that $\ts F\wedge\ts F$ is large, the $aγγ$ interaction is best viewed as an axion--photon oscillation, analogous to neutrino flavour oscillation (see figure~\ref{fig:axion-photon-oscillation}) \cite[§\,91.3.1]{ParticleDataGroup-review-2020}.
+This suggests a scheme for detecting axions by `shining light through walls,' whereby a laser is beamed at an optical barrier in a strong magnetic field, and any generated axions (freely passing through the barrier) which oscillate back into photons on the other side are detected.
+The first such experiment was performed in 1992 with a \SI{3.7}{\tesla} superconducting magnet over a length of \SI{4.4}{\meter}, and found that $|g_{aγγ}| < \SI{6.7e-7}{\per\giga\eV}$ for axions lighter than \SI{1}{\milli\eV} \cite{first-LSW-experiment}.
+The current best limit from light-through-wall experiments, $|g_{aγγ}| < \SI{3.5e-8}{\per\giga\eV}$, was obtained in 2015 with two \SI{9}{\tesla} Large Hadron Collider dipole magnets \cite{best-LSW-experiment}, but there have been no positive detections.
+
+Another consequence of axion--photon oscillation is that light suffers from dichroism\footnotemark\ and birefringence in a strong, uniform magnetic field $\vec B$.
+The dichroism arises since the polarisation of light parallel to the magnetic field, $\vec E_\parallel$, where $\vec E \cdot \vec B$ is large, undergoes $aγγ$ oscillation and is depleted while $\vec E_\perp$ remains unaffected \cite[§\,91.3.2]{ParticleDataGroup-review-2020}.
+A similar process results in birefringence, where linearly polarised light becomes elliptically polarised, but the experimental limits from dichroism experiments are stronger: $|g_{aγγ}| < \SI{3.6e-7}{\per\giga\eV}$ for sub-\si{\milli\eV} axions \cite{axion_dichromism}.
+In 2006, a collaboration reported a false positive in a vacuum dichroism experiment, detecting axions with $m_a \approx \SI{1.3}{\milli\eV}$ and $g_{aγγ} = \SI{3e-6}{\per\giga\eV}$, but the detection was attributed to instrumental artefacts two years later \cite{birefringence_false_positive_2008}.
+
+
+\footnotetext{
+	Generally, \emph{dichroism} is the dependence of a medium's optical absorption on the polarization of light.
+	In this case, the medium is the vacuum in regions of large $\ts F\wedge\ts F$.
+}
+
+\begin{table}[h]
+	\centering
+	\begin{tabular}{lll}
+		\textbf{experiment} & $|g_{aγγ}|$ & $m_a$ \\
+		\hline
+		light-through-walls & $< \SI{3.5e-8}{\per\giga\eV}$ & $< \SI{1}{\milli\eV}$ \\
+		dichroism \& birefringence & $< \SI{3.6e-8}{\per\giga\eV}$ \\ 
+		helioscope & $< \SI{3.6e-8}{\per\giga\eV}$
+	\end{tabular}
+\end{table}
+
+\begin{figure}
+	\centering
+	\includegraphics{diagrams/axion-photon-oscillation.pdf}
+	\caption{Example axion--photon oscillation diagram.}
+	\label{fig:axion-photon-oscillation}
+\end{figure}
+
+
+\subsubsection{Detection of Axions from The Sun}
+
+We also expect low-mass, weakly interacting particles to be produced in the astrophysical plasmas found inside stars.
+Efforts have therefore been made to detect axions of solar origin.
+In a strong macroscopic $\vec B$ field, axions (or indeed, any axion-like particle with a two-photon vertex) may be converted into x-rays via a reverse Primakoff process, $a + e^\pm \to e^\pm + γ$.
+With standard solar models, the expected axion flux on Earth is
+\begin{align}
+	φ_\odot \approx 3.8\times10^{11}\,(10^{10}\,\si{\giga\eV}\,|g_{aγγ}|)^2\,\si{\per\square\cm\per\s}
+,\end{align}
+which is significant and detectable for axions with $|g_{aγγ}| \gtrsim 10^{-11}\,\si{\per\giga\eV}$ \cite{solar-axion-flux_2007}.
+
+The Tokyo axion helioscope, initially constructed in 1995 and then continuously upgraded, utilised a \SI{4}{\tesla} superconducting magnet on a sun-tracking mount.
+In 2008, it was reported that its failure to detect solar axions implied a limit $|g_{aγγ}| < \SI{6e-10}{\per\giga\eV}$ for sub-\si{\milli\eV} axions \cite{Tokyo-axion-helioscope_2008}.
+More recently, the CERN Axion Solar Telescope used a decommissioned \SI{9}{\tesla} LHC dipole magnet in a similar helioscope apparatus to establish a stronger limit: $|g_{aγγ}| < \SI{6.6e-11}{\per\giga\eV}$, though only for axions of mass $m_a < \SI{0.03}{\eV}$ \cite{CAST-helioscope_2017}.
+
+
+\begin{figure}
+	\centering
+	\includegraphics{diagrams/lab-bounds.pdf}
+	\caption{Limits on axions from laboratory experiments.}
+\end{figure}
