@@ -1,0 +1,40 @@
+\documentclass{standalone}
+\usepackage{pgfplots}
+\pgfplotsset{width=7cm,compat=1.8}
+
+\usepackage{siunitx}
+
+
+\begin{document}
+
+\begin{tikzpicture} 
+	\begin{loglogaxis}[
+		enlargelimits=0.1,
+		ymin=1e-11, ymax=1e-6,
+		xmin=1e-3, xmax=1e1,
+		xlabel={$m_a, \si{\milli\eV}$},
+		ylabel={$|g_{aγγ}|, \si{\per\giga\eV}$},
+	]
+	\addplot [thick,color=blue, fill=blue, fill opacity=0.1]
+	coordinates {
+			(1, 1)
+		(1, 6.7e-7)
+			(0.5, 6.7e-7)
+		(0.5, 3.6e-7)
+			(0.3, 3.6e-7)
+		(0.3, 3.5e-8)
+			(0.02, 3.5e-8)
+		(0.02, 6.6e-11)
+			(1e-4, 6.6e-11)
+			(1e-4, 1)
+	};
+	\addplot[mark=x, only marks, color=blue] coordinates {
+		(1, 6.7e-7)
+		(0.5, 3.6e-7)
+		(0.3, 3.5e-8)
+		(0.02, 6.6e-11)
+	};
+	\end{loglogaxis}
+\end{tikzpicture}  	
+
+\end{document}

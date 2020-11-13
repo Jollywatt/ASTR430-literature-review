@@ -1,0 +1,19 @@
+\RequirePackage{luatex85}
+\documentclass{standalone}
+
+\usepackage{unicode-math}
+\usepackage{tikz-feynman}
+
+\begin{document}
+	
+\feynmandiagram [small,horizontal=a to b] {
+	i1 --[photon, out=0, in=-90] a --[photon, out=90, in=0] i2,
+	a --[scalar] b,
+	b --[photon, half right] c --[photon, half right] b,
+	c --[scalar] d,
+	d --[photon, half right] e --[photon, half right] d,
+	e --[scalar] f,
+	o1 --[photon, out=180, in=90] f --[photon, out=-90, in=180] o2,
+};
+
+\end{document}
