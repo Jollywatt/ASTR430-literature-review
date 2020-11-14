@@ -1,25 +1,27 @@
 \chapter{Axions in Cosmology}
 
-\begin{figure}[t!]
-\begin{aside}[Terminology from cosmology]
-\begin{itemize}[leftmargin=0.75em]\setlength\itemsep{0.25ex}
-	\item \emph{thermalisation}
----	the process of a particle species reaching thermal equilibrium (i.e., uniform energy and abundance) over cosmological scales, mitigated by self-interactions or processes involving other matter species which diffuse energy.
-	\item \emph{freeze-out}
----	the point beyond which the rates of thermalising processes become negligible due to a sufficiently large rate of cosmic expansion, resulting in persistent non-equilibrium distributions of a particle species.
-Since the universe cools as it expands, freeze-out may be viewed as the change of phase of a species from a gas to a cooler condensate.
-\end{itemize}
-\end{aside}
-\end{figure}
 
 With the advent of precision cosmology, particle physicists can use the entire universe as a laboratory for ever more sensitive experiments.
-
-[Role of axions: possible dark matter candidates]
+Of special interest is the axion's promise as a dark matter candidate.
+We expect axions to be produced in astrophysical plasma, and therefore to possibly have significant implications on the evolution of the universe and of astrophysical structures.
 
 Many cosmological tests of axion-like particles involve predicting relative particle abundances in the universe at various epochs, such as the baryon-to-photon or neutrino-to-photon ratios.
 Such arguments begin with a minimal `thermodynamical' model of the universe as a homogeneous, isotropic, expanding background upon which different particle species exist uniformly distributed and in thermal equilibrium.
-The universe's macrostate is characterised by each species' abundance and energy distribution.
+The universe's macrostate is characterised by each species' abundance and energy distribution, and can be given a cosmological temperature, $T$, quantifying average energy density.
 Interactions and processes between species, which at any time may depend on present particle abundances and energies, define differential relations which can be solved to determine the abundance of each species at any point in the universe's evolution.
+
+
+\begin{figure}[b!]
+\begin{aside}[Terminology from cosmology]
+\begin{itemize}[leftmargin=0.75em]\setlength\itemsep{0.25ex}
+	\item \emph{thermalisation}
+---	the process of a particle species reaching thermal equilibrium (i.e., uniform energy and abundance) over cosmological scales, mitigated by energy-diffusing self-interactions or processes with other species.
+	\item \emph{freeze-out}
+---	the point beyond which the rates of thermalising processes become negligible due to cooling cosmological temperature or accelerating cosmic expansion. Freeze-out results in persistent non-equilibrium distributions of a particle species, analogous to a change of phase from a gas to a cooler condensate.
+% Since the universe cools as it expands, freeze-out may be viewed as a species' change of phase from a gas to a cooler condensate.
+\end{itemize}
+\end{aside}
+\end{figure}
 
 The assumptions of isotropy and homogeneity specify a spacetime with a Friedmann--Lemaître--Robertson--Walker (FLRW) metric,
 \begin{align}
@@ -34,6 +36,9 @@ If the rate is smaller than the rate of cosmic expansion, $Γ \ll H$, then the i
 If a species' most dominant interactions freeze-out, then it becomes thermally isolated from other fields and its abundance remains fixed.
 
 
+
+
+
 \section{Axion Interactions and Processes}
 
 
@@ -41,14 +46,26 @@ Axions decay into photons via the axion-photon vertex at a rate
 \begin{align}
 	Γ_{a\to 2γ} = \frac{g_{aγγ}^2m_a^3}{64π} \approx 10^{-24}\,\si{\per\second}\qty(\frac{m_a}{\si{\eV}})^5
 ,\end{align}
-where the coupling strength $g_{aγγ}$ can be approximately written in terms of the mass given, with an $\cal O(1)$ model dependence.
-Thus, for axions to exist in significant abundance, they must be sufficiently light, less the decay process dominates.
-The inverse decay $2γ \to a$ is also possible, with a rate $Γ_{2γ \to a} \propto 1/T$ which increases as the universe cools, so that axions recouple at late epochs \cite{Cadamuro_2011,Marsh_2016}.
+where the coupling strength $g_{aγγ}$ can be approximately written in terms of the mass given, with an $\cal O(1)$ model dependence \cite{Cadamuro_2011}.
+Thus, for axions to exist in significant abundance in the present, they must be sufficiently light, or else the decay process dominates.
+An inverse decay process $2γ \to a$ is also possible, with a rate $Γ_{2γ \to a} \propto 1/T$ increasing as the universe cools.
+This implies that axions may recouple to photons at late stages of the universe's evolution \cite{Marsh_2016}.
 
-Axions also interact by the strong force with hadronic matter via the gluon-axion vertex, \ref{fig:axion-bigluon}.
-In particular, this gives rise to Primakoff and Compton electron scattering processes shown in figure~\ref{fig:scattering-processes}.
-These two scattering processes, along with photon decay and inverse decay, are the dominant interactions relevant to cosmology.
+Axions also interact by the strong force with hadronic matter via the gluon-axion vertex, giving rise to the Primakoff (and Compton) electron scattering processes shown in figure~\ref{fig:scattering-processes}.
+When the universe is sufficiently hot so as to produce axions, $T \gg m_a$, the rate of Primakoff scattering $Γ_\text{P} \propto g_{aγγ}^2n_e$ is proportional to the number density of electrons-plus-positions, $n_e$ \cite{Cadamuro_2011}.
+For leptonic (e.g., DFSZ) axions, \cite{Cadamuro_2011} approximate the rate of Compton scattering as
+\begin{align}
+	Γ_\text{C} \propto \frac{g_{aee}^2n_e}{\max\qty{T^2, m_a^2}}
+.\end{align}
+These scattering processes, along with photon decay and inverse decay, are the dominant interactions relevant to cosmology.
+The freeze-out temperatures of these processes vary non-linearly with axion mass.
 
-
-
-
+\begin{figure}
+	\centering
+	\includegraphics{diagrams/cosmo-freeze-out.pdf}
+	\caption{
+		Axion decoupling and recoupling with varying cosmological temperature.
+		The evolution of the universe progresses from left-to-right, in the direction of \emph{decreasing} temperature.
+		The shaded regions indicate periods where each processes occurred with ease, keeping axions thermalised.
+	}
+\end{figure}

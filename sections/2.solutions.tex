@@ -1,16 +1,16 @@
 \chapter{The Peccei--Quinn Axion Solution}
 
 
-Perhaps the most famous resolution to the strong \CP\ problem is the Peccei--Quinn theory of the \emph{axion}, first proposed in 1977 \cite{PecceiQuinn_1977}.
+The most famous resolution to the strong \CP\ problem is the Peccei--Quinn theory of the \emph{axion}, first proposed in 1977 \cite{PecceiQuinn_1977}.
 In essence, the axion solution involves extending the standard model in order to promote the original $\bar θ$-parameter to a field $\bar θ(x) = \bar θ_\text{SM} + a(x)$ in such a way that it is dynamically relaxed to zero, $\bar θ \to 0$.
-In doing so, a new massive boson described by the scalar axion field $a(x)$ is necessarily introduced.
+In doing so, a new massive boson described by the pseudoscalar \emph{axion field} $a(x)$ is necessarily introduced.
 There are different inequivalent ways to extend the standard model to realise the axion solution, but all Peccei--Quinn axion models share the same necessary features:
 \begin{itemize}
 	\item The extended Lagrangian $\LL_\text{PQ}$ possesses an additional global chiral symmetry $\UPQ$.
 	The exact action of this \emph{Peccei--Quinn symmetry} depends on the particular axion model, and is not of central importance.
 	The defining feature of $\UPQ$ is that it is chiral, so that a $\UPQ$ transformation by $α$ radians anomalously induces a $θ$-term $α\angbr{\tsbm F\wedge\tsbm F}$ in the effective Lagrangian (via the chiral anomaly).
 
-	\item The Peccei--Quinn symmetry $\UPQ$ is \emph{spontaneously broken}, and the single resulting Nambu--Goldstone boson is named the axion field, $a(x)$.
+	\item The Peccei--Quinn symmetry $\UPQ$ is \emph{spontaneously broken}, and the single resulting Nambu--Goldstone boson is named \emph{the axion field}, $a(x)$.
 	Being a Nambu--Goldstone boson, the axion transforms as $a(x) \mapsto a(x) + α$ under a $\UPQ$ rotation of $α$ radians.
 	The chiral anomaly results in a potential for the axion $a(x)$ (giving rise to axion mass) with a potential minimum occurring where $a(x) = -\bar θ_\text{SM}$.
 \end{itemize}
@@ -136,8 +136,11 @@ In perturbation theory, this corresponds to a Feynman vertex in which an axion a
 
 The $aγγ$ interaction is strong where $\ts F\wedge\ts F = (\vec E \cdot \vec B)\,\vol$ is large.
 This implies that axions may be generated from photons and vice-versa in the presence of strong electromagnetic fields.
-Near a charged particle such as an electron, where the field is concentrated in a Coulomb potential, the $γ \leftrightarrow a$ conversion is best viewed as a scattering process, $γ + e^\pm \to e^\pm + a$, and is named the \emph{Primakoff effect} \cite[§\,93.1.3]{ParticleDataGroup-review-2020}
-The two most dominant Primakoff diagrams are shown in figure~\ref{fig:scattering-processes}.
+Near a charged particle such as an electron, where the field is concentrated in a Coulomb potential, the $γ \leftrightarrow a$ conversion is best viewed as a scattering process, $γ + e^\pm \to e^\pm + a$, and is named the \emph{Primakoff effect} \cite[§\,93.1.3]{ParticleDataGroup-review-2020}.
+The $agg$ vertex gives rise to interactions between axions and strongly-interacting hadronic matter (particularly pions and kaons) \cite{Cadamuro_2011}.
+These interactions are universal to all axion models.
+For \emph{leptonic} axion models with an electron interaction term $\LL_q$, there is also an axion--electron vertex.
+This enables a Compton scattering process in addition to Primakoff scattering, both of which are shown in figure~\ref{fig:scattering-processes}.
 
 \begin{figure}[h]
 	\centering
@@ -153,13 +156,12 @@ The two most dominant Primakoff diagrams are shown in figure~\ref{fig:scattering
 		\caption{Compton}
 		\label{fig:Compton-scattering}
 	\end{subfigure}
-	\caption{Dominant axion processes with electrons (or positrons with arrows reversed) \cite{Cadamuro_2011}.}
+	\caption{Dominant axion processes with electrons (or positrons with arrows reversed) \cite{Cadamuro_2011}.
+	Compton scattering only occurs for leptonic axions.}
 	\label{fig:scattering-processes}
 \end{figure}
 
 
- suggesting methods for experimentally detecting axions in the lab or in magnetised stellar bodies.
-The $agg$ vertex gives rise to interactions between axions and strongly-interacting hadronic matter (particularly pions and kaons) \cite{Cadamuro_2011}.
 
 
 \subsection{The Original Peccei--Quinn--Weinberg--Wilczek Axion}
@@ -197,6 +199,13 @@ Such axion models generally fall into two classes:
 	The KSVZ model introduces an additional massive quark $\bm q$ as well as the parent field $Φ$.
 	\item \textit{The Dine--Fischler--Srednicki--Zhitnitsky (DFSZ) Axion} \\
 	The DFSZ model contains two Higgs doubles like the PQWW model, but also contains a separate scalar parent field $Φ$.
+	The DFSZ model contains the additional mass term
+	\begin{align}
+		\Re\qty(H_2\bar{\bm φ}_+\mat m_e\bm φ_-^{(e)})
+	,\end{align}
+	which is a Yukawa coupling between one of the Higgs doublets $H_2$, the left-handed leptons $\bm φ_+$, and the right-handed electron $\bm φ_-^{(e)}$, where $\mat m_e$ is the (non-square) matrix of Yukawa couplings.
+	The $(H_2, \bm φ_-^{(e)})$ coupling gives rise to an axion--electron vertex, and hence DFSZ axions are leptonic and undergo Compton scattering (figure~\ref{fig:Compton-scattering}).
+
 \end{itemize}
 
 
@@ -206,7 +215,7 @@ Such axion models generally fall into two classes:
 In the presence of a strong, uniform electromagnetic field with $\vec E \parallel \vec B$ so that $\ts F\wedge\ts F$ is large, the $aγγ$ interaction is best viewed as an axion--photon oscillation, analogous to neutrino flavour oscillation (see figure~\ref{fig:axion-photon-oscillation}) \cite[§\,91.3.1]{ParticleDataGroup-review-2020}.
 This suggests a scheme for detecting axions by `shining light through walls,' whereby a laser is beamed at an optical barrier in a strong magnetic field, and any generated axions (freely passing through the barrier) which oscillate back into photons on the other side are detected.
 The first such experiment was performed in 1992 with a \SI{3.7}{\tesla} superconducting magnet over a length of \SI{4.4}{\meter}, and found that $|g_{aγγ}| < \SI{6.7e-7}{\per\giga\eV}$ for axions lighter than \SI{1}{\milli\eV} \cite{first-LSW-experiment}.
-The current best limit from light-through-wall experiments, $|g_{aγγ}| < \SI{3.5e-8}{\per\giga\eV}$, was obtained in 2015 with two \SI{9}{\tesla} Large Hadron Collider dipole magnets \cite{best-LSW-experiment}, but there have been no positive detections.
+The current best limit from light-shining-though-walls (LSW) experiments, $|g_{aγγ}| < \SI{3.5e-8}{\per\giga\eV}$, was obtained in 2015 with two \SI{9}{\tesla} Large Hadron Collider dipole magnets \cite{best-LSW-experiment}, but there have been no positive axion detections.
 
 Another consequence of axion--photon oscillation is that light suffers from dichroism\footnotemark\ and birefringence in a strong, uniform magnetic field $\vec B$.
 The dichroism arises since the polarisation of light parallel to the magnetic field, $\vec E_\parallel$, where $\vec E \cdot \vec B$ is large, undergoes $aγγ$ oscillation and is depleted while $\vec E_\perp$ remains unaffected \cite[§\,91.3.2]{ParticleDataGroup-review-2020}.
@@ -219,16 +228,6 @@ In 2006, a collaboration reported a false positive in a vacuum dichroism experim
 	In this case, the medium is the vacuum in regions of large $\ts F\wedge\ts F$.
 }
 
-\begin{table}[h]
-	\centering
-	\begin{tabular}{lll}
-		\textbf{experiment} & $|g_{aγγ}|$ & $m_a$ \\
-		\hline
-		light-through-walls & $< \SI{3.5e-8}{\per\giga\eV}$ & $< \SI{1}{\milli\eV}$ \\
-		dichroism \& birefringence & $< \SI{3.6e-8}{\per\giga\eV}$ \\ 
-		helioscope & $< \SI{3.6e-8}{\per\giga\eV}$
-	\end{tabular}
-\end{table}
 
 \begin{figure}
 	\centering
@@ -242,20 +241,28 @@ In 2006, a collaboration reported a false positive in a vacuum dichroism experim
 
 We also expect low-mass, weakly interacting particles to be produced in the astrophysical plasmas found inside stars.
 Efforts have therefore been made to detect axions of solar origin.
-In a strong macroscopic $\vec B$ field, axions (or indeed, any axion-like particle with a two-photon vertex) may be converted into x-rays via a reverse Primakoff process, $a + e^\pm \to e^\pm + γ$.
+In a strong macroscopic $\vec B$ field, axions (or indeed, any axion-like particles with a two-photon vertex) may be converted into x-rays via a reverse Primakoff process, $a + e^\pm \to e^\pm + γ$.
 With standard solar models, the expected axion flux on Earth is
 \begin{align}
 	φ_\odot \approx 3.8\times10^{11}\,(10^{10}\,\si{\giga\eV}\,|g_{aγγ}|)^2\,\si{\per\square\cm\per\s}
 ,\end{align}
 which is significant and detectable for axions with $|g_{aγγ}| \gtrsim 10^{-11}\,\si{\per\giga\eV}$ \cite{solar-axion-flux_2007}.
 
-The Tokyo axion helioscope, initially constructed in 1995 and then continuously upgraded, utilised a \SI{4}{\tesla} superconducting magnet on a sun-tracking mount.
-In 2008, it was reported that its failure to detect solar axions implied a limit $|g_{aγγ}| < \SI{6e-10}{\per\giga\eV}$ for sub-\si{\milli\eV} axions \cite{Tokyo-axion-helioscope_2008}.
+The Tokyo axion helioscope, initially constructed in 1995 and then continuously upgraded, utilised a \SI{4}{\tesla} superconducting magnet on a sun-tracking mount to detect solar axions.
+In 2008, it was reported that its negative results implied a limit $|g_{aγγ}| < \SI{6e-10}{\per\giga\eV}$ for sub-\si{\milli\eV} axions \cite{Tokyo-axion-helioscope_2008}.
 More recently, the CERN Axion Solar Telescope used a decommissioned \SI{9}{\tesla} LHC dipole magnet in a similar helioscope apparatus to establish a stronger limit: $|g_{aγγ}| < \SI{6.6e-11}{\per\giga\eV}$, though only for axions of mass $m_a < \SI{0.03}{\eV}$ \cite{CAST-helioscope_2017}.
 
 
 \begin{figure}
 	\centering
 	\includegraphics{diagrams/lab-bounds.pdf}
-	\caption{Limits on axions from laboratory experiments.}
+	\caption{Limits on axion mass $m_a$ and photon coupling {}$g_{aγγ}$ from laboratory experiments. Shaded regions are experimentally excluded.
+		(LSW '92 \cite{first-LSW-experiment},
+		BRFT '90 \cite{axion_dichromism},
+		LSW '15 \cite{best-LSW-experiment},
+		CAST '17 \cite{CAST-helioscope_2017})
+	}
 \end{figure}
+
+Further laboratory experiments to detect axions are under way (e.g., \cite{further-lab-experiments_2017}), but direct detection on Earth is not the only experimental probe available.
+Axions may have significant roles in stellar evolution, the universe's early history and as dark matter, placing them in the domain of cosmology.
