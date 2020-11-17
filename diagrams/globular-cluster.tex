@@ -1,0 +1,52 @@
+\documentclass{standalone}
+\usepackage{pgfplots}
+\pgfplotsset{width=7cm,compat=1.8}
+\usepgfplotslibrary{fillbetween}
+
+
+\usepackage{unicode-math}
+\usepackage{siunitx}
+
+
+
+\pgfdeclarelayer{annotations}
+\pgfsetlayers{main,annotations}
+
+\begin{document}
+
+\begin{tikzpicture} 
+	\begin{axis}[
+		scale=1.4,
+		xmin=-0.5, xmax=2,
+		ymin=11, ymax=20,
+		y dir=reverse,
+		xlabel={colour index, $B - V$},
+		ylabel={visual magnitude, $M_V$},
+		legend style={
+			at={(0.06,0.93)},
+			anchor=north west,
+			legend cell align=left,
+		},
+		title={Colour--Magnitude Diagram of Messier 5 Cluster},
+	]
+
+	\addplot+ [only marks, opacity=0.5, mark=x, mark options={orange, scale=0.7pt}] table [x=star_X, y=star_Y, col sep=comma] {globular-clustar-data.csv};
+	\addplot+ [only marks, opacity=0.5, mark=star, mark options={cyan!30!blue, scale=1pt}] table [x=HB_X, y=HB_Y, col sep=comma] {globular-clustar-data.csv};
+	\addplot+ [only marks, opacity=0.5, mark=*, mark options={cyan!30!magenta, scale=0.6pt}] table [x=RGB_X, y=RGB_Y, col sep=comma] {globular-clustar-data.csv};
+	\legend{
+		main sequence,
+		horizontal branch,
+		red giant branch,
+	}
+
+	\begin{pgfonlayer}{annotations}
+		\draw[->, thick] (axis cs: 0.6, 18) to [bend left=23] (axis cs: 1., 14);
+		\draw[->, thick] (axis cs: 1, 14) to [bend left=23] (axis cs: 0.1, 15.2);
+		% \draw[->, thin, white] (axis cs: 0.6, 18) to [bend left=23] (axis cs: 1., 14);
+		% \draw[->, thin, white] (axis cs: 1, 14) to [bend left=23] (axis cs: 0.1, 15.2);
+	\end{pgfonlayer}
+
+	\end{axis}
+\end{tikzpicture}  	
+
+\end{document}

@@ -84,7 +84,7 @@ Extremely light axions, $m_a \lesssim \SI{200}{\eV}$, remain thermally isolated 
 
 
 
-\section{Constraints from Big Bang Nucleosynthesis}
+\subsection{Constraints from Big Bang Nucleosynthesis}
 
 \begin{figure}
 	\centering
@@ -95,15 +95,15 @@ Extremely light axions, $m_a \lesssim \SI{200}{\eV}$, remain thermally isolated 
 A few minutes after the beginning of time, when the universe cooled to $\sim 10^{10}\,\si{\K}$ during \emph{Big Bang nucleosynthesis} (BBN), protons and neutrons began to bind together to form light atomic nuclei.
 The primary fusion reactions that occurred are:
 \begin{align}
-	\mathrm{p + n} &\to \mathrm{{}^2H} + γ
-\\	\mathrm{p + {}^2H} &\to \mathrm{{}^3He} + γ
-\\	\mathrm{{}^2H + {}^2H} &\to \mathrm{{}^3He + n, {}^3H + p}
-\\	\mathrm{{}^3He + {}^2H} &\to \mathrm{{}^4He + p}
+	\el{p + n} &\to \el{^2H} + γ
+\\	\el{p + {}^2H} &\to \el{^3He} + γ
+\\	\el{^2H + {}^2H} &\to \el{^3He + n, {}^3H + p}
+\\	\el{^3He + {}^2H} &\to \el{^4He + p}
 \\	&\ \vdots
 \end{align}
-Photons are involved in the production of deuterium $^2\mathrm H$ and the lightest isotopes of helium, but not in the fusion of heavier nuclei.
+Photons are involved in the production of deuterium $^2\el H$ and the lightest isotopes of helium, but not in the fusion of heavier nuclei.
 An analysis of the reaction rates provides a relationship between the photon abundance $n_γ$ and the abundance of light nuclei (i.e., baryons, $n_B$).
-A larger initial baryon--photon ratio $η = n_B/n_γ$ corresponds to more efficient production of deuterium and ultimately to a larger helium $^4\mathrm{He}$ abundance in the present.
+A larger initial baryon--photon ratio $η = n_B/n_γ$ corresponds to more efficient production of deuterium and ultimately to a larger helium $^4\el{He}$ abundance in the present.
 Relative element abundances in the present epoch constrain the value of the initial baryon--photon ratio to $η = (6.2 \pm 0.4) \times 10^{-10}$ \cite[§\,24.4]{ParticleDataGroup-review-2020}.
 
 
@@ -130,13 +130,52 @@ Cadamuro \etal.\ find that the predicted deuterium abundance is reduced two stan
 	m_a \gtrsim \SI{300}{\kilo\eV}
 	\label{eqn:cosmo-limit}
 \end{align}
-at $2σ = 97\%$ confidence \cite{Cadamuro_2011}.
+at $2σ = \SI{97}{\percent}$ confidence \cite{Cadamuro_2011}.
 Axions within this bound decay into photons sufficiently quickly so as not to deviate the outcome of BBN from observation.
 Such heavy axions are thermalised at all epochs, even purely hadronic axions which do not undergo Compton scattering (see figure~\ref{fig:axion-freeze-out}).
 The limit \eqref{eqn:cosmo-limit} therefore applies to all axion types, and is far more restrictive than laboratory constraints.
 
 
 
-\section{Constraints from Stellar Evolution}
+\subsection{Constraints from Stellar Evolution}
 
-The expected production of solar axions has implications for the different stages of stellar evolution.
+
+Galaxies consist of \emph{globular clusters} (GCs), each typically consisting of between $10^5$ and $10^7$ stars.
+A typical galaxy like our own hosts hundreds of GCs, each one a gravitationally self-contained island of stars.
+The population of a GC can be partitioned into different branches by stage of stellar evolution, as in figure~\ref{fig:globular-cluster}.
+Young stars exist in the main sequence and approach the \emph{red giant branch} (RGB) as they burn hydrogen fuel and produce helium.
+Red giants approach the helium fusion phase as their cores become \el{He}-dense and \el{H}-depleted.
+The ignition of \el{He}-fusion in late-stage red giants causes an immediate rise in temperature and rate of \el{He}-fusion, transitioning the star into a new equilibrium state in the \emph{horizontal branch} (HB) \cite[§\,3.2]{Irastorza_2018}.
+The parameter $R \coloneqq N_\text{RGB}/N_\text{HB}$ is defined as the population ratio between the horizontal and red giant branches in a given GC, and is a useful observable for testing models of stellar evolution.
+
+The alleged production of axions in stars has implications for stellar evolution.
+Specifically, axion production via the Primakoff process $γ + A \to A + a$ in stellar plasma results in a hotter core temperature and faster burning of helium fuel in red giants.
+This affects the relative durations of the RGB and HB stages.
+The observed population of stars in each stage of the stellar sequence is statistically proportional to the stage's average lifetime, and thus the observable $R$ parameter measures relative stage lifetimes, $R = N_\text{RGB}/N_\text{HB} = T_\text{RGB}/T_\text{HB}$.
+Thus, the axion--photon interaction strength may be constrained by comparing the predicted $R$-parameter to those observed in local GCs.
+A recent survey \cite{Stellar-evolution-constraints_2015,Stellar-evolution-constraints_2020} of 39 of GCs reports the constraint $|g_{aγγ}| < \SI{6.5e-11}{\per\giga\eV}$ at \SI{95}{\percent} confidence \cite[§\,3.2]{Irastorza_2018}.
+Stronger interacting axions cause horizontal branch stars to burn too quickly, reducing the $R$-parameter below the observed window.
+
+
+\begin{figure}
+	\centering
+	\includegraphics{diagrams/globular-cluster.pdf}
+	\caption{An example colour-magnitude plot for the Messier 5 globular cluster, showing main branches of stellar evolution.
+	The visual magnitude encodes luminosity (increasing upwards) and the colour index encodes surface temperature (increasing right-to-left).
+	Stellar evolution flows in the direction of the arrows.
+	}
+	% \note{(Data from \cite{M5_CM_diagram}.)}}
+	\label{fig:globular-cluster}
+\end{figure}
+
+
+
+
+
+
+\section{Conclusions and Outlook}
+
+It is only a possibility that axions exist, and if it does, it remains elusively in the ever-shrinking non-excluded areas of parameter space.
+
+\subsubsection{Axions and Dark Matter, Inflation and Baryogenesis}
+

@@ -7,7 +7,6 @@
 \usepackage{libertine}
 % \usepackage[default]{comicneue}
 
-
 % Bibliography
 \usepackage[
 	style=phys,
@@ -46,6 +45,7 @@
 
 % Misc. packages
 \usepackage[ddmmyy]{datetime}
+\usepackage{xspace}
 
 
 \usepackage{hyperref}
@@ -57,6 +57,9 @@
 	}
 
 \listfiles
+
+
+
 
 %% LAYOUT %%
 
@@ -116,7 +119,7 @@
 
 %% SYMBOLS & SHORTCUTS %%
 
-\newcommand{\CP}{{$CP$}}
+\newcommand{\CP}{$CP$\xspace}
 
 % fonts and annotations
 \renewcommand{\cal}{\mathcal}
@@ -158,6 +161,8 @@
 % \newcommand{\Re}{\mathfrak{Re}}
 \newcommand{\csform}{\ts\omega_3}  % Chern-Simons 3-form
 \newcommand{\vol}{\ts{\mathrm{vol}}} % volume element
+
+\newcommand{\el}[1]{\ensuremath{\mathrm{#1}}}
 
 
 % \newcommand{\csform}{\phi_{\text{CS}}^{(3)}}
