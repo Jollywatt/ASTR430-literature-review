@@ -18,16 +18,16 @@
 		x dir=reverse,
 		xlabel={$T, \si{\kilo\eV}$},
 		ylabel={$m_a, \si{\kilo\eV}$},
-	    legend style={
-	    	at={(0.86,0.1)},
-	    	anchor=south east,
-	    	legend cell align=left,
-	    },
-	    title={Freeze-out of Axion Processes},
-	    every axis plot/.append style={
-	    	smooth,
-	    	thick,
-	    },
+		legend style={
+			at={(0.86,0.1)},
+			anchor=south east,
+			legend cell align=left,
+		},
+		title={Freeze-out of Axion Processes},
+		every axis plot/.append style={
+			smooth,
+			thick,
+		},
 		no markers,
 	]
 
@@ -38,7 +38,7 @@
 	\addplot+ [name path=p, cyan!30!magenta] table [x=p_X, y=p_Y, col sep=comma]
 		{cosmo-freeze-out_datasets.csv};
 
-    \path[name path=axis] (axis cs: 1e-2,1e3) -- (axis cs: 1e5,1e3);
+	\path[name path=axis] (axis cs: 1e-2,1e3) -- (axis cs: 1e5,1e3);
 
 	\addplot+[orange, opacity=0.4] fill between [of=yya and axis];
 	\addplot+[cyan!30!blue, opacity=0.4] fill between [of=c and axis];

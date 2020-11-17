@@ -5,7 +5,7 @@ With the advent of precision cosmology in the 21st century, particle physicists 
 Depending on the strength and variety of their interactions with other matter, axions may have significant implications for the evolution of the universe and of astrophysical structures, leaving behind detectable signatures.
 Of special interest is the axion's promise as a dark matter candidate.
 This section is a review of the current status of the axion in cosmology; its astrophysical predictions and observational constraints.
-Primary sources are Cadamuro, Hannestad \etal., \cite[{}2011]{Cadamuro_2011}; Marsh \cite[{}2016]{Marsh_2016}; and Irastorza and Redondo \cite[{}2018]{Irastorza_2018}; along with sections of the Particle Data Group's \emph{Review of Particle Physics} \cite[{}2020]{ParticleDataGroup-review-2020}.
+Primary sources are Cadamuro, Hannestad \etal., \cite[{}2011]{Cadamuro_2011} and Irastorza and Redondo \cite[{}2018]{Irastorza_2018}, along with sections of the Particle Data Group's \emph{Review of Particle Physics} \cite[{}2020]{ParticleDataGroup-review-2020}.
 
 
 
@@ -18,10 +18,21 @@ Many cosmological tests of axion-like particles involve predicting relative part
 Such arguments begin with a minimal `thermodynamical' model of the universe as a homogeneous, isotropic, expanding background upon which different particle species exist in uniform thermal equilibrium.
 The universe's macrostate is characterised by each species' abundance and energy distribution, and is characterised by a cosmological temperature, $T$, quantifying average energy density.
 Interactions and processes between species, which at any time may depend on present particle abundances and energies, define differential relations which can be solved to determine the abundance of each species at any point in the universe's evolution.
-In general, this is expressed by the \emph{Boltzmann transport equation}, describing the statistical behaviour of a thermodynamic system out of equilibrium. \note{Need to cite?}
+In general, this is expressed by the \emph{Boltzmann transport equation}, describing the statistical behaviour of a thermodynamic system out of equilibrium \cite[§\,3]{Irastorza_2018}
 
 
-\begin{figure}[b!]
+The harsh assumptions of isotropy and homogeneity specify a spacetime with a Friedmann--Lemaître--Robertson--Walker (FLRW) metric,
+\begin{align}
+	% \ts g = -c^2 \ts\dd t\otimes\ts\dd t + a(t)^2\qty(η_{ij}\,\ts\dd x^i\otimes\ts\dd x^j)
+	\ts g = -c^2 \ts\dd t^2 + a(t)^2\qty(\frac{\ts\dd r^2}{1 - kr^2} + r^2 \ts Θ)
+\end{align}
+where $k \in \qty{+1, 0, -1}$ reflects the type of spatial curvature, $\ts Θ = \ts\dd θ^2 + \sinθ\,\ts\dd φ^2$ is the metric of the unit sphere, and $\ts\dd x^2 \equiv \ts\dd x\otimes\ts\dd x$.
+Standard cosmological models are spatially flat with $k = 0$.
+The scale factor $a(t)$ describes the cosmological evolution of the universe and defines the \emph{Hubble parameter,} $H \coloneqq \dot{a}/a$, or cosmic expansion rate.
+The equations of general relativity determine $a(t)$ uniquely in terms of the mass--energy content of the universe.
+
+
+\begin{figure}[t!]
 \begin{aside}[Terminology from cosmology]
 \begin{itemize}[leftmargin=0.75em]\setlength\itemsep{0.25ex}
 	\item \emph{thermalisation}
@@ -33,15 +44,7 @@ In general, this is expressed by the \emph{Boltzmann transport equation}, descri
 \end{aside}
 \end{figure}
 
-The harsh assumptions of isotropy and homogeneity specify a spacetime with a Friedmann--Lemaître--Robertson--Walker (FLRW) metric,
-\begin{align}
-	% \ts g = -c^2 \ts\dd t\otimes\ts\dd t + a(t)^2\qty(η_{ij}\,\ts\dd x^i\otimes\ts\dd x^j)
-	\ts g = -c^2 \ts\dd t^2 + a(t)^2\qty(\frac{\ts\dd r^2}{1 - kr^2} + r^2 \ts Θ)
-\end{align}
-where $k \in \qty{+1, 0, -1}$ reflects the type of spatial curvature, $\ts Θ = \ts\dd θ^2 + \sinθ\,\ts\dd φ^2$ is the metric of the unit sphere, and $\ts\dd x^2 \equiv \ts\dd x\otimes\ts\dd x$.
-Standard cosmological models are spatially flat with $k = 0$.
-The scale factor $a(t)$ describes the cosmological evolution of the universe and defines the \emph{Hubble parameter,} $H \coloneqq \dot{a}/a$, or cosmic expansion rate.
-The equations of general relativity determine $a(t)$ uniquely in terms of the mass--energy content of the universe.
+\pagebreak[4]
 
 If the rate $Γ$ of a particle interaction is large (corresponding to large probability per unit spacetime volume for the interaction to occur), then it will provide a mechanism for thermalisation of the species involved---or in the case of production and decay processes, will drive the species to abundance or extinction. 
 If the rate is smaller than the rate of cosmic expansion, $Γ \ll H$, then the interaction or process will freeze-out and become negligible.
@@ -57,11 +60,11 @@ If a species' most dominant interactions freeze-out, then it becomes thermally i
 
 \section{Axion Interactions and Processes}
 
-Axions spontaneously decay into photons via the axion-photon vertex at a well-known rate of
+Axions spontaneously decay into photons via the axion-photon vertex at a well-known rate
 \begin{align}
 	Γ_{a\to 2γ} = \frac{g_{aγγ}^2m_a^3}{64π} \approx 10^{-24}\,\si{\per\second}\qty(\frac{m_a}{\si{\eV}})^5
 ,\end{align}
-where the coupling strength $g_{aγγ}$ can be approximately written in terms of the mass $m_a$, introducing an overall $\cal O(1)$ dependence on the particular axion model \cite{Cadamuro_2011}.
+where the coupling strength $g_{aγγ}$ can be approximately written in terms of the mass $m_a$ (which introduces an overall $\cal O(1)$ dependence on the particular axion model) \cite{Cadamuro_2011}.
 Thus, for axions to exist in significant abundance in the present epoch, they must be sufficiently light, or else the decay process dominates.
 If they are too light, $m_a < \SI{18}{\eV}$, than the axion half-life exceeds the age of the universe.
 An inverse decay process $2γ \to a$ is also possible, with a rate $Γ_{2γ \to a} \propto 1/T$ increasing as the universe cools.
@@ -173,9 +176,42 @@ Stronger interacting axions cause horizontal branch stars to burn too quickly, r
 
 
 
-\section{Conclusions and Outlook}
+% \section{Outlook and Conclusion}
+\section{A Solution to Dark Matter, Inflation and Baryogenesis?}
 
-It is only a possibility that axions exist, and if it does, it remains elusively in the ever-shrinking non-excluded areas of parameter space.
+It is only a possibility that axions exist, and if they do, they remain in the ever-shrinking areas of parameter space (a modern exclusion plot shown in figure~\ref{fig:finish-already}).
+Despite this, axion phenomenology is earning increasingly more attention.
+Many more cosmological tests other than those mentioned in this report exist, and experiments are currently under way to further explore the axion parameter space \cite{Irastorza_2018,landscape_2020,further-lab-experiments_2017}.
+Arguably, the reason for its popularity is that the axion conceivably plays a central role in open problems in more than one area of cosmology.
 
-\subsubsection{Axions and Dark Matter, Inflation and Baryogenesis}
 
+% \subsubsection{A Solution to Dark Matter, Inflation and Baryogenesis?}
+
+Most notably, the axion exhibits all the necessary features for a cold dark matter candidate.
+There are several proposed theoretical frameworks by which the axion comes to contribute (in some cases, totally) to the present dark matter density, estimated to be $ρ_{CDM} \approx \SI{0.45}{\giga\eV\per\cubic\cm}$ \cite[§\,5.3]{landscape_2020}.
+One such framework is the \emph{misalignment mechanism}, whereby the present day energy density $ρ_{CDM}$ is stored in the zero modes of the $\bar θ$-vacuum angle as it continues to undergo lightly damped oscillation about the potential minimum at $\bar θ = 0$ after acquiring a large nonzero angle after inflation \cite[§\,5.3]{landscape_2020}.
+Assuming axions as solely responsible for dark matter, the axion number density would be
+\begin{align}
+	n_a \approx \num{4.5e14}\,\qty(\frac{\si{\micro\eV}}{m_a})\,\si{\per\cubic\cm}
+.\end{align}
+There are numerous active \emph{haloscope experiments} designed to detect ambient axions, making use of coherence effects to overcome their incredibly weak interactions: the \emph{Axion Dark Matter eXperiment} (ADMX) \cite{AMDX-2020} is the longest standing \cite[§\,7]{Irastorza_2018}.
+
+\begin{figure}
+	\centering
+	\includegraphics{diagrams/final-bounds.pdf}
+	\caption{}
+	\label{fig:finish-already}
+\end{figure}
+
+
+Inflation is the hypothesized period of rapid cosmic expansion in the early universe, invoked to explain certain observed features of the cosmos.
+Degrees of freedom known as \emph{inflatons} drive inflation until they reach a potential minimum.
+The inflaton potential must be very flat compared to the Hubble scale $c/H$ at the time of inflation.
+Axions with a suitable energy scale $f_a$ and mass $m_a$ (incidentally, very different to CDM axions) provide a appropriately flat potential $V(\bar θ)$, making them especially good inflaton candidates \cite[§\,7]{Marsh_2016}.
+
+If that were not enough, the problem of baryogenesis---the evident matter--antimatter asymmetry in the universe---may plausibly be explained by a cosmological evolution of the axion field.
+The $\bar θ$-angle must be very small today, as constrained by the neutron electric dipole moment \cite{electric_dipole_neutron_2020}, but it is conceivable that $\bar θ \sim \cal O(1)$ in the very early universe, which may have resulted in preferential generation of matter over antimatter \cite[§\,7.1]{landscape_2020}.
+
+All these features earn the axion a status of special interest in particle physics and cosmology, even with a pessimistic view of its existence.
+It has been claimed \cite{Irastorza_2018} that the rapidly improving experimental landscape makes it likely that the axion, if it exists, will be detected in the near future.
+In that case, a broad subset of physics would enjoy a revitalising breakthrough, and half a century's worth of theoretical progress would become tangible.
